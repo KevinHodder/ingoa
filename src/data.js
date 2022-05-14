@@ -119,6 +119,39 @@ export const zones = [
     speaker: "Hepora (Sybil) Young",
     audioTrackFull: "zones/067.mp3",
     selectedNames: [],
-    localities: [],
+    localities: [
+      {
+        order: 1,
+        name: "Ātiamuri",
+        alternativeSpellings: ["atiamuri"],
+        types: [lt.LOCALITY],
+        audioStart: 4.7,
+        audioEnd: 5.71,
+      }, // Ātiamuri
+      {
+        order: 2,
+        name: "Hāparangi",
+        alternativeSpellings: ["Haparangi"],
+        types: [lt.LOCALITY],
+        audioStart: 6.69,
+        audioEnd: 7.57,
+      }, // Hāparangi
+      {
+        order: 3,
+        name: "Horohoro",
+        alternativeSpellings: [],
+        types: [lt.LOCALITY],
+        audioStart: 8.49,
+        audioEnd: 9.22,
+      }, // Horohoro
+      // Kearoa
+      // Maruahangaroa
+      // Ngātoroirangi
+      // Pōkaitū
+      // Rongomaipāpā
+      // Te Uira
+      // Tikorangi
+      // Waikato
+    ],
   },
 ];
