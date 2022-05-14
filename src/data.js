@@ -19,12 +19,12 @@ export const zones = [
       },
     ],
     localities: [
-      {
-        order: 1,
-        name: "Tīnui",
-        alternativeSpellings: ["tinui"],
-        types: [lt.LOCALITY],
-      },
+      // {
+      //   order: 1,
+      //   name: "Tīnui",
+      //   alternativeSpellings: ["tinui"],
+      //   types: [lt.LOCALITY],
+      // },
     ],
   },
   {
