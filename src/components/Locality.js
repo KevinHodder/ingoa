@@ -31,7 +31,6 @@ export const Locality = (props) => {
 
   const playName = () => {
     if (audioRef.current) {
-      console.log(audioRef.current);
       audioRef.current.currentTime = locality.audioStart;
       audioRef.current.int = setInterval(() => {
         if (audioRef.current.currentTime > locality.audioEnd) {

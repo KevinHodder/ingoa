@@ -119,5 +119,6 @@ export const zones = [
     speaker: "Hepora (Sybil) Young",
     audioTrackFull: "zones/067.mp3",
     selectedNames: [],
+    localities: [],
   },
 ];
