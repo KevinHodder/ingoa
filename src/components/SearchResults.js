@@ -16,14 +16,19 @@ export const SearchResults = (props) => {
       <h2>Results: </h2>
       <Accordion defaultActiveKey="0">
         {results.length
-          ? results.map((result, index) => (
-              <Result
-                details={result.item}
-                key={`zone${result.item.number}`}
-                index={index}
-              />
-            ))
+          ? results
+              .slice(0, 10)
+              .map((result, index) => (
+                <Result
+                  details={result.item}
+                  key={`zone${result.item.number}`}
+                  index={index}
+                />
+              ))
           : null}
+        {results.length > 10 ? (
+          <div>Use the search bar to find more regions"</div>
+        ) : null}
       </Accordion>
     </Wrapper>
   );
