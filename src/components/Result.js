@@ -14,15 +14,15 @@ export const Result = (props) => {
     <Accordion.Item eventKey={index.toString()}>
       <Accordion.Header>{nameCommon}</Accordion.Header>
       <Accordion.Body>
-        {selectedNames.length && (
-          <Fragment>
-            <h2 className={"indRecordings"}>Individual Recordings</h2>
-            {selectedNames.map((rec) => (
-              <IndividualRecord record={rec} key={`${zone}${rec.name}`} />
-            ))}
-          </Fragment>
-        )}
-        <hr />
+        {/*{selectedNames.length ? (*/}
+        {/*  <Fragment>*/}
+        {/*    <h2 className={"indRecordings"}>Individual Recordings</h2>*/}
+        {/*    {selectedNames.map((rec) => (*/}
+        {/*      <IndividualRecord record={rec} key={`${zone}${rec.name}`} />*/}
+        {/*    ))}*/}
+        {/*    <hr />*/}
+        {/*  </Fragment>*/}
+        {/*) : null}*/}
         <Localities
           localities={localities}
           zone={zone}
@@ -47,7 +47,7 @@ Result.propTypes = {
       PropTypes.shape({
         order: PropTypes.number,
         name: PropTypes.string,
-        alternativeSpellings: PropTypes.arrayOf(PropTypes.string),
+        altSpellings: PropTypes.arrayOf(PropTypes.string),
         types: PropTypes.arrayOf(PropTypes.string),
       })
     ),

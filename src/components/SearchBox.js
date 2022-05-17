@@ -5,7 +5,9 @@ import { zones } from "../data";
 
 const fuseZones = new Fuse(zones, {
   includeScore: true,
-  keys: ["nameCommon", "localities.name", "localities.alternativeSpellings"],
+  keys: ["nameCommon", "localities.name", "localities.altSpellings"],
+  threshold: 0.1,
+  distance: 10,
 });
 
 export const SearchBox = (props) => {
@@ -22,7 +24,7 @@ export const SearchBox = (props) => {
     if (searchTerm) {
       setResults(fuseZones.search(searchTerm));
     } else setResults(allResults);
-  }, [searchTerm, setResults]);
+  }, [searchTerm, setResults, allResults]);
 
   return (
     <Fragment>

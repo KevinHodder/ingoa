@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { isArrPresent } from "../utils/utils";
 import { ReactComponent as Speaker } from "../assets/speaker.svg";
 
 const Record = styled.div`
@@ -53,6 +54,15 @@ export const Locality = (props) => {
       <Icon alt={"play name"} onClick={playName} style={speakerStyle} />
       <Name>{locality.name}</Name>
       <Types>{locality.types.sort().join(", ")}</Types>
+      {isArrPresent(locality.altNames) ? (
+        <Fragment>
+          <hr />
+          <h5>Alternative names/pronunciations</h5>
+          {locality.altNames.map((alt) => (
+            <p>{alt.name}</p>
+          ))}
+        </Fragment>
+      ) : null}
     </Record>
   );
 };
@@ -61,7 +71,7 @@ Locality.propTypes = {
   locality: PropTypes.shape({
     order: PropTypes.number,
     name: PropTypes.string,
-    alternativeSpellings: PropTypes.arrayOf(PropTypes.string),
+    altSpellings: PropTypes.arrayOf(PropTypes.string),
     types: PropTypes.arrayOf(PropTypes.string),
     audioStart: PropTypes.number,
     audioEnd: PropTypes.number,

@@ -32,7 +32,7 @@ Localities.propTypes = {
     PropTypes.shape({
       order: PropTypes.number,
       name: PropTypes.string,
-      alternativeSpellings: PropTypes.arrayOf(PropTypes.string),
+      altSpellings: PropTypes.arrayOf(PropTypes.string),
       types: PropTypes.arrayOf(PropTypes.string),
     })
   ),

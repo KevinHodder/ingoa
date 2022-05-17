@@ -10,7 +10,6 @@ const Wrapper = styled.div`
 
 export const SearchResults = (props) => {
   const { results } = props;
-  console.log(results);
 
   return (
     <Wrapper>
