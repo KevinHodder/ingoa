@@ -27,7 +27,7 @@ export const SearchResults = (props) => {
               ))
           : null}
         {results.length > 10 ? (
-          <div>Use the search bar to find more regions"</div>
+          <div>Use the search bar to find more regions</div>
         ) : null}
       </Accordion>
     </Wrapper>
