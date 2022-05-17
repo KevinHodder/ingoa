@@ -11,6 +11,8 @@ const Record = styled.div`
   grid-column-gap: 5px;
   grid-row-gap: 3px;
   align-items: center;
+  min-height: 20px;
+  margin-bottom: 3px;
 `;
 const Icon = styled(Speaker)`
   height: 20px;
