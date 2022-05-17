@@ -17,7 +17,7 @@ export const SearchResults = (props) => {
       <Accordion defaultActiveKey="0">
         {results.length
           ? results
-              .slice(0, 10)
+              // .slice(0, 10)
               .map((result, index) => (
                 <Result
                   details={result.item}

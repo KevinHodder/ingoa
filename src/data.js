@@ -50757,7 +50757,7 @@ export const zones = [
             altSpellings: [
               "te huru manu (kaore au i mohio... te whakapapa ki terā ingoa)",
             ],
-            audioStart: 145.7,
+            audioStart: 149.5,
             audioEnd: 153.61,
           },
         ],

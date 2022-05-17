@@ -25,6 +25,14 @@ const Types = styled.div`
   // width: max-content;
 `;
 
+const Alts = styled.div`
+  grid-column: 2 / 4;
+`;
+
+const AltTitle = styled.div`
+  font-weight: bold;
+`;
+
 export const Locality = (props) => {
   const { locality, audioRef } = props;
 
@@ -51,17 +59,26 @@ export const Locality = (props) => {
 
   return (
     <Record>
-      <Icon alt={"play name"} onClick={playName} style={speakerStyle} />
+      {locality.audioStart ? (
+        <Icon alt={"play name"} onClick={playName} style={speakerStyle} />
+      ) : (
+        <div />
+      )}
       <Name>{locality.name}</Name>
-      <Types>{locality.types.sort().join(", ")}</Types>
+      {isArrPresent(locality.types) ? (
+        <Types>{locality.types.sort().join(", ")}</Types>
+      ) : null}
       {isArrPresent(locality.altNames) ? (
-        <Fragment>
-          <hr />
-          <h5>Alternative names/pronunciations</h5>
-          {locality.altNames.map((alt) => (
-            <p>{alt.name}</p>
+        <Alts>
+          <AltTitle>Alternative names/pronunciations</AltTitle>
+          {locality.altNames.map((alt, altIndex) => (
+            <Locality
+              locality={alt}
+              audioRef={audioRef}
+              key={`${locality.name}${altIndex}`}
+            />
           ))}
-        </Fragment>
+        </Alts>
       ) : null}
     </Record>
   );

@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import { Accordion } from "react-bootstrap";
+import { Fragment, useContext } from "react";
+import { Accordion, AccordionContext } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 import Localities from "./Localities";
@@ -7,6 +7,7 @@ import IndividualRecord from "./IndividualRecord";
 
 export const Result = (props) => {
   const { details, index } = props;
+  const { activeEventKey } = useContext(AccordionContext);
   const { nameCommon, selectedNames, localities, zone, audioTrackFull } =
     details;
 
@@ -23,11 +24,13 @@ export const Result = (props) => {
         {/*    <hr />*/}
         {/*  </Fragment>*/}
         {/*) : null}*/}
-        <Localities
-          localities={localities}
-          zone={zone}
-          audioTrackFull={audioTrackFull}
-        />
+        {activeEventKey === index.toString() ? (
+          <Localities
+            localities={localities}
+            zone={zone}
+            audioTrackFull={audioTrackFull}
+          />
+        ) : null}
       </Accordion.Body>
     </Accordion.Item>
   );
