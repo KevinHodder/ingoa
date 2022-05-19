@@ -3,7 +3,6 @@ import { Accordion, AccordionContext } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 import Localities from "./Localities";
-// import IndividualRecord from "./IndividualRecord";
 
 export const Result = (props) => {
   const { details, index } = props;
@@ -13,7 +12,7 @@ export const Result = (props) => {
     // selectedNames,
     speakers,
     localities,
-    zone,
+    number,
     audioTrackFull,
   } = details;
 
@@ -21,22 +20,13 @@ export const Result = (props) => {
     <Accordion.Item eventKey={index.toString()}>
       <Accordion.Header>{nameCommon}</Accordion.Header>
       <Accordion.Body>
-        {/*{selectedNames.length ? (*/}
-        {/*  <Fragment>*/}
-        {/*    <h2 className={"indRecordings"}>Individual Recordings</h2>*/}
-        {/*    {selectedNames.map((rec) => (*/}
-        {/*      <IndividualRecord record={rec} key={`${zone}${rec.name}`} />*/}
-        {/*    ))}*/}
-        {/*    <hr />*/}
-        {/*  </Fragment>*/}
-        {/*) : null}*/}
         <div>
           Spoken by <strong>{speakers.join(", ")}</strong>
         </div>
         {activeEventKey === index.toString() ? (
           <Localities
             localities={localities}
-            zone={zone}
+            zone={number}
             audioTrackFull={audioTrackFull}
           />
         ) : null}

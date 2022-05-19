@@ -23,7 +23,7 @@ export const Localities = (props) => {
           audioRef={audioRef}
           currentlyPlaying={currentlyPlaying}
           setCurrentlyPlaying={setCurrentlyPlaying}
-          key={`${zone}${index}`}
+          key={`${zone.toString().padStart(3, "0")}${index}`}
         />
       ))}
     </Fragment>
