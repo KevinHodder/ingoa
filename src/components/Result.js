@@ -31,7 +31,7 @@ export const Result = (props) => {
         {/*  </Fragment>*/}
         {/*) : null}*/}
         <div>
-          Read by <strong>{speakers.join(", ")}</strong>
+          Spoken by <strong>{speakers.join(", ")}</strong>
         </div>
         {activeEventKey === index.toString() ? (
           <Localities
