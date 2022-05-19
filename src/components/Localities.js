@@ -1,4 +1,4 @@
-import { Fragment, useRef } from "react";
+import { Fragment, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Locality from "./Locality";
@@ -11,6 +11,7 @@ export const Localities = (props) => {
   const { localities, audioTrackFull, zone } = props;
 
   const audioRef = useRef();
+  const [currentlyPlaying, setCurrentlyPlaying] = useState();
 
   return localities.length ? (
     <Fragment>
@@ -20,6 +21,8 @@ export const Localities = (props) => {
         <Locality
           locality={locality}
           audioRef={audioRef}
+          currentlyPlaying={currentlyPlaying}
+          setCurrentlyPlaying={setCurrentlyPlaying}
           key={`${zone}${index}`}
         />
       ))}

@@ -26,11 +26,11 @@ export const IndividualRecord = (props) => {
 
   const setToNotPlaying = () => setIsPlaying(false);
 
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.addEventListener("ended", setToNotPlaying);
-    }
-  });
+  // useEffect(() => {
+  //   if (audioRef.current) {
+  //     audioRef.current.addEventListener("ended", setToNotPlaying);
+  //   }
+  // }, [audioRef.current]);
 
   const speakerStyle = {
     fill: isPlaying ? "red" : "black",

@@ -10,21 +10,24 @@ const fuseZones = new Fuse(zones, {
   distance: 10,
 });
 
+const allResults = zones
+  .sort((zone) => zone.number)
+  .map((zone) => ({
+    item: zone,
+  }));
+
 export const SearchBox = (props) => {
   const { setResults } = props;
   const [searchTerm, setSearchTerm] = useState("");
 
-  const allResults = zones
-    .sort((zone) => zone.number)
-    .map((zone) => ({
-      item: zone,
-    }));
-
   useEffect(() => {
     if (searchTerm) {
       setResults(fuseZones.search(searchTerm));
-    } else setResults(allResults);
-  }, [searchTerm, setResults, allResults]);
+    } else {
+      console.log("setting all results");
+      setResults(allResults);
+    }
+  }, [searchTerm, setResults]);
 
   return (
     <Fragment>

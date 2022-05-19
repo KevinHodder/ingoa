@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { isArrPresent } from "../utils/utils";
@@ -36,12 +36,24 @@ const AltTitle = styled.div`
 `;
 
 export const Locality = (props) => {
-  const { locality, audioRef } = props;
+  const { locality, audioRef, currentlyPlaying, setCurrentlyPlaying } = props;
+  const thisID = `${locality.name}${locality.audioStart}`;
 
   const [isPlaying, setIsPlaying] = useState(false);
 
+  useEffect(() => {
+    if (currentlyPlaying !== thisID) {
+      setIsPlaying(false);
+    }
+  }, [currentlyPlaying, thisID]);
+
   const playName = () => {
     if (audioRef.current) {
+      // handle "already playing"
+      audioRef.current.pause();
+      clearInterval(audioRef.current.int);
+      // start new play
+      setCurrentlyPlaying(thisID);
       audioRef.current.currentTime = locality.audioStart;
       audioRef.current.int = setInterval(() => {
         if (audioRef.current.currentTime > locality.audioEnd) {
@@ -77,6 +89,8 @@ export const Locality = (props) => {
             <Locality
               locality={alt}
               audioRef={audioRef}
+              currentlyPlaying={currentlyPlaying}
+              setCurrentlyPlaying={setCurrentlyPlaying}
               key={`${locality.name}${altIndex}`}
             />
           ))}
