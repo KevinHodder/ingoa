@@ -16,7 +16,7 @@ export const Localities = (props) => {
   return localities.length ? (
     <Fragment>
       <audio ref={audioRef} src={`./${audioTrackFull}`} />
-      <Header>Localities</Header>
+      <Header>Places</Header>
       {localities.map((locality, index) => (
         <Locality
           locality={locality}
