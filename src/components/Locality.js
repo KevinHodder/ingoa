@@ -17,10 +17,12 @@ const Record = styled.div`
 const Icon = styled(Speaker)`
   height: 20px;
   width: 20px;
+  cursor: pointer;
 `;
 const Name = styled.div`
   width: minmax(100px, 1fr);
   font-weight: bold;
+  cursor: pointer;
 `;
 
 const Types = styled.div`
@@ -78,7 +80,7 @@ export const Locality = (props) => {
       ) : (
         <div />
       )}
-      <Name>{locality.name}</Name>
+      <Name onClick={playName}>{locality.name}</Name>
       {isArrPresent(locality.types) ? (
         <Types>{locality.types.sort().join(", ")}</Types>
       ) : null}
