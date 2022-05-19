@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Accordion, AccordionContext } from "react-bootstrap";
 import PropTypes from "prop-types";
 
@@ -7,14 +7,7 @@ import Localities from "./Localities";
 export const Result = (props) => {
   const { details, index } = props;
   const { activeEventKey } = useContext(AccordionContext);
-  const {
-    nameCommon,
-    // selectedNames,
-    speakers,
-    localities,
-    number,
-    audioTrackFull,
-  } = details;
+  const { nameCommon, speakers, localities, number, audioTrackFull } = details;
 
   return (
     <Accordion.Item eventKey={index.toString()}>
@@ -25,6 +18,7 @@ export const Result = (props) => {
         </div>
         {activeEventKey === index.toString() ? (
           <Localities
+            autofocus
             localities={localities}
             zone={number}
             audioTrackFull={audioTrackFull}
