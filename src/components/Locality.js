@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { isArrPresent } from "../utils/utils";
-import { ReactComponent as Speaker } from "../assets/speaker.svg";
+import Speaker from "./Speaker";
 
 const Record = styled.div`
   display: grid;
@@ -14,11 +14,7 @@ const Record = styled.div`
   min-height: 20px;
   margin-bottom: 3px;
 `;
-const Icon = styled(Speaker)`
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-`;
+
 const Name = styled.div`
   width: minmax(100px, 1fr);
   font-weight: bold;
@@ -69,14 +65,10 @@ export const Locality = (props) => {
     }
   };
 
-  const speakerStyle = {
-    fill: isPlaying ? "red" : "black",
-  };
-
   return (
     <Record>
       {locality.audioStart ? (
-        <Icon alt={"play name"} onClick={playName} style={speakerStyle} />
+        <Speaker name={locality.name} isPlaying={isPlaying} play={playName} />
       ) : (
         <div />
       )}

@@ -1,28 +1,42 @@
-import { useContext, useEffect } from "react";
+import { Fragment, useContext, useEffect, useRef } from "react";
 import { Accordion, AccordionContext } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 import Localities from "./Localities";
+import styled from "styled-components";
+
+const SpeakerInfo = styled.div`
+  font-size: 1.5em;
+`;
 
 export const Result = (props) => {
   const { details, index } = props;
-  const { activeEventKey } = useContext(AccordionContext);
   const { nameCommon, speakers, localities, number, audioTrackFull } = details;
 
+  const { activeEventKey } = useContext(AccordionContext);
+  const thisElem = useRef();
+
+  useEffect(() => {
+    if (activeEventKey === index.toString()) {
+      thisElem.current.scrollIntoView();
+    }
+  });
+
   return (
-    <Accordion.Item eventKey={index.toString()}>
+    <Accordion.Item eventKey={index.toString()} ref={thisElem}>
       <Accordion.Header>{nameCommon}</Accordion.Header>
       <Accordion.Body>
-        <div>
-          Spoken by <strong>{speakers.join(", ")}</strong>
-        </div>
         {activeEventKey === index.toString() ? (
-          <Localities
-            autofocus
-            localities={localities}
-            zone={number}
-            audioTrackFull={audioTrackFull}
-          />
+          <Fragment>
+            <SpeakerInfo>
+              Spoken by <strong>{speakers.join(", ")}</strong>
+            </SpeakerInfo>
+            <Localities
+              localities={localities}
+              zone={number}
+              audioTrackFull={audioTrackFull}
+            />
+          </Fragment>
         ) : null}
       </Accordion.Body>
     </Accordion.Item>
