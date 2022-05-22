@@ -5,6 +5,7 @@ import { zones } from "../data";
 
 const fuseZones = new Fuse(zones, {
   includeScore: true,
+  includeMatches: true,
   keys: ["nameCommon", "localities.name", "localities.altSpellings"],
   threshold: 0.1,
   distance: 10,
@@ -16,13 +17,25 @@ const allResults = zones
     item: zone,
   }));
 
+const getSearchResults = (searchTerm, setResults) => {
+  const results = fuseZones.search(searchTerm);
+
+  results.map((result) => {
+    const matches = result.matches.map((match) => match.value);
+    return (result.item.localities = result.item.localities.filter((locality) =>
+      matches.includes(locality.name)
+    ));
+  });
+  setResults(results);
+};
+
 export const SearchBox = (props) => {
   const { setResults } = props;
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     if (searchTerm) {
-      setResults(fuseZones.search(searchTerm));
+      getSearchResults(searchTerm, setResults);
     } else {
       console.log("setting all results");
       setResults(allResults);

@@ -22707,7 +22707,7 @@ export const zones = [
         name: "Otaketake",
         types: ["thermal region"],
         audioStart: 35.95,
-        audioEnd: 36.79,
+        audioEnd: 37.4,
       },
       {
         order: 17,
