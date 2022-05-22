@@ -2,6 +2,7 @@ import { Accordion } from "react-bootstrap";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Result from "./Result";
+import { Fragment } from "react";
 
 const Wrapper = styled.div`
   padding: 5px;
@@ -13,20 +14,22 @@ export const SearchResults = (props) => {
 
   return (
     <Wrapper>
-      <h2>Results: </h2>
-      <Accordion defaultActiveKey="0">
-        {results.length
-          ? results
-              // .slice(0, 10)
-              .map((result, index) => (
-                <Result
-                  details={result.item}
-                  key={`zone${result.item.number}`}
-                  index={index}
-                />
-              ))
-          : null}
-      </Accordion>
+      {results.length ? (
+        <Fragment>
+          <h2>Results: </h2>
+          <Accordion defaultActiveKey="0">
+            {results.map((result, index) => (
+              <Result
+                details={result.item}
+                key={`zone${result.item.number}`}
+                index={index}
+              />
+            ))}
+          </Accordion>
+        </Fragment>
+      ) : (
+        <h3>No results found for your search</h3>
+      )}
     </Wrapper>
   );
 };
