@@ -21,35 +21,35 @@ export const zones = [
       {
         order: 1,
         name: "Aotea",
-        types: [lt.QUAY],
+        types: ["quay"],
         audioStart: 4.32,
         audioEnd: 5.63,
       },
       {
         order: 2,
         name: "Arahanga",
-        types: [lt.FERRY],
+        types: ["ferry"],
         audioStart: 7.1,
         audioEnd: 8.16,
       },
       {
         order: 3,
         name: "Arahura",
-        types: [lt.FERRY],
+        types: ["ferry"],
         audioStart: 10.07,
         audioEnd: 11.17,
       },
       {
         order: 4,
         name: "Aratika",
-        types: [lt.FERRY],
+        types: ["ferry"],
         audioStart: 12.79,
         audioEnd: 13.99,
       },
       {
         order: 5,
         name: "Aro",
-        types: [lt.VALLEY],
+        types: ["valley"],
         audioStart: 15.01,
         audioEnd: 15.69,
       },
@@ -63,7 +63,7 @@ export const zones = [
       {
         order: 7,
         name: "Hātaitai",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 20.47,
         audioEnd: 21.85,
         altSpellings: ["hataitai"],
@@ -71,7 +71,7 @@ export const zones = [
       {
         order: 8,
         name: "Hape",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 23.54,
         audioEnd: 24.65,
       },
@@ -85,7 +85,7 @@ export const zones = [
       {
         order: 10,
         name: "Kārōri",
-        types: [lt.SUBURB, lt.STREAM],
+        types: ["suburb", "stream"],
         audioStart: 28.34,
         audioEnd: 29.36,
         altSpellings: ["karori"],
@@ -93,7 +93,7 @@ export const zones = [
       {
         order: 11,
         name: "Kaiwharawhara",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 30.57,
         audioEnd: 31.87,
       },
@@ -156,7 +156,7 @@ export const zones = [
       {
         order: 19,
         name: "Mākara",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 51.09,
         audioEnd: 52.29,
         altSpellings: ["makara"],
@@ -180,7 +180,7 @@ export const zones = [
       {
         order: 22,
         name: "Māupuia",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 59.71,
         audioEnd: 61.2,
         altSpellings: ["maupuia"],
@@ -188,7 +188,7 @@ export const zones = [
       {
         order: 23,
         name: "Mairangi",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 62.39,
         audioEnd: 63.61,
       },
@@ -239,7 +239,7 @@ export const zones = [
       {
         order: 29,
         name: "Ngaio",
-        types: ["gorge", lt.SUBURB],
+        types: ["gorge", "suburb"],
         audioStart: 79.55,
         audioEnd: 80.63,
       },
@@ -262,7 +262,7 @@ export const zones = [
       {
         order: 32,
         name: "Ōrangi-Kaupapa",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 87.63,
         audioEnd: 89.56,
         altSpellings: ["orangi-kaupapa"],
@@ -294,7 +294,7 @@ export const zones = [
       {
         order: 36,
         name: "Papārangi",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 99.99,
         audioEnd: 101.05,
         altSpellings: ["paparangi"],
@@ -325,7 +325,7 @@ export const zones = [
       {
         order: 40,
         name: "Rāroa",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 111.9,
         audioEnd: 113.05,
         altSpellings: ["raroa"],
@@ -340,7 +340,7 @@ export const zones = [
       {
         order: 42,
         name: "Rongotai",
-        types: [lt.SUBURB, "airport"],
+        types: ["suburb", "airport"],
         audioStart: 116.9,
         audioEnd: 118.1,
       },
@@ -369,7 +369,7 @@ export const zones = [
       {
         order: 46,
         name: "Te Aro",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 128.45,
         audioEnd: 129.35,
       },
@@ -407,7 +407,7 @@ export const zones = [
       {
         order: 51,
         name: "Te Kāinga",
-        types: [lt.SUBURB, "catholic centre"],
+        types: ["suburb", "catholic centre"],
         audioStart: 144.22,
         audioEnd: 145.35,
         altSpellings: ["te kainga"],
@@ -488,7 +488,7 @@ export const zones = [
       {
         order: 3,
         name: "Ēpuni",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 12.29,
         audioEnd: 13.32,
         altSpellings: ["epuni"],
@@ -533,7 +533,7 @@ export const zones = [
       {
         order: 9,
         name: "Korokoro",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 27.45,
         audioEnd: 28.54,
       },
@@ -555,14 +555,14 @@ export const zones = [
       {
         order: 12,
         name: "Maungaraki",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 34.93,
         audioEnd: 36.17,
       },
       {
         order: 13,
         name: "Moerā",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 37.25,
         audioEnd: 38.17,
         altSpellings: ["moera"],
@@ -577,7 +577,7 @@ export const zones = [
       {
         order: 15,
         name: "Naenae",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 41.97,
         audioEnd: 43.24,
       },
@@ -615,7 +615,7 @@ export const zones = [
       {
         order: 20,
         name: "Pōmare",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 54.85,
         audioEnd: 55.84,
         altSpellings: ["pomare"],
@@ -661,7 +661,7 @@ export const zones = [
       {
         order: 26,
         name: "Taitā",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 67.52,
         audioEnd: 68.43,
         altSpellings: ["taita"],
@@ -745,7 +745,7 @@ export const zones = [
       {
         order: 37,
         name: "Waiwhetū",
-        types: [lt.STREAM, "marae", lt.SUBURB],
+        types: ["stream", "marae", "suburb"],
         audioStart: 97.67,
         audioEnd: 98.79,
         altSpellings: ["waiwhetu"],
@@ -791,7 +791,7 @@ export const zones = [
       {
         order: 3,
         name: "Heretaunga",
-        types: ["river", lt.SUBURB],
+        types: ["river", "suburb"],
         audioStart: 12.51,
         audioEnd: 13.9,
         altNames: [
@@ -821,7 +821,7 @@ export const zones = [
       {
         order: 6,
         name: "Māoribank",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         altSpellings: ["maoribank"],
         altNames: [
           {
@@ -835,7 +835,7 @@ export const zones = [
       {
         order: 7,
         name: "Mangaroa",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 26.03,
         audioEnd: 27.61,
       },
@@ -858,7 +858,7 @@ export const zones = [
       {
         order: 10,
         name: "Pākurātahi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 34.42,
         audioEnd: 35.89,
         altSpellings: ["pakurātahi"],
@@ -889,7 +889,7 @@ export const zones = [
       {
         order: 14,
         name: "Tōtara",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 44.24,
         audioEnd: 45.17,
         altSpellings: ["totara"],
@@ -963,7 +963,7 @@ export const zones = [
       {
         order: 6,
         name: "Kenepurū",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 22.43,
         audioEnd: 23.69,
         altSpellings: ["kenepuru"],
@@ -1009,7 +1009,7 @@ export const zones = [
       {
         order: 11,
         name: "Mana",
-        types: ["island", lt.SUBURB],
+        types: ["island", "suburb"],
         audioStart: 35.36,
         audioEnd: 36.1,
         altNames: [
@@ -1062,7 +1062,7 @@ export const zones = [
       {
         order: 17,
         name: "Pāuatahānui",
-        types: [lt.SUBURB, "inlet"],
+        types: ["suburb", "inlet"],
         audioStart: 54.67,
         audioEnd: 57.01,
         altSpellings: ["pauatahānui"],
@@ -1070,7 +1070,7 @@ export const zones = [
       {
         order: 18,
         name: "Papakōwhai",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 58.48,
         audioEnd: 59.79,
         altSpellings: ["papakowhai"],
@@ -1093,7 +1093,7 @@ export const zones = [
       {
         order: 21,
         name: "Paremata",
-        types: [lt.SUBURB],
+        types: ["suburb"],
       },
       {
         order: 22,
@@ -1120,7 +1120,7 @@ export const zones = [
       {
         order: 25,
         name: "Rānui",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 75.36,
         audioEnd: 76.45,
         altSpellings: ["ranui"],
@@ -1150,7 +1150,7 @@ export const zones = [
       {
         order: 29,
         name: "Tairangi",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 85.43,
         audioEnd: 86.44,
       },
@@ -1165,7 +1165,7 @@ export const zones = [
       {
         order: 31,
         name: "Takapūāhia",
-        types: [lt.STREAM, "marae"],
+        types: ["stream", "marae"],
         audioStart: 89.93,
         audioEnd: 91.67,
         altSpellings: ["takapuahia"],
@@ -1216,7 +1216,7 @@ export const zones = [
       {
         order: 38,
         name: "Te Whitinga",
-        types: [lt.SUBURB, "harbour"],
+        types: ["suburb", "harbour"],
         audioStart: 107.63,
         audioEnd: 108.65,
       },
@@ -1261,7 +1261,7 @@ export const zones = [
       {
         order: 44,
         name: "Waitangirua",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 122.1,
         audioEnd: 123.5,
       },
@@ -1306,7 +1306,7 @@ export const zones = [
       {
         order: 3,
         name: "Horokiri",
-        types: [lt.VALLEY],
+        types: ["valley"],
         audioStart: 12.13,
         audioEnd: 13.14,
       },
@@ -1351,7 +1351,7 @@ export const zones = [
       {
         order: 8,
         name: "Muri",
-        types: ["railway station", lt.SUBURB],
+        types: ["railway station", "suburb"],
         audioStart: 31,
         audioEnd: 31.7,
       },
@@ -1374,7 +1374,7 @@ export const zones = [
       {
         order: 11,
         name: "Ngārara",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 38.25,
         audioEnd: 39.25,
         altSpellings: ["ngarara"],
@@ -1478,7 +1478,7 @@ export const zones = [
       {
         order: 25,
         name: "Waimāpihi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 78.1,
         audioEnd: 79.71,
         altSpellings: ["waimapihi"],
@@ -1486,21 +1486,21 @@ export const zones = [
       {
         order: 26,
         name: "Waimarino",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 81.17,
         audioEnd: 82.44,
       },
       {
         order: 27,
         name: "Waimea",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 84.54,
         audioEnd: 85.41,
       },
       {
         order: 28,
         name: "Wainui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 87.56,
         audioEnd: 88.56,
       },
@@ -1521,7 +1521,7 @@ export const zones = [
       {
         order: 31,
         name: "Wharemauku",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 94.12,
         audioEnd: 95.36,
       },
@@ -1819,7 +1819,7 @@ export const zones = [
       {
         order: 1,
         name: "Hōkio",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 5.13,
         audioEnd: 5.79,
         altSpellings: ["hokio"],
@@ -1841,7 +1841,7 @@ export const zones = [
       {
         order: 4,
         name: "Kohitere",
-        types: [lt.SUBURB, "training centre"],
+        types: ["suburb", "training centre"],
         audioStart: 13.57,
         audioEnd: 14.4,
       },
@@ -1929,7 +1929,7 @@ export const zones = [
       {
         order: 16,
         name: "Weraroa",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 45.16,
         audioEnd: 45.75,
       },
@@ -2230,7 +2230,7 @@ export const zones = [
       {
         order: 36,
         name: "Wairarawa",
-        types: ["beach", lt.STREAM],
+        types: ["beach", "stream"],
         audioStart: 105.67,
         audioEnd: 106.57,
       },
@@ -2288,7 +2288,7 @@ export const zones = [
       {
         order: 4,
         name: "Awapuni",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 11.29,
         audioEnd: 12.14,
       },
@@ -2302,7 +2302,7 @@ export const zones = [
       {
         order: 6,
         name: "Hokowhitu",
-        types: [lt.SUBURB, "park"],
+        types: ["suburb", "park"],
         audioStart: 15.87,
         audioEnd: 16.43,
       },
@@ -2317,7 +2317,7 @@ export const zones = [
       {
         order: 8,
         name: "Kahuterawa",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 20.12,
         audioEnd: 21.19,
       },
@@ -2415,7 +2415,7 @@ export const zones = [
       {
         order: 21,
         name: "Tākaro",
-        types: [lt.SUBURB, "park"],
+        types: ["suburb", "park"],
         audioStart: 53.61,
         audioEnd: 54.38,
         altSpellings: ["takaro"],
@@ -2476,19 +2476,19 @@ export const zones = [
       {
         order: 29,
         name: "Tokomaru",
-        types: ["township", lt.STREAM],
+        types: ["township", "stream"],
         audioStart: 77.65,
         audioEnd: 78.33,
       },
       {
         order: 30,
         name: "Turitea",
-        types: ["dams", lt.STREAM],
+        types: ["dams", "stream"],
       },
       {
         order: 31,
         name: "Whakarongo",
-        types: ["township", lt.STREAM],
+        types: ["township", "stream"],
         audioStart: 80.73,
         audioEnd: 81.47,
       },
@@ -2554,7 +2554,7 @@ export const zones = [
       {
         order: 6,
         name: "Kawakawa",
-        types: [lt.STREAM, "reserve", "locality"],
+        types: ["stream", "reserve", "locality"],
         audioStart: 17.62,
         audioEnd: 18.46,
       },
@@ -2804,21 +2804,21 @@ export const zones = [
       {
         order: 10,
         name: "Kawakawa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 29.74,
         audioEnd: 30.57,
       },
       {
         order: 11,
         name: "Kawhatau",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 32.79,
         audioEnd: 33.6,
       },
       {
         order: 12,
         name: "Kiwitea",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 35.04,
         audioEnd: 35.96,
       },
@@ -2841,7 +2841,7 @@ export const zones = [
       {
         order: 15,
         name: "Mākiekie",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 43.41,
         audioEnd: 44.49,
         altSpellings: ["makiekie"],
@@ -2901,7 +2901,7 @@ export const zones = [
       {
         order: 23,
         name: "Mangawharariki",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 62.48,
         audioEnd: 63.57,
       },
@@ -3009,7 +3009,7 @@ export const zones = [
       {
         order: 37,
         name: "Pōrewa",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 101.18,
         audioEnd: 101.87,
         altSpellings: ["porewa"],
@@ -3017,7 +3017,7 @@ export const zones = [
       {
         order: 38,
         name: "Pōtairua",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 103.72,
         audioEnd: 104.81,
         altSpellings: ["potairua"],
@@ -3040,7 +3040,7 @@ export const zones = [
       {
         order: 41,
         name: "Pourangaki",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 112.46,
         audioEnd: 113.29,
       },
@@ -3063,7 +3063,7 @@ export const zones = [
       {
         order: 44,
         name: "Rangataua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 120.52,
         audioEnd: 121.44,
       },
@@ -3200,14 +3200,14 @@ export const zones = [
       {
         order: 63,
         name: "Waitapu",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 177.22,
         audioEnd: 177.78,
       },
       {
         order: 64,
         name: "Waituna",
-        types: [lt.STREAM, "locality", "locality"],
+        types: ["stream", "locality", "locality"],
         audioStart: 179.51,
         audioEnd: 180.4,
       },
@@ -3221,7 +3221,7 @@ export const zones = [
       {
         order: 66,
         name: "Tūtūnui",
-        types: [lt.STREAM, "locality", "locality"],
+        types: ["stream", "locality", "locality"],
         audioStart: 163.49,
         audioEnd: 164.68,
         altSpellings: ["tutūnui"],
@@ -3282,14 +3282,14 @@ export const zones = [
       {
         order: 6,
         name: "Makohine",
-        types: [lt.STREAM, "locality", "viaduct"],
+        types: ["stream", "locality", "viaduct"],
         audioStart: 17.32,
         audioEnd: 18.49,
       },
       {
         order: 7,
         name: "Mangaio",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 20.06,
         audioEnd: 20.89,
       },
@@ -3334,7 +3334,7 @@ export const zones = [
       {
         order: 13,
         name: "Ōarenga",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 35.36,
         audioEnd: 36.3,
         altSpellings: ["oarenga"],
@@ -3557,14 +3557,14 @@ export const zones = [
       {
         order: 1,
         name: "Ararawa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 7.31,
         audioEnd: 8.23,
       },
       {
         order: 2,
         name: "Awarua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 9.88,
         audioEnd: 10.91,
       },
@@ -3609,7 +3609,7 @@ export const zones = [
       {
         order: 8,
         name: "Koukoupō",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 38.23,
         audioEnd: 39.52,
         altSpellings: ["koukoupo"],
@@ -3625,7 +3625,7 @@ export const zones = [
       {
         order: 10,
         name: "Mākōtuku",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 45.27,
         audioEnd: 46.74,
         altSpellings: ["makotuku"],
@@ -3649,7 +3649,7 @@ export const zones = [
       {
         order: 13,
         name: "Mangāio",
-        types: [lt.STREAM, "falls"],
+        types: ["stream", "falls"],
         audioStart: 57.69,
         audioEnd: 58.77,
         altSpellings: ["mangaio"],
@@ -3657,14 +3657,14 @@ export const zones = [
       {
         order: 14,
         name: "Mangaehuehu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 60.57,
         audioEnd: 61.83,
       },
       {
         order: 15,
         name: "Mangaetoroa",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 63.7,
         audioEnd: 65,
       },
@@ -3685,7 +3685,7 @@ export const zones = [
       {
         order: 18,
         name: "Mangōihe",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 73.66,
         audioEnd: 74.99,
         altSpellings: ["mangoihe"],
@@ -3927,7 +3927,7 @@ export const zones = [
       {
         order: 4,
         name: "Mākirikiri",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 16.4,
         audioEnd: 17.78,
         altSpellings: ["makirikiri"],
@@ -4014,7 +4014,7 @@ export const zones = [
       {
         order: 15,
         name: "Taharua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 53.82,
         audioEnd: 54.74,
       },
@@ -4120,7 +4120,7 @@ export const zones = [
       {
         order: 7,
         name: "Hinemāiaia",
-        types: ["lake", lt.STREAM, "power station"],
+        types: ["lake", "stream", "power station"],
         audioStart: 24.92,
         audioEnd: 26.46,
         altSpellings: ["hinemaiaia"],
@@ -4158,7 +4158,7 @@ export const zones = [
       {
         order: 12,
         name: "Ketetahi",
-        types: ["springs", lt.STREAM],
+        types: ["springs", "stream"],
         audioStart: 41.29,
         audioEnd: 42.32,
       },
@@ -4180,7 +4180,7 @@ export const zones = [
       {
         order: 15,
         name: "Mākahikātoa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 50.91,
         audioEnd: 52.43,
         altSpellings: ["makahikātoa"],
@@ -4188,7 +4188,7 @@ export const zones = [
       {
         order: 16,
         name: "Mangakōura",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 54.58,
         audioEnd: 55.75,
         altSpellings: ["mangakoura"],
@@ -4196,14 +4196,14 @@ export const zones = [
       {
         order: 17,
         name: "Mangatoetoeiti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 57.86,
         audioEnd: 59.64,
       },
       {
         order: 18,
         name: "Mangatoetoenui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 61.86,
         audioEnd: 63.59,
       },
@@ -4284,7 +4284,7 @@ export const zones = [
       {
         order: 29,
         name: "Ōtūrere",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 99.58,
         audioEnd: 100.77,
         altSpellings: ["oturere"],
@@ -4348,7 +4348,7 @@ export const zones = [
       {
         order: 37,
         name: "Puketarata",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 126.04,
         audioEnd: 127.21,
       },
@@ -4436,7 +4436,7 @@ export const zones = [
       {
         order: 48,
         name: "Te Ārero",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 163.36,
         audioEnd: 164.46,
         altSpellings: ["te arero"],
@@ -4569,7 +4569,7 @@ export const zones = [
       {
         order: 66,
         name: "Waihōhonu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 224.14,
         audioEnd: 225.47,
         altSpellings: ["waihohonu"],
@@ -4577,7 +4577,7 @@ export const zones = [
       {
         order: 67,
         name: "Waikato",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 227.83,
         audioEnd: 228.83,
       },
@@ -4702,14 +4702,14 @@ export const zones = [
       {
         order: 11,
         name: "Mangakara",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 30.31,
         audioEnd: 31.09,
       },
       {
         order: 12,
         name: "Mangatā",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 32.51,
         audioEnd: 33.37,
         altSpellings: ["mangata"],
@@ -4768,7 +4768,7 @@ export const zones = [
       {
         order: 20,
         name: "Nukuhau",
-        types: ["marae", lt.SUBURB],
+        types: ["marae", "suburb"],
         audioStart: 48.09,
         audioEnd: 48.86,
       },
@@ -4791,7 +4791,7 @@ export const zones = [
       {
         order: 23,
         name: "Ōnekeneke",
-        types: [lt.STREAM, "terraces"],
+        types: ["stream", "terraces"],
         audioStart: 53.68,
         audioEnd: 54.72,
         altSpellings: ["onekeneke"],
@@ -4815,7 +4815,7 @@ export const zones = [
       {
         order: 26,
         name: "Ōruapūraho",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 60.15,
         audioEnd: 61.58,
         altSpellings: ["oruapuraho"],
@@ -4853,7 +4853,7 @@ export const zones = [
       {
         order: 31,
         name: "Pueto",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 73.79,
         audioEnd: 74.54,
       },
@@ -4897,7 +4897,7 @@ export const zones = [
       {
         order: 37,
         name: "Tauhara",
-        types: ["mountain", lt.SUBURB, "centre"],
+        types: ["mountain", "suburb", "centre"],
         audioStart: 87.63,
         audioEnd: 88.33,
       },
@@ -5122,14 +5122,14 @@ export const zones = [
       {
         order: 9,
         name: "Mangakino",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 21.73,
         audioEnd: 22.78,
       },
       {
         order: 10,
         name: "Mangatāhae",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 24.21,
         audioEnd: 25.43,
         altSpellings: ["mangatahae"],
@@ -5310,7 +5310,7 @@ export const zones = [
       {
         order: 34,
         name: "Waihora",
-        types: [lt.STREAM, "bay"],
+        types: ["stream", "bay"],
         audioStart: 84.81,
         audioEnd: 85.64,
       },
@@ -5338,14 +5338,14 @@ export const zones = [
       {
         order: 38,
         name: "Whanganui",
-        types: ["bay", lt.STREAM],
+        types: ["bay", "stream"],
         audioStart: 93.61,
         audioEnd: 94.57,
       },
       {
         order: 39,
         name: "Whareroa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 95.71,
         audioEnd: 96.52,
       },
@@ -5404,7 +5404,7 @@ export const zones = [
       {
         order: 7,
         name: "Mangamāhu",
-        types: [lt.STREAM, "township"],
+        types: ["stream", "township"],
         audioStart: 22.5,
         audioEnd: 24.2,
         altSpellings: ["mangamahu"],
@@ -5412,7 +5412,7 @@ export const zones = [
       {
         order: 8,
         name: "Mangatīpona",
-        types: ["range", lt.STREAM],
+        types: ["range", "stream"],
         audioStart: 26.1,
         audioEnd: 27.8,
         altSpellings: ["mangatipona"],
@@ -5605,7 +5605,7 @@ export const zones = [
       {
         order: 1,
         name: "Ārāmoho",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 5.2,
         audioEnd: 6.2,
         altSpellings: ["aramoho"],
@@ -5621,7 +5621,7 @@ export const zones = [
       {
         order: 3,
         name: "Ahuahu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 9.84,
         audioEnd: 10.9,
       },
@@ -5732,7 +5732,7 @@ export const zones = [
       {
         order: 18,
         name: "Mangamāhu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 52.13,
         audioEnd: 53.23,
         altSpellings: ["mangamahu"],
@@ -5740,7 +5740,7 @@ export const zones = [
       {
         order: 19,
         name: "Mangapapa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 55.23,
         audioEnd: 56.25,
       },
@@ -5872,7 +5872,7 @@ export const zones = [
       {
         order: 37,
         name: "Pūrua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 105.88,
         audioEnd: 106.61,
         altSpellings: ["purua"],
@@ -5997,7 +5997,7 @@ export const zones = [
       {
         order: 54,
         name: "Upokongaro",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 156.65,
         audioEnd: 157.71,
       },
@@ -6032,7 +6032,7 @@ export const zones = [
       {
         order: 59,
         name: "Whangamōmona",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 171.09,
         audioEnd: 172.19,
         altSpellings: ["whangamomona"],
@@ -6115,7 +6115,7 @@ export const zones = [
       {
         order: 8,
         name: "Makatote",
-        types: [lt.STREAM, "viaduct"],
+        types: ["stream", "viaduct"],
         audioStart: 27.53,
         audioEnd: 28.44,
       },
@@ -6151,7 +6151,7 @@ export const zones = [
       {
         order: 13,
         name: "Mangaturuturu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 41.57,
         audioEnd: 42.64,
       },
@@ -6224,7 +6224,7 @@ export const zones = [
       {
         order: 22,
         name: "Ōtūkōpiri",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 70.46,
         audioEnd: 71.72,
         altSpellings: ["otukopiri"],
@@ -6350,7 +6350,7 @@ export const zones = [
       {
         order: 39,
         name: "Tāngāhoe",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 119.51,
         audioEnd: 120.52,
         altSpellings: ["tangāhoe"],
@@ -6542,7 +6542,7 @@ export const zones = [
       {
         order: 10,
         name: "Ketetahi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 20.43,
         audioEnd: 21.3,
       },
@@ -6702,7 +6702,7 @@ export const zones = [
       {
         order: 31,
         name: "Piopiotea",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 57.53,
         audioEnd: 58.63,
       },
@@ -6738,7 +6738,7 @@ export const zones = [
       {
         order: 36,
         name: "Rangaroa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 67.42,
         audioEnd: 68.23,
       },
@@ -6783,7 +6783,7 @@ export const zones = [
       {
         order: 42,
         name: "Taringamotu",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 79.32,
         audioEnd: 80.27,
       },
@@ -7009,7 +7009,7 @@ export const zones = [
       {
         order: 2,
         name: "Heao",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 6.93,
         audioEnd: 7.63,
       },
@@ -7068,7 +7068,7 @@ export const zones = [
       {
         order: 10,
         name: "Ōtāhu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 21.03,
         audioEnd: 21.77,
         altSpellings: ["otahu"],
@@ -7157,7 +7157,7 @@ export const zones = [
       {
         order: 22,
         name: "Toetoe",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 43.31,
         audioEnd: 44.27,
       },
@@ -7186,7 +7186,7 @@ export const zones = [
       {
         order: 26,
         name: "Waikākā",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 51.77,
         audioEnd: 52.9,
         altSpellings: ["waikakā"],
@@ -7201,7 +7201,7 @@ export const zones = [
       {
         order: 28,
         name: "Waitangata",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 55.75,
         audioEnd: 56.83,
       },
@@ -7282,14 +7282,14 @@ export const zones = [
       {
         order: 8,
         name: "Mangaehu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 19.96,
         audioEnd: 20.94,
       },
       {
         order: 9,
         name: "Mangatuku",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 21.79,
         audioEnd: 22.91,
       },
@@ -7503,7 +7503,7 @@ export const zones = [
       {
         order: 38,
         name: "Whangamōmona",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 85.87,
         audioEnd: 86.75,
         altSpellings: ["whangamomona"],
@@ -7547,7 +7547,7 @@ export const zones = [
       {
         order: 5,
         name: "Kai-iwi",
-        types: [lt.STREAM, "marae", "marae", "locality"],
+        types: ["stream", "marae", "marae", "locality"],
         audioStart: 16.67,
         audioEnd: 17.47,
       },
@@ -7584,7 +7584,7 @@ export const zones = [
       {
         order: 10,
         name: "Kauarapaoa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 31.87,
         audioEnd: 32.93,
       },
@@ -7612,7 +7612,7 @@ export const zones = [
       {
         order: 14,
         name: "Mākākaho",
-        types: [lt.STREAM, "bridge"],
+        types: ["stream", "bridge"],
         audioStart: 43.27,
         audioEnd: 44.47,
         altSpellings: ["makākaho"],
@@ -7635,7 +7635,7 @@ export const zones = [
       {
         order: 17,
         name: "Mangapapa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 52.1,
         audioEnd: 53.02,
       },
@@ -7678,7 +7678,7 @@ export const zones = [
       {
         order: 23,
         name: "Moeawatea",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 70.31,
         audioEnd: 71.42,
       },
@@ -7700,7 +7700,7 @@ export const zones = [
       {
         order: 26,
         name: "Moumāhaki",
-        types: [lt.STREAM, "marae", "locality"],
+        types: ["stream", "marae", "locality"],
         audioStart: 78.35,
         audioEnd: 79.48,
         altSpellings: ["moumahaki"],
@@ -7745,7 +7745,7 @@ export const zones = [
       {
         order: 32,
         name: "Ōkehu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 94.92,
         audioEnd: 95.69,
         altSpellings: ["okehu"],
@@ -7769,7 +7769,7 @@ export const zones = [
       {
         order: 34,
         name: "Ōmāhina",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 102.53,
         audioEnd: 103.45,
         altSpellings: ["omahina"],
@@ -7777,7 +7777,7 @@ export const zones = [
       {
         order: 35,
         name: "Ōmaru",
-        types: [lt.STREAM, "falls"],
+        types: ["stream", "falls"],
         audioStart: 105.57,
         audioEnd: 106.22,
         altSpellings: ["omaru"],
@@ -7856,7 +7856,7 @@ export const zones = [
       {
         order: 45,
         name: "Pōkeka",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 136.9,
         audioEnd: 137.63,
         altSpellings: ["pokeka"],
@@ -8033,7 +8033,7 @@ export const zones = [
       {
         order: 68,
         name: "Tokomaru",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 210.61,
         audioEnd: 211.36,
       },
@@ -8108,7 +8108,7 @@ export const zones = [
       {
         order: 77,
         name: "Weraweraonga",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 239,
         audioEnd: 240.02,
       },
@@ -8396,7 +8396,7 @@ export const zones = [
       {
         order: 33,
         name: "Tāngāhoe",
-        types: ["river", lt.VALLEY],
+        types: ["river", "valley"],
         audioStart: 64.37,
         audioEnd: 65.48,
         altSpellings: ["tangāhoe"],
@@ -8621,7 +8621,7 @@ export const zones = [
       {
         order: 9,
         name: "Kaupokonui",
-        types: [lt.STREAM, "beach", "locality"],
+        types: ["stream", "beach", "locality"],
         audioStart: 28.78,
         audioEnd: 30.15,
       },
@@ -8687,7 +8687,7 @@ export const zones = [
       {
         order: 18,
         name: "Mangawhero",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 52.84,
         audioEnd: 53.81,
       },
@@ -8734,7 +8734,7 @@ export const zones = [
       {
         order: 24,
         name: "Ōuri",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 69.23,
         audioEnd: 70.21,
         altSpellings: ["ouri"],
@@ -8742,7 +8742,7 @@ export const zones = [
       {
         order: 25,
         name: "Otakeho",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 71.65,
         audioEnd: 72.56,
       },
@@ -8764,7 +8764,7 @@ export const zones = [
       {
         order: 28,
         name: "Punehu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 80.33,
         audioEnd: 80.86,
       },
@@ -8786,7 +8786,7 @@ export const zones = [
       {
         order: 31,
         name: "Taikātū",
-        types: [lt.STREAM, "marae"],
+        types: ["stream", "marae"],
         audioStart: 90.08,
         audioEnd: 91.42,
         altSpellings: ["taikatu"],
@@ -8801,7 +8801,7 @@ export const zones = [
       {
         order: 33,
         name: "Taungātara",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 95.68,
         audioEnd: 96.93,
         altSpellings: ["taungatara"],
@@ -8920,7 +8920,7 @@ export const zones = [
       {
         order: 5,
         name: "Kātikarā",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 17.14,
         audioEnd: 18.52,
         altSpellings: ["katikarā"],
@@ -8928,7 +8928,7 @@ export const zones = [
       {
         order: 6,
         name: "Kaihihī",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 20.69,
         audioEnd: 22.01,
         altSpellings: ["kaihihi"],
@@ -8943,7 +8943,7 @@ export const zones = [
       {
         order: 8,
         name: "Kapoaiaia",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 27.84,
         audioEnd: 29.23,
       },
@@ -9015,7 +9015,7 @@ export const zones = [
       {
         order: 18,
         name: "Ōākura",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 59.08,
         audioEnd: 60.24,
         altSpellings: ["oakura"],
@@ -9023,7 +9023,7 @@ export const zones = [
       {
         order: 19,
         name: "Ōaoiti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 62.2,
         audioEnd: 63.52,
         altSpellings: ["oaoiti"],
@@ -9031,7 +9031,7 @@ export const zones = [
       {
         order: 20,
         name: "Ōaonui",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 65.51,
         audioEnd: 66.72,
         altSpellings: ["oaonui"],
@@ -9039,7 +9039,7 @@ export const zones = [
       {
         order: 21,
         name: "Ōkahu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 69.06,
         audioEnd: 70.06,
         altSpellings: ["okahu"],
@@ -9138,7 +9138,7 @@ export const zones = [
       {
         order: 33,
         name: "Pūngaereere",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 109.02,
         audioEnd: 110.6,
         altSpellings: ["pungaereere"],
@@ -9185,7 +9185,7 @@ export const zones = [
       {
         order: 39,
         name: "Taungātara",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 127.06,
         audioEnd: 128.33,
         altSpellings: ["taungatara"],
@@ -9275,14 +9275,14 @@ export const zones = [
       {
         order: 51,
         name: "Waitotoroa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 168.07,
         audioEnd: 169.24,
       },
       {
         order: 52,
         name: "Waiweranui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 171.27,
         audioEnd: 172.71,
       },
@@ -9312,7 +9312,7 @@ export const zones = [
       {
         order: 1,
         name: "Huatoki",
-        types: [lt.STREAM, "domain"],
+        types: ["stream", "domain"],
         audioStart: 5.13,
         audioEnd: 5.91,
       },
@@ -9400,7 +9400,7 @@ export const zones = [
       {
         order: 13,
         name: "Moturoa",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 38.59,
         audioEnd: 39.44,
       },
@@ -9438,7 +9438,7 @@ export const zones = [
       {
         order: 17,
         name: "Ngātataroa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 52.89,
         audioEnd: 53.9,
         altSpellings: ["ngatataroa"],
@@ -9614,7 +9614,7 @@ export const zones = [
       {
         order: 40,
         name: "Tehenui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 119.39,
         audioEnd: 120.11,
       },
@@ -9642,7 +9642,7 @@ export const zones = [
       {
         order: 44,
         name: "Waimea",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 129.03,
         audioEnd: 129.78,
       },
@@ -9686,7 +9686,7 @@ export const zones = [
       {
         order: 50,
         name: "Waiwakaiho",
-        types: [lt.STREAM, lt.SUBURB],
+        types: ["stream", "suburb"],
         audioStart: 144.59,
         audioEnd: 145.53,
       },
@@ -9739,7 +9739,7 @@ export const zones = [
       {
         order: 5,
         name: "Mīmī",
-        types: [lt.STREAM],
+        types: ["stream"],
         altSpellings: ["mimī"],
         altNames: [
           {
@@ -9888,7 +9888,7 @@ export const zones = [
       {
         order: 6,
         name: "Mangaongaonga",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 19.07,
         audioEnd: 20.18,
       },
@@ -10093,14 +10093,14 @@ export const zones = [
       {
         order: 13,
         name: "Kohunui",
-        types: [lt.STREAM, "marae", "locality"],
+        types: ["stream", "marae", "locality"],
         audioStart: 34.98,
         audioEnd: 35.77,
       },
       {
         order: 14,
         name: "Mākara",
-        types: ["range", lt.STREAM],
+        types: ["range", "stream"],
         audioStart: 37.5,
         audioEnd: 38.32,
         altSpellings: ["makara"],
@@ -10184,7 +10184,7 @@ export const zones = [
       {
         order: 25,
         name: "Ōpouawe",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 64.83,
         audioEnd: 65.93,
         altSpellings: ["opouawe"],
@@ -10283,7 +10283,7 @@ export const zones = [
       {
         order: 37,
         name: "Rimutaka",
-        types: [],
+        types: ["range"],
         audioStart: 99.09,
         audioEnd: 99.97,
         altNames: [
@@ -10298,7 +10298,7 @@ export const zones = [
       {
         order: 38,
         name: "Ruakōkopātuna",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 103.86,
         audioEnd: 105.5,
         altSpellings: ["ruakokopatuna"],
@@ -10335,7 +10335,7 @@ export const zones = [
       {
         order: 43,
         name: "Tauherenīkau",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 117.23,
         audioEnd: 118.46,
         altSpellings: ["tauherenikau"],
@@ -10435,7 +10435,7 @@ export const zones = [
       {
         order: 55,
         name: "Turanganui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 154.35,
         audioEnd: 155.24,
       },
@@ -10464,14 +10464,14 @@ export const zones = [
       {
         order: 59,
         name: "Waihoroi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 164.56,
         audioEnd: 165.38,
       },
       {
         order: 60,
         name: "Wainuiōrū",
-        types: [lt.VALLEY],
+        types: ["valley"],
         audioStart: 167.34,
         audioEnd: 168.37,
         altSpellings: ["wainuioru"],
@@ -10479,7 +10479,7 @@ export const zones = [
       {
         order: 61,
         name: "Waiōrongomai",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 170.24,
         audioEnd: 171.36,
         altSpellings: ["waiorongomai"],
@@ -10670,7 +10670,7 @@ export const zones = [
       {
         order: 15,
         name: "Mangatārere",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 39.6,
         audioEnd: 40.79,
         altSpellings: ["mangatarere"],
@@ -10895,7 +10895,7 @@ export const zones = [
       {
         order: 45,
         name: "Waipoua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 116.59,
         audioEnd: 117.32,
       },
@@ -10977,7 +10977,7 @@ export const zones = [
       {
         order: 7,
         name: "Kōpuaranga",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 19.72,
         audioEnd: 20.45,
         altSpellings: ["kopuaranga"],
@@ -10985,7 +10985,7 @@ export const zones = [
       {
         order: 8,
         name: "Mākākahi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 21.88,
         audioEnd: 22.79,
         altSpellings: ["makākahi"],
@@ -11079,7 +11079,7 @@ export const zones = [
       {
         order: 20,
         name: "Tanawa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 48.44,
         audioEnd: 49.08,
       },
@@ -11107,7 +11107,7 @@ export const zones = [
       {
         order: 24,
         name: "Te Hoe",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 57.44,
         audioEnd: 58.02,
       },
@@ -11121,7 +11121,7 @@ export const zones = [
       {
         order: 26,
         name: "Tīnui",
-        types: [lt.STREAM, lt.VALLEY, "locality"],
+        types: ["stream", "valley", "locality"],
         audioStart: 61.65,
         audioEnd: 62.21,
         altSpellings: ["tinui"],
@@ -11144,7 +11144,7 @@ export const zones = [
       {
         order: 28,
         name: "Whakataki",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 67.77,
         audioEnd: 68.55,
       },
@@ -11204,7 +11204,7 @@ export const zones = [
       {
         order: 6,
         name: "Mātaikona",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 18.74,
         audioEnd: 19.83,
         altSpellings: ["mataikona"],
@@ -11228,7 +11228,7 @@ export const zones = [
       {
         order: 9,
         name: "Pākowhai",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 26.68,
         audioEnd: 27.7,
         altSpellings: ["pakowhai"],
@@ -11282,7 +11282,7 @@ export const zones = [
       {
         order: 16,
         name: "Waihoki",
-        types: [lt.STREAM, lt.VALLEY, "locality"],
+        types: ["stream", "valley", "locality"],
         audioStart: 44.6,
         audioEnd: 45.4,
       },
@@ -11326,7 +11326,7 @@ export const zones = [
       {
         order: 5,
         name: "Keremu-tū-pou",
-        types: ["hill", lt.STREAM],
+        types: ["hill", "stream"],
         audioStart: 18.65,
         audioEnd: 19.88,
         altSpellings: ["keremu-tu-pou"],
@@ -11389,7 +11389,7 @@ export const zones = [
       {
         order: 11,
         name: "Mākākahi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 28.05,
         audioEnd: 29.04,
         altSpellings: ["makākahi"],
@@ -11397,7 +11397,7 @@ export const zones = [
       {
         order: 12,
         name: "Mākuri",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 30.4,
         audioEnd: 31.33,
         altSpellings: ["makuri"],
@@ -11448,7 +11448,7 @@ export const zones = [
       {
         order: 19,
         name: "Mangaone",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 46,
         audioEnd: 47.12,
       },
@@ -11632,7 +11632,7 @@ export const zones = [
       {
         order: 10,
         name: "Māharahara",
-        types: ["peak", lt.STREAM, "locality"],
+        types: ["peak", "stream", "locality"],
         audioStart: 30.31,
         audioEnd: 31.18,
         altSpellings: ["maharahara"],
@@ -11648,7 +11648,7 @@ export const zones = [
       {
         order: 12,
         name: "Mākōkako",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 35.96,
         audioEnd: 37.13,
         altSpellings: ["makokako"],
@@ -11680,14 +11680,14 @@ export const zones = [
       {
         order: 16,
         name: "Manga-a-toro",
-        types: [lt.STREAM, "locality", lt.VALLEY],
+        types: ["stream", "locality", "valley"],
         audioStart: 47.64,
         audioEnd: 48.77,
       },
       {
         order: 17,
         name: "Manga-atua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 50.78,
         audioEnd: 51.78,
       },
@@ -11701,14 +11701,14 @@ export const zones = [
       {
         order: 19,
         name: "Mangamanaia",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 56.23,
         audioEnd: 57.21,
       },
       {
         order: 20,
         name: "Mangapuaka",
-        types: [lt.STREAM, "hill"],
+        types: ["stream", "hill"],
         audioStart: 58.96,
         audioEnd: 59.81,
       },
@@ -11722,7 +11722,7 @@ export const zones = [
       {
         order: 22,
         name: "Mangaterā",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 64.01,
         audioEnd: 64.99,
         altSpellings: ["mangatera"],
@@ -11730,14 +11730,14 @@ export const zones = [
       {
         order: 23,
         name: "Mangatewai-iti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 67.16,
         audioEnd: 68.42,
       },
       {
         order: 24,
         name: "Mangatewai-nui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 70.18,
         audioEnd: 71.47,
       },
@@ -11751,7 +11751,7 @@ export const zones = [
       {
         order: 26,
         name: "Mangawhero",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 75.79,
         audioEnd: 76.72,
       },
@@ -11963,7 +11963,7 @@ export const zones = [
       {
         order: 53,
         name: "Tapuata",
-        types: [lt.STREAM],
+        types: ["stream"],
       },
       {
         order: 54,
@@ -12130,7 +12130,7 @@ export const zones = [
       {
         order: 72,
         name: "Waiaruhe",
-        types: [lt.STREAM, "falls"],
+        types: ["stream", "falls"],
         audioStart: 210.47,
         audioEnd: 211.38,
       },
@@ -12152,7 +12152,7 @@ export const zones = [
       {
         order: 75,
         name: "Wainui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 217.54,
         audioEnd: 218.5,
       },
@@ -12189,7 +12189,7 @@ export const zones = [
       {
         order: 80,
         name: "Whakaruatapu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 230.28,
         audioEnd: 231.45,
       },
@@ -12227,7 +12227,7 @@ export const zones = [
       {
         order: 2,
         name: "Huatokitoki",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 7.02,
         audioEnd: 8.34,
       },
@@ -12241,7 +12241,7 @@ export const zones = [
       {
         order: 4,
         name: "Mangamaire",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 11.33,
         audioEnd: 12.53,
       },
@@ -12316,7 +12316,7 @@ export const zones = [
       {
         order: 14,
         name: "Taumata-whakatangihanga-koauau-ō-Tamatea-Pōkai-Whenua-ki-tana-tahu",
-        types: [],
+        types: ["hill"],
         altSpellings: [
           "taumata-whakatangihanga-koauau-o-tamatea-pōkai-whenua-ki-tana-tahu",
         ],
@@ -12334,7 +12334,7 @@ export const zones = [
       {
         order: 15,
         name: "Taurekaitai",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 49.24,
         audioEnd: 50.65,
       },
@@ -12458,7 +12458,7 @@ export const zones = [
       {
         order: 12,
         name: "Māharakeke",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 32.21,
         audioEnd: 33.17,
         altSpellings: ["maharakeke"],
@@ -12466,7 +12466,7 @@ export const zones = [
       {
         order: 13,
         name: "Mākāretu",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 35.06,
         audioEnd: 36.04,
         altSpellings: ["makāretu"],
@@ -12474,21 +12474,21 @@ export const zones = [
       {
         order: 14,
         name: "Mahurauiti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 38.16,
         audioEnd: 39.26,
       },
       {
         order: 15,
         name: "Mahuraunui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 41.08,
         audioEnd: 41.98,
       },
       {
         order: 16,
         name: "Makaroro",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 43.49,
         audioEnd: 44.25,
       },
@@ -12503,7 +12503,7 @@ export const zones = [
       {
         order: 18,
         name: "Mangakurī",
-        types: [lt.STREAM, "beach"],
+        types: ["stream", "beach"],
         audioStart: 48.03,
         audioEnd: 48.83,
         altSpellings: ["mangakuri"],
@@ -12511,14 +12511,14 @@ export const zones = [
       {
         order: 19,
         name: "Mangamauku",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 50.73,
         audioEnd: 51.71,
       },
       {
         order: 20,
         name: "Mangaōnuku",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 53.69,
         audioEnd: 54.49,
         altSpellings: ["mangaonuku"],
@@ -12526,7 +12526,7 @@ export const zones = [
       {
         order: 21,
         name: "Mangaōrapa",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 56.02,
         audioEnd: 56.99,
         altSpellings: ["mangaorapa"],
@@ -12534,7 +12534,7 @@ export const zones = [
       {
         order: 22,
         name: "Mangapatē-iti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 58.34,
         audioEnd: 59.67,
         altSpellings: ["mangapate-iti"],
@@ -12542,7 +12542,7 @@ export const zones = [
       {
         order: 23,
         name: "Mangapatē-nui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 61.28,
         audioEnd: 62.42,
         altSpellings: ["mangapate-nui"],
@@ -12558,7 +12558,7 @@ export const zones = [
       {
         order: 25,
         name: "Mangatewai",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 66.8,
         audioEnd: 67.68,
       },
@@ -12778,7 +12778,7 @@ export const zones = [
       {
         order: 55,
         name: "Tukipō",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 136.58,
         audioEnd: 137.37,
         altSpellings: ["tukipo"],
@@ -12801,7 +12801,7 @@ export const zones = [
       {
         order: 58,
         name: "Wai-iti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 142.48,
         audioEnd: 143.24,
       },
@@ -12861,7 +12861,7 @@ export const zones = [
       {
         order: 1,
         name: "Ākina",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 5.68,
         audioEnd: 6.54,
         altSpellings: ["akina"],
@@ -12944,7 +12944,7 @@ export const zones = [
       {
         order: 12,
         name: "Māhora",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 28.17,
         audioEnd: 28.93,
         altSpellings: ["mahora"],
@@ -12966,7 +12966,7 @@ export const zones = [
       {
         order: 15,
         name: "Mangateretere",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 33.91,
         audioEnd: 35.05,
       },
@@ -13030,7 +13030,7 @@ export const zones = [
       {
         order: 24,
         name: "Ōhara",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 51.71,
         audioEnd: 52.55,
         altSpellings: ["ohara"],
@@ -13068,7 +13068,7 @@ export const zones = [
       {
         order: 29,
         name: "Poporangi",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 62.35,
         audioEnd: 63.22,
       },
@@ -13118,7 +13118,7 @@ export const zones = [
       {
         order: 36,
         name: "Raureka",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 76.52,
         audioEnd: 77.35,
       },
@@ -13278,7 +13278,7 @@ export const zones = [
       {
         order: 1,
         name: "Ahuriri",
-        types: ["river", lt.SUBURB],
+        types: ["river", "suburb"],
         audioStart: 5.74,
         audioEnd: 6.65,
       },
@@ -13292,7 +13292,7 @@ export const zones = [
       {
         order: 3,
         name: "Awatoto",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 9.65,
         audioEnd: 10.46,
       },
@@ -13371,7 +13371,7 @@ export const zones = [
       {
         order: 14,
         name: "Kareaara",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 31.21,
         audioEnd: 32.23,
       },
@@ -13423,7 +13423,7 @@ export const zones = [
       {
         order: 21,
         name: "Makahū",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 46.12,
         audioEnd: 46.97,
         altSpellings: ["makahu"],
@@ -13438,7 +13438,7 @@ export const zones = [
       {
         order: 23,
         name: "Mangatutu",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 50.22,
         audioEnd: 50.87,
       },
@@ -13453,14 +13453,14 @@ export const zones = [
       {
         order: 25,
         name: "Maraenui",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 54.68,
         audioEnd: 55.91,
       },
       {
         order: 26,
         name: "Marewa",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 56.8,
         audioEnd: 57.53,
       },
@@ -13527,7 +13527,7 @@ export const zones = [
       {
         order: 35,
         name: "Onekawa",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 74.67,
         audioEnd: 75.54,
       },
@@ -13550,7 +13550,7 @@ export const zones = [
       {
         order: 38,
         name: "Ōkawa",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 79.44,
         audioEnd: 80.31,
         altSpellings: ["okawa"],
@@ -13661,7 +13661,7 @@ export const zones = [
       {
         order: 52,
         name: "Pirimai",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 105.91,
         audioEnd: 106.72,
       },
@@ -13790,7 +13790,7 @@ export const zones = [
       {
         order: 69,
         name: "Taipō",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 140.52,
         audioEnd: 141.45,
         altSpellings: ["taipo"],
@@ -13798,7 +13798,7 @@ export const zones = [
       {
         order: 70,
         name: "Tamatea",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 142.29,
         audioEnd: 143.25,
       },
@@ -13843,7 +13843,7 @@ export const zones = [
       {
         order: 76,
         name: "Te Awa",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 154.01,
         audioEnd: 154.66,
       },
@@ -14173,7 +14173,7 @@ export const zones = [
       {
         order: 14,
         name: "Kiwi",
-        types: [lt.VALLEY],
+        types: ["valley"],
         audioStart: 25.6,
         audioEnd: 26.33,
       },
@@ -14203,7 +14203,7 @@ export const zones = [
       {
         order: 18,
         name: "Mākaretū",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 31.77,
         audioEnd: 32.88,
         altSpellings: ["makaretu"],
@@ -14225,14 +14225,14 @@ export const zones = [
       {
         order: 20,
         name: "Mangaone",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 34.85,
         audioEnd: 35.8,
       },
       {
         order: 21,
         name: "Mangapōike",
-        types: [lt.VALLEY, "river", "locality"],
+        types: ["valley", "river", "locality"],
         audioStart: 36.2,
         audioEnd: 37.4,
         altSpellings: ["mangapoike"],
@@ -14240,7 +14240,7 @@ export const zones = [
       {
         order: 22,
         name: "Mangarangiora",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 38.11,
         audioEnd: 39.4,
       },
@@ -14269,7 +14269,7 @@ export const zones = [
       {
         order: 26,
         name: "Matakūhia",
-        types: ["range", lt.STREAM],
+        types: ["range", "stream"],
         audioStart: 45.14,
         audioEnd: 46.27,
         altSpellings: ["matakuhia"],
@@ -14500,7 +14500,7 @@ export const zones = [
       {
         order: 56,
         name: "Ruakituri",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 96.02,
         audioEnd: 97.07,
       },
@@ -14521,7 +14521,7 @@ export const zones = [
       {
         order: 59,
         name: "Tāhaenui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 100.89,
         audioEnd: 101.79,
         altSpellings: ["tahaenui"],
@@ -14537,7 +14537,7 @@ export const zones = [
       {
         order: 61,
         name: "Tāwhara",
-        types: [lt.VALLEY],
+        types: ["valley"],
         audioStart: 104.61,
         audioEnd: 105.44,
         altSpellings: ["tawhara"],
@@ -14739,7 +14739,7 @@ export const zones = [
       {
         order: 89,
         name: "Waiātai",
-        types: [lt.VALLEY, "reserve"],
+        types: ["valley", "reserve"],
         audioStart: 156.03,
         audioEnd: 157.01,
         altSpellings: ["waiatai"],
@@ -14754,7 +14754,7 @@ export const zones = [
       {
         order: 91,
         name: "Waihī",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 159.91,
         audioEnd: 160.84,
         altSpellings: ["waihi"],
@@ -14762,7 +14762,7 @@ export const zones = [
       {
         order: 92,
         name: "Waihua",
-        types: ["river", lt.VALLEY, "beach"],
+        types: ["river", "valley", "beach"],
         audioStart: 161.67,
         audioEnd: 162.59,
       },
@@ -15056,7 +15056,7 @@ export const zones = [
       {
         order: 27,
         name: "Rāhuimokairoa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 58.73,
         audioEnd: 60.82,
         altSpellings: ["rahuimokairoa"],
@@ -15079,7 +15079,7 @@ export const zones = [
       {
         order: 30,
         name: "Tāhaenui",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 66.93,
         audioEnd: 67.85,
         altSpellings: ["tahaenui"],
@@ -15138,7 +15138,7 @@ export const zones = [
       {
         order: 38,
         name: "Tunanui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 83.2,
         audioEnd: 84.03,
       },
@@ -15174,7 +15174,7 @@ export const zones = [
       {
         order: 43,
         name: "Whāngāwehi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 94.68,
         audioEnd: 95.71,
         altSpellings: ["whangāwehi"],
@@ -15392,7 +15392,7 @@ export const zones = [
       {
         order: 26,
         name: "Rongopai",
-        types: [],
+        types: ["marae", "meeting house"],
         audioStart: 58.68,
         audioEnd: 59.43,
         altNames: [
@@ -15437,7 +15437,7 @@ export const zones = [
       {
         order: 31,
         name: "Taurau",
-        types: [lt.VALLEY],
+        types: ["valley"],
         audioStart: 72.2,
         audioEnd: 72.91,
       },
@@ -15588,7 +15588,7 @@ export const zones = [
       {
         order: 4,
         name: "Hāmanatua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 12.11,
         audioEnd: 13.66,
         altSpellings: ["hamanatua"],
@@ -15619,7 +15619,7 @@ export const zones = [
       {
         order: 8,
         name: "Koranga",
-        types: [lt.STREAM, lt.VALLEY, "locality"],
+        types: ["stream", "valley", "locality"],
         audioStart: 25,
         audioEnd: 25.82,
       },
@@ -15642,7 +15642,7 @@ export const zones = [
       {
         order: 11,
         name: "Mangatū",
-        types: [lt.STREAM, "forest", "marae"],
+        types: ["stream", "forest", "marae"],
         audioStart: 33.11,
         audioEnd: 34.38,
         altSpellings: ["mangatu"],
@@ -15845,14 +15845,14 @@ export const zones = [
       {
         order: 38,
         name: "Waihora",
-        types: ["river", lt.VALLEY],
+        types: ["river", "valley"],
         audioStart: 110.26,
         audioEnd: 111.07,
       },
       {
         order: 39,
         name: "Waihuka",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 112.44,
         audioEnd: 113.25,
       },
@@ -15866,7 +15866,7 @@ export const zones = [
       {
         order: 41,
         name: "Waingaromia",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 117.61,
         audioEnd: 118.81,
       },
@@ -15918,7 +15918,7 @@ export const zones = [
       {
         order: 48,
         name: "Wheo",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 137.14,
         audioEnd: 137.54,
       },
@@ -15933,7 +15933,7 @@ export const zones = [
       {
         order: 1,
         name: "Awapuni",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 6.1,
         audioEnd: 7.04,
       },
@@ -15962,7 +15962,7 @@ export const zones = [
       {
         order: 5,
         name: "Mākaraka",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 15.82,
         audioEnd: 16.82,
         altSpellings: ["makaraka"],
@@ -16023,7 +16023,7 @@ export const zones = [
       {
         order: 13,
         name: "Te Hāpara",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 31.74,
         audioEnd: 32.66,
         altSpellings: ["te hapara"],
@@ -16098,7 +16098,7 @@ export const zones = [
       {
         order: 22,
         name: "Waimatā",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 57,
         audioEnd: 58.05,
         altSpellings: ["waimata"],
@@ -16114,7 +16114,7 @@ export const zones = [
       {
         order: 24,
         name: "Whataupoko",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 61.67,
         audioEnd: 62.61,
       },
@@ -16144,7 +16144,7 @@ export const zones = [
       {
         order: 3,
         name: "Kaitī",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 11.78,
         audioEnd: 12.74,
         altSpellings: ["kaiti"],
@@ -16160,7 +16160,7 @@ export const zones = [
       {
         order: 4,
         name: "Kōpuawhakapata",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 17.53,
         audioEnd: 19.06,
         altSpellings: ["kopuawhakapata"],
@@ -16641,7 +16641,7 @@ export const zones = [
       {
         order: 32,
         name: "Waiau",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 103.58,
         audioEnd: 104.29,
       },
@@ -16655,7 +16655,7 @@ export const zones = [
       {
         order: 34,
         name: "Waiputaputa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 110.08,
         audioEnd: 111.07,
       },
@@ -16722,7 +16722,7 @@ export const zones = [
       {
         order: 7,
         name: "Īhūngia",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 22.16,
         audioEnd: 22.97,
         altSpellings: ["ihungia"],
@@ -16773,7 +16773,7 @@ export const zones = [
       {
         order: 14,
         name: "Mākokomuku",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 40.85,
         audioEnd: 41.99,
         altSpellings: ["makokomuku"],
@@ -16796,7 +16796,7 @@ export const zones = [
       {
         order: 17,
         name: "Mangahauini",
-        types: [lt.VALLEY],
+        types: ["valley"],
         audioStart: 49.76,
         audioEnd: 50.66,
       },
@@ -17003,7 +17003,7 @@ export const zones = [
       {
         order: 45,
         name: "Waiau",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 129.75,
         audioEnd: 130.42,
       },
@@ -17018,14 +17018,14 @@ export const zones = [
       {
         order: 47,
         name: "Waingakia",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 134.67,
         audioEnd: 135.41,
       },
       {
         order: 48,
         name: "Waiota",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 136.9,
         audioEnd: 137.67,
       },
@@ -17046,7 +17046,7 @@ export const zones = [
       {
         order: 51,
         name: "Wairangi",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 145.21,
         audioEnd: 145.8,
       },
@@ -17098,7 +17098,7 @@ export const zones = [
       {
         order: 4,
         name: "Awatere",
-        types: ["river", lt.VALLEY, "meeting house"],
+        types: ["river", "valley", "meeting house"],
         audioStart: 13.63,
         audioEnd: 14.29,
       },
@@ -17295,7 +17295,7 @@ export const zones = [
       {
         order: 31,
         name: "Mangaōporo",
-        types: [lt.STREAM, lt.VALLEY],
+        types: ["stream", "valley"],
         audioStart: 83.75,
         audioEnd: 84.66,
         altSpellings: ["mangaoporo"],
@@ -17318,7 +17318,7 @@ export const zones = [
       {
         order: 34,
         name: "Maraehara",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 91.7,
         audioEnd: 92.45,
       },
@@ -17403,7 +17403,7 @@ export const zones = [
       {
         order: 45,
         name: "Paoa-a-ruku",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 117.83,
         audioEnd: 118.76,
       },
@@ -17453,7 +17453,7 @@ export const zones = [
       {
         order: 52,
         name: "Poroporo",
-        types: [lt.STREAM, lt.VALLEY],
+        types: ["stream", "valley"],
         audioStart: 133.6,
         audioEnd: 134.29,
       },
@@ -17697,7 +17697,7 @@ export const zones = [
       {
         order: 85,
         name: "Te Pae-o-te-Pakinga",
-        types: [],
+        types: ["meeting house"],
         audioStart: 221.58,
         audioEnd: 222.95,
         altNames: [
@@ -17852,7 +17852,7 @@ export const zones = [
       {
         order: 104,
         name: "Waipapa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 275.08,
         audioEnd: 275.78,
       },
@@ -18042,7 +18042,7 @@ export const zones = [
       {
         order: 13,
         name: "Mangatūtara",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 41.08,
         audioEnd: 42.06,
         altSpellings: ["mangatutara"],
@@ -18351,7 +18351,7 @@ export const zones = [
       {
         order: 52,
         name: "Te Pae o te Pakanga",
-        types: [],
+        types: ["meeting house"],
         audioStart: 157.68,
         audioEnd: 158.98,
         altNames: [
@@ -18574,7 +18574,7 @@ export const zones = [
       {
         order: 4,
         name: "Mangaotāne",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 16.4,
         audioEnd: 18.01,
         altSpellings: ["mangaotane"],
@@ -18604,7 +18604,7 @@ export const zones = [
       {
         order: 8,
         name: "Takapūtahi",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 29.92,
         audioEnd: 31.35,
         altSpellings: ["takaputahi"],
@@ -18627,7 +18627,7 @@ export const zones = [
       {
         order: 11,
         name: "Tōrere",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 40.81,
         audioEnd: 41.67,
         altSpellings: ["torere"],
@@ -18741,7 +18741,7 @@ export const zones = [
       {
         order: 13,
         name: "Matakerepū",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 33.34,
         audioEnd: 34.51,
         altSpellings: ["matakerepu"],
@@ -18818,7 +18818,7 @@ export const zones = [
       {
         order: 23,
         name: "Ōpato",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 57.46,
         audioEnd: 58.38,
         altSpellings: ["opato"],
@@ -18850,7 +18850,7 @@ export const zones = [
       {
         order: 27,
         name: "Pākihi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 67.69,
         audioEnd: 68.51,
         altSpellings: ["pakihi"],
@@ -18968,7 +18968,7 @@ export const zones = [
       {
         order: 42,
         name: "Te Waiti",
-        types: ["hill", lt.STREAM],
+        types: ["hill", "stream"],
         audioStart: 109.2,
         audioEnd: 109.99,
       },
@@ -18997,7 +18997,7 @@ export const zones = [
       {
         order: 46,
         name: "Tūtaetoko",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 118.9,
         audioEnd: 120.11,
         altSpellings: ["tutaetoko"],
@@ -19099,7 +19099,7 @@ export const zones = [
       {
         order: 4,
         name: "Hopuruahine",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 12.51,
         audioEnd: 13.33,
       },
@@ -19329,7 +19329,7 @@ export const zones = [
       {
         order: 35,
         name: "Tūranga Pikitoi",
-        types: [],
+        types: ["meeting house"],
         audioStart: 74.87,
         audioEnd: 75.98,
         altSpellings: ["turanga pikitoi"],
@@ -19337,7 +19337,7 @@ export const zones = [
       {
         order: 36,
         name: "Wai-iti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 77.35,
         audioEnd: 78.3,
       },
@@ -19351,7 +19351,7 @@ export const zones = [
       {
         order: 38,
         name: "Waiōpua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 80.51,
         audioEnd: 81.47,
         altSpellings: ["waiopua"],
@@ -19428,7 +19428,7 @@ export const zones = [
       {
         order: 7,
         name: "Ōhaua",
-        types: [lt.VALLEY, "locality"],
+        types: ["valley", "locality"],
         audioStart: 21.51,
         audioEnd: 22.52,
         altSpellings: ["ohaua"],
@@ -19767,7 +19767,7 @@ export const zones = [
       {
         order: 13,
         name: "Ōkahu",
-        types: ["river", lt.VALLEY, "gorge"],
+        types: ["river", "valley", "gorge"],
         audioStart: 38.64,
         audioEnd: 39.45,
         altSpellings: ["okahu"],
@@ -19972,7 +19972,7 @@ export const zones = [
       {
         order: 40,
         name: "Tōtarapāpā",
-        types: [lt.STREAM, "falls"],
+        types: ["stream", "falls"],
         audioStart: 112.03,
         audioEnd: 113.37,
         altSpellings: ["totarapapā"],
@@ -20279,7 +20279,7 @@ export const zones = [
       {
         order: 34,
         name: "Waiopāoa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 103.28,
         audioEnd: 104.66,
         altSpellings: ["waiopaoa"],
@@ -20287,7 +20287,7 @@ export const zones = [
       {
         order: 35,
         name: "Waiotukupuna",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 106.12,
         audioEnd: 107.59,
       },
@@ -20326,277 +20326,277 @@ export const zones = [
   {
     number: 58,
     nameCommon: "Murupara",
-    speakers: ['"John Henry Bird', "", "Hirini Moko Mead"],
+    speakers: ["John Henry Bird, QSO", "Hirini Moko Mead"],
     localities: [
       {
         order: 1,
         name: "Āniwaniwa",
-        types: [],
-        audioStart: null,
-        audioEnd: 5.41,
+        types: ["falls", "lake", "hydro station"],
+        audioStart: 5.41,
+        audioEnd: 6.28,
         altSpellings: ["aniwaniwa"],
       },
       {
         order: 2,
         name: "Apa-hāpai-taketake",
-        types: [],
-        audioStart: null,
-        audioEnd: 8.3,
+        types: ["meeting house"],
+        audioStart: 8.3,
+        audioEnd: 9.87,
         altSpellings: ["apa-hapai-taketake"],
       },
       {
         order: 3,
         name: "Eripitana",
-        types: [],
-        audioStart: null,
-        audioEnd: 11.44,
+        types: ["church house"],
+        audioStart: 11.44,
+        audioEnd: 12.49,
       },
       {
         order: 4,
         name: "Hanamāhihi",
-        types: [],
-        audioStart: null,
-        audioEnd: 14.71,
+        types: ["locality"],
+        audioStart: 14.71,
+        audioEnd: 15.75,
         altSpellings: ["hanamahihi"],
       },
       {
         order: 5,
         name: "Hine-nui-te-Pō",
-        types: [],
-        audioStart: null,
-        audioEnd: 17.21,
+        types: ["meeting house"],
+        audioStart: 17.21,
+        audioEnd: 18.37,
         altSpellings: ["hine-nui-te-po"],
       },
       {
         order: 6,
         name: "Horomanga",
-        types: [],
-        audioStart: null,
-        audioEnd: 19.89,
+        types: ["stream", "locality"],
+        audioStart: 19.89,
+        audioEnd: 20.66,
       },
       {
         order: 7,
         name: "Hukawai",
-        types: [],
-        audioStart: null,
-        audioEnd: 22.47,
+        types: ["falls"],
+        audioStart: 22.47,
+        audioEnd: 23.23,
       },
       {
         order: 8,
         name: "Kākānui",
-        types: [],
-        audioStart: null,
-        audioEnd: 24.88,
+        types: ["mountain"],
+        audioStart: 24.88,
+        audioEnd: 25.98,
         altSpellings: ["kakānui"],
       },
       {
         order: 9,
         name: "Karatia",
-        types: [],
-        audioStart: null,
-        audioEnd: 28.22,
+        types: ["locality"],
+        audioStart: 28.22,
+        audioEnd: 29.06,
       },
       {
         order: 10,
         name: "Kiorenui",
-        types: [],
-        audioStart: null,
-        audioEnd: 30.9,
+        types: ["locality"],
+        audioStart: 30.9,
+        audioEnd: 31.86,
       },
       {
         order: 11,
         name: "Kōpikopiko",
-        types: [],
-        audioStart: null,
-        audioEnd: 33.45,
+        types: ["stream"],
+        audioStart: 33.45,
+        audioEnd: 34.33,
         altSpellings: ["kopikopiko"],
       },
       {
         order: 12,
         name: "Kōpuriki",
-        types: [],
-        audioStart: null,
-        audioEnd: 35.74,
+        types: ["locality"],
+        audioStart: 35.74,
+        audioEnd: 36.58,
         altSpellings: ["kopuriki"],
       },
       {
         order: 13,
         name: "Kuranui",
-        types: [],
-        audioStart: null,
-        audioEnd: 38.48,
+        types: ["dining hall"],
+        audioStart: 38.48,
+        audioEnd: 39.23,
       },
       {
         order: 14,
         name: "Mātea",
-        types: [],
-        audioStart: null,
-        audioEnd: 40.88,
+        types: ["forest"],
+        audioStart: 40.88,
+        audioEnd: 41.74,
         altSpellings: ["matea"],
       },
       {
         order: 15,
         name: "Mangawiri",
-        types: [],
-        audioStart: null,
-        audioEnd: 43.46,
+        types: ["river", "locality"],
+        audioStart: 43.46,
+        audioEnd: 44.28,
       },
       {
         order: 16,
         name: "Minginui",
-        types: [],
-        audioStart: null,
-        audioEnd: 46.35,
+        types: ["locality"],
+        audioStart: 46.35,
+        audioEnd: 47.14,
       },
       {
         order: 17,
         name: "Moewhare",
-        types: [],
-        audioStart: null,
-        audioEnd: 48.66,
+        types: ["marae", "meeting house"],
+        audioStart: 48.66,
+        audioEnd: 49.47,
       },
       {
         order: 18,
         name: "Motukurī",
-        types: [],
-        audioStart: null,
-        audioEnd: 51.3,
+        types: ["hill"],
+        audioStart: 51.3,
+        audioEnd: 52.2,
         altSpellings: ["motukuri"],
       },
       {
         order: 19,
         name: "Murumurunga",
-        types: [],
-        audioStart: null,
-        audioEnd: 54,
+        types: ["marae"],
+        audioStart: 54,
+        audioEnd: 54.91,
       },
       {
         order: 20,
         name: "Murupara",
-        types: [],
-        audioStart: null,
-        audioEnd: 56.77,
+        types: ["town"],
+        audioStart: 56.77,
+        audioEnd: 57.52,
       },
       {
         order: 21,
         name: "Ngāpuketūrua",
-        types: [],
-        audioStart: null,
-        audioEnd: 58.91,
+        types: ["hills"],
+        audioStart: 58.91,
+        audioEnd: 60.32,
         altSpellings: ["ngapuketurua"],
       },
       {
         order: 22,
         name: "Ngāpūtahi",
-        types: [],
-        audioStart: null,
-        audioEnd: 61.85,
+        types: ["locality"],
+        audioStart: 61.85,
+        audioEnd: 62.78,
         altSpellings: ["ngaputahi"],
       },
       {
         order: 23,
         name: "Ōkoro-mātā-kiwi",
-        types: [],
-        audioStart: null,
-        audioEnd: 64.46,
+        types: ["locality"],
+        audioStart: 64.46,
+        audioEnd: 65.99,
         altSpellings: ["okoro-matā-kiwi"],
       },
       {
         order: 24,
         name: "Ōtamatea",
-        types: [],
-        audioStart: null,
-        audioEnd: 68.18,
+        types: ["stream"],
+        audioStart: 68.18,
+        audioEnd: 69.1,
         altSpellings: ["otamatea"],
       },
       {
         order: 25,
         name: "Ōtūmākio",
-        types: [],
-        audioStart: null,
-        audioEnd: 71.04,
+        types: ["locality"],
+        audioStart: 71.04,
+        audioEnd: 72.32,
         altSpellings: ["otumakio"],
       },
       {
         order: 26,
         name: "Pai-noa-iho",
-        types: [],
-        audioStart: null,
-        audioEnd: 73.75,
+        types: ["pā"],
+        audioStart: 73.75,
+        audioEnd: 74.61,
       },
       {
         order: 27,
         name: "Pohokura",
-        types: [],
-        audioStart: null,
-        audioEnd: 76.89,
+        types: ["river"],
+        audioStart: 76.89,
+        audioEnd: 77.73,
       },
       {
         order: 28,
         name: "Pukahuinui",
-        types: [],
-        audioStart: null,
-        audioEnd: 79.32,
+        types: ["mountain"],
+        audioStart: 79.32,
+        audioEnd: 80.31,
         altNames: [
           {
             name: "Kokomako",
             altSpellings: ["kokomako"],
-            audioStart: null,
-            audioEnd: null,
+            audioStart: 81.22,
+            audioEnd: 81.98,
           },
         ],
       },
       {
         order: 29,
         name: "Rangitāiki",
-        types: [],
-        audioStart: null,
-        audioEnd: 83.64,
+        types: ["river"],
+        audioStart: 83.64,
+        audioEnd: 84.68,
         altSpellings: ["rangitaiki"],
       },
       {
         order: 30,
         name: "Rangitahi",
-        types: [],
-        audioStart: null,
-        audioEnd: 85.89,
+        types: ["pā"],
+        audioStart: 85.89,
+        audioEnd: 86.63,
       },
       {
         order: 31,
         name: "Ruatapu",
-        types: [],
-        audioStart: null,
-        audioEnd: 87.75,
+        types: ["meeting house"],
+        audioStart: 87.75,
+        audioEnd: 88.57,
       },
       {
         order: 32,
         name: "Rūnanga",
-        types: [],
-        audioStart: null,
-        audioEnd: 90.95,
+        types: ["locality"],
+        audioStart: 90.95,
+        audioEnd: 91.77,
         altSpellings: ["runanga"],
       },
       {
         order: 33,
         name: "Tāwhiuau",
-        types: [],
-        audioStart: null,
-        audioEnd: 93.03,
+        types: ["mountain"],
+        audioStart: 93.03,
+        audioEnd: 93.96,
         altSpellings: ["tawhiuau"],
       },
       {
         order: 34,
         name: "Tama-ki-Hikurangi",
-        types: [],
-        audioStart: null,
-        audioEnd: 95.35,
+        types: ["meeting house"],
+        audioStart: 95.35,
+        audioEnd: 96.44,
       },
       {
         order: 35,
         name: "Tangihāruru",
-        types: [],
-        audioStart: null,
-        audioEnd: 98.85,
+        types: ["meeting house"],
+        audioStart: 98.85,
+        audioEnd: 99.57,
         altSpellings: ["tangiharuru"],
       },
       {
@@ -20609,76 +20609,76 @@ export const zones = [
       {
         order: 37,
         name: "Te Poho-o-Kurī",
-        types: [],
-        audioStart: null,
-        audioEnd: 104.35,
+        types: ["meeting house"],
+        audioStart: 104.35,
+        audioEnd: 105.6,
         altSpellings: ["te poho-o-kuri"],
       },
       {
         order: 38,
         name: "Te Whaiti",
-        types: [],
-        audioStart: null,
-        audioEnd: 107.13,
+        types: ["settlement"],
+        audioStart: 107.13,
+        audioEnd: 107.99,
       },
       {
         order: 39,
         name: "Te Whatu-o-te-Kanohi",
-        types: [],
-        audioStart: null,
-        audioEnd: 109.75,
+        types: ["meeting house"],
+        audioStart: 109.75,
+        audioEnd: 111.06,
       },
       {
         order: 40,
         name: "Tīpapa",
-        types: [],
-        audioStart: null,
-        audioEnd: 112.76,
+        types: ["marae"],
+        audioStart: 112.76,
+        audioEnd: 113.5,
         altSpellings: ["tipapa"],
       },
       {
         order: 41,
         name: "Waikotikoti",
-        types: [],
-        audioStart: null,
-        audioEnd: 115.44,
+        types: ["marae"],
+        audioStart: 115.44,
+        audioEnd: 116.37,
       },
       {
         order: 42,
         name: "Waiohau",
-        types: [],
-        audioStart: null,
-        audioEnd: 118.34,
+        types: ["locality"],
+        audioStart: 118.34,
+        audioEnd: 119.16,
       },
       {
         order: 43,
         name: "Waipunga",
-        types: [],
-        audioStart: null,
-        audioEnd: 120.83,
+        types: ["river"],
+        audioStart: 120.83,
+        audioEnd: 121.56,
       },
       {
         order: 44,
         name: "Wharepākau-tautau-ki-te-kapua",
-        types: [],
-        audioStart: null,
-        audioEnd: 123.4,
+        types: ["meeting house"],
+        audioStart: 123.4,
+        audioEnd: 125.73,
         altSpellings: ["wharepakau-tautau-ki-te-kapua"],
       },
       {
         order: 45,
         name: "Whēao",
-        types: [],
-        audioStart: null,
-        audioEnd: 127.66,
+        types: ["river"],
+        audioStart: 127.66,
+        audioEnd: 128.28,
         altSpellings: ["wheao"],
       },
       {
         order: 46,
         name: "Whirinaki",
-        types: [],
-        audioStart: null,
-        audioEnd: 130.33,
+        types: ["river", "pā"],
+        audioStart: 130.33,
+        audioEnd: 131.2,
       },
     ],
     audioTrackFull: "zones/058.mp3",
@@ -20686,7 +20686,7 @@ export const zones = [
   {
     number: 59,
     nameCommon: "Edgecumbe/Whakatāne",
-    speakers: ["Euera Manuera", "Hirini Moko Mead", ""],
+    speakers: ["Euera Manuera", "Hirini Moko Mead"],
     localities: [
       {
         order: 1,
@@ -20757,7 +20757,7 @@ export const zones = [
       {
         order: 10,
         name: "Kōpeopeo",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 30.98,
         audioEnd: 32.16,
         altSpellings: ["kopeopeo"],
@@ -20765,7 +20765,7 @@ export const zones = [
       {
         order: 11,
         name: "Māngāwhio",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 34.22,
         audioEnd: 35.37,
         altSpellings: ["mangāwhio"],
@@ -21173,10 +21173,10 @@ export const zones = [
         audioEnd: 174.73,
         altNames: [
           {
-            name: '"Ā',
-            altSpellings: ['"a'],
-            audioStart: null,
-            audioEnd: 176.56,
+            name: "Ā, ka mutu atu...",
+            altSpellings: ["a, ka mutu atu..."],
+            audioStart: 176.56,
+            audioEnd: 178.04,
           },
         ],
       },
@@ -21237,7 +21237,7 @@ export const zones = [
       {
         order: 7,
         name: "Pikowai",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 15.65,
         audioEnd: 16.39,
       },
@@ -21351,7 +21351,7 @@ export const zones = [
       {
         order: 2,
         name: "Kaikōkopu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 7.31,
         audioEnd: 8.42,
         altSpellings: ["kaikokopu"],
@@ -21374,7 +21374,7 @@ export const zones = [
       {
         order: 5,
         name: "Ōtamarākau",
-        types: [lt.VALLEY, "locality", "locality"],
+        types: ["valley", "locality", "locality"],
         audioStart: 15.18,
         audioEnd: 16.73,
         altSpellings: ["otamarakau"],
@@ -21382,7 +21382,7 @@ export const zones = [
       {
         order: 6,
         name: "Pongakawa",
-        types: [lt.STREAM, lt.VALLEY, "locality", "locality"],
+        types: ["stream", "valley", "locality", "locality"],
         audioStart: 18.13,
         audioEnd: 19.13,
       },
@@ -21427,14 +21427,14 @@ export const zones = [
       {
         order: 12,
         name: "Waitahanui",
-        types: [lt.STREAM, "pā"],
+        types: ["stream", "pā"],
         audioStart: 31.8,
         audioEnd: 33.03,
       },
       {
         order: 13,
         name: "Whaerere",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 34.47,
         audioEnd: 35.46,
       },
@@ -21595,14 +21595,14 @@ export const zones = [
       {
         order: 21,
         name: "Pokopoko",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 40.48,
         audioEnd: 41.32,
       },
       {
         order: 22,
         name: "Pongakawa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 41.94,
         audioEnd: 42.9,
       },
@@ -21719,7 +21719,7 @@ export const zones = [
       {
         order: 38,
         name: "Waitahanui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 66.5,
         audioEnd: 67.6,
       },
@@ -22115,7 +22115,7 @@ export const zones = [
       {
         order: 46,
         name: "Te Waiiti",
-        types: [lt.STREAM, "pā"],
+        types: ["stream", "pā"],
         audioStart: 102.6,
         audioEnd: 103.5,
       },
@@ -22313,14 +22313,14 @@ export const zones = [
       {
         order: 17,
         name: "Waingaehe",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 38.89,
         audioEnd: 39.84,
       },
       {
         order: 18,
         name: "Waiōhewa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 40.82,
         audioEnd: 41.82,
         altSpellings: ["waiohewa"],
@@ -22505,7 +22505,7 @@ export const zones = [
       {
         order: 22,
         name: "Tūreporepo",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 45.6,
         audioEnd: 47.3,
         altSpellings: ["tureporepo"],
@@ -22543,14 +22543,14 @@ export const zones = [
       {
         order: 27,
         name: "Wairua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 54,
         audioEnd: 54.76,
       },
       {
         order: 28,
         name: "Waitangi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 55.41,
         audioEnd: 56.24,
       },
@@ -22581,7 +22581,7 @@ export const zones = [
       {
         order: 2,
         name: "Hāparangi",
-        types: [],
+        types: ["peak"],
         audioStart: 6.58,
         audioEnd: 7.46,
         altSpellings: ["haparangi"],
@@ -22834,7 +22834,7 @@ export const zones = [
       {
         order: 34,
         name: "Waikite",
-        types: [lt.VALLEY, "thermal region"],
+        types: ["valley", "thermal region"],
         audioStart: 63.72,
         audioEnd: 64.52,
       },
@@ -22882,14 +22882,14 @@ export const zones = [
       {
         order: 41,
         name: "Wharepapa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 72.92,
         audioEnd: 73.74,
       },
       {
         order: 42,
         name: "Whirinaki",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 74.22,
         audioEnd: 75.04,
       },
@@ -23100,7 +23100,7 @@ export const zones = [
       {
         order: 14,
         name: "Puarenga",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 28.53,
         audioEnd: 29.31,
       },
@@ -23231,7 +23231,7 @@ export const zones = [
       {
         order: 32,
         name: "Tihiotonga",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 60.73,
         audioEnd: 61.67,
       },
@@ -23400,7 +23400,7 @@ export const zones = [
       {
         order: 10,
         name: "Kāwaha",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 22.99,
         audioEnd: 23.89,
         altSpellings: ["kawaha"],
@@ -23445,7 +23445,7 @@ export const zones = [
       {
         order: 16,
         name: "Ngāpuna",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 35.46,
         audioEnd: 36.42,
         altSpellings: ["ngapuna"],
@@ -23453,7 +23453,7 @@ export const zones = [
       {
         order: 17,
         name: "Ngāroto",
-        types: [lt.FERRY],
+        types: ["ferry"],
         audioStart: 36.95,
         audioEnd: 37.96,
         altSpellings: ["ngaroto"],
@@ -23477,7 +23477,7 @@ export const zones = [
       {
         order: 20,
         name: "Ōtamatea",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 43.03,
         audioEnd: 44.17,
         altSpellings: ["otamatea"],
@@ -23485,7 +23485,7 @@ export const zones = [
       {
         order: 21,
         name: "Ōwhata",
-        types: [lt.SUBURB, "point"],
+        types: ["suburb", "point"],
         audioStart: 45.51,
         audioEnd: 46.43,
         altSpellings: ["owhata"],
@@ -23524,7 +23524,7 @@ export const zones = [
       {
         order: 25,
         name: "Puarenga",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 54.94,
         audioEnd: 56.15,
       },
@@ -23595,7 +23595,7 @@ export const zones = [
       {
         order: 34,
         name: "Tārewa",
-        types: ["pā", lt.SUBURB],
+        types: ["pā", "suburb"],
         audioStart: 74.46,
         audioEnd: 75.5,
         altSpellings: ["tarewa"],
@@ -23639,7 +23639,7 @@ export const zones = [
       {
         order: 38,
         name: "Te Koutū",
-        types: ["headland", "pā", lt.SUBURB],
+        types: ["headland", "pā", "suburb"],
         audioStart: 85.3,
         audioEnd: 86.2,
         altSpellings: ["te koutu"],
@@ -23753,7 +23753,7 @@ export const zones = [
       {
         order: 51,
         name: "Utuhina",
-        types: [lt.STREAM, lt.SUBURB],
+        types: ["stream", "suburb"],
         audioStart: 113.7,
         audioEnd: 114.66,
       },
@@ -23775,7 +23775,7 @@ export const zones = [
       {
         order: 54,
         name: "Waingaehe",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 119.39,
         audioEnd: 120.6,
       },
@@ -23977,7 +23977,7 @@ export const zones = [
       {
         order: 14,
         name: "Waiōwhiro",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 33.6,
         audioEnd: 34.58,
         altSpellings: ["waiowhiro"],
@@ -24008,7 +24008,7 @@ export const zones = [
       {
         order: 1,
         name: "Awahou",
-        types: [lt.STREAM, "pā", "locality"],
+        types: ["stream", "pā", "locality"],
         audioStart: 5.2,
         audioEnd: 6.33,
       },
@@ -24103,7 +24103,7 @@ export const zones = [
       {
         order: 14,
         name: "Taniwha",
-        types: ["springs", lt.STREAM],
+        types: ["springs", "stream"],
         audioStart: 31,
         audioEnd: 31.61,
       },
@@ -24156,7 +24156,7 @@ export const zones = [
       {
         order: 21,
         name: "Waitetī",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 45.31,
         audioEnd: 46.4,
         altSpellings: ["waiteti"],
@@ -24172,7 +24172,7 @@ export const zones = [
       {
         order: 1,
         name: "Kaikōkopu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 5.5,
         audioEnd: 6.61,
         altSpellings: ["kaikokopu"],
@@ -24235,7 +24235,7 @@ export const zones = [
       {
         order: 9,
         name: "Ōtūnākoro",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 19.66,
         audioEnd: 21.09,
         altSpellings: ["otunakoro"],
@@ -24250,7 +24250,7 @@ export const zones = [
       {
         order: 11,
         name: "Pokopoko",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 23.82,
         audioEnd: 24.66,
       },
@@ -24339,7 +24339,7 @@ export const zones = [
       {
         order: 23,
         name: "Waihī",
-        types: [lt.STREAM, "estuary"],
+        types: ["stream", "estuary"],
         audioStart: 45.87,
         audioEnd: 46.9,
         altSpellings: ["waihi"],
@@ -24347,7 +24347,7 @@ export const zones = [
       {
         order: 24,
         name: "Waitahanui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 47.2,
         audioEnd: 48.21,
       },
@@ -24361,7 +24361,7 @@ export const zones = [
       {
         order: 26,
         name: "Wharekāhu",
-        types: [lt.VALLEY],
+        types: ["valley"],
         audioStart: 50.54,
         audioEnd: 51.61,
         altSpellings: ["wharekahu"],
@@ -24442,7 +24442,7 @@ export const zones = [
       {
         order: 10,
         name: "Ōhineangaanga",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 27.66,
         audioEnd: 29.38,
         altSpellings: ["ohineangaanga"],
@@ -24466,7 +24466,7 @@ export const zones = [
       {
         order: 13,
         name: "Parawhenuamea",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 36.21,
         audioEnd: 37.59,
       },
@@ -24598,7 +24598,7 @@ export const zones = [
       {
         order: 31,
         name: "Waiāri",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 83.34,
         audioEnd: 84.14,
         altSpellings: ["waiari"],
@@ -24940,7 +24940,7 @@ export const zones = [
       {
         order: 23,
         name: "Matapihi",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 46.22,
         audioEnd: 47.03,
       },
@@ -25118,7 +25118,7 @@ export const zones = [
       {
         order: 46,
         name: "Peterehema",
-        types: [],
+        types: ["marae", "locality"],
         audioStart: 80.5,
         audioEnd: 81.24,
       },
@@ -25354,7 +25354,7 @@ export const zones = [
       {
         order: 77,
         name: "Tūāpiro",
-        types: [lt.STREAM, "marae", "meeting house"],
+        types: ["stream", "marae", "meeting house"],
         audioStart: 129.88,
         audioEnd: 130.72,
         altSpellings: ["tuapiro"],
@@ -25370,7 +25370,7 @@ export const zones = [
       {
         order: 79,
         name: "Uretara",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 132.96,
         audioEnd: 133.76,
       },
@@ -25405,7 +25405,7 @@ export const zones = [
       {
         order: 84,
         name: "Waimapu",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 140.65,
         audioEnd: 141.31,
       },
@@ -25419,7 +25419,7 @@ export const zones = [
       {
         order: 86,
         name: "Wairākei",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 143.36,
         audioEnd: 144.45,
         altSpellings: ["wairakei"],
@@ -25464,7 +25464,7 @@ export const zones = [
       {
         order: 91,
         name: "Whakamarama",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 149.66,
         audioEnd: 150.56,
       },
@@ -25778,7 +25778,7 @@ export const zones = [
       {
         order: 2,
         name: "Mataora",
-        types: ["bay", lt.VALLEY],
+        types: ["bay", "valley"],
         audioStart: 6.78,
         audioEnd: 7.84,
       },
@@ -25863,7 +25863,7 @@ export const zones = [
       {
         order: 13,
         name: "Waitāwheta",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 35.53,
         audioEnd: 36.69,
         altSpellings: ["waitawheta"],
@@ -25878,7 +25878,7 @@ export const zones = [
       {
         order: 15,
         name: "Waitete",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 40.12,
         audioEnd: 41.11,
       },
@@ -25901,7 +25901,7 @@ export const zones = [
       {
         order: 2,
         name: "Hauturu",
-        types: [],
+        types: ["island"],
         audioStart: 6.33,
         audioEnd: 7.15,
       },
@@ -25968,7 +25968,7 @@ export const zones = [
       {
         order: 11,
         name: "Ōtūwhetī",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 26.69,
         audioEnd: 28.03,
         altSpellings: ["otuwheti"],
@@ -26012,7 +26012,7 @@ export const zones = [
       {
         order: 17,
         name: "Waiharakeke",
-        types: ["river", lt.STREAM, "locality"],
+        types: ["river", "stream", "locality"],
         audioStart: 40.28,
         audioEnd: 41.53,
       },
@@ -26279,7 +26279,7 @@ export const zones = [
       {
         order: 28,
         name: "Ngārahutūnoa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 59.87,
         audioEnd: 61.61,
         altSpellings: ["ngarahutunoa"],
@@ -26571,7 +26571,7 @@ export const zones = [
       {
         order: 67,
         name: "Whauwhau",
-        types: ["beach", lt.STREAM],
+        types: ["beach", "stream"],
         audioStart: 138.08,
         audioEnd: 138.82,
       },
@@ -26622,7 +26622,7 @@ export const zones = [
       {
         order: 4,
         name: "Hāpapawera",
-        types: ["coast", lt.STREAM],
+        types: ["coast", "stream"],
         audioStart: 12.03,
         audioEnd: 12.96,
         altSpellings: ["hapapawera"],
@@ -26651,7 +26651,7 @@ export const zones = [
       {
         order: 8,
         name: "Kōpurukaitaha",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 20.55,
         audioEnd: 21.57,
         altSpellings: ["kopurukaitaha"],
@@ -26682,7 +26682,7 @@ export const zones = [
       {
         order: 12,
         name: "Pākore",
-        types: [lt.STREAM, "pā site"],
+        types: ["stream", "pā site"],
         audioStart: 28.46,
         audioEnd: 29.06,
         altSpellings: ["pakore"],
@@ -26712,14 +26712,14 @@ export const zones = [
       {
         order: 16,
         name: "Tuateawa",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 36.47,
         audioEnd: 37.19,
       },
       {
         order: 17,
         name: "Waihīrere",
-        types: [lt.STREAM, "waterfall"],
+        types: ["stream", "waterfall"],
         audioStart: 38.55,
         audioEnd: 39.31,
         altSpellings: ["waihirere"],
@@ -26727,7 +26727,7 @@ export const zones = [
       {
         order: 18,
         name: "Waikoromiko",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 40.63,
         audioEnd: 41.55,
       },
@@ -26839,7 +26839,7 @@ export const zones = [
       {
         order: 12,
         name: "Te Pāhi",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 31.27,
         audioEnd: 32.19,
         altSpellings: ["te pahi"],
@@ -26878,7 +26878,7 @@ export const zones = [
       {
         order: 17,
         name: "Waiāro",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 44.57,
         audioEnd: 45.57,
         altSpellings: ["waiaro"],
@@ -26916,7 +26916,7 @@ export const zones = [
       {
         order: 2,
         name: "Awakanae",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 5.59,
         audioEnd: 6.83,
       },
@@ -26930,7 +26930,7 @@ export const zones = [
       {
         order: 4,
         name: "Hikutawatawa",
-        types: ["peak", lt.STREAM],
+        types: ["peak", "stream"],
         audioStart: 9.89,
         audioEnd: 11.28,
       },
@@ -27106,7 +27106,7 @@ export const zones = [
       {
         order: 27,
         name: "Ōmāwhiti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 74.16,
         audioEnd: 75.47,
         altSpellings: ["omawhiti"],
@@ -27114,7 +27114,7 @@ export const zones = [
       {
         order: 28,
         name: "Ōtakeao",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 76.13,
         audioEnd: 77.34,
         altSpellings: ["otakeao"],
@@ -27129,7 +27129,7 @@ export const zones = [
       {
         order: 30,
         name: "Paraunahi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 80.92,
         audioEnd: 81.94,
       },
@@ -27144,7 +27144,7 @@ export const zones = [
       {
         order: 32,
         name: "Tauwhetarangi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 86.04,
         audioEnd: 87.26,
       },
@@ -27159,7 +27159,7 @@ export const zones = [
       {
         order: 34,
         name: "Te Matā",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 91.51,
         audioEnd: 92.58,
         altSpellings: ["te mata"],
@@ -27179,7 +27179,7 @@ export const zones = [
       {
         order: 37,
         name: "Waiau",
-        types: [lt.STREAM, "pā site", "locality"],
+        types: ["stream", "pā site", "locality"],
         audioStart: 95.49,
         audioEnd: 96.44,
       },
@@ -27193,7 +27193,7 @@ export const zones = [
       {
         order: 39,
         name: "Wairākau",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 99.44,
         audioEnd: 100.9,
         altSpellings: ["wairakau"],
@@ -27201,7 +27201,7 @@ export const zones = [
       {
         order: 40,
         name: "Wairotoroto",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 101.1,
         audioEnd: 102.38,
       },
@@ -27242,7 +27242,7 @@ export const zones = [
       {
         order: 1,
         name: "Hape",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 5.09,
         audioEnd: 5.72,
       },
@@ -27270,7 +27270,7 @@ export const zones = [
       {
         order: 5,
         name: "Karaka",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 14.38,
         audioEnd: 15.24,
       },
@@ -27323,7 +27323,7 @@ export const zones = [
       {
         order: 12,
         name: "Otuturu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 28.45,
         audioEnd: 29.61,
       },
@@ -27345,7 +27345,7 @@ export const zones = [
       {
         order: 15,
         name: "Pōhue",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 34.19,
         audioEnd: 35.18,
         altSpellings: ["pohue"],
@@ -27360,7 +27360,7 @@ export const zones = [
       {
         order: 17,
         name: "Rāpaura",
-        types: [lt.STREAM, "gardens"],
+        types: ["stream", "gardens"],
         audioStart: 38.97,
         audioEnd: 40.08,
         altSpellings: ["rapaura"],
@@ -27376,7 +27376,7 @@ export const zones = [
       {
         order: 19,
         name: "Tāpū",
-        types: [],
+        types: ["river", "locality"],
         audioStart: 43.72,
         audioEnd: 44.58,
         altSpellings: ["tapu"],
@@ -27384,7 +27384,7 @@ export const zones = [
       {
         order: 20,
         name: "Tararū",
-        types: ["peak", lt.STREAM, "point", "locality"],
+        types: ["peak", "stream", "point", "locality"],
         audioStart: 45.67,
         audioEnd: 46.61,
         altSpellings: ["tararu"],
@@ -27446,7 +27446,7 @@ export const zones = [
       {
         order: 28,
         name: "Wakawau",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 64.44,
         audioEnd: 65.46,
       },
@@ -27461,7 +27461,7 @@ export const zones = [
       {
         order: 30,
         name: "Waipatukahu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 68.73,
         audioEnd: 69.94,
       },
@@ -27475,7 +27475,7 @@ export const zones = [
       {
         order: 32,
         name: "Whāngaiterenga",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 74.39,
         audioEnd: 75.69,
         altSpellings: ["whangaiterenga"],
@@ -27549,7 +27549,7 @@ export const zones = [
       {
         order: 9,
         name: "Ōpūkeko",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 22.28,
         audioEnd: 23.48,
         altSpellings: ["opukeko"],
@@ -27587,7 +27587,7 @@ export const zones = [
       {
         order: 14,
         name: "Tarariki",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 33.06,
         audioEnd: 34.13,
       },
@@ -27647,7 +27647,7 @@ export const zones = [
       {
         order: 1,
         name: "Hāpuakohe",
-        types: [],
+        types: ["range"],
         audioStart: 5.37,
         audioEnd: 6.46,
         altSpellings: ["hapuakohe"],
@@ -27750,7 +27750,7 @@ export const zones = [
       {
         order: 15,
         name: "Te Awaiti",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 30.84,
         audioEnd: 31.91,
       },
@@ -27788,7 +27788,7 @@ export const zones = [
       {
         order: 20,
         name: "Tūī",
-        types: ["pā", lt.STREAM, "locality", "park", "reserve"],
+        types: ["pā", "stream", "locality", "park", "reserve"],
         audioStart: 41.66,
         audioEnd: 42.21,
         altSpellings: ["tui"],
@@ -27915,7 +27915,7 @@ export const zones = [
       {
         order: 14,
         name: "Pōura Ureora",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 48.51,
         audioEnd: 49.96,
         altSpellings: ["poura ureora"],
@@ -28155,7 +28155,7 @@ export const zones = [
       {
         order: 13,
         name: "Tāpapakānga",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 31.74,
         audioEnd: 33.16,
         altSpellings: ["tapapakānga"],
@@ -28322,7 +28322,7 @@ export const zones = [
       {
         order: 14,
         name: "Mangapēhi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 34.96,
         audioEnd: 36.13,
         altSpellings: ["mangapehi"],
@@ -28360,7 +28360,7 @@ export const zones = [
       {
         order: 19,
         name: "Maungaōtaki",
-        types: [],
+        types: ["peak"],
         audioStart: 48.94,
         audioEnd: 50.44,
         altSpellings: ["maungaotaki"],
@@ -28383,7 +28383,7 @@ export const zones = [
       {
         order: 22,
         name: "Mōkauiti",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 57.87,
         audioEnd: 58.93,
         altSpellings: ["mokauiti"],
@@ -28690,7 +28690,7 @@ export const zones = [
       {
         order: 5,
         name: "Mangakāhu",
-        types: [lt.VALLEY, "locality"],
+        types: ["valley", "locality"],
         audioStart: 18.12,
         audioEnd: 19.23,
         altSpellings: ["mangakahu"],
@@ -28698,14 +28698,14 @@ export const zones = [
       {
         order: 6,
         name: "Mangaokewa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 21.12,
         audioEnd: 22.77,
       },
       {
         order: 7,
         name: "Mangapēhi",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 24.33,
         audioEnd: 25.9,
         altSpellings: ["mangapehi"],
@@ -28720,7 +28720,7 @@ export const zones = [
       {
         order: 9,
         name: "Māramataha",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 30.83,
         audioEnd: 32.08,
         altSpellings: ["maramataha"],
@@ -28768,7 +28768,7 @@ export const zones = [
       {
         order: 15,
         name: "Orongomaipoho",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 49.33,
         audioEnd: 50.96,
       },
@@ -28879,7 +28879,7 @@ export const zones = [
       {
         order: 30,
         name: "Waimiha",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 97.82,
         audioEnd: 98.61,
       },
@@ -28939,7 +28939,7 @@ export const zones = [
       {
         order: 5,
         name: "Mangaokewa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 14.77,
         audioEnd: 16.38,
       },
@@ -29124,7 +29124,7 @@ export const zones = [
       {
         order: 29,
         name: "Te Kuititanga",
-        types: [lt.VALLEY],
+        types: ["valley"],
         audioStart: 91.05,
         audioEnd: 92.16,
       },
@@ -29349,7 +29349,7 @@ export const zones = [
       {
         order: 22,
         name: "Te Awamarino",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 57.22,
         audioEnd: 58.38,
       },
@@ -29426,7 +29426,7 @@ export const zones = [
       {
         order: 32,
         name: "Waitomo",
-        types: ["caves", lt.STREAM, "locality"],
+        types: ["caves", "stream", "locality"],
         audioStart: 84.42,
         audioEnd: 85.29,
       },
@@ -30636,7 +30636,7 @@ export const zones = [
       {
         order: 41,
         name: "Te Papatapu",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 96.49,
         audioEnd: 97.29,
       },
@@ -30679,7 +30679,7 @@ export const zones = [
       {
         order: 47,
         name: "Waimai",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 110.7,
         audioEnd: 111.49,
       },
@@ -30751,7 +30751,7 @@ export const zones = [
       {
         order: 3,
         name: "Mangakino",
-        types: [lt.STREAM, "town"],
+        types: ["stream", "town"],
         audioStart: 9.59,
         audioEnd: 10.65,
       },
@@ -30862,7 +30862,7 @@ export const zones = [
       {
         order: 1,
         name: "Aotea",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 5.76,
         audioEnd: 6.53,
       },
@@ -30897,7 +30897,7 @@ export const zones = [
       {
         order: 6,
         name: "Matarāua",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 18.93,
         audioEnd: 20,
         altSpellings: ["mataraua"],
@@ -30928,7 +30928,7 @@ export const zones = [
       {
         order: 10,
         name: "Ngutuwera",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 28.74,
         audioEnd: 29.63,
       },
@@ -30957,21 +30957,21 @@ export const zones = [
       {
         order: 14,
         name: "Papanui",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 38.95,
         audioEnd: 39.88,
       },
       {
         order: 15,
         name: "Paraonui",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 41.76,
         audioEnd: 42.7,
       },
       {
         order: 16,
         name: "Pokaiwhenua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 44.69,
         audioEnd: 45.83,
       },
@@ -31066,7 +31066,7 @@ export const zones = [
       {
         order: 29,
         name: "Whakauru",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 82.49,
         audioEnd: 83.5,
       },
@@ -31255,7 +31255,7 @@ export const zones = [
       {
         order: 24,
         name: "Pōkaiwhenua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 66.19,
         audioEnd: 67.33,
         altSpellings: ["pokaiwhenua"],
@@ -31548,7 +31548,7 @@ export const zones = [
       {
         order: 62,
         name: "Waihoroi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 179.04,
         audioEnd: 179.96,
       },
@@ -31577,7 +31577,7 @@ export const zones = [
       {
         order: 66,
         name: "Waiōmou",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 189.95,
         audioEnd: 191.12,
         altSpellings: ["waiomou"],
@@ -31585,7 +31585,7 @@ export const zones = [
       {
         order: 67,
         name: "Waipā",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 192.66,
         audioEnd: 193.47,
         altSpellings: ["waipa"],
@@ -31700,7 +31700,7 @@ export const zones = [
       {
         order: 12,
         name: "Mangawara",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 30.6,
         audioEnd: 31.5,
       },
@@ -31848,7 +31848,7 @@ export const zones = [
       {
         order: 32,
         name: "Tauhei",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 79.79,
         audioEnd: 80.65,
       },
@@ -31878,7 +31878,7 @@ export const zones = [
       {
         order: 36,
         name: "Te Kawakawa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 90.66,
         audioEnd: 92,
       },
@@ -31959,7 +31959,7 @@ export const zones = [
       {
         order: 47,
         name: "Tutumangeo",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 115.59,
         audioEnd: 117.01,
       },
@@ -32018,7 +32018,7 @@ export const zones = [
       {
         order: 55,
         name: "Waitakaruru",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 136.01,
         audioEnd: 137.19,
       },
@@ -32117,7 +32117,7 @@ export const zones = [
       {
         order: 10,
         name: "Mangakōmua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 21.36,
         audioEnd: 22.34,
         altSpellings: ["mangakomua"],
@@ -32125,14 +32125,14 @@ export const zones = [
       {
         order: 11,
         name: "Manga-Hoe",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 23.73,
         audioEnd: 24.58,
       },
       {
         order: 12,
         name: "Māngātutu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 25.51,
         audioEnd: 26.56,
         altSpellings: ["mangātutu"],
@@ -32170,7 +32170,7 @@ export const zones = [
       {
         order: 17,
         name: "Ōwairaka",
-        types: [lt.STREAM, lt.VALLEY, "locality"],
+        types: ["stream", "valley", "locality"],
         audioStart: 36.47,
         audioEnd: 37.11,
         altSpellings: ["owairaka"],
@@ -32415,7 +32415,7 @@ export const zones = [
       {
         order: 7,
         name: "Mangaohoe",
-        types: [lt.STREAM],
+        types: ["stream"],
         altNames: [
           {
             name: "Mangaōhoe",
@@ -32428,14 +32428,14 @@ export const zones = [
       {
         order: 8,
         name: "Mangahoi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 16.57,
         audioEnd: 17.48,
       },
       {
         order: 9,
         name: "Mangapiko",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 18.46,
         audioEnd: 19.34,
       },
@@ -32716,7 +32716,7 @@ export const zones = [
       {
         order: 8,
         name: "Kāniwhaniwha",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 17.13,
         audioEnd: 18.34,
         altSpellings: ["kaniwhaniwha"],
@@ -32762,7 +32762,7 @@ export const zones = [
       {
         order: 14,
         name: "Maeroa",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 30.85,
         audioEnd: 31.74,
       },
@@ -32806,7 +32806,7 @@ export const zones = [
       {
         order: 20,
         name: "Ōhio",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 40.85,
         audioEnd: 41.39,
         altSpellings: ["ohio"],
@@ -32858,7 +32858,7 @@ export const zones = [
       {
         order: 27,
         name: "Pūkete",
-        types: [lt.SUBURB, "park"],
+        types: ["suburb", "park"],
         audioStart: 52.63,
         audioEnd: 53.41,
         altSpellings: ["pukete"],
@@ -32961,7 +32961,7 @@ export const zones = [
       {
         order: 41,
         name: "Te Rapa",
-        types: [lt.SUBURB, "racecourse"],
+        types: ["suburb", "racecourse"],
         audioStart: 79.34,
         audioEnd: 80.13,
       },
@@ -33020,7 +33020,7 @@ export const zones = [
       {
         order: 49,
         name: "Waitāwhiriwhiri",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 94.19,
         audioEnd: 95.65,
         altSpellings: ["waitawhiriwhiri"],
@@ -33125,7 +33125,7 @@ export const zones = [
       {
         order: 11,
         name: "Mangawara",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 28.18,
         audioEnd: 28.98,
       },
@@ -33190,7 +33190,7 @@ export const zones = [
       {
         order: 20,
         name: "Tauhei",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 48.06,
         audioEnd: 48.86,
       },
@@ -33289,7 +33289,7 @@ export const zones = [
       {
         order: 2,
         name: "Awaroa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 6.75,
         audioEnd: 7.58,
       },
@@ -33551,7 +33551,7 @@ export const zones = [
       {
         order: 4,
         name: "Mangapiko",
-        types: [lt.STREAM, lt.VALLEY],
+        types: ["stream", "valley"],
         audioStart: 11,
         audioEnd: 11.93,
       },
@@ -33573,7 +33573,7 @@ export const zones = [
       {
         order: 7,
         name: "Matahuru",
-        types: ["marae", lt.STREAM, "locality"],
+        types: ["marae", "stream", "locality"],
         audioStart: 16.2,
         audioEnd: 17.14,
       },
@@ -33631,7 +33631,7 @@ export const zones = [
       {
         order: 15,
         name: "Ōkaeria",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 34.7,
         audioEnd: 35.6,
         altSpellings: ["okaeria"],
@@ -33639,7 +33639,7 @@ export const zones = [
       {
         order: 16,
         name: "Ōpuatia",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 36.51,
         audioEnd: 37.58,
         altSpellings: ["opuatia"],
@@ -33726,7 +33726,7 @@ export const zones = [
       {
         order: 28,
         name: "Waerenga",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 62.34,
         audioEnd: 63.11,
       },
@@ -33799,7 +33799,7 @@ export const zones = [
       {
         order: 3,
         name: "Huriwai",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 10.14,
         audioEnd: 10.92,
       },
@@ -33933,7 +33933,7 @@ export const zones = [
       {
         order: 21,
         name: "Pukekawa",
-        types: [],
+        types: ["locality"],
       },
       {
         order: 22,
@@ -34102,7 +34102,7 @@ export const zones = [
       {
         order: 1,
         name: "Akaaka",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 6.2,
         audioEnd: 7.15,
       },
@@ -34187,7 +34187,7 @@ export const zones = [
       {
         order: 13,
         name: "Mauku",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 35.29,
         audioEnd: 36.09,
       },
@@ -34246,7 +34246,7 @@ export const zones = [
       {
         order: 21,
         name: "Puhitahi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 52.46,
         audioEnd: 53.31,
       },
@@ -34312,7 +34312,7 @@ export const zones = [
       {
         order: 30,
         name: "Tamaoho",
-        types: [],
+        types: ["meeting house"],
       },
       {
         order: 31,
@@ -34382,7 +34382,7 @@ export const zones = [
       {
         order: 40,
         name: "Waitangi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 91.43,
         audioEnd: 92.29,
       },
@@ -34396,7 +34396,7 @@ export const zones = [
       {
         order: 42,
         name: "Whangamaire",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 95.69,
         audioEnd: 96.68,
       },
@@ -34463,7 +34463,7 @@ export const zones = [
       {
         order: 5,
         name: "Ngakoroa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 15.49,
         audioEnd: 16.7,
       },
@@ -35189,7 +35189,7 @@ export const zones = [
       {
         order: 10,
         name: "Ngā Tuaitara-ō-Taikehu",
-        types: [],
+        types: ["peaks"],
         audioStart: 37.02,
         audioEnd: 40.2,
         altSpellings: ["nga tuaitara-o-taikehu"],
@@ -35837,7 +35837,7 @@ export const zones = [
       {
         order: 4,
         name: "Ihumātao",
-        types: [],
+        types: ["locality"],
         audioStart: 14.39,
         audioEnd: 15.72,
         altSpellings: ["ihumatao"],
@@ -36021,7 +36021,7 @@ export const zones = [
       {
         order: 23,
         name: "Papahīnau",
-        types: [],
+        types: ["locality"],
         audioStart: 80.28,
         audioEnd: 81.65,
         altSpellings: ["papahinau"],
@@ -36198,7 +36198,7 @@ export const zones = [
       {
         order: 46,
         name: "Wiri",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 146.3,
         audioEnd: 146.97,
         altNames: [
@@ -36810,7 +36810,7 @@ export const zones = [
       {
         order: 9,
         name: "Kohimārama",
-        types: [lt.SUBURB, "beach"],
+        types: ["suburb", "beach"],
         audioStart: 24.23,
         audioEnd: 25.41,
         altSpellings: ["kohimarama"],
@@ -36909,14 +36909,14 @@ export const zones = [
       {
         order: 22,
         name: "Onehunga",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 58.86,
         audioEnd: 59.8,
       },
       {
         order: 23,
         name: "Ōrākei",
-        types: ["basin", "creek", "marae", lt.SUBURB],
+        types: ["basin", "creek", "marae", "suburb"],
         audioStart: 60.46,
         audioEnd: 61.59,
         altSpellings: ["orakei"],
@@ -36924,14 +36924,14 @@ export const zones = [
       {
         order: 24,
         name: "Oranga",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 63.58,
         audioEnd: 64.3,
       },
       {
         order: 25,
         name: "Ōwairaka",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 65.7,
         audioEnd: 66.81,
         altSpellings: ["owairaka"],
@@ -36990,7 +36990,7 @@ export const zones = [
       {
         order: 32,
         name: "Remuera",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 85.09,
         audioEnd: 86.14,
       },
@@ -37082,7 +37082,7 @@ export const zones = [
       {
         order: 44,
         name: "Te Pāpapa",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 117.42,
         audioEnd: 118.37,
         altSpellings: ["te papapa"],
@@ -37171,14 +37171,14 @@ export const zones = [
       {
         order: 56,
         name: "Waikaraka",
-        types: [lt.SUBURB, "park"],
+        types: ["suburb", "park"],
         audioStart: 151.68,
         audioEnd: 152.62,
       },
       {
         order: 57,
         name: "Waikōwhai",
-        types: ["bay", lt.SUBURB, "park"],
+        types: ["bay", "suburb", "park"],
         audioStart: 154.38,
         audioEnd: 155.41,
         altSpellings: ["waikowhai"],
@@ -37371,7 +37371,7 @@ export const zones = [
       {
         order: 19,
         name: "Kōnini",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 36.66,
         audioEnd: 37.46,
         altSpellings: ["konini"],
@@ -37379,7 +37379,7 @@ export const zones = [
       {
         order: 20,
         name: "Kūmeu",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 38.23,
         audioEnd: 39,
         altSpellings: ["kumeu"],
@@ -37402,14 +37402,14 @@ export const zones = [
       {
         order: 23,
         name: "Mokoroa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 43.1,
         audioEnd: 43.84,
       },
       {
         order: 24,
         name: "Mōmutu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 46.01,
         audioEnd: 46.67,
         altSpellings: ["momutu"],
@@ -37425,7 +37425,7 @@ export const zones = [
       {
         order: 26,
         name: "Ngongetepara",
-        types: [lt.STREAM],
+        types: ["stream"],
         altNames: [
           {
             name: "Te Ngongetepara",
@@ -37445,7 +37445,7 @@ export const zones = [
       {
         order: 28,
         name: "Ōpānuku",
-        types: [lt.STREAM, "marae"],
+        types: ["stream", "marae"],
         audioStart: 54.69,
         audioEnd: 55.53,
         altSpellings: ["opanuku"],
@@ -37469,7 +37469,7 @@ export const zones = [
       {
         order: 30,
         name: "Oratia",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 60.89,
         audioEnd: 61.84,
       },
@@ -37483,14 +37483,14 @@ export const zones = [
       {
         order: 32,
         name: "Paremuka",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 64.2,
         audioEnd: 64.99,
       },
       {
         order: 33,
         name: "Paturoa",
-        types: ["bay", lt.STREAM],
+        types: ["bay", "stream"],
         audioStart: 65.58,
         audioEnd: 66.47,
       },
@@ -37502,7 +37502,7 @@ export const zones = [
       {
         order: 35,
         name: "Rānui",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 67.54,
         audioEnd: 68.34,
         altSpellings: ["ranui"],
@@ -37517,7 +37517,7 @@ export const zones = [
       {
         order: 37,
         name: "Ruatuna",
-        types: [lt.STREAM, "beach"],
+        types: ["stream", "beach"],
         audioStart: 70.15,
         audioEnd: 70.98,
       },
@@ -37567,7 +37567,7 @@ export const zones = [
       {
         order: 43,
         name: "Te Atatū",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 83.17,
         audioEnd: 84.25,
         altSpellings: ["te atatu"],
@@ -37627,7 +37627,7 @@ export const zones = [
       {
         order: 51,
         name: "Titirangi",
-        types: [lt.SUBURB, "beach", "golf course"],
+        types: ["suburb", "beach", "golf course"],
         audioStart: 97.94,
         audioEnd: 98.78,
       },
@@ -37657,14 +37657,14 @@ export const zones = [
       {
         order: 55,
         name: "Waiatarua",
-        types: ["peak", lt.SUBURB],
+        types: ["peak", "suburb"],
         audioStart: 103.31,
         audioEnd: 104.26,
       },
       {
         order: 56,
         name: "Waikūmete",
-        types: [lt.STREAM, "cemetery"],
+        types: ["stream", "cemetery"],
         audioStart: 104.73,
         audioEnd: 105.77,
         altSpellings: ["waikumete"],
@@ -37680,7 +37680,7 @@ export const zones = [
       {
         order: 58,
         name: "Waimoko",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 107.52,
         audioEnd: 108.4,
       },
@@ -37709,7 +37709,7 @@ export const zones = [
       {
         order: 62,
         name: "Waitākere",
-        types: ["falls", lt.STREAM, "range"],
+        types: ["falls", "stream", "range"],
         audioStart: 112.45,
         audioEnd: 113.55,
         altSpellings: ["waitakere"],
@@ -37725,7 +37725,7 @@ export const zones = [
       {
         order: 64,
         name: "Waituna",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 115.3,
         audioEnd: 116,
       },
@@ -37761,7 +37761,7 @@ export const zones = [
       {
         order: 1,
         name: "Anawhata",
-        types: ["beach", lt.STREAM, "locality"],
+        types: ["beach", "stream", "locality"],
         audioStart: 5.76,
         audioEnd: 6.5,
       },
@@ -37783,7 +37783,7 @@ export const zones = [
       {
         order: 4,
         name: "Huia",
-        types: [lt.STREAM, "dam", "dam", "reservoir", "reservoir", "locality"],
+        types: ["stream", "dam", "dam", "reservoir", "reservoir", "locality"],
         audioStart: 11.23,
         audioEnd: 11.7,
         altNames: [
@@ -37818,7 +37818,7 @@ export const zones = [
       {
         order: 7,
         name: "Kakamātua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 18.38,
         audioEnd: 19.36,
         altSpellings: ["kakamatua"],
@@ -37826,7 +37826,7 @@ export const zones = [
       {
         order: 8,
         name: "Karekare",
-        types: [lt.STREAM, "beach", "locality"],
+        types: ["stream", "beach", "locality"],
         audioStart: 19.92,
         audioEnd: 20.71,
       },
@@ -37876,7 +37876,7 @@ export const zones = [
       {
         order: 15,
         name: "Marowharo",
-        types: [],
+        types: ["stream"],
         audioStart: 34.03,
         audioEnd: 34.86,
       },
@@ -37913,7 +37913,7 @@ export const zones = [
       {
         order: 20,
         name: "Pāraha",
-        types: ["bay", lt.STREAM],
+        types: ["bay", "stream"],
         audioStart: 41.56,
         audioEnd: 42.13,
         altSpellings: ["paraha"],
@@ -37951,7 +37951,7 @@ export const zones = [
       {
         order: 25,
         name: "Piha",
-        types: ["beach", lt.STREAM, "locality"],
+        types: ["beach", "stream", "locality"],
         audioStart: 48.83,
         audioEnd: 49.38,
       },
@@ -38033,14 +38033,14 @@ export const zones = [
       {
         order: 36,
         name: "Te Henga",
-        types: [lt.STREAM, "beach", "marshland"],
+        types: ["stream", "beach", "marshland"],
         audioStart: 64.6,
         audioEnd: 65.35,
       },
       {
         order: 37,
         name: "Te Kāinga Māturi",
-        types: ["park", lt.STREAM],
+        types: ["park", "stream"],
         audioStart: 65.55,
         audioEnd: 66.74,
         altSpellings: ["te kainga māturi"],
@@ -38086,7 +38086,7 @@ export const zones = [
       {
         order: 42,
         name: "Wainamu",
-        types: ["lake", lt.STREAM],
+        types: ["lake", "stream"],
         audioStart: 78.6,
         audioEnd: 79.38,
       },
@@ -38116,7 +38116,7 @@ export const zones = [
       {
         order: 46,
         name: "Whatipū",
-        types: ["beach", lt.STREAM, "locality"],
+        types: ["beach", "stream", "locality"],
         audioStart: 83.89,
         audioEnd: 84.32,
         altSpellings: ["whatipu"],
@@ -38132,7 +38132,7 @@ export const zones = [
       {
         order: 1,
         name: "Awanohi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 5.18,
         audioEnd: 5.95,
       },
@@ -38176,7 +38176,7 @@ export const zones = [
       {
         order: 7,
         name: "Hauraki",
-        types: ["gulf", "maritime park", lt.SUBURB],
+        types: ["gulf", "maritime park", "suburb"],
         audioStart: 19.38,
         audioEnd: 20.04,
       },
@@ -38302,7 +38302,7 @@ export const zones = [
       {
         order: 21,
         name: "Ōkura",
-        types: ["river", lt.SUBURB],
+        types: ["river", "suburb"],
         audioStart: 64.1,
         audioEnd: 64.83,
         altSpellings: ["okura"],
@@ -38326,7 +38326,7 @@ export const zones = [
       {
         order: 23,
         name: "Onepoto",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 71.67,
         audioEnd: 72.7,
       },
@@ -38348,7 +38348,7 @@ export const zones = [
       {
         order: 26,
         name: "Otehā",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 78.76,
         audioEnd: 79.48,
         altSpellings: ["oteha"],
@@ -38356,7 +38356,7 @@ export const zones = [
       {
         order: 27,
         name: "Pāremoremo",
-        types: [lt.STREAM, "locality", "prison"],
+        types: ["stream", "locality", "prison"],
         audioStart: 81.04,
         audioEnd: 82.04,
         altSpellings: ["paremoremo"],
@@ -38470,7 +38470,7 @@ export const zones = [
       {
         order: 42,
         name: "Wainoni",
-        types: ["park", lt.SUBURB],
+        types: ["park", "suburb"],
         audioStart: 121.87,
         audioEnd: 122.63,
       },
@@ -38493,7 +38493,7 @@ export const zones = [
       {
         order: 1,
         name: "Āhukuramu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 5.44,
         audioEnd: 6.66,
         altSpellings: ["ahukuramu"],
@@ -38508,7 +38508,7 @@ export const zones = [
       {
         order: 3,
         name: "Ararimu",
-        types: [lt.STREAM, lt.VALLEY],
+        types: ["stream", "valley"],
         audioStart: 10.62,
         audioEnd: 11.51,
       },
@@ -38589,7 +38589,7 @@ export const zones = [
       {
         order: 13,
         name: "Kūmeu",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 36.68,
         audioEnd: 37.48,
         altSpellings: ["kumeu"],
@@ -38834,14 +38834,14 @@ export const zones = [
       {
         order: 45,
         name: "Waikoukou",
-        types: [lt.STREAM, lt.VALLEY, "locality"],
+        types: ["stream", "valley", "locality"],
         audioStart: 125.83,
         audioEnd: 126.92,
       },
       {
         order: 46,
         name: "Waimauku",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 128.57,
         audioEnd: 129.53,
       },
@@ -38937,7 +38937,7 @@ export const zones = [
       {
         order: 7,
         name: "Ōtānerua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 20.53,
         audioEnd: 21.77,
         altSpellings: ["otanerua"],
@@ -39037,7 +39037,7 @@ export const zones = [
       {
         order: 3,
         name: "Kawau",
-        types: [],
+        types: ["bay"],
         audioStart: 13.12,
         audioEnd: 13.83,
       },
@@ -39143,7 +39143,7 @@ export const zones = [
       {
         order: 17,
         name: "Te Ārai",
-        types: [],
+        types: ["point", "locality", "locality"],
         audioStart: 45.58,
         audioEnd: 46.25,
         altSpellings: ["te arai"],
@@ -39282,7 +39282,7 @@ export const zones = [
       {
         order: 6,
         name: "Maeneene",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 21.05,
         audioEnd: 22.07,
       },
@@ -39356,7 +39356,7 @@ export const zones = [
       {
         order: 15,
         name: "Pīroa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 48.52,
         audioEnd: 49.2,
         altSpellings: ["piroa"],
@@ -39619,7 +39619,7 @@ export const zones = [
       {
         order: 23,
         name: "Mangatara",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 54.14,
         audioEnd: 55.04,
       },
@@ -39822,7 +39822,7 @@ export const zones = [
       {
         order: 50,
         name: "Rāhiri",
-        types: [],
+        types: ["meeting house"],
         audioStart: 123,
         audioEnd: 123.84,
         altSpellings: ["rahiri"],
@@ -40084,7 +40084,7 @@ export const zones = [
       {
         order: 84,
         name: "Tūtāmoe",
-        types: [],
+        types: ["peak"],
         audioStart: 210.45,
         audioEnd: 211.48,
         altSpellings: ["tutamoe"],
@@ -40128,7 +40128,7 @@ export const zones = [
       {
         order: 90,
         name: "Waiotira",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 225.21,
         audioEnd: 226.24,
       },
@@ -40334,7 +40334,7 @@ export const zones = [
       {
         order: 23,
         name: "Tūtāmoe",
-        types: [],
+        types: ["range", "peak", "locality"],
         audioStart: 59.9,
         audioEnd: 60.56,
         altSpellings: ["tutamoe"],
@@ -40342,7 +40342,7 @@ export const zones = [
       {
         order: 24,
         name: "Waikarā",
-        types: [lt.STREAM, "marae", "locality"],
+        types: ["stream", "marae", "locality"],
         audioStart: 61.74,
         audioEnd: 62.6,
         altSpellings: ["waikara"],
@@ -40773,7 +40773,7 @@ export const zones = [
       {
         order: 50,
         name: "Tūtamoe",
-        types: [],
+        types: ["peak", "range"],
         audioStart: 112.95,
         audioEnd: 113.88,
         altSpellings: ["tutamoe"],
@@ -40788,7 +40788,7 @@ export const zones = [
       {
         order: 52,
         name: "Waimā",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 115.83,
         audioEnd: 116.64,
         altSpellings: ["waima"],
@@ -40914,7 +40914,7 @@ export const zones = [
       {
         order: 9,
         name: "Mangakāhia",
-        types: ["river", lt.VALLEY],
+        types: ["river", "valley"],
         audioStart: 20.82,
         audioEnd: 22.01,
         altSpellings: ["mangakahia"],
@@ -40922,7 +40922,7 @@ export const zones = [
       {
         order: 10,
         name: "Mangamutu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 22.67,
         audioEnd: 23.7,
       },
@@ -41058,7 +41058,7 @@ export const zones = [
       {
         order: 28,
         name: "Punākitere",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 62.8,
         audioEnd: 63.9,
         altSpellings: ["punakitere"],
@@ -41259,7 +41259,7 @@ export const zones = [
       {
         order: 9,
         name: "Kāmo",
-        types: ["springs", lt.SUBURB],
+        types: ["springs", "suburb"],
         audioStart: 27.22,
         audioEnd: 27.79,
         altSpellings: ["kamo"],
@@ -41319,7 +41319,7 @@ export const zones = [
       {
         order: 16,
         name: "Mangakāhia",
-        types: ["river", lt.VALLEY],
+        types: ["river", "valley"],
         audioStart: 48,
         audioEnd: 48.83,
         altSpellings: ["mangakahia"],
@@ -41432,7 +41432,7 @@ export const zones = [
       {
         order: 31,
         name: "Māunu",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 89.61,
         audioEnd: 90.18,
         altSpellings: ["maunu"],
@@ -41477,14 +41477,14 @@ export const zones = [
       {
         order: 37,
         name: "Onerahi",
-        types: ["marae", lt.SUBURB],
+        types: ["marae", "suburb"],
         audioStart: 111.14,
         audioEnd: 111.97,
       },
       {
         order: 38,
         name: "Ōtaika",
-        types: [lt.VALLEY, lt.SUBURB, "locality"],
+        types: ["valley", "suburb", "locality"],
         audioStart: 112.85,
         audioEnd: 113.71,
         altSpellings: ["otaika"],
@@ -41500,7 +41500,7 @@ export const zones = [
       {
         order: 40,
         name: "Otangarei",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 116.94,
         audioEnd: 117.92,
       },
@@ -41560,7 +41560,7 @@ export const zones = [
       {
         order: 48,
         name: "Parawhau",
-        types: [lt.VALLEY, "locality"],
+        types: ["valley", "locality"],
         audioStart: 142.4,
         audioEnd: 142.94,
       },
@@ -41642,7 +41642,7 @@ export const zones = [
       {
         order: 59,
         name: "Raupunga",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 165.07,
         audioEnd: 165.91,
       },
@@ -41766,7 +41766,7 @@ export const zones = [
       {
         order: 76,
         name: "Te Hihi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 202.48,
         audioEnd: 203.08,
       },
@@ -41824,14 +41824,14 @@ export const zones = [
       {
         order: 84,
         name: "Te Wheki",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 224.01,
         audioEnd: 224.8,
       },
       {
         order: 85,
         name: "Tikipunga",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 227.11,
         audioEnd: 227.87,
       },
@@ -41869,7 +41869,7 @@ export const zones = [
       {
         order: 90,
         name: "Waiarohia",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 237.92,
         audioEnd: 238.92,
       },
@@ -41897,14 +41897,14 @@ export const zones = [
       {
         order: 94,
         name: "Waiotama",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 249.57,
         audioEnd: 250.53,
       },
       {
         order: 95,
         name: "Waiotira",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 252.23,
         audioEnd: 253.09,
       },
@@ -41955,7 +41955,7 @@ export const zones = [
       {
         order: 102,
         name: "Whananāki",
-        types: [],
+        types: ["bay", "locality", "locality"],
         audioStart: 272.46,
         audioEnd: 273.19,
         altSpellings: ["whananaki"],
@@ -42009,7 +42009,7 @@ export const zones = [
       {
         order: 107,
         name: "Whau",
-        types: ["river", lt.VALLEY],
+        types: ["river", "valley"],
         audioStart: 295.82,
         audioEnd: 296.15,
       },
@@ -42105,7 +42105,7 @@ export const zones = [
       {
         order: 11,
         name: "Māuitaha",
-        types: [],
+        types: ["island"],
         audioStart: 34.5,
         audioEnd: 35.61,
         altSpellings: ["mauitaha"],
@@ -42142,7 +42142,7 @@ export const zones = [
       {
         order: 16,
         name: "Motuwairaka",
-        types: [],
+        types: ["island"],
         audioStart: 52.54,
         audioEnd: 53.95,
       },
@@ -42163,7 +42163,7 @@ export const zones = [
       {
         order: 19,
         name: "Tawatawa",
-        types: [],
+        types: ["island"],
         audioStart: 61.48,
         audioEnd: 62.33,
       },
@@ -42424,7 +42424,7 @@ export const zones = [
       {
         order: 25,
         name: "Tāikirau",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 68.96,
         audioEnd: 69.82,
         altSpellings: ["taikirau"],
@@ -42469,7 +42469,7 @@ export const zones = [
       {
         order: 31,
         name: "Waipūākākāhau",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 83.99,
         audioEnd: 85.74,
         altSpellings: ["waipuakākāhau"],
@@ -42487,15 +42487,15 @@ export const zones = [
   {
     number: 131,
     nameCommon: "Bay of Islands",
-    speakers: [' Kei Tutuki!"', "Tupi Puriri", "Rameka Cope"],
+    speakers: ["Tupi Puriri", "Rameka Cope"],
     localities: [
       {
         order: 1,
-        name: '"Ē Koro',
-        types: ["7"],
-        audioStart: null,
-        audioEnd: null,
-        altSpellings: ['"e koro'],
+        name: "Ē Koro, Kei Tutuki!",
+        types: ["meeting house"],
+        audioStart: 5.93,
+        audioEnd: 7.91,
+        altSpellings: ["e koro, kei tutuki!"],
       },
       {
         order: 2,
@@ -42877,7 +42877,7 @@ export const zones = [
       {
         order: 51,
         name: "Owhareiti",
-        types: ["lake", lt.STREAM],
+        types: ["lake", "stream"],
         audioStart: 130.41,
         audioEnd: 131.47,
       },
@@ -43040,7 +43040,7 @@ export const zones = [
       {
         order: 73,
         name: "Tāikirau",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 185.4,
         audioEnd: 186.34,
         altSpellings: ["taikirau"],
@@ -43312,14 +43312,14 @@ export const zones = [
       {
         order: 109,
         name: "Waiharakeke",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 290.41,
         audioEnd: 291.63,
       },
       {
         order: 110,
         name: "Waihou",
-        types: ["river", lt.VALLEY, "locality", "locality"],
+        types: ["river", "valley", "locality", "locality"],
         audioStart: 293.31,
         audioEnd: 294.21,
       },
@@ -43459,7 +43459,7 @@ export const zones = [
       {
         order: 7,
         name: "Hikurua",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 19.86,
         audioEnd: 20.73,
       },
@@ -43563,7 +43563,7 @@ export const zones = [
       {
         order: 21,
         name: "Māngāpā",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 60.4,
         audioEnd: 61.41,
         altSpellings: ["mangāpā"],
@@ -43803,7 +43803,7 @@ export const zones = [
       {
         order: 54,
         name: "Ōmaunu",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 136.3,
         audioEnd: 137.2,
         altSpellings: ["omaunu"],
@@ -43987,7 +43987,7 @@ export const zones = [
       {
         order: 78,
         name: "Takarau",
-        types: [lt.STREAM, "block"],
+        types: ["stream", "block"],
         audioStart: 196.35,
         audioEnd: 197.07,
       },
@@ -44002,7 +44002,7 @@ export const zones = [
       {
         order: 80,
         name: "Taraire",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 201.58,
         audioEnd: 202.26,
       },
@@ -44031,7 +44031,7 @@ export const zones = [
       {
         order: 84,
         name: "Tauranga",
-        types: ["bay", lt.VALLEY, "locality", "locality"],
+        types: ["bay", "valley", "locality", "locality"],
         audioStart: 210.01,
         audioEnd: 210.77,
       },
@@ -44170,7 +44170,7 @@ export const zones = [
       {
         order: 102,
         name: "Tōuwai",
-        types: [lt.STREAM, "bay"],
+        types: ["stream", "bay"],
         audioStart: 255.38,
         audioEnd: 256.2,
         altSpellings: ["touwai"],
@@ -44220,7 +44220,7 @@ export const zones = [
       {
         order: 109,
         name: "Waionepū",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 269.21,
         audioEnd: 270.13,
         altSpellings: ["waionepu"],
@@ -44244,7 +44244,7 @@ export const zones = [
       {
         order: 112,
         name: "Te Waitapu",
-        types: [lt.STREAM, "bay"],
+        types: ["stream", "bay"],
         audioStart: 275.95,
         audioEnd: 276.88,
       },
@@ -44306,13 +44306,7 @@ export const zones = [
   {
     number: 133,
     nameCommon: "North Hokianga",
-    speakers: [
-      "Joe Toki",
-      '"Puhi Kai Ariki',
-      "sp_46",
-      "Raureti Harris",
-      "Bob Harris",
-    ],
+    speakers: ["Joe Toki", "Raureti Harris", "Bob Harris"],
     localities: [
       {
         order: 1,
@@ -44325,7 +44319,7 @@ export const zones = [
       {
         order: 2,
         name: "Hūtoia",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 7.73,
         audioEnd: 8.76,
         altSpellings: ["hutoia"],
@@ -44422,7 +44416,7 @@ export const zones = [
       {
         order: 15,
         name: "Moetangi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 30.6,
         audioEnd: 31.52,
       },
@@ -44467,22 +44461,18 @@ export const zones = [
       {
         order: 21,
         name: "Ngāpuhi",
-        types: [],
+        types: ["meeting house"],
         audioStart: 39.78,
         audioEnd: 40.75,
         altSpellings: ["ngapuhi"],
         altNames: [
           {
-            name: " Puhi Moana Ariki",
-            altSpellings: [" puhi moana ariki"],
-            audioStart: null,
-            audioEnd: null,
-          },
-          {
-            name: ' PUhi TAniwha RAU"',
-            altSpellings: [' puhi taniwha rau"'],
-            audioStart: 44.54,
-            audioEnd: null,
+            name: "Puhi Kai Ariki, Puhi Moana Ariki, Puhi Taniwha Rau",
+            altSpellings: [
+              "puhi kai ariki, puhi moana ariki, puhi taniwha rau",
+            ],
+            audioStart: 40.85,
+            audioEnd: 44.54,
           },
         ],
       },
@@ -44497,7 +44487,7 @@ export const zones = [
       {
         order: 23,
         name: "Ōkāhu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 47,
         audioEnd: 47.83,
         altSpellings: ["okahu"],
@@ -44513,7 +44503,7 @@ export const zones = [
       {
         order: 25,
         name: "Ōmākura",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 50.29,
         audioEnd: 51.28,
         altSpellings: ["omakura"],
@@ -44583,7 +44573,7 @@ export const zones = [
       {
         order: 34,
         name: "Paiōkātutu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 66.98,
         audioEnd: 68.73,
         altSpellings: ["paiokatutu"],
@@ -44683,7 +44673,7 @@ export const zones = [
       {
         order: 47,
         name: "Taikarawa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 90.22,
         audioEnd: 91.16,
       },
@@ -44732,7 +44722,7 @@ export const zones = [
       {
         order: 54,
         name: "Te Karae",
-        types: [lt.STREAM, "meeting house", "locality"],
+        types: ["stream", "meeting house", "locality"],
         audioStart: 101.41,
         audioEnd: 102.13,
       },
@@ -44761,7 +44751,7 @@ export const zones = [
       {
         order: 58,
         name: "Te Waipoka",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 108.88,
         audioEnd: 109.77,
       },
@@ -44826,14 +44816,14 @@ export const zones = [
       {
         order: 67,
         name: "Waihou",
-        types: ["river", lt.STREAM, "marae"],
+        types: ["river", "stream", "marae"],
         audioStart: 124.42,
         audioEnd: 125.18,
       },
       {
         order: 68,
         name: "Waikerehū",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 125.97,
         audioEnd: 126.94,
         altSpellings: ["waikerehu"],
@@ -44841,7 +44831,7 @@ export const zones = [
       {
         order: 69,
         name: "Waimāhe",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 127.87,
         audioEnd: 128.83,
         altSpellings: ["waimahe"],
@@ -44891,14 +44881,14 @@ export const zones = [
       {
         order: 76,
         name: "Whakarapa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 140.95,
         audioEnd: 141.73,
       },
       {
         order: 77,
         name: "Whakateterekia",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 142.79,
         audioEnd: 143.86,
       },
@@ -44940,7 +44930,7 @@ export const zones = [
       {
         order: 5,
         name: "Manganuiōwai",
-        types: [],
+        types: ["stream"],
         audioStart: 10.4,
         audioEnd: 11.37,
         altSpellings: ["manganuiowai"],
@@ -44948,7 +44938,7 @@ export const zones = [
       {
         order: 6,
         name: "Mangawhero",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 12.64,
         audioEnd: 13.34,
       },
@@ -45021,7 +45011,7 @@ export const zones = [
       {
         order: 16,
         name: "Pūhata",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 32.19,
         audioEnd: 32.64,
         altSpellings: ["puhata"],
@@ -45156,14 +45146,14 @@ export const zones = [
       {
         order: 2,
         name: "Hukatere",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 8.38,
         audioEnd: 9.02,
       },
       {
         order: 3,
         name: "Hunahuna",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 10.33,
         audioEnd: 11.05,
       },
@@ -45250,7 +45240,7 @@ export const zones = [
       {
         order: 15,
         name: "Ōhārae",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 42.46,
         audioEnd: 43.45,
         altSpellings: ["oharae"],
@@ -45295,7 +45285,7 @@ export const zones = [
       {
         order: 21,
         name: "Paranui",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 60.29,
         audioEnd: 61.02,
       },
@@ -45381,7 +45371,7 @@ export const zones = [
       {
         order: 33,
         name: "Tanutanu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 88.96,
         audioEnd: 89.82,
       },
@@ -45426,7 +45416,7 @@ export const zones = [
       {
         order: 39,
         name: "Te Puhi",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 104.66,
         audioEnd: 105.33,
       },
@@ -45469,7 +45459,7 @@ export const zones = [
       {
         order: 45,
         name: "Waitaha",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 119.44,
         audioEnd: 120.23,
       },
@@ -45550,7 +45540,7 @@ export const zones = [
       {
         order: 10,
         name: "Parapara",
-        types: [lt.STREAM, "locality", "marae", "meeting house"],
+        types: ["stream", "locality", "marae", "meeting house"],
         audioStart: 28.33,
         audioEnd: 29.03,
       },
@@ -45711,7 +45701,7 @@ export const zones = [
       {
         order: 13,
         name: "Kauaeparāoa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 26.11,
         audioEnd: 27.03,
         altSpellings: ["kauaeparaoa"],
@@ -45764,21 +45754,21 @@ export const zones = [
       {
         order: 19,
         name: "Manawahei",
-        types: [],
+        types: ["island"],
         audioStart: 39.75,
         audioEnd: 40.7,
       },
       {
         order: 20,
         name: "Manawarua",
-        types: [],
+        types: ["island"],
         audioStart: 41.59,
         audioEnd: 42.48,
       },
       {
         order: 21,
         name: "Manawatahi",
-        types: [],
+        types: ["island"],
         audioStart: 43.07,
         audioEnd: 43.91,
       },
@@ -45902,7 +45892,7 @@ export const zones = [
       {
         order: 38,
         name: "Ngākeketa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 79.28,
         audioEnd: 80.17,
         altSpellings: ["ngakeketa"],
@@ -46243,14 +46233,14 @@ export const zones = [
       {
         order: 84,
         name: "Te Waioraroropo",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 179.02,
         audioEnd: 180.83,
       },
       {
         order: 85,
         name: "Te Waiorata",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 182.91,
         audioEnd: 183.76,
       },
@@ -46329,7 +46319,7 @@ export const zones = [
       {
         order: 96,
         name: "Waikanae",
-        types: [lt.STREAM, "lake"],
+        types: ["stream", "lake"],
         audioStart: 206.16,
         audioEnd: 207.01,
       },
@@ -46365,7 +46355,7 @@ export const zones = [
       {
         order: 101,
         name: "Waimōrere",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 218.51,
         audioEnd: 219.36,
         altSpellings: ["waimorere"],
@@ -46373,7 +46363,7 @@ export const zones = [
       {
         order: 102,
         name: "Waingurunguru",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 220.52,
         audioEnd: 221.46,
       },
@@ -46394,7 +46384,7 @@ export const zones = [
       {
         order: 105,
         name: "Waiparera",
-        types: ["lake", lt.STREAM],
+        types: ["lake", "stream"],
         audioStart: 227.11,
         audioEnd: 227.91,
       },
@@ -46408,7 +46398,7 @@ export const zones = [
       {
         order: 107,
         name: "Waitāhora",
-        types: ["lake", lt.STREAM],
+        types: ["lake", "stream"],
         audioStart: 231.33,
         audioEnd: 232.25,
         altSpellings: ["waitahora"],
@@ -46423,21 +46413,21 @@ export const zones = [
       {
         order: 109,
         name: "Waitanoni",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 235.13,
         audioEnd: 236.01,
       },
       {
         order: 110,
         name: "Waitarau",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 237.2,
         audioEnd: 238.01,
       },
       {
         order: 111,
         name: "Waitiki",
-        types: [lt.STREAM, "landing", "locality", "locality"],
+        types: ["stream", "landing", "locality", "locality"],
         audioStart: 239.53,
         audioEnd: 240.27,
       },
@@ -46483,7 +46473,7 @@ export const zones = [
       {
         order: 1,
         name: "Hinemihi",
-        types: [],
+        types: ["meeting house"],
         audioStart: 5.81,
         audioEnd: 6.63,
       },
@@ -46498,7 +46488,7 @@ export const zones = [
       {
         order: 3,
         name: "Pouihi",
-        types: [],
+        types: ["carving"],
         audioStart: 11.05,
         audioEnd: 11.77,
       },
@@ -46558,7 +46548,7 @@ export const zones = [
       {
         order: 4,
         name: "Te Awaiti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 13.73,
         audioEnd: 14.98,
       },
@@ -46847,7 +46837,7 @@ export const zones = [
       {
         order: 13,
         name: "Kānuka",
-        types: ["ridge", lt.STREAM],
+        types: ["ridge", "stream"],
         audioStart: 34.13,
         audioEnd: 34.84,
         altSpellings: ["kanuka"],
@@ -47030,7 +47020,7 @@ export const zones = [
       {
         order: 35,
         name: "Rāmeka",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 87.88,
         audioEnd: 88.71,
         altSpellings: ["rameka"],
@@ -47142,7 +47132,7 @@ export const zones = [
       {
         order: 50,
         name: "Tui",
-        types: [lt.STREAM, "community"],
+        types: ["stream", "community"],
         audioStart: 124.74,
         audioEnd: 125.33,
       },
@@ -47421,7 +47411,7 @@ export const zones = [
       {
         order: 22,
         name: "Rīwaka",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 64.89,
         audioEnd: 65.67,
         altSpellings: ["riwaka"],
@@ -47689,7 +47679,7 @@ export const zones = [
       {
         order: 3,
         name: "Atawhai",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 10.01,
         audioEnd: 11.23,
       },
@@ -47770,7 +47760,7 @@ export const zones = [
       {
         order: 14,
         name: "Maitai",
-        types: ["river", lt.VALLEY, lt.SUBURB],
+        types: ["river", "valley", "suburb"],
         audioStart: 33.47,
         audioEnd: 34.56,
       },
@@ -47808,7 +47798,7 @@ export const zones = [
       {
         order: 19,
         name: "Matau ā Māui",
-        types: [],
+        types: ["province", "peninsula", "beach"],
         audioStart: 44.64,
         audioEnd: 46.44,
         altSpellings: ["matau a māui"],
@@ -47823,7 +47813,7 @@ export const zones = [
       {
         order: 21,
         name: "Moana",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 50.02,
         audioEnd: 50.92,
       },
@@ -47914,7 +47904,7 @@ export const zones = [
       {
         order: 33,
         name: "Tāhuna",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 81.47,
         audioEnd: 82.48,
         altSpellings: ["tahuna"],
@@ -47966,7 +47956,7 @@ export const zones = [
       {
         order: 38,
         name: "Wai-iti",
-        types: ["river", lt.VALLEY],
+        types: ["river", "valley"],
         audioStart: 105.91,
         audioEnd: 107.05,
       },
@@ -48003,7 +47993,7 @@ export const zones = [
       {
         order: 43,
         name: "Whangamoa",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 120.13,
         audioEnd: 121.02,
       },
@@ -48236,7 +48226,7 @@ export const zones = [
       {
         order: 29,
         name: "Ōpōuri",
-        types: ["peak", lt.VALLEY, "locality", "saddle"],
+        types: ["peak", "valley", "locality", "saddle"],
         audioStart: 92.52,
         audioEnd: 93.85,
         altSpellings: ["opouri"],
@@ -48300,7 +48290,7 @@ export const zones = [
       {
         order: 38,
         name: "Rei",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 121.84,
         audioEnd: 122.56,
       },
@@ -48314,7 +48304,7 @@ export const zones = [
       {
         order: 40,
         name: "Ronga",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 126.79,
         audioEnd: 127.59,
       },
@@ -48364,7 +48354,7 @@ export const zones = [
       {
         order: 47,
         name: "Te Aumiti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 146.48,
         audioEnd: 147.8,
       },
@@ -48449,7 +48439,7 @@ export const zones = [
       {
         order: 58,
         name: "Tunakino",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 175.01,
         audioEnd: 176.15,
       },
@@ -48583,14 +48573,14 @@ export const zones = [
       {
         order: 5,
         name: "Arahanga",
-        types: [lt.FERRY],
+        types: ["ferry"],
         audioStart: 19.45,
         audioEnd: 20.33,
       },
       {
         order: 6,
         name: "Arahura",
-        types: [lt.FERRY],
+        types: ["ferry"],
         audioStart: 21.76,
         audioEnd: 22.68,
       },
@@ -48604,7 +48594,7 @@ export const zones = [
       {
         order: 8,
         name: "Aratika",
-        types: [lt.FERRY],
+        types: ["ferry"],
         audioStart: 27.07,
         audioEnd: 27.93,
       },
@@ -48693,7 +48683,7 @@ export const zones = [
       {
         order: 19,
         name: "Mākahi",
-        types: [lt.STREAM],
+        types: ["stream"],
         altSpellings: ["makahi"],
       },
       {
@@ -48951,7 +48941,7 @@ export const zones = [
       {
         order: 52,
         name: "Waitohi",
-        types: [lt.STREAM, "town"],
+        types: ["stream", "town"],
         audioStart: 164.17,
         audioEnd: 165.21,
       },
@@ -49095,7 +49085,7 @@ export const zones = [
       {
         order: 14,
         name: "Ōhinemāhuta",
-        types: ["river", lt.VALLEY, "locality", "domain"],
+        types: ["river", "valley", "locality", "domain"],
         audioStart: 41.55,
         audioEnd: 43.08,
         altSpellings: ["ohinemahuta"],
@@ -49158,7 +49148,7 @@ export const zones = [
       {
         order: 22,
         name: "Pūkaka",
-        types: [lt.VALLEY],
+        types: ["valley"],
         audioStart: 60.6,
         audioEnd: 61.39,
         altSpellings: ["pukaka"],
@@ -49254,7 +49244,7 @@ export const zones = [
       {
         order: 36,
         name: "Tua Marino",
-        types: [],
+        types: ["locality"],
       },
       {
         order: 37,
@@ -49273,14 +49263,14 @@ export const zones = [
       {
         order: 39,
         name: "Waiharakeke",
-        types: [],
+        types: ["river", "region"],
         audioStart: 93.61,
         audioEnd: 95.01,
       },
       {
         order: 40,
         name: "Waihōpai",
-        types: ["river", lt.VALLEY, "spy station"],
+        types: ["river", "valley", "spy station"],
         audioStart: 96.79,
         audioEnd: 97.94,
         altSpellings: ["waihopai"],
@@ -49296,7 +49286,7 @@ export const zones = [
       {
         order: 42,
         name: "Wairau",
-        types: ["river", lt.VALLEY, "bar", "pā"],
+        types: ["river", "valley", "bar", "pā"],
         audioStart: 101.94,
         audioEnd: 103.04,
       },
@@ -49467,7 +49457,7 @@ export const zones = [
       {
         order: 20,
         name: "Maritana",
-        types: [],
+        types: ["peak"],
       },
       {
         order: 21,
@@ -49509,7 +49499,7 @@ export const zones = [
       {
         order: 26,
         name: "Mororimu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 71.79,
         audioEnd: 72.87,
       },
@@ -49570,7 +49560,7 @@ export const zones = [
       {
         order: 34,
         name: "Ōhau",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 94.49,
         audioEnd: 95.21,
         altSpellings: ["ohau"],
@@ -49593,7 +49583,7 @@ export const zones = [
       {
         order: 37,
         name: "Ōtemākura",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 101.4,
         audioEnd: 102.69,
         altSpellings: ["otemakura"],
@@ -49660,7 +49650,7 @@ export const zones = [
       {
         order: 46,
         name: "Rākautara",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 124.54,
         audioEnd: 125.65,
         altSpellings: ["rakautara"],
@@ -49779,7 +49769,7 @@ export const zones = [
       {
         order: 59,
         name: "Waitāne",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 165.06,
         audioEnd: 166.07,
         altSpellings: ["waitane"],
@@ -49897,7 +49887,7 @@ export const zones = [
       {
         order: 11,
         name: "Ōmihi",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 31.5,
         audioEnd: 32.47,
         altSpellings: ["omihi"],
@@ -50032,7 +50022,7 @@ export const zones = [
       {
         order: 29,
         name: "Waitiataukuri",
-        types: [],
+        types: ["spit"],
         audioStart: 74.07,
         audioEnd: 76.1,
       },
@@ -50168,7 +50158,7 @@ export const zones = [
       {
         order: 16,
         name: "Rakiora",
-        types: [],
+        types: ["town"],
         audioStart: 28.78,
         audioEnd: 29.77,
       },
@@ -50231,7 +50221,7 @@ export const zones = [
   {
     number: 150,
     nameCommon: "Christchurch",
-    speakers: ["Rakiihia Tau", "Maurice Gray", ' Ihu Tai Maroro"'],
+    speakers: ["Rakiihia Tau", "Maurice Gray"],
     localities: [
       {
         order: 1,
@@ -50258,7 +50248,7 @@ export const zones = [
       {
         order: 4,
         name: "Aranui",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 11.94,
         audioEnd: 12.66,
       },
@@ -50272,7 +50262,7 @@ export const zones = [
       {
         order: 6,
         name: "Heihei",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 16.28,
         audioEnd: 16.92,
       },
@@ -50286,29 +50276,29 @@ export const zones = [
       {
         order: 8,
         name: "Here-ora",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 18.89,
         audioEnd: 19.59,
       },
       {
         order: 9,
         name: "Hika-huruhuru",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 20.68,
         audioEnd: 21.45,
       },
       {
         order: 10,
         name: "Ihu Tai",
-        types: [],
+        types: ["estuary"],
         audioStart: 22.39,
         audioEnd: 23.16,
         altNames: [
           {
-            name: ' Ihu Tai Maroro"',
-            altSpellings: [' ihu tai maroro"'],
-            audioStart: null,
-            audioEnd: null,
+            name: "Ihu Tai ki Uta, Ihu Tai Maroro",
+            altSpellings: ["ihu tai ki uta, ihu tai maroro"],
+            audioStart: 23.7,
+            audioEnd: 26.3,
           },
         ],
       },
@@ -50329,12 +50319,12 @@ export const zones = [
       {
         order: 13,
         name: "Koinonia",
-        types: [],
+        types: ["school"],
       },
       {
         order: 14,
         name: "Mairehau",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 31.28,
         audioEnd: 31.94,
       },
@@ -50432,7 +50422,7 @@ export const zones = [
       {
         order: 26,
         name: "Ōtautahi",
-        types: ["Christchurch", "The Bricks"],
+        types: ["river", "city", "locality"],
         audioStart: 55.92,
         audioEnd: 56.6,
         altSpellings: ["otautahi"],
@@ -50446,7 +50436,7 @@ export const zones = [
       {
         order: 28,
         name: "Ōurihia",
-        types: [],
+        types: ["suburb"],
         audioStart: 58.34,
         audioEnd: 59.17,
         altSpellings: ["ourihia"],
@@ -50462,7 +50452,7 @@ export const zones = [
       {
         order: 29,
         name: "Papanui",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 61.76,
         audioEnd: 62.46,
         altNames: [
@@ -50592,7 +50582,7 @@ export const zones = [
       {
         order: 46,
         name: "Tāpapanui",
-        types: [],
+        types: ["suburb"],
         audioStart: 97.43,
         audioEnd: 98.42,
         altSpellings: ["tapapanui"],
@@ -50696,7 +50686,7 @@ export const zones = [
       {
         order: 60,
         name: "Temanuka",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 132.98,
         audioEnd: 133.75,
       },
@@ -50795,21 +50785,21 @@ export const zones = [
       {
         order: 71,
         name: "Wai-iti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 166.54,
         audioEnd: 166.99,
       },
       {
         order: 72,
         name: "Wai-utu-utu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 168.27,
         audioEnd: 169.15,
       },
       {
         order: 73,
         name: "Waimāero",
-        types: [],
+        types: ["stream", "district", "beach"],
         audioStart: 170.22,
         audioEnd: 171.01,
         altSpellings: ["waimaero"],
@@ -50832,7 +50822,7 @@ export const zones = [
       {
         order: 75,
         name: "Wainōni",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 177.68,
         audioEnd: 178.41,
         altSpellings: ["wainoni"],
@@ -50864,7 +50854,7 @@ export const zones = [
       {
         order: 78,
         name: "Wairārapa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 186.19,
         audioEnd: 186.99,
         altSpellings: ["wairarapa"],
@@ -50901,7 +50891,7 @@ export const zones = [
       {
         order: 83,
         name: "Wharenui",
-        types: [lt.SUBURB, "school"],
+        types: ["suburb", "school"],
         audioStart: 195.33,
         audioEnd: 195.92,
       },
@@ -50916,7 +50906,7 @@ export const zones = [
       {
         order: 1,
         name: "Ahi ā Tamatea",
-        types: [],
+        types: ["rock"],
         altSpellings: ["ahi a tamatea"],
         altNames: [
           {
@@ -51033,7 +51023,7 @@ export const zones = [
       {
         order: 14,
         name: "Ōhinehou",
-        types: [],
+        types: ["bay", "locality"],
         audioStart: 43.46,
         audioEnd: 44.2,
         altSpellings: ["ohinehou"],
@@ -51065,7 +51055,7 @@ export const zones = [
       {
         order: 18,
         name: "Ōtamahua",
-        types: [],
+        types: ["island"],
         audioStart: 52.84,
         audioEnd: 53.67,
         altSpellings: ["otamahua"],
@@ -51145,7 +51135,7 @@ export const zones = [
       {
         order: 26,
         name: "Tāpoa",
-        types: [],
+        types: ["bay", "point"],
         audioStart: 76.91,
         audioEnd: 77.71,
         altSpellings: ["tapoa"],
@@ -51220,7 +51210,7 @@ export const zones = [
       {
         order: 36,
         name: "Te Pōhue",
-        types: [],
+        types: ["bay", "peak"],
         audioStart: 100.75,
         audioEnd: 101.37,
         altSpellings: ["te pohue"],
@@ -51295,7 +51285,7 @@ export const zones = [
       {
         order: 2,
         name: "Akaloa",
-        types: [],
+        types: ["harbour"],
         audioStart: 8.73,
         audioEnd: 9.55,
       },
@@ -51354,7 +51344,7 @@ export const zones = [
       {
         order: 10,
         name: "Kaituna",
-        types: [lt.STREAM, "lagoon", "hill", "pass"],
+        types: ["stream", "lagoon", "hill", "pass"],
         audioStart: 27.98,
         audioEnd: 28.8,
       },
@@ -51453,7 +51443,7 @@ export const zones = [
       {
         order: 23,
         name: "Ōkaraki",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 59.84,
         audioEnd: 60.75,
         altSpellings: ["okaraki"],
@@ -51485,7 +51475,7 @@ export const zones = [
       {
         order: 27,
         name: "Ōkuti",
-        types: [lt.VALLEY, "reserve", "locality"],
+        types: ["valley", "reserve", "locality"],
         audioStart: 68.93,
         audioEnd: 69.72,
         altSpellings: ["okuti"],
@@ -51517,7 +51507,7 @@ export const zones = [
       {
         order: 31,
         name: "Ōpara",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 77.39,
         audioEnd: 78.17,
         altSpellings: ["opara"],
@@ -51764,7 +51754,7 @@ export const zones = [
       {
         order: 63,
         name: "Te Kawa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 154.54,
         audioEnd: 155.27,
       },
@@ -51917,7 +51907,7 @@ export const zones = [
       {
         order: 84,
         name: "Waikoko",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 209.01,
         audioEnd: 209.82,
       },
@@ -51938,7 +51928,7 @@ export const zones = [
       {
         order: 87,
         name: "Wairewa",
-        types: [],
+        types: ["lake", "county"],
         audioStart: 214.14,
         audioEnd: 215,
       },
@@ -52030,7 +52020,7 @@ export const zones = [
       {
         order: 7,
         name: "Kā Pūkariki",
-        types: [],
+        types: ["hill", "locality"],
         audioStart: 26.66,
         audioEnd: 27.57,
         altSpellings: ["ka pukariki"],
@@ -52093,7 +52083,7 @@ export const zones = [
       {
         order: 15,
         name: "Ōpīhako",
-        types: [],
+        types: ["range", "peak"],
         audioStart: 45.42,
         audioEnd: 46.37,
         altSpellings: ["opihako"],
@@ -52350,7 +52340,7 @@ export const zones = [
       {
         order: 49,
         name: "Whaka-Ēpa",
-        types: [],
+        types: ["river", "locality"],
         audioStart: 129.13,
         audioEnd: 129.84,
         altSpellings: ["whaka-epa"],
@@ -52495,7 +52485,7 @@ export const zones = [
       {
         order: 13,
         name: "Kā-taupa-hoe",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 36.26,
         audioEnd: 37.95,
         altSpellings: ["ka-taupa-hoe"],
@@ -52631,7 +52621,7 @@ export const zones = [
       {
         order: 31,
         name: "Te Kopi-ō-te-Ōpihi",
-        types: [],
+        types: ["pass", "gorge"],
         audioStart: 77.3,
         audioEnd: 79.8,
         altSpellings: ["te kopi-o-te-opihi"],
@@ -52878,7 +52868,7 @@ export const zones = [
       {
         order: 17,
         name: "Tōtara",
-        types: [lt.VALLEY, "locality", "locality"],
+        types: ["valley", "locality", "locality"],
         audioStart: 56.29,
         audioEnd: 57.09,
         altSpellings: ["totara"],
@@ -52902,7 +52892,7 @@ export const zones = [
       {
         order: 20,
         name: "Waitarakao",
-        types: [],
+        types: ["lagoon", "locality"],
         audioStart: 62.94,
         audioEnd: 64.02,
       },
@@ -53127,7 +53117,7 @@ export const zones = [
       {
         order: 25,
         name: "Te Ao Mārama",
-        types: ["range", lt.STREAM],
+        types: ["range", "stream"],
         audioStart: 75.11,
         audioEnd: 76.11,
         altSpellings: ["te ao marama"],
@@ -53211,7 +53201,7 @@ export const zones = [
       {
         order: 35,
         name: "Waihao",
-        types: [],
+        types: ["river", "locality", "locality", "marae"],
         audioStart: 106.7,
         audioEnd: 107.52,
       },
@@ -53254,7 +53244,7 @@ export const zones = [
       {
         order: 41,
         name: "Waituna",
-        types: [],
+        types: ["creek", "locality", "locality"],
         audioStart: 120.68,
         audioEnd: 121.56,
       },
@@ -53277,7 +53267,7 @@ export const zones = [
       {
         order: 1,
         name: "Aoraki",
-        types: [],
+        types: ["peak"],
         audioStart: 5.78,
         audioEnd: 6.33,
       },
@@ -53362,14 +53352,14 @@ export const zones = [
       {
         order: 10,
         name: "Manahune",
-        types: [],
+        types: ["mountains", "creek"],
         audioStart: 45.19,
         audioEnd: 46.12,
       },
       {
         order: 11,
         name: "Mārewa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 48.89,
         audioEnd: 49.64,
         altSpellings: ["marewa"],
@@ -53384,7 +53374,7 @@ export const zones = [
       {
         order: 13,
         name: "Maukakukuta",
-        types: [],
+        types: ["peak", "river"],
         audioStart: 55.97,
         audioEnd: 57.74,
       },
@@ -53669,7 +53659,7 @@ export const zones = [
       {
         order: 2,
         name: "Ārai te Uru",
-        types: [],
+        types: ["ocean", "reef"],
         audioStart: 6.63,
         audioEnd: 7.92,
         altSpellings: ["arai te uru"],
@@ -53713,7 +53703,7 @@ export const zones = [
       {
         order: 8,
         name: "Kā Tiki",
-        types: [],
+        types: ["beach", "locality"],
         audioStart: 19.14,
         audioEnd: 19.94,
         altSpellings: ["ka tiki"],
@@ -53802,7 +53792,7 @@ export const zones = [
       {
         order: 19,
         name: "Moeraki",
-        types: ["1"],
+        types: ["point", "locality"],
         audioStart: 42.99,
         audioEnd: 43.93,
       },
@@ -54028,7 +54018,7 @@ export const zones = [
       {
         order: 48,
         name: "Te Kurī",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 106.65,
         audioEnd: 107.48,
         altSpellings: ["te kuri"],
@@ -54236,7 +54226,7 @@ export const zones = [
       {
         order: 7,
         name: "Kātiki",
-        types: [],
+        types: ["beach", "locality"],
         audioStart: 16.73,
         audioEnd: 17.44,
         altSpellings: ["katiki"],
@@ -54377,7 +54367,7 @@ export const zones = [
       {
         order: 26,
         name: "Pahatea",
-        types: [],
+        types: ["hill"],
         audioStart: 57.83,
         audioEnd: 58.63,
       },
@@ -54465,7 +54455,7 @@ export const zones = [
       {
         order: 38,
         name: "Wai ā te Ao",
-        types: [],
+        types: ["peak", "region"],
         audioStart: 83.24,
         audioEnd: 84.4,
         altSpellings: ["wai a te ao"],
@@ -54608,7 +54598,7 @@ export const zones = [
       {
         order: 13,
         name: "Kaikorae",
-        types: [],
+        types: ["valley", "suburb"],
         audioStart: 31.16,
         audioEnd: 32.07,
       },
@@ -54630,7 +54620,7 @@ export const zones = [
       {
         order: 16,
         name: "Karitāne",
-        types: [],
+        types: ["locality"],
         audioStart: 38.65,
         audioEnd: 39.6,
         altSpellings: ["karitane"],
@@ -54661,7 +54651,7 @@ export const zones = [
       {
         order: 20,
         name: "Maia",
-        types: [],
+        types: ["suburb"],
       },
       {
         order: 21,
@@ -54673,7 +54663,7 @@ export const zones = [
       {
         order: 22,
         name: "Māori",
-        types: [],
+        types: ["hill", "head", "suburb", "locality"],
         audioStart: 51.65,
         audioEnd: 52.25,
         altSpellings: ["maori"],
@@ -54754,7 +54744,7 @@ export const zones = [
       {
         order: 32,
         name: "Ōkaihae",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 73.53,
         audioEnd: 74.54,
         altSpellings: ["okaihae"],
@@ -54801,7 +54791,7 @@ export const zones = [
       {
         order: 38,
         name: "Ōrokonui",
-        types: [lt.STREAM, "locality", "Home"],
+        types: ["stream", "locality", "Home"],
         audioStart: 85.68,
         audioEnd: 86.78,
         altSpellings: ["orokonui"],
@@ -54833,7 +54823,7 @@ export const zones = [
       {
         order: 42,
         name: "Ōwhiro",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 93.99,
         audioEnd: 94.7,
         altSpellings: ["owhiro"],
@@ -54841,7 +54831,7 @@ export const zones = [
       {
         order: 43,
         name: "Pā-waitaha",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 96.06,
         audioEnd: 97.16,
         altSpellings: ["pa-waitaha"],
@@ -54863,7 +54853,7 @@ export const zones = [
       {
         order: 46,
         name: "Pipīkāretu",
-        types: [],
+        types: ["beach", "point"],
         audioStart: 103.61,
         audioEnd: 104.63,
         altSpellings: ["pipikaretu"],
@@ -54952,7 +54942,7 @@ export const zones = [
       {
         order: 57,
         name: "Tainui",
-        types: ["inlet", lt.SUBURB],
+        types: ["inlet", "suburb"],
         audioStart: 134.53,
         audioEnd: 135.69,
       },
@@ -55124,7 +55114,7 @@ export const zones = [
       {
         order: 79,
         name: "Waipūtaka",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 198.06,
         audioEnd: 199.09,
         altSpellings: ["waiputaka"],
@@ -55139,7 +55129,7 @@ export const zones = [
       {
         order: 81,
         name: "Whakaari",
-        types: [],
+        types: ["hills", "suburb", "hospital"],
         audioStart: 203.15,
         audioEnd: 204.01,
       },
@@ -55226,7 +55216,7 @@ export const zones = [
       {
         order: 6,
         name: "Koau",
-        types: [],
+        types: ["river"],
         audioStart: 17.64,
         audioEnd: 18.24,
       },
@@ -55565,7 +55555,7 @@ export const zones = [
       {
         order: 19,
         name: "Ō-te-kōti-kāko",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 55.89,
         audioEnd: 57.24,
         altSpellings: ["o-te-koti-kako"],
@@ -55573,7 +55563,7 @@ export const zones = [
       {
         order: 20,
         name: "Ō-te-tī",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 57.93,
         audioEnd: 58.81,
         altSpellings: ["o-te-ti"],
@@ -55618,7 +55608,7 @@ export const zones = [
       {
         order: 26,
         name: "Ōtepītoko",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 67.43,
         audioEnd: 69.02,
         altSpellings: ["otepitoko"],
@@ -55626,7 +55616,7 @@ export const zones = [
       {
         order: 27,
         name: "Ōtewhakariki",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 70.63,
         audioEnd: 71.84,
         altSpellings: ["otewhakariki"],
@@ -55634,7 +55624,7 @@ export const zones = [
       {
         order: 28,
         name: "Ōtuawhiti",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 73.71,
         audioEnd: 74.83,
         altSpellings: ["otuawhiti"],
@@ -55672,7 +55662,7 @@ export const zones = [
       {
         order: 33,
         name: "Take-kārara",
-        types: [],
+        types: ["town site"],
         audioStart: 86.59,
         audioEnd: 87.65,
         altSpellings: ["take-karara"],
@@ -55680,7 +55670,7 @@ export const zones = [
       {
         order: 34,
         name: "Takekararapa",
-        types: [],
+        types: ["arm"],
       },
       {
         order: 35,
@@ -55707,7 +55697,7 @@ export const zones = [
       {
         order: 37,
         name: "Takikārara",
-        types: [],
+        types: ["island"],
         audioStart: 96.97,
         audioEnd: 98.38,
         altSpellings: ["takikarara"],
@@ -55730,7 +55720,7 @@ export const zones = [
       {
         order: 40,
         name: "Tāuru-Hāwea",
-        types: [],
+        types: ["stream", "stream"],
         audioStart: 105.66,
         audioEnd: 106.86,
         altSpellings: ["tauru-hāwea"],
@@ -55738,7 +55728,7 @@ export const zones = [
       {
         order: 41,
         name: "Te Kāhika",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 108.58,
         audioEnd: 109.61,
         altSpellings: ["te kahika"],
@@ -55777,7 +55767,7 @@ export const zones = [
       {
         order: 46,
         name: "Tioripātea",
-        types: [],
+        types: ["range", "pass"],
         audioStart: 123.32,
         audioEnd: 124.63,
         altSpellings: ["tioripatea"],
@@ -55785,7 +55775,7 @@ export const zones = [
       {
         order: 47,
         name: "Tītitea",
-        types: [],
+        types: ["peaks"],
         audioStart: 126.36,
         audioEnd: 127.31,
         altSpellings: ["tititea"],
@@ -55805,7 +55795,7 @@ export const zones = [
       {
         order: 50,
         name: "Uretārewa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 133.7,
         audioEnd: 134.78,
         altSpellings: ["uretarewa"],
@@ -55910,7 +55900,7 @@ export const zones = [
       {
         order: 6,
         name: "Kā Kōhaka Ruruwhenua",
-        types: [lt.VALLEY],
+        types: ["valley"],
         audioStart: 19.98,
         audioEnd: 22.09,
         altSpellings: ["ka kohaka ruruwhenua"],
@@ -56113,7 +56103,7 @@ export const zones = [
       {
         order: 33,
         name: "Te Koroka",
-        types: [],
+        types: ["range", "peak"],
         audioStart: 105.73,
         audioEnd: 106.43,
       },
@@ -56149,7 +56139,7 @@ export const zones = [
       {
         order: 38,
         name: "Te Taumata ō Haki te Kura",
-        types: [],
+        types: ["peak"],
         audioStart: 123.74,
         audioEnd: 127.14,
         altSpellings: ["te taumata o haki te kura"],
@@ -56301,7 +56291,7 @@ export const zones = [
       {
         order: 5,
         name: "Manapōuri",
-        types: ["pn_-"],
+        types: ["lake", "town"],
         audioStart: 17.16,
         audioEnd: 18.27,
         altSpellings: ["manapouri"],
@@ -56387,7 +56377,7 @@ export const zones = [
       {
         order: 17,
         name: "Takahe",
-        types: [lt.VALLEY, "locality"],
+        types: ["valley", "locality"],
         audioStart: 48.57,
         audioEnd: 49.66,
       },
@@ -56448,7 +56438,7 @@ export const zones = [
       {
         order: 25,
         name: "Te Rua ō te Moko",
-        types: [],
+        types: ["ranges", "lake"],
         audioStart: 73.29,
         audioEnd: 74.91,
         altSpellings: ["te rua o te moko"],
@@ -56625,7 +56615,7 @@ export const zones = [
       {
         order: 16,
         name: "Kārora",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 41.52,
         audioEnd: 42.56,
         altSpellings: ["karora"],
@@ -56746,7 +56736,7 @@ export const zones = [
       {
         order: 31,
         name: "Ōwaka",
-        types: [lt.VALLEY, "locality", "locality"],
+        types: ["valley", "locality", "locality"],
         audioStart: 84.21,
         audioEnd: 85.17,
         altSpellings: ["owaka"],
@@ -57056,7 +57046,7 @@ export const zones = [
       {
         order: 70,
         name: "Waiarikiki",
-        types: [lt.STREAM, "locality"],
+        types: ["stream", "locality"],
         audioStart: 202.72,
         audioEnd: 204.11,
       },
@@ -57100,7 +57090,7 @@ export const zones = [
       {
         order: 75,
         name: "Waikāwa",
-        types: ["river", lt.VALLEY, "locality"],
+        types: ["river", "valley", "locality"],
         audioStart: 219.98,
         audioEnd: 220.98,
         altSpellings: ["waikawa"],
@@ -57237,7 +57227,7 @@ export const zones = [
       {
         order: 1,
         name: "Aoraki",
-        types: [],
+        types: ["point"],
         audioStart: 6.76,
         audioEnd: 8.06,
       },
@@ -57273,7 +57263,7 @@ export const zones = [
       {
         order: 6,
         name: "Kā Wakaputaputa",
-        types: [],
+        types: ["bay", "point"],
         audioStart: 19.37,
         audioEnd: 20.6,
         altSpellings: ["ka wakaputaputa"],
@@ -57391,14 +57381,14 @@ export const zones = [
       {
         order: 20,
         name: "Murihiku",
-        types: [],
+        types: ["province", "city", "marae"],
         audioStart: 58.8,
         audioEnd: 59.73,
       },
       {
         order: 21,
         name: "Ōmata",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 61.88,
         audioEnd: 62.63,
         altSpellings: ["omata"],
@@ -57452,14 +57442,14 @@ export const zones = [
       {
         order: 28,
         name: "Otarewa",
-        types: [],
+        types: ["city", "creek"],
         audioStart: 82.99,
         audioEnd: 84,
       },
       {
         order: 29,
         name: "Ōtātara",
-        types: [lt.SUBURB],
+        types: ["suburb"],
         audioStart: 86.21,
         audioEnd: 87.21,
         altSpellings: ["otatara"],
@@ -57657,14 +57647,14 @@ export const zones = [
       {
         order: 56,
         name: "Waianiwa",
-        types: [],
+        types: ["locality"],
         audioStart: 167.29,
         audioEnd: 168.3,
       },
       {
         order: 57,
         name: "Waihōpai",
-        types: [lt.STREAM, "city", lt.SUBURB],
+        types: ["stream", "city", "suburb"],
         audioStart: 170.48,
         audioEnd: 171.64,
         altSpellings: ["waihopai"],
@@ -57672,14 +57662,14 @@ export const zones = [
       {
         order: 58,
         name: "Waikiwi",
-        types: [lt.STREAM, lt.SUBURB],
+        types: ["stream", "suburb"],
         audioStart: 173.24,
         audioEnd: 174.34,
       },
       {
         order: 59,
         name: "Waikōura",
-        types: [],
+        types: ["stream", "locality"],
         audioStart: 176.25,
         audioEnd: 177.38,
         altSpellings: ["waikoura"],
@@ -57731,7 +57721,7 @@ export const zones = [
       {
         order: 65,
         name: "Waitaramea",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 197.03,
         audioEnd: 198.17,
       },
@@ -57796,7 +57786,7 @@ export const zones = [
       {
         order: 6,
         name: "Ōarākaka",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 23.96,
         audioEnd: 25.19,
         altSpellings: ["oarakaka"],
@@ -57812,7 +57802,7 @@ export const zones = [
       {
         order: 8,
         name: "Ōkui",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 30.83,
         audioEnd: 31.73,
         altSpellings: ["okui"],
@@ -57844,7 +57834,7 @@ export const zones = [
       {
         order: 11,
         name: "Ōrurukoukou",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 43.9,
         audioEnd: 45.36,
         altSpellings: ["orurukoukou"],
@@ -57912,14 +57902,14 @@ export const zones = [
       {
         order: 20,
         name: "Taunoa",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 67.95,
         audioEnd: 68.86,
       },
       {
         order: 21,
         name: "Tāwhiritū",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 70.9,
         audioEnd: 71.96,
         altSpellings: ["tawhiritu"],
@@ -57943,7 +57933,7 @@ export const zones = [
       {
         order: 23,
         name: "Te Rere",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 77.51,
         audioEnd: 78.52,
       },
@@ -57992,7 +57982,7 @@ export const zones = [
       {
         order: 30,
         name: "Waimeamea",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 94.69,
         audioEnd: 96.43,
       },
@@ -58498,7 +58488,7 @@ export const zones = [
       {
         order: 3,
         name: "Hotunui",
-        types: [],
+        types: ["island"],
         audioStart: 10.6,
         audioEnd: 11.54,
         altNames: [
@@ -58591,7 +58581,7 @@ export const zones = [
       {
         order: 13,
         name: "Ōrangihua",
-        types: [],
+        types: ["inlet"],
         audioStart: 44.13,
         audioEnd: 45.18,
         altSpellings: ["orangihua"],
@@ -59010,7 +59000,7 @@ export const zones = [
       {
         order: 16,
         name: "Kaikokopu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 52.22,
         audioEnd: 53.61,
       },
@@ -59025,7 +59015,7 @@ export const zones = [
       {
         order: 18,
         name: "Kaituna",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 57.64,
         audioEnd: 58.77,
       },
@@ -59204,14 +59194,14 @@ export const zones = [
       {
         order: 42,
         name: "Pukenui",
-        types: [],
+        types: ["island", "inlet"],
         audioStart: 134.67,
         audioEnd: 135.67,
       },
       {
         order: 43,
         name: "Rakitūmā",
-        types: ["Preservation Inlet", "Chalky Island", "Cuttle Cove"],
+        types: ["range", "inlet", "island", "cove"],
         audioStart: 137.91,
         audioEnd: 139.23,
         altSpellings: ["rakituma"],
@@ -59367,7 +59357,7 @@ export const zones = [
       {
         order: 64,
         name: "Te Pari",
-        types: [],
+        types: ["peak", "sound"],
         audioStart: 215.17,
         audioEnd: 216.19,
       },
@@ -59473,7 +59463,7 @@ export const zones = [
       {
         order: 78,
         name: "Waikākāpō",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 262.57,
         audioEnd: 263.84,
         altSpellings: ["waikakāpo"],
@@ -59488,14 +59478,14 @@ export const zones = [
       {
         order: 80,
         name: "Wairere",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 268.07,
         audioEnd: 269.1,
       },
       {
         order: 81,
         name: "Waitapu",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 270.14,
         audioEnd: 271.16,
       },
@@ -59639,7 +59629,7 @@ export const zones = [
       {
         order: 12,
         name: "Heretaniwha",
-        types: [],
+        types: ["river", "bay", "point"],
         audioStart: 34.98,
         audioEnd: 36.13,
       },
@@ -59689,7 +59679,7 @@ export const zones = [
       {
         order: 19,
         name: "Kāniere",
-        types: [],
+        types: ["lake", "river", "power station", "locality"],
         audioStart: 53.46,
         audioEnd: 54.57,
         altSpellings: ["kaniere"],
@@ -60004,7 +59994,7 @@ export const zones = [
       {
         order: 57,
         name: "Pōhuerua",
-        types: [],
+        types: ["state forest", "stream"],
         audioStart: 159.15,
         audioEnd: 160.23,
         altSpellings: ["pohuerua"],
@@ -60090,7 +60080,7 @@ export const zones = [
       {
         order: 69,
         name: "Tātāre",
-        types: ["range", lt.STREAM],
+        types: ["range", "stream"],
         audioStart: 189.86,
         audioEnd: 190.91,
         altSpellings: ["tatāre"],
@@ -60301,7 +60291,7 @@ export const zones = [
       {
         order: 96,
         name: "Waitaiki",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 263.98,
         audioEnd: 264.9,
       },
@@ -60547,14 +60537,14 @@ export const zones = [
       {
         order: 23,
         name: "Maukurunui",
-        types: [],
+        types: ["creek"],
         audioStart: 52.36,
         audioEnd: 53.44,
       },
       {
         order: 24,
         name: "Māwhera",
-        types: [],
+        types: ["river", "town"],
         audioStart: 54.67,
         audioEnd: 55.52,
         altSpellings: ["mawhera"],
@@ -60648,7 +60638,7 @@ export const zones = [
       {
         order: 36,
         name: "Pōhuerua",
-        types: [],
+        types: ["lake", "locality"],
         audioStart: 81.2,
         audioEnd: 82.33,
         altSpellings: ["pohuerua"],
@@ -60937,7 +60927,7 @@ export const zones = [
       {
         order: 14,
         name: "Kōhaihai",
-        types: ["bluff", lt.STREAM],
+        types: ["bluff", "stream"],
         audioStart: 33.01,
         audioEnd: 34.09,
         altSpellings: ["kohaihai"],
@@ -61024,7 +61014,7 @@ export const zones = [
       {
         order: 25,
         name: "Orowaite",
-        types: [],
+        types: ["locality"],
         audioStart: 57.06,
         audioEnd: 58.19,
       },
@@ -61070,7 +61060,7 @@ export const zones = [
       {
         order: 31,
         name: "Punakaiki",
-        types: [lt.STREAM, "locality", "rocks"],
+        types: ["stream", "locality", "rocks"],
         audioStart: 72.08,
         audioEnd: 73.24,
       },
@@ -61278,7 +61268,7 @@ export const zones = [
       {
         order: 2,
         name: "Hukurangi",
-        types: [],
+        types: ["peak"],
         audioStart: 10.22,
         audioEnd: 10.92,
       },
@@ -61617,7 +61607,7 @@ export const zones = [
       {
         order: 5,
         name: "Hukurangi",
-        types: [],
+        types: ["peak"],
         audioStart: 16.92,
         audioEnd: 17.8,
       },
@@ -62039,7 +62029,7 @@ export const zones = [
       {
         order: 62,
         name: "Te Awatea",
-        types: [lt.STREAM],
+        types: ["stream"],
         audioStart: 164.62,
         audioEnd: 165.78,
       },

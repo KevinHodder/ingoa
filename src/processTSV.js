@@ -25,7 +25,7 @@ const removeMacrons = (input) => {
     .replace(/\u016a/, "U");
 };
 
-const csvFile = fs.readFileSync("../placenames.csv", "utf8");
+const csvFile = fs.readFileSync("../placenames.tsv", "utf8");
 const [header, ...lines] = csvFile.split("\r\n");
 // console.log(header);
 
@@ -61,7 +61,7 @@ const zones = [];
 
 lines.forEach((line) => {
   // split the csv record
-  const split = line.split(",");
+  const split = line.split("\t");
   if (!split[ZONENUM]) {
     return;
   }
@@ -70,6 +70,7 @@ lines.forEach((line) => {
     zones.push({
       number: parseInt(split[ZONENUM]),
       nameCommon: split[ZONENAME],
+
       speakers: [],
     });
   }
@@ -120,7 +121,7 @@ lines.forEach((line) => {
         audioEnd: parseFloat(split[END2]),
       });
       // Add speaker to speaker list if not already present
-      if (!zone.speakers.includes(split[SPEAKER2])) {
+      if (!zone.speakers.includes(split[SPEAKER2]) && split[SPEAKER2]) {
         zone.speakers.push(split[SPEAKER2]);
       }
     }
@@ -134,7 +135,7 @@ lines.forEach((line) => {
         audioStart: parseFloat(split[START3]),
         audioEnd: parseFloat(split[END3]),
       });
-      if (!zone.speakers.includes(split[SPEAKER3])) {
+      if (!zone.speakers.includes(split[SPEAKER3]) && split[SPEAKER3]) {
         zone.speakers.push(split[SPEAKER3]);
       }
     }
