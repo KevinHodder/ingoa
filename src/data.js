@@ -12327,7 +12327,7 @@ export const zones = [
               "taumata-whakatangihanga-koauau-o-tamatea-turi-pukaka-piki-maunga-horo-nuku-pōkai-whenua-ki-tana-tahu",
             ],
             audioStart: 35.83,
-            audioEnd: 46.1,
+            audioEnd: 47.1,
           },
         ],
       },

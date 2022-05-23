@@ -19,14 +19,15 @@ const allResults = zones
 
 const getSearchResults = (searchTerm, setResults) => {
   const results = fuseZones.search(searchTerm);
+  const output = JSON.parse(JSON.stringify(results));
 
-  results.map((result) => {
+  output.map((result) => {
     const matches = result.matches.map((match) => match.value);
     return (result.item.localities = result.item.localities.filter((locality) =>
       matches.includes(locality.name)
     ));
   });
-  setResults(results);
+  setResults(output);
 };
 
 export const SearchBox = (props) => {
@@ -37,7 +38,6 @@ export const SearchBox = (props) => {
     if (searchTerm) {
       getSearchResults(searchTerm, setResults);
     } else {
-      console.log("setting all results");
       setResults(allResults);
     }
   }, [searchTerm, setResults]);
