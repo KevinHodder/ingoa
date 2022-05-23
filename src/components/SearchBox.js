@@ -6,7 +6,13 @@ import { zones } from "../data";
 const fuseZones = new Fuse(zones, {
   includeScore: true,
   includeMatches: true,
-  keys: ["nameCommon", "localities.name", "localities.altSpellings"],
+  keys: [
+    "nameCommon",
+    "localities.name",
+    "localities.altSpellings",
+    "localities.altNames.name",
+    "localities.altNames.altSpellings",
+  ],
   threshold: 0.1,
   distance: 10,
 });
@@ -17,15 +23,50 @@ const allResults = zones
     item: zone,
   }));
 
+const hasMatchingAltName = (locality, matches) => {
+  return (
+    locality.altNames &&
+    locality.altNames.reduce(
+      (prev, curr) =>
+        prev ||
+        matches.includes(curr.name) ||
+        hasMatchingAltSpelling(curr, matches),
+      false
+    )
+  );
+};
+const hasMatchingAltSpelling = (locality, matches) =>
+  locality.altSpellings &&
+  locality.altSpellings.reduce(
+    (prev, curr) => prev || matches.includes(curr),
+    false
+  );
+
+const hasMatchingName = (locality, matches) => matches.includes(locality.name);
+const getMatchingLocalities = (localities, matches) => {
+  return localities.filter(
+    (locality) =>
+      hasMatchingName(locality, matches) ||
+      hasMatchingAltSpelling(locality, matches) ||
+      hasMatchingAltName(locality, matches)
+  );
+};
+
 const getSearchResults = (searchTerm, setResults) => {
   const results = fuseZones.search(searchTerm);
   const output = JSON.parse(JSON.stringify(results));
-
-  output.map((result) => {
+  results.forEach((result, index) => {
     const matches = result.matches.map((match) => match.value);
-    return (result.item.localities = result.item.localities.filter((locality) =>
-      matches.includes(locality.name)
-    ));
+    // return whole zone if the search matches zone name
+    if (matches.includes(result.item.nameCommon)) {
+      return (output[index].item.localities = result.item.localities);
+    }
+    // otherwise return just matching search results
+    const filteredLocalities = getMatchingLocalities(
+      result.item.localities,
+      matches
+    );
+    return (output[index].item.localities = filteredLocalities);
   });
   setResults(output);
 };
