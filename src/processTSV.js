@@ -84,7 +84,7 @@ lines.forEach((line) => {
       zone.localities = [];
     }
     // add speaker name from first entry
-    if (split[ZONEORDERNUM] == 1) {
+    if (parseInt(split[ZONEORDERNUM]) === 1) {
       zone.audioTrackFull = `zones/${split[ZONENUM].toString().padStart(
         3,
         "0"
@@ -168,4 +168,4 @@ lines.forEach((line) => {
   }
 });
 
-console.log();
+fs.writeFileSync("data.json", JSON.stringify(zones));

@@ -1,7 +1,7 @@
 import Fuse from "fuse.js";
 import { useState, useEffect, Fragment } from "react";
 import PropTypes from "prop-types";
-import { zones } from "../data";
+import zones from "../data.json";
 
 const fuseZones = new Fuse(zones, {
   includeScore: true,
