@@ -1,0 +1,5 @@
+circle {
+    transform-box: fill-box; /* you need this for SVGs */
+    transform-origin: center;
+    transform: scale(0.75);
+}

@@ -1,15 +1,60 @@
 import PropTypes from "prop-types";
+import "./mapzones.css";
+// import styled from "styled-components";
 
 const MapSIZones = (props) => {
   const clickHandler = (event) => {
     return props.goTo(event);
   };
+
   return (
     <svg x={10} y={2.7} cursor={"pointer"}>
       <g
         xmlns="http://www.w3.org/2000/svg"
-        id="layer1"
-        stroke="red"
+        id="dots"
+        fill="red"
+        transform="scale(0.34)"
+      >
+        <circle id="dot154" cx="140" cy="127" r="1.7555633" />
+        <circle id="dot153" cx="156" cy="116" r="1.7555633" />
+        <circle id="dot148" cx="167" cy="97" r="1.7555633" />
+        <circle id="dot147" cx="190" cy="74" r="1.7555633" />
+        <circle id="dot146" cx="215" cy="51" r="1.7555633" />
+        <circle id="dot145" cx="218" cy="33" r="1.7555633" />
+        <circle id="dot144" cx="213" cy="26" r="1.7555633" />
+        <circle id="dot143" cx="199" cy="38" r="1.7555633" />
+        <circle id="dot141" cx="185" cy="29" r="1.7555633" />
+        <circle id="dot140" cx="180" cy="14" r="1.7555633" />
+        <circle id="dot175" cx="165" cy="40" r="1.7555633" />
+        <circle id="dot142" cx="177" cy="48" r="1.7555633" />
+        <circle id="dot174" cx="149" cy="73" r="1.7555633" />
+        <circle id="dot173" cx="98" cy="118" r="1.7555633" />
+        <circle id="dot157" cx="108" cy="144" r="1.7555633" />
+        <circle id="dot162" cx="82" cy="165" r="1.7555633" />
+        <circle id="dot163" cx="59" cy="176" r="1.7555633" />
+        <circle id="dot164" cx="41" cy="193" r="1.7555633" />
+        <circle id="dot172" cx="15" cy="197" r="1.7555633" />
+        <circle id="dot167" cx="35" cy="222" r="1.7555633" />
+        <circle id="dot166" cx="52" cy="221" r="1.7555633" />
+        <circle id="dot165" cx="76" cy="218" r="1.7555633" />
+        <circle id="dot161" cx="96" cy="213" r="1.7555633" />
+        <circle id="dot160" cx="114" cy="212" r="1.7555633" />
+        <circle id="dot159" cx="102" cy="189" r="1.7555633" />
+        <circle id="dot149" cx="173" cy="113" r="1.7555633" />
+        <circle id="dot150" cx="176" cy="120" r="1.7555633" />
+        <circle id="dot151" cx="181" cy="126" r="1.7555633" />
+        <circle id="dot152" cx="182" cy="131" r="1.7555633" />
+        <circle id="dot168" cx="66" cy="255" r="1.7555633" />
+        <circle id="dot169_170" cx="42" cy="264" r="1.7555633" />
+        <circle id="dot171" cx="13" cy="251" r="1.7555633" />
+        <circle id="dot176_177" cx="50" cy="69" r="1.7555633" />
+        <circle id="dot155" cx="129" cy="154" r="1.7555633" />
+        <circle id="dot156" cx="125" cy="169" r="1.7555633" />
+        <circle id="dot158" cx="113" cy="175" r="1.7555633" />
+      </g>
+      <g
+        xmlns="http://www.w3.org/2000/svg"
+        id="zones"
         strokeWidth={0}
         fillOpacity={0}
         transform="scale(0.34) translate(-490.8403,-11.549397)"
@@ -177,8 +222,8 @@ const MapSIZones = (props) => {
         <ellipse
           id="168"
           onClick={clickHandler}
-          cx="589.0816"
-          cy="178.52643"
+          cx="589"
+          cy="178"
           rx="7.8484006"
           ry="5.2150559"
           transform="rotate(8.5938218)"
