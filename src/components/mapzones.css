@@ -1,13 +1,22 @@
 circle {
     transform-box: fill-box; /* you need this for SVGs */
-    transform-origin: center;
+    transform-origin: center center;
     transform: scale(0.75);
     fill: red;
-    opacity: 1;
+    opacity: 0;
 }
 
-/*circle hovered {*/
-/*    transform-box: fill-box; !* you need this for SVGs *!*/
-/*    transform-origin: center;*/
-/*    transform: scale(1.5);*/
+text {
+    font-size: 22px;
+    font-family: Arial;
+}
+
+#tags > path {
+    fill: grey;
+    opacity: 0.75;
+}
+
+/*[id*='name'] {*/
+/*    opacity: 0;*/
+/*    overflow: visible;*/
 /*}*/

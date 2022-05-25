@@ -1,4 +1,9 @@
-import { Fragment, useContext, useEffect, useRef } from "react";
+import {
+  Fragment,
+  useContext,
+  // useEffect,
+  useRef,
+} from "react";
 import { Accordion, AccordionContext } from "react-bootstrap";
 import PropTypes from "prop-types";
 
@@ -16,11 +21,11 @@ export const Result = (props) => {
   const { activeEventKey } = useContext(AccordionContext);
   const thisElem = useRef();
 
-  useEffect(() => {
-    if (activeEventKey === index.toString()) {
-      thisElem.current.scrollIntoView();
-    }
-  });
+  // useEffect(() => {
+  //   // if (activeEventKey === index.toString()) {
+  //     // thisElem.current.scrollIntoView();
+  //   // }
+  // });
 
   return (
     <Accordion.Item eventKey={index.toString()} ref={thisElem}>
