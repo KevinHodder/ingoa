@@ -76,7 +76,7 @@ export const Localities = (props) => {
         <PlayAllText>{isPlayingAll ? "Pause" : "Play All"}</PlayAllText>
       </PlayAllBlock>
 
-      <Header>Places</Header>
+      <Header>Names/Ngā Ingoa</Header>
 
       {localities.map((locality, index) => (
         <Locality

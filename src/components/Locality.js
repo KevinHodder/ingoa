@@ -78,7 +78,7 @@ export const Locality = (props) => {
       ) : null}
       {isArrPresent(locality.altNames) ? (
         <Alts>
-          <AltTitle>Alternative names/pronunciations</AltTitle>
+          <AltTitle>Alternatively/Manohi anō</AltTitle>
           {locality.altNames.map((alt, altIndex) => (
             <Locality
               locality={alt}

@@ -9,12 +9,7 @@ const MapSIZones = (props) => {
 
   return (
     <svg x={10} y={2.7} cursor={"pointer"}>
-      <g
-        xmlns="http://www.w3.org/2000/svg"
-        id="dots"
-        fill="red"
-        transform="scale(0.34)"
-      >
+      <g xmlns="http://www.w3.org/2000/svg" id="dots" transform="scale(0.34)">
         <circle id="dot170" cx="53" cy="257" r="1.7555633" />
         <circle id="dot154" cx="140" cy="127" r="1.7555633" />
         <circle id="dot153" cx="156" cy="116" r="1.7555633" />

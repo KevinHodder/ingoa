@@ -85,7 +85,7 @@ export const SearchBox = (props) => {
 
   return (
     <Fragment>
-      <h2>Search for a name</h2>
+      <h2>Search for a name/Kimihia ki tētahi ingoa</h2>
       <input
         className={"searchBox"}
         onChange={(e) => setSearchTerm(e.target.value)}

@@ -2,4 +2,12 @@ circle {
     transform-box: fill-box; /* you need this for SVGs */
     transform-origin: center;
     transform: scale(0.75);
+    fill: red;
+    opacity: 1;
 }
+
+/*circle hovered {*/
+/*    transform-box: fill-box; !* you need this for SVGs *!*/
+/*    transform-origin: center;*/
+/*    transform: scale(1.5);*/
+/*}*/

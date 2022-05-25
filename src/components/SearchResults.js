@@ -16,7 +16,7 @@ export const SearchResults = (props) => {
     <Wrapper>
       {results.length ? (
         <Fragment>
-          <h2>Results: </h2>
+          <h2>Results/Ingoa rokohina:</h2>
           <Accordion defaultActiveKey="0">
             {results.map((result, index) => (
               <Result
