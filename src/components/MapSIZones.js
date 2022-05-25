@@ -15,6 +15,7 @@ const MapSIZones = (props) => {
         fill="red"
         transform="scale(0.34)"
       >
+        <circle id="dot170" cx="53" cy="257" r="1.7555633" />
         <circle id="dot154" cx="140" cy="127" r="1.7555633" />
         <circle id="dot153" cx="156" cy="116" r="1.7555633" />
         <circle id="dot148" cx="167" cy="97" r="1.7555633" />
@@ -45,7 +46,7 @@ const MapSIZones = (props) => {
         <circle id="dot151" cx="181" cy="126" r="1.7555633" />
         <circle id="dot152" cx="182" cy="131" r="1.7555633" />
         <circle id="dot168" cx="66" cy="255" r="1.7555633" />
-        <circle id="dot169_170" cx="42" cy="264" r="1.7555633" />
+        <circle id="dot169" cx="42" cy="264" r="1.7555633" />
         <circle id="dot171" cx="13" cy="251" r="1.7555633" />
         <circle id="dot176_177" cx="50" cy="69" r="1.7555633" />
         <circle id="dot155" cx="129" cy="154" r="1.7555633" />
@@ -59,6 +60,15 @@ const MapSIZones = (props) => {
         fillOpacity={0}
         transform="scale(0.34) translate(-490.8403,-11.549397)"
       >
+        <ellipse
+          id="170"
+          onClick={clickHandler}
+          cx="400.71057"
+          cy="483.40353"
+          rx="4.7983103"
+          ry="6.8994498"
+          transform="matrix(0.89653725,-0.44296836,0.38444815,0.92314659,0,0)"
+        />
         <path
           id="140"
           onClick={clickHandler}
@@ -229,7 +239,7 @@ const MapSIZones = (props) => {
           transform="rotate(8.5938218)"
         />
         <path
-          id="169_170"
+          id="169"
           onClick={clickHandler}
           d="m 528.19205,271.42199 c -3.31604,5.31483 -8.01842,11.72389 -9.41138,15.06701 7.56354,4.23537 6.51814,-4.19774 12.34506,-3.12833 7.1358,-0.93441 16.08956,-5.07056 9.06076,-13.34979 -1.61711,-4.12071 -10.71967,-13.32966 -13.7541,-4.27099 -0.0813,2.01838 0.54365,4.05245 1.75966,5.6821 z"
         />
