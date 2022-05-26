@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 
 import Localities from "./Localities";
 import styled from "styled-components";
+import "./result.css";
 
 const SpeakerInfo = styled.div`
   font-size: 1.5em;

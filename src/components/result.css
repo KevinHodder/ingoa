@@ -1,0 +1,7 @@
+.accordion-button {
+    font-size: 2rem;
+}
+
+.accordion-button:not(.collapsed) {
+    font-weight: bold;
+}
