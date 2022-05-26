@@ -17,7 +17,12 @@ const MapSIZones = (props) => {
     gsap.set(q("circle"), {
       opacity: 0,
     });
-    gsap.to(q("circle"), { opacity: 1, duration: 2, delay: 1 });
+    gsap.to(q("circle"), {
+      opacity: 1,
+      duration: 2,
+      delay: 1,
+      stagger: 0.1,
+    });
     gsap.set(q("[id*='name']"), {
       opacity: 0,
     });
@@ -65,43 +70,43 @@ const MapSIZones = (props) => {
         </text>
       </g>
       <g id="dots" fill="red" transform="translate(0,0)">
-        <circle id="dot154" cx="141" cy="127.6" r="1.756" />
-        <circle id="dot153" cx="157" cy="116.1" r="1.756" />
-        <circle id="dot148" cx="167.7" cy="97.9" r="1.756" />
-        <circle id="dot147" cx="190" cy="74.77" r="1.756" />
-        <circle id="dot146" cx="215.2" cy="51.22" r="1.756" />
-        <circle id="dot145" cx="218.1" cy="34.17" r="1.756" />
-        <circle id="dot144" cx="214" cy="26.02" r="1.756" />
-        <circle id="dot143" cx="199.5" cy="38" r="1.756" />
-        <circle id="dot141" cx="185.9" cy="29.74" r="1.756" />
         <circle id="dot140" cx="180.1" cy="14.87" r="1.756" />
-        <circle id="dot175" cx="165.2" cy="40.89" r="1.756" />
+        <circle id="dot141" cx="185.9" cy="29.74" r="1.756" />
         <circle id="dot142" cx="177.6" cy="48.33" r="1.756" />
-        <circle id="dot174" cx="149.9" cy="73.94" r="1.756" />
-        <circle id="dot173" cx="98.72" cy="119" r="1.756" />
-        <circle id="dot157" cx="105.5" cy="144.5" r="1.756" />
-        <circle id="dot162" cx="79.72" cy="163.2" r="1.756" />
-        <circle id="dot163" cx="59.9" cy="176.8" r="1.756" />
-        <circle id="dot164" cx="41.72" cy="193.7" r="1.756" />
-        <circle id="dot172" cx="15.28" cy="197.4" r="1.756" />
-        <circle id="dot167" cx="35.11" cy="222.2" r="1.756" />
-        <circle id="dot166" cx="52.46" cy="221.4" r="1.756" />
-        <circle id="dot165" cx="76.83" cy="218.5" r="1.756" />
-        <circle id="dot161" cx="96.25" cy="214" r="1.756" />
-        <circle id="dot160" cx="114" cy="211.5" r="1.756" />
-        <circle id="dot159" cx="102" cy="189.2" r="1.756" />
+        <circle id="dot143" cx="199.5" cy="38" r="1.756" />
+        <circle id="dot144" cx="214" cy="26.02" r="1.756" />
+        <circle id="dot145" cx="218.1" cy="34.17" r="1.756" />
+        <circle id="dot146" cx="215.2" cy="51.22" r="1.756" />
+        <circle id="dot147" cx="190" cy="74.77" r="1.756" />
+        <circle id="dot148" cx="167.7" cy="97.9" r="1.756" />
         <circle id="dot149" cx="173.5" cy="113.2" r="1.756" />
         <circle id="dot150" cx="176.3" cy="120.4" r="1.756" />
         <circle id="dot151" cx="180.8" cy="125.2" r="1.756" />
         <circle id="dot152" cx="182.7" cy="130.8" r="1.756" />
-        <circle id="dot168" cx="66.5" cy="253" r="1.756" />
-        <circle id="dot170" cx="54.33" cy="256.5" r="1.756" />
-        <circle id="dot169" cx="42.55" cy="262.3" r="1.756" />
-        <circle id="dot171" cx="13.63" cy="251.1" r="1.756" />
-        <circle id="dot176_177" cx="50.81" cy="69.6" r="1.756" />
+        <circle id="dot153" cx="157" cy="116.1" r="1.756" />
+        <circle id="dot154" cx="141" cy="127.6" r="1.756" />
         <circle id="dot155" cx="129.3" cy="154.9" r="1.756" />
         <circle id="dot156" cx="125.6" cy="169.4" r="1.756" />
+        <circle id="dot157" cx="105.5" cy="144.5" r="1.756" />
         <circle id="dot158" cx="113.3" cy="175.7" r="1.756" />
+        <circle id="dot159" cx="102" cy="189.2" r="1.756" />
+        <circle id="dot160" cx="114" cy="211.5" r="1.756" />
+        <circle id="dot161" cx="96.25" cy="214" r="1.756" />
+        <circle id="dot162" cx="79.72" cy="163.2" r="1.756" />
+        <circle id="dot163" cx="59.9" cy="176.8" r="1.756" />
+        <circle id="dot164" cx="41.72" cy="193.7" r="1.756" />
+        <circle id="dot165" cx="76.83" cy="218.5" r="1.756" />
+        <circle id="dot166" cx="52.46" cy="221.4" r="1.756" />
+        <circle id="dot167" cx="35.11" cy="222.2" r="1.756" />
+        <circle id="dot168" cx="66.5" cy="253" r="1.756" />
+        <circle id="dot169" cx="42.55" cy="262.3" r="1.756" />
+        <circle id="dot170" cx="54.33" cy="256.5" r="1.756" />
+        <circle id="dot171" cx="13.63" cy="251.1" r="1.756" />
+        <circle id="dot172" cx="15.28" cy="197.4" r="1.756" />
+        <circle id="dot173" cx="98.72" cy="119" r="1.756" />
+        <circle id="dot174" cx="149.9" cy="73.94" r="1.756" />
+        <circle id="dot175" cx="165.2" cy="40.89" r="1.756" />
+        <circle id="dot176_177" cx="50.81" cy="69.6" r="1.756" />
       </g>
       <g id="zones" fillOpacity={0} transform="translate(-4.2,-6.5)">
         <path
