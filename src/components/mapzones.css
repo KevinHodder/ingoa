@@ -16,6 +16,10 @@ text {
     opacity: 0.75;
 }
 
+body {
+    background-color: lightblue;
+}
+
 /*[id*='name'] {*/
 /*    opacity: 0;*/
 /*    overflow: visible;*/
