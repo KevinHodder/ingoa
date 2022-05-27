@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import data from "../data.json";
-import MapSIZones from "./MapSIZones";
+import MapNIZones from "./MapNIZones";
 
 const MapSVGCont = styled.svg`
   max-width: 100%;
-  max-height: 75vh;
   min-width: 50vh;
+  max-height: 75vh;
 `;
 
 const BGImg = styled.image``;
 
-const MapSI = (props) => {
+const MapNI = (props) => {
   const { setResults } = props;
 
   const goTo = (event) => {
@@ -24,11 +24,11 @@ const MapSI = (props) => {
   };
 
   return (
-    <MapSVGCont viewBox="0 0 85.5 100">
-      <BGImg href={"./maps/SI.png"} x={0} y={0} width={85.5} height={100} />
-      <MapSIZones goTo={goTo} />
+    <MapSVGCont viewBox="0 0 72 100">
+      <BGImg href={"./maps/NI.png"} x={0} y={0} width={72} height={100} />
+      <MapNIZones goTo={goTo} />
     </MapSVGCont>
   );
 };
 
-export default MapSI;
+export default MapNI;

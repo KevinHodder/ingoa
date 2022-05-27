@@ -55,7 +55,7 @@ const MapSIZones = (props) => {
       ref={siRef}
       transform="scale(0.345) translate(26,6.5)"
     >
-      <g id="tags" transform="translate(-5,-5)">
+      <g id="tags" transform="translate(-25,-5)">
         <path
           id="name140bg"
           d="m 170.3,10.21 c -0.4,0 -0.8,0.91 -0.8,2.04 v 3.06 c 0,1.13 0.4,2.04 0.8,2.04 h 13.1 l 1.9,3.73 2.1,-3.73 h 16.1 c 0.4,0 0.8,-0.91 0.8,-2.04 v -3.06 c 0,-1.13 -0.4,-2.04 -0.8,-2.04 z"
@@ -69,7 +69,7 @@ const MapSIZones = (props) => {
           Golden Bay
         </text>
       </g>
-      <g id="dots" fill="red" transform="translate(0,0)">
+      <g id="dots" fill="red" transform="translate(-20,0)">
         <circle id="dot140" cx="180.1" cy="14.87" r="1.756" />
         <circle id="dot141" cx="185.9" cy="29.74" r="1.756" />
         <circle id="dot142" cx="177.6" cy="48.33" r="1.756" />
@@ -108,7 +108,7 @@ const MapSIZones = (props) => {
         <circle id="dot175" cx="165.2" cy="40.89" r="1.756" />
         <circle id="dot176_177" cx="50.81" cy="69.6" r="1.756" />
       </g>
-      <g id="zones" fillOpacity={0} transform="translate(-4.2,-6.5)">
+      <g id="zones" fillOpacity={0} transform="translate(-25.2,-6.5)">
         <path
           id="155"
           onClick={clickHandler}
@@ -357,7 +357,7 @@ const MapSIZones = (props) => {
           d="M227.2324 17.482c-5.8212.7699-3.1752 4.7495 0 0zm0 7.1573a6.8267 4.0537 0 0 0-6.8796 3.5721c-1.323.979-3.1752 1.2966-5.292 1.2172-5.5566 8.4407 9.7902 9.2345 12.1716 3.3075a6.8267 4.0537 0 0 0 5.0274-1.376c.5292.2647.7938 0 1.323-1.1906a6.8267 4.0537 0 0 0 .5292-1.4818 6.8267 4.0537 0 0 0-.2646-.4498c.2646-.5557.2646-1.1907.2646-1.9316-.5292-.2646-.7938-.3704-1.323-.3704l-.5292.1058a6.8267 4.0537 0 0 0-5.0274-1.4024z"
         />
         <path
-          id="path2683-2"
+          id="part3"
           d="M115.3066 16.7199c-.2646 0-.5292.0264-.7938.0555H89.6404v.0265-.0265c-.5292 2.7333-.2646 4.0458 0 4.477v2.1433h58.212v-6.6203h-32.2812c0-.0344-.2646-.0529-.2646-.0555z"
         />
         <path
