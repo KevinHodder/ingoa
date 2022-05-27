@@ -6,6 +6,10 @@ const MapSVGCont = styled.svg`
   max-width: 100%;
   max-height: 75vh;
   min-width: 50vh;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const BGImg = styled.image``;
