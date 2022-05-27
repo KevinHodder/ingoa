@@ -1,0 +1,10 @@
+button > svg {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+button > svg:hover {
+   fill: #373b3e;
+    transform: scale(1.1);
+}

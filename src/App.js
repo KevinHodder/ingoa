@@ -7,6 +7,7 @@ import SearchBox from "./components/SearchBox";
 import SearchResults from "./components/SearchResults";
 import MapSI from "./components/MapSI";
 import MapNI from "./components/MapNI";
+import GoToTop from "./components/GoToTop";
 
 const Maps = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <main>
+      <GoToTop />
       <Maps>
         <MapNI setResults={setResults} />
         <MapSI setResults={setResults} />
