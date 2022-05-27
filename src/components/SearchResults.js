@@ -2,7 +2,7 @@ import { Accordion } from "react-bootstrap";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Result from "./Result";
-import { Fragment } from "react";
+import { Fragment, useEffect, useRef } from "react";
 
 const Wrapper = styled.div`
   padding: 5px;
@@ -10,14 +10,20 @@ const Wrapper = styled.div`
 `;
 
 export const SearchResults = (props) => {
-  const { results } = props;
+  const { results, isAllResults } = props;
+  const acc = useRef();
+  useEffect(() => {
+    if (!isAllResults) {
+      acc.current.scrollIntoView(true);
+    }
+  });
 
   return (
     <Wrapper>
       {results.length ? (
         <Fragment>
           <h2>Results/Ingoa rokohina: ({results.length || ""})</h2>
-          <Accordion defaultActiveKey="0">
+          <Accordion defaultActiveKey="0" ref={acc}>
             {results.map((result, index) => (
               <Result
                 details={result.item}
