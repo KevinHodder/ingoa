@@ -17,7 +17,7 @@ export const SearchResults = (props) => {
     if (acc.current && results.length < 170) {
       acc.current.scrollIntoView(true);
     }
-  });
+  }, [acc, results]);
 
   return (
     <Wrapper>

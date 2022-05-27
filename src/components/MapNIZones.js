@@ -18,7 +18,7 @@ const MapNIZones = (props) => {
     });
     gsap.to(q("circle"), {
       opacity: 1,
-      duration: 1,
+      duration: 2,
       delay: 1,
       stagger: 0.03,
     });
