@@ -72,8 +72,6 @@ const getSearchResults = (searchTerm, setResults) => {
 };
 
 export const SearchBox = (props) => {
-  console.log("zones: ", zones.length);
-
   const { setResults } = props;
   const [searchTerm, setSearchTerm] = useState("");
 

@@ -14,7 +14,7 @@ export const SearchResults = (props) => {
   const acc = useRef();
 
   useEffect(() => {
-    if (results.length < 170) {
+    if (acc.current && results.length < 170) {
       acc.current.scrollIntoView(true);
     }
   });
