@@ -10,10 +10,11 @@ const Wrapper = styled.div`
 `;
 
 export const SearchResults = (props) => {
-  const { results, isAllResults } = props;
+  const { results } = props;
   const acc = useRef();
+
   useEffect(() => {
-    if (!isAllResults) {
+    if (results.length < 170) {
       acc.current.scrollIntoView(true);
     }
   });

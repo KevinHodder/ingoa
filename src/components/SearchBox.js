@@ -72,16 +72,16 @@ const getSearchResults = (searchTerm, setResults) => {
 };
 
 export const SearchBox = (props) => {
-  const { setResults, setIsAllResults } = props;
+  console.log("zones: ", zones.length);
+
+  const { setResults } = props;
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     if (searchTerm) {
       getSearchResults(searchTerm, setResults);
-      setIsAllResults(false);
     } else {
       setResults(allResults);
-      setIsAllResults(true);
     }
   }, [searchTerm, setResults]);
 

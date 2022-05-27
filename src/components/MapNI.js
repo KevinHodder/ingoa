@@ -11,7 +11,7 @@ const MapSVGCont = styled.svg`
 const BGImg = styled.image``;
 
 const MapNI = (props) => {
-  const { setResults, setIsAllResults } = props;
+  const { setResults } = props;
 
   const goTo = (event) => {
     event.preventDefault();
@@ -21,7 +21,6 @@ const MapNI = (props) => {
         .filter((zone) => ids.includes(zone.number))
         .map((zone) => ({ item: zone }))
     );
-    setIsAllResults(false);
   };
 
   return (

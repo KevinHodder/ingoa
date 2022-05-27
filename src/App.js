@@ -16,17 +16,16 @@ const Maps = styled.div`
 
 function App() {
   const [results, setResults] = useState([]);
-  const [isAllResults, setIsAllResults] = useState([]);
 
   return (
     <main>
       <Maps>
-        <MapNI setResults={setResults} setIsAllResults={setIsAllResults} />
-        <MapSI setResults={setResults} setIsAllResults={setIsAllResults} />
+        <MapNI setResults={setResults} />
+        <MapSI setResults={setResults} />
       </Maps>
 
-      <SearchBox setResults={setResults} setIsAllResults={setIsAllResults} />
-      <SearchResults results={results} isAllResults={isAllResults} />
+      <SearchBox setResults={setResults} />
+      <SearchResults results={results} />
     </main>
   );
 }
