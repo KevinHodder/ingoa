@@ -119,7 +119,9 @@ export const SearchBox = (props) => {
         <Box
           className={"searchBox"}
           ref={boxRef}
-          placeholder={"e.g. Te Aroha"}
+          placeholder={
+            "e.g. a city, region, marae, or other place of significance"
+          }
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <ClearButton onClick={clearHandler}>Clear Search</ClearButton>
