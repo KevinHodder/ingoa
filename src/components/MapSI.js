@@ -28,7 +28,7 @@ const MapSI = (props) => {
   };
 
   return (
-    <MapSVGCont viewBox="0 0 85.5 100">
+    <MapSVGCont viewBox="0 0 85.5 100" role={"presentation"}>
       <BGImg href={"./maps/SI.png"} x={0} y={0} width={85.5} height={100} />
       <MapSIZones goTo={goTo} />
     </MapSVGCont>

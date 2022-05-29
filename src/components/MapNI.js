@@ -28,7 +28,7 @@ const MapNI = (props) => {
   };
 
   return (
-    <MapSVGCont viewBox="0 0 72 100">
+    <MapSVGCont viewBox="0 0 72 100" role={"presentation"}>
       <BGImg href={"./maps/NI.png"} x={0} y={0} width={72} height={100} />
       <MapNIZones goTo={goTo} />
     </MapSVGCont>
