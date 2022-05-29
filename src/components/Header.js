@@ -6,6 +6,7 @@ const Title = styled.header`
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  text-align: center;
   font-size: 4rem;
   font-weight: bold;
 `;
