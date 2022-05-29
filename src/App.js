@@ -7,6 +7,7 @@ import SearchBox from "./components/SearchBox";
 import SearchResults from "./components/SearchResults";
 import MapSI from "./components/MapSI";
 import MapNI from "./components/MapNI";
+import Header from "./components/Header";
 // import GoToTop from "./components/GoToTop";
 
 const Maps = styled.div`
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <main>
+      <Header />
       {/*<GoToTop />*/}
       <Maps>
         <MapNI setResults={setResults} />
