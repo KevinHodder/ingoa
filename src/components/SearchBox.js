@@ -1,7 +1,8 @@
 import Fuse from "fuse.js";
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, Fragment, useRef } from "react";
 import PropTypes from "prop-types";
 import zones from "../data.json";
+import styled from "styled-components";
 
 const fuseZones = new Fuse(zones, {
   includeScore: true,
@@ -71,9 +72,32 @@ const getSearchResults = (searchTerm, setResults) => {
   setResults(output);
 };
 
+const clearSearch = (ref) => {
+  ref.current.value = "";
+};
+
+const Box = styled.input`
+  height: 3.2rem;
+  font-size: 2rem;
+`;
+
+const SearchBar = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const ClearButton = styled.button`
+  font-weight: bold;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  height: 3.2rem;
+`;
+
 export const SearchBox = (props) => {
   const { setResults } = props;
   const [searchTerm, setSearchTerm] = useState("");
+
+  const boxRef = useRef();
 
   useEffect(() => {
     if (searchTerm) {
@@ -83,13 +107,23 @@ export const SearchBox = (props) => {
     }
   }, [searchTerm, setResults]);
 
+  const clearHandler = () => {
+    clearSearch(boxRef);
+    setResults(allResults);
+  };
+
   return (
     <Fragment>
       <h2>Search for a name/Kimihia ki tētahi ingoa</h2>
-      <input
-        className={"searchBox"}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
+      <SearchBar>
+        <Box
+          className={"searchBox"}
+          ref={boxRef}
+          placeholder={"e.g. Te Aroha"}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <ClearButton onClick={clearHandler}>Clear Search</ClearButton>
+      </SearchBar>
     </Fragment>
   );
 };
