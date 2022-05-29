@@ -31,7 +31,7 @@ const Header = () => {
         <div>This is a prototype under active development. </div>
         <div>
           For background, see an earlier version at{" "}
-          <a href={"ingoa.maori.nz"}>ingoa.maori.nz</a>.
+          <a href={"http://ingoa.maori.nz"}>ingoa.maori.nz</a>.
         </div>
         <div>
           We welcome feedback, especially about accessibility, at&nbsp;
