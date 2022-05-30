@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { Fragment } from "react";
+
+const HeaderBlock = styled.div`
+  margin-bottom: 2rem;
+`;
 
 const Title = styled.header`
   display: flex;
@@ -23,12 +26,11 @@ const Subheader = styled.div`
   align-items: center;
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 2rem;
 `;
 
 const Header = () => {
   return (
-    <Fragment>
+    <HeaderBlock>
       <Title>
         <div>Ngā Ingoa ō Aotearoa</div>
         <SubTitle>An Oral Dictionary of Māori Placenames</SubTitle>
@@ -50,7 +52,7 @@ const Header = () => {
           are in, and they will be corrected.
         </div>
       </Subheader>
-    </Fragment>
+    </HeaderBlock>
   );
 };
 
