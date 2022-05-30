@@ -120,8 +120,8 @@ const MapSIZones = ({ data, goTo }) => {
       {hoverName && (
         <g id="hoverName">
           <text
-            x={100}
-            y={280}
+            x={150}
+            y={270}
             style={{ fontSize: "smaller" }}
             textAnchor={"middle"}
           >
