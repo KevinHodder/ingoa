@@ -11,6 +11,10 @@ const Title = styled.header`
   font-weight: bold;
 `;
 
+const SubTitle = styled.div`
+  font-size: 3rem;
+`;
+
 const Subheader = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +30,7 @@ const Header = () => {
     <Fragment>
       <Title>
         <div>Ngā Ingoa ō Aotearoa</div>
-        <div>An Oral Dictionary of Māori Placenames</div>
+        <SubTitle>An Oral Dictionary of Māori Placenames</SubTitle>
       </Title>
       <Subheader>
         <div>This is a prototype under active development. </div>
