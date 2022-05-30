@@ -33,6 +33,10 @@ const MapNIZones = ({ data, goTo }) => {
   }, []);
 
   const getHoverName = (id) => {
+    if (id === "115_116") {
+      //Auckland
+      return "Auckland Isthmus";
+    }
     return data.filter((rec) => parseInt(rec.number) === parseInt(id))[0]
       .nameCommon;
   };
