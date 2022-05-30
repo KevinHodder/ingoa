@@ -39,7 +39,8 @@ const Header = () => {
           <a href={"http://ingoa.maori.nz"}>ingoa.maori.nz</a>.
         </div>
         <div>
-          We welcome feedback, especially about accessibility, at&nbsp;
+          We welcome feedback, especially about navigation and accessibility,
+          at&nbsp;
           <a href={"mailto: hughingoa@gmail.nz"}>hughingoa@gmail.nz</a>.{" "}
         </div>
         <div>
