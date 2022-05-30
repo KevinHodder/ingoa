@@ -124,7 +124,7 @@ export const SearchBox = (props) => {
           }
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <ClearButton onClick={clearHandler}>Clear Search</ClearButton>
+        <ClearButton onClick={clearHandler}>X</ClearButton>
       </SearchBar>
     </Fragment>
   );
