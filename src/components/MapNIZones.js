@@ -192,7 +192,8 @@ const MapNIZones = (props) => {
         <circle id="dot135" cx="41.09" cy="51.83" r="2.47" />
         <circle id="dot136" cx="39.44" cy="44.19" r="2.47" />
         <circle id="dot137" cx="23.33" cy="28.87" r="2.47" />
-        <circle id="dot138" cx="86.72" cy="24.57" r="2.47" />
+        <circle id="dot138" cx="70.52" cy="18.29" r="2.47" />
+        <circle id="dot139" cx="70.60" cy="29.62" r="2.47" />
       </g>
       <g id="NIZones" fillOpacity={0}>
         <path
@@ -1258,9 +1259,16 @@ const MapNIZones = (props) => {
           onClick={clickHandler}
           onMouseOver={hoverHandler}
           onMouseLeave={unhoverHandler}
-          d="M275.586 56.291a.1996.1996 0 0 0-.1993.2012v68.584a.198.198 0 0 0 .1992.1992h105.0079a.1996.1996 0 0 0 .2011-.1992v-68.584a.2012.2012 0 0 0-.2011-.2012z"
-          transform="scale(.26458)"
+          d="m 67.40648,14.849834 c -0.03524,0 -0.06322,0.0089 -0.06322,0.01985 v 6.764917 c 0,0.01096 0.02799,0.01965 0.06322,0.01965 h 33.3255 c 0.0353,0 0.0638,-0.0087 0.0638,-0.01965 V 14.86968 c 0,-0.01096 -0.0286,-0.01985 -0.0638,-0.01985 z"
         />
+        <path
+          id="139"
+          onClick={clickHandler}
+          onMouseOver={hoverHandler}
+          onMouseLeave={unhoverHandler}
+          d="m 67.625201,26.221103 c -0.03516,0 -0.06309,0.0089 -0.06309,0.01984 v 6.765107 c 0,0.01095 0.02792,0.01964 0.06309,0.01964 h 33.252959 c 0.0352,0 0.0637,-0.0087 0.0637,-0.01964 v -6.7651 c 0,-0.01095 -0.0285,-0.01984 -0.0637,-0.01984 z"
+        />
+
         <path
           id="part1"
           cursor={"default"} // remove this when it works
