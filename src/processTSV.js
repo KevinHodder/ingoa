@@ -26,7 +26,7 @@ const removeMacrons = (input) => {
 };
 
 const csvFile = fs.readFileSync("../placenames.tsv", "utf8");
-const [header, ...lines] = csvFile.split("\r\n");
+const [header, ...lines] = csvFile.split("\r\n"); // Windows = \r\n, Linux/Mac = \n
 // console.log(header);
 
 const ZONENUM = 4;
@@ -99,6 +99,7 @@ lines.forEach((line) => {
     if (split[START1]) {
       newLocality.audioStart = parseFloat(split[START1]);
       newLocality.audioEnd = parseFloat(split[END1]);
+      newLocality.speaker = split[SPEAKER1];
       if (!zone.speakers.includes(split[SPEAKER1])) {
         zone.speakers.push(split[SPEAKER1]);
       }
@@ -119,6 +120,7 @@ lines.forEach((line) => {
         altSpellings: [removeMacrons(split[SPOKENNAME2]).toLowerCase()],
         audioStart: parseFloat(split[START2]),
         audioEnd: parseFloat(split[END2]),
+        speaker: split[SPEAKER2],
       });
       // Add speaker to speaker list if not already present
       if (!zone.speakers.includes(split[SPEAKER2]) && split[SPEAKER2]) {
@@ -134,6 +136,7 @@ lines.forEach((line) => {
         altSpellings: [removeMacrons(split[SPOKENNAME3]).toLowerCase()],
         audioStart: parseFloat(split[START3]),
         audioEnd: parseFloat(split[END3]),
+        speaker: split[SPEAKER3],
       });
       if (!zone.speakers.includes(split[SPEAKER3]) && split[SPEAKER3]) {
         zone.speakers.push(split[SPEAKER3]);

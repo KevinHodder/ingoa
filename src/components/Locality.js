@@ -1,18 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, forwardRef } from "react";
+import { Tooltip } from "@mui/material";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { isArrPresent } from "../utils/utils";
 import Speaker from "./Speaker";
+import "./locality.css";
 
 const Record = styled.div`
   display: grid;
   width: auto;
-  grid-template-columns: 20px minmax(100px, 150px) auto;
+  grid-template-columns: minmax(120px, 170px) auto;
   grid-column-gap: 5px;
   grid-row-gap: 3px;
   align-items: center;
   min-height: 20px;
   margin-bottom: 3px;
+`;
+
+const TooltipZone = styled.div`
+  display: grid;
+  grid-template-columns: 20px minmax(100px, 150px);
+  grid-column-gap: 5px;
 `;
 
 const Name = styled.div`
@@ -26,7 +34,8 @@ const Types = styled.div`
 `;
 
 const Alts = styled.div`
-  grid-column: 2 / 4;
+  grid-column: 1 / 3;
+  margin-left: 25px;
 `;
 
 const AltTitle = styled.div`
@@ -65,14 +74,41 @@ export const Locality = (props) => {
     }
   };
 
-  return (
-    <Record>
+  const PlayableName = forwardRef((props, ref) => (
+    <TooltipZone {...props} ref={ref}>
       {locality.audioStart ? (
         <Speaker name={locality.name} isPlaying={isPlaying} play={playName} />
       ) : (
         <div />
       )}
       <Name onClick={playName}>{locality.name}</Name>
+    </TooltipZone>
+  ));
+
+  const TTCont = styled.div`
+    font-size: 1rem;
+  `;
+
+  const WrappedPlayableName = () => {
+    if (locality.speaker) {
+      return (
+        <Tooltip
+          title={<TTCont>Spoken by {locality.speaker}</TTCont>}
+          followCursor={true}
+          arrow
+          placement="top"
+          sx={{ fontSize: "20rem" }}
+        >
+          <PlayableName />
+        </Tooltip>
+      );
+    }
+    return <PlayableName />;
+  };
+
+  return (
+    <Record>
+      <WrappedPlayableName />
       {isArrPresent(locality.types) ? (
         <Types>{locality.types.sort().join(", ")}</Types>
       ) : null}
@@ -102,13 +138,17 @@ Locality.propTypes = {
     types: PropTypes.arrayOf(PropTypes.string),
     audioStart: PropTypes.number,
     audioEnd: PropTypes.number,
-  }),
+    speaker: PropTypes.string,
+  }).isRequired,
   audioRef: PropTypes.object,
+  currentlyPlaying: PropTypes.string,
+  setCurrentlyPlaying: PropTypes.func.isRequired,
 };
 
 Locality.defaultProps = {
   locality: {},
   audioRef: {},
+  currentlyPlaying: undefined,
 };
 
 export default Locality;
