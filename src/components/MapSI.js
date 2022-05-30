@@ -7,7 +7,7 @@ const MapSVGCont = styled.svg`
   max-height: 75vh;
   min-width: 50vh;
 
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     display: none;
   }
 `;
