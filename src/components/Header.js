@@ -23,6 +23,7 @@ const Subheader = styled.div`
   align-items: center;
   text-align: center;
   font-size: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const Header = () => {
