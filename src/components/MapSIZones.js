@@ -87,12 +87,12 @@ const MapSIZones = (props) => {
         <circle id="dot154" cx="141" cy="127.6" r="1.756" />
         <circle id="dot155" cx="129.3" cy="154.9" r="1.756" />
         <circle id="dot156" cx="125.6" cy="169.4" r="1.756" />
-        <circle id="dot157" cx="105.5" cy="144.5" r="1.756" />
+        <circle id="dot157" cx="108.5" cy="144.5" r="1.756" />
         <circle id="dot158" cx="113.3" cy="175.7" r="1.756" />
         <circle id="dot159" cx="102" cy="189.2" r="1.756" />
         <circle id="dot160" cx="114" cy="211.5" r="1.756" />
         <circle id="dot161" cx="96.25" cy="214" r="1.756" />
-        <circle id="dot162" cx="79.72" cy="163.2" r="1.756" />
+        <circle id="dot162" cx="82.72" cy="163.2" r="1.756" />
         <circle id="dot163" cx="59.9" cy="176.8" r="1.756" />
         <circle id="dot164" cx="41.72" cy="193.7" r="1.756" />
         <circle id="dot165" cx="76.83" cy="218.5" r="1.756" />
