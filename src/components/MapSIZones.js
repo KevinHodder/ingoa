@@ -1,16 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./mapzones.css";
 import gsap from "gsap";
 import { useRef } from "react";
 // import styled from "styled-components";
 
-const MapSIZones = (props) => {
+const MapSIZones = ({ data, goTo }) => {
   const siRef = useRef();
   const q = gsap.utils.selector(siRef);
 
+  const [hoverName, setHoverName] = useState("");
+
   const clickHandler = (event) => {
-    return props.goTo(event);
+    return goTo(event);
   };
 
   useEffect(() => {
@@ -31,22 +33,29 @@ const MapSIZones = (props) => {
     });
   }, []);
 
+  const getHoverName = (id) => {
+    return data.filter((rec) => parseInt(rec.number) === parseInt(id))[0]
+      .nameCommon;
+  };
+
   const hoverHandler = ({ currentTarget }) => {
     gsap.to(q(`#dot${currentTarget.id}`), {
       fillOpacity: 0,
     });
-    gsap.to(q(`[id*='name${currentTarget.id}']`), {
-      opacity: 1,
-    });
+    // gsap.to(q(`[id*='name${currentTarget.id}']`), {
+    //   opacity: 1,
+    // });
+    setHoverName(getHoverName(currentTarget.id));
   };
 
   const unhoverHandler = ({ currentTarget }) => {
     gsap.to(q(`#dot${currentTarget.id}`), {
       fillOpacity: 1,
     });
-    gsap.to(q(`[id*='name${currentTarget.id}']`), {
-      opacity: 0,
-    });
+    // gsap.to(q(`[id*='name${currentTarget.id}']`), {
+    //   opacity: 0,
+    // });
+    setHoverName("");
   };
 
   return (
@@ -55,20 +64,20 @@ const MapSIZones = (props) => {
       ref={siRef}
       transform="scale(0.345) translate(26,6.5)"
     >
-      <g id="tags" transform="translate(-25,-5)">
-        <path
-          id="name140bg"
-          d="m 170.3,10.21 c -0.4,0 -0.8,0.91 -0.8,2.04 v 3.06 c 0,1.13 0.4,2.04 0.8,2.04 h 13.1 l 1.9,3.73 2.1,-3.73 h 16.1 c 0.4,0 0.8,-0.91 0.8,-2.04 v -3.06 c 0,-1.13 -0.4,-2.04 -0.8,-2.04 z"
-        />
-        <text
-          id="name140"
-          x="271.6"
-          y="235.7"
-          transform="matrix(0.2646,0,0,0.2646,99.41,-46.83)"
-        >
-          Golden Bay
-        </text>
-      </g>
+      {/*<g id="tags" transform="translate(-25,-5)">*/}
+      {/*  <path*/}
+      {/*    id="name140bg"*/}
+      {/*    d="m 170.3,10.21 c -0.4,0 -0.8,0.91 -0.8,2.04 v 3.06 c 0,1.13 0.4,2.04 0.8,2.04 h 13.1 l 1.9,3.73 2.1,-3.73 h 16.1 c 0.4,0 0.8,-0.91 0.8,-2.04 v -3.06 c 0,-1.13 -0.4,-2.04 -0.8,-2.04 z"*/}
+      {/*  />*/}
+      {/*  <text*/}
+      {/*    id="name140"*/}
+      {/*    x="271.6"*/}
+      {/*    y="235.7"*/}
+      {/*    transform="matrix(0.2646,0,0,0.2646,99.41,-46.83)"*/}
+      {/*  >*/}
+      {/*    Golden Bay*/}
+      {/*  </text>*/}
+      {/*</g>*/}
       <g id="dots" fill="red" transform="translate(-20,0)">
         <circle id="dot140" cx="180.1" cy="14.87" r="1.756" />
         <circle id="dot141" cx="185.9" cy="29.74" r="1.756" />
@@ -108,6 +117,18 @@ const MapSIZones = (props) => {
         <circle id="dot175" cx="165.2" cy="40.89" r="1.756" />
         <circle id="dot176_177" cx="50.81" cy="69.6" r="1.756" />
       </g>
+      {hoverName && (
+        <g id="hoverName">
+          <text
+            x={100}
+            y={280}
+            style={{ fontSize: "smaller" }}
+            textAnchor={"middle"}
+          >
+            {hoverName}
+          </text>
+        </g>
+      )}
       <g id="zones" fillOpacity={0} transform="translate(-25.2,-6.5)">
         <path
           id="155"

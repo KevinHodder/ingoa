@@ -1,15 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./mapzones.css";
 import gsap from "gsap";
 import { useRef } from "react";
 
-const MapNIZones = (props) => {
+const MapNIZones = ({ data, goTo }) => {
   const niRef = useRef();
   const q = gsap.utils.selector(niRef);
 
+  const [hoverName, setHoverName] = useState("");
+
   const clickHandler = (event) => {
-    return props.goTo(event);
+    return goTo(event);
   };
 
   useEffect(() => {
@@ -30,6 +32,11 @@ const MapNIZones = (props) => {
     // });
   }, []);
 
+  const getHoverName = (id) => {
+    return data.filter((rec) => parseInt(rec.number) === parseInt(id))[0]
+      .nameCommon;
+  };
+
   const hoverHandler = ({ currentTarget }) => {
     gsap.to(q(`#dot${currentTarget.id}`), {
       fillOpacity: 0,
@@ -37,6 +44,7 @@ const MapNIZones = (props) => {
     // gsap.to(q(`[id*='name${currentTarget.id}']`), {
     //   opacity: 1,
     // });
+    setHoverName(getHoverName(currentTarget.id));
   };
 
   const unhoverHandler = ({ currentTarget }) => {
@@ -46,6 +54,7 @@ const MapNIZones = (props) => {
     // gsap.to(q(`[id*='name${currentTarget.id}']`), {
     //   opacity: 0,
     // });
+    setHoverName("");
   };
 
   return (
@@ -195,6 +204,18 @@ const MapNIZones = (props) => {
         <circle id="dot138" cx="70.52" cy="18.29" r="2.47" />
         <circle id="dot139" cx="70.60" cy="29.62" r="2.47" />
       </g>
+      {hoverName && (
+        <g id="hoverName">
+          <text
+            x={250}
+            y={430}
+            style={{ fontSize: "1.1rem" }}
+            textAnchor={"middle"}
+          >
+            {hoverName}
+          </text>
+        </g>
+      )}
       <g id="NIZones" fillOpacity={0}>
         <path
           id="1"
