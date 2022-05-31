@@ -49,7 +49,16 @@ const Header = () => {
         <div>
           The audio of some names is incorrectly cut short. If you notice any
           such issues, please advise us which they are and the Zones/takiwā they
-          are in, and they will be corrected.
+          are in, and they will be corrected. Only names in use before 1994 are
+          included.
+        </div>
+        <hr style={{ width: "100%" }} />
+        <div style={{ fontWeight: "bold" }}>
+          To find a name, click on the map...{" "}
+        </div>
+        <div style={{ fontWeight: "bold" }}>
+          {" "}
+          Kia kitea he ingoa, pawhiria te mapi...
         </div>
       </Subheader>
     </HeaderBlock>

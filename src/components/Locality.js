@@ -40,6 +40,7 @@ const Alts = styled.div`
 
 const AltTitle = styled.div`
   font-weight: bold;
+  font-style: italic;
 `;
 
 export const Locality = (props) => {

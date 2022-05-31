@@ -93,6 +93,14 @@ const ClearButton = styled.button`
   height: 3.2rem;
 `;
 
+const SearchText = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
+
 export const SearchBox = (props) => {
   const { setResults } = props;
   const [searchTerm, setSearchTerm] = useState("");
@@ -114,7 +122,11 @@ export const SearchBox = (props) => {
 
   return (
     <Fragment>
-      <h2>Search for a name/Kimihia ki tētahi ingoa</h2>
+      <SearchText>
+        <h2>.... or write the name here</h2>
+        <h2>...tuhia ranei te ingoa ki konei</h2>
+      </SearchText>
+
       <SearchBar>
         <Box
           className={"searchBox"}

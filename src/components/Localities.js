@@ -6,6 +6,8 @@ import Speaker from "./Speaker";
 
 const Header = styled.h2`
   margin-top: 1em;
+  font-weight: bold;
+  font-size: 2em;
 `;
 
 const PlayAllBlock = styled.div`
@@ -73,10 +75,12 @@ export const Localities = (props) => {
           isPlaying={isPlayingAll}
           name={`all names in ${zone.nameCommon}`}
         />
-        <PlayAllText>{isPlayingAll ? "Pause" : "Play All"}</PlayAllText>
+        <PlayAllText>
+          {isPlayingAll ? "Pause/Tūtataria" : "All/Katoa"}
+        </PlayAllText>
       </PlayAllBlock>
 
-      <Header>Names/Ngā Ingoa</Header>
+      <Header>Individual names/He ingoa takitahi</Header>
 
       {localities.map((locality, index) => (
         <Locality
