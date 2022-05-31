@@ -13,6 +13,7 @@ const fuseZones = new Fuse(zones, {
     "localities.altSpellings",
     "localities.altNames.name",
     "localities.altNames.altSpellings",
+    "localities.speaker",
   ],
   threshold: 0.1,
   distance: 10,
@@ -44,12 +45,15 @@ const hasMatchingAltSpelling = (locality, matches) =>
   );
 
 const hasMatchingName = (locality, matches) => matches.includes(locality.name);
+const hasMatchingSpeaker = (locality, matches) =>
+  matches.includes(locality.speaker);
 const getMatchingLocalities = (localities, matches) => {
   return localities.filter(
     (locality) =>
       hasMatchingName(locality, matches) ||
       hasMatchingAltSpelling(locality, matches) ||
-      hasMatchingAltName(locality, matches)
+      hasMatchingAltName(locality, matches) ||
+      hasMatchingSpeaker(locality, matches)
   );
 };
 
