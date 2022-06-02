@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 import SearchBox from "./components/SearchBox";
 import SearchResults from "./components/SearchResults";
