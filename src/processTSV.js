@@ -38,10 +38,12 @@ const SPOKENNAME1 = 9;
 const SPEAKER1 = 11;
 const START1 = 13;
 const END1 = 14;
+const INDEXNAME2 = 15;
 const SPOKENNAME2 = 16;
 const SPEAKER2 = 18;
 const START2 = 20;
 const END2 = 21;
+const INDEXNAME3 = 22;
 const SPOKENNAME3 = 23;
 const SPEAKER3 = 25;
 const START3 = 27;
@@ -111,15 +113,15 @@ lines.forEach((line) => {
     }
     //TODO: Need to check for missing primary pronunciation
     //Alternative pronunciations
-    if (split[START2]) {
+    if (split[INDEXNAME2]) {
       if (!newLocality.altNames) {
         newLocality.altNames = [];
       }
       newLocality.altNames.push({
-        name: split[SPOKENNAME2],
-        altSpellings: [removeMacrons(split[SPOKENNAME2]).toLowerCase()],
-        audioStart: parseFloat(split[START2]),
-        audioEnd: parseFloat(split[END2]),
+        name: split[INDEXNAME2],
+        altSpellings: [removeMacrons(split[INDEXNAME2]).toLowerCase()],
+        audioStart: split[START2] && parseFloat(split[START2]),
+        audioEnd: split[END2] && parseFloat(split[END2]),
         speaker: split[SPEAKER2],
       });
       // Add speaker to speaker list if not already present
@@ -132,10 +134,10 @@ lines.forEach((line) => {
         newLocality.altNames = [];
       }
       newLocality.altNames.push({
-        name: split[SPOKENNAME3],
-        altSpellings: [removeMacrons(split[SPOKENNAME3]).toLowerCase()],
-        audioStart: parseFloat(split[START3]),
-        audioEnd: parseFloat(split[END3]),
+        name: split[INDEXNAME3],
+        altSpellings: [removeMacrons(split[INDEXNAME3]).toLowerCase()],
+        audioStart: split[START3] && parseFloat(split[START3]),
+        audioEnd: split[END3] && parseFloat(split[END3]),
         speaker: split[SPEAKER3],
       });
       if (!zone.speakers.includes(split[SPEAKER3]) && split[SPEAKER3]) {
