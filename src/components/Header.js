@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const HeaderBlock = styled.div`
   margin-bottom: 2rem;
+  background-colour: rgba(255, 255, 255, 0.5);
 `;
 
 const Title = styled.header`
@@ -10,12 +11,14 @@ const Title = styled.header`
   flex-wrap: wrap;
   align-items: center;
   text-align: center;
-  font-size: 4rem;
-  font-weight: bold;
+  margin-bottom: 2rem;
+  > h1 {
+    font-size: 4rem;
+  }
 `;
 
-const SubTitle = styled.div`
-  font-size: 3rem;
+const SubTitle = styled.h2`
+  font-size: 2rem;
 `;
 
 const Subheader = styled.div`
@@ -24,19 +27,38 @@ const Subheader = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  margin: auto;
+  text-align: left;
   font-size: 2rem;
+  width: 80%;
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+  > div {
+    width: 100%;
+  }
+`;
+
+const MapInstructions = styled.div`
+  font-weight: bold;
+  text-align: center;
+  @media (max-width: 650px) {
+    display: none;
+  }
 `;
 
 const Header = () => {
   return (
     <HeaderBlock>
       <Title>
-        <div>Ngā Ingoa ō Aotearoa</div>
+        <h1>Ngā Ingoa ō Aotearoa</h1>
         <SubTitle>An Oral Dictionary of Māori Placenames</SubTitle>
       </Title>
       <Subheader>
-        <div>This is a prototype under active development. </div>
+        <div>
+          This is a prototype under active development. It is a dictionary of
+          pronunciation only, and only names in use before 1994 are included.
+        </div>
         <div>
           For background, see an earlier version at{" "}
           <a href={"http://ingoa.maori.nz"}>ingoa.maori.nz</a>.
@@ -53,13 +75,10 @@ const Header = () => {
           included.
         </div>
         <hr style={{ width: "100%" }} />
-        <div style={{ fontWeight: "bold" }}>
-          To find a name, click on the map...{" "}
-        </div>
-        <div style={{ fontWeight: "bold" }}>
-          {" "}
-          Kia kitea he ingoa, pawhiria te mapi...
-        </div>
+        <MapInstructions>
+          <div>To find a name, click on the map...</div>
+          <div>Kia kitea he ingoa, pawhiria te mapi...</div>
+        </MapInstructions>
       </Subheader>
     </HeaderBlock>
   );

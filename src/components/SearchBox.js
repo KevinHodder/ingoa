@@ -43,10 +43,10 @@ const hasMatchingAltSpelling = (locality, matches) =>
     (prev, curr) => prev || matches.includes(curr),
     false
   );
-
 const hasMatchingName = (locality, matches) => matches.includes(locality.name);
 const hasMatchingSpeaker = (locality, matches) =>
   matches.includes(locality.speaker);
+
 const getMatchingLocalities = (localities, matches) => {
   return localities.filter(
     (locality) =>
@@ -83,6 +83,7 @@ const clearSearch = (ref) => {
 const Box = styled.input`
   height: 3.2rem;
   font-size: 2rem;
+  width: 100%;
 `;
 
 const SearchBar = styled.div`
@@ -103,6 +104,19 @@ const SearchText = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  @media (max-width: 650px) {
+    display: none;
+  }
+`;
+const SearchTextSmall = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @media (min-width: 651px) {
+    display: none;
+  }
 `;
 
 export const SearchBox = (props) => {
@@ -127,17 +141,19 @@ export const SearchBox = (props) => {
   return (
     <Fragment>
       <SearchText>
-        <h2>.... or write the name here</h2>
-        <h2>...tuhia ranei te ingoa ki konei</h2>
+        <h2>....or write the name of a place or speaker here</h2>
+        <h2>...tuhia ranei te ingoa wāhi, kaikōrero, ki konei</h2>
       </SearchText>
+      <SearchTextSmall>
+        <h2>Write the name of a place or speaker here</h2>
+        <h2>Tuhia te ingoa wāhi, kaikōrero, ki konei</h2>
+      </SearchTextSmall>
 
       <SearchBar>
         <Box
           className={"searchBox"}
           ref={boxRef}
-          placeholder={
-            "e.g. a city, region, marae, or other place of significance"
-          }
+          placeholder={"Write here / Tuhia ki konei"}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <ClearButton onClick={clearHandler}>X</ClearButton>
