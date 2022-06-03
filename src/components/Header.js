@@ -71,8 +71,7 @@ const Header = () => {
         <div>
           The audio of some names is incorrectly cut short. If you notice any
           such issues, please advise us which they are and the Zones/takiwā they
-          are in, and they will be corrected. Only names in use before 1994 are
-          included.
+          are in, and they will be corrected.
         </div>
         <hr style={{ width: "100%" }} />
         <MapInstructions>
