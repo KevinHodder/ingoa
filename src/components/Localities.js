@@ -6,8 +6,9 @@ import Speaker from "./Speaker";
 
 const Header = styled.h2`
   margin-top: 1em;
-  font-weight: bold;
-  font-size: 2em;
+  font-style: italic;
+  font-size: 1.5em;
+  font-weight: normal;
 `;
 
 const PlayAllBlock = styled.div`
@@ -20,8 +21,7 @@ const PlayAllBlock = styled.div`
 `;
 
 const PlayAllText = styled.div`
-  font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
   white-space: nowrap;
 `;
 

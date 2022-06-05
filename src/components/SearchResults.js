@@ -9,6 +9,11 @@ const Wrapper = styled.div`
   background: rgba(155, 155, 155, 0.5);
 `;
 
+const ResultsHeader = styled.h2`
+  font-style: italic;
+  font-weight: normal;
+`;
+
 export const SearchResults = (props) => {
   const { results } = props;
   const acc = useRef();
@@ -23,7 +28,9 @@ export const SearchResults = (props) => {
     <Wrapper>
       {results.length ? (
         <Fragment>
-          <h2>Results/Ingoa rokohina: ({results.length || ""})</h2>
+          <ResultsHeader>
+            Results/Ingoa rokohina: ({results.length || ""})
+          </ResultsHeader>
           <Accordion defaultActiveKey="0" ref={acc}>
             {results.map((result, index) => (
               <Result

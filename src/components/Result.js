@@ -13,6 +13,8 @@ import "./result.css";
 
 const SpeakerInfo = styled.div`
   font-size: 1.5em;
+  font-style: italic;
+  font-weight: normal;
 `;
 
 export const Result = (props) => {
@@ -35,7 +37,7 @@ export const Result = (props) => {
         {activeEventKey === index.toString() ? (
           <Fragment>
             <SpeakerInfo>
-              Spoken by <strong>{speakers.join(", ")}</strong>
+              Spoken by/Kaikōrero: {speakers.join(", ")}
             </SpeakerInfo>
             <Localities
               localities={localities}
