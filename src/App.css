@@ -1,10 +1,11 @@
 body {
-  background-color: rgb(119, 172, 171);
+  background-image: url("./assets/bg.png")
 }
 
 main {
   width: 70vw;
   margin: auto;
+  background-color: rgb(216, 206, 206,0.90);
 }
 
 @media (max-width: 650px) {

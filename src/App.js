@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import bg from "./assets/bg.png";
 
 import SearchBox from "./components/SearchBox";
 import SearchResults from "./components/SearchResults";
@@ -16,11 +17,15 @@ const Maps = styled.div`
   justify-content: center;
 `;
 
+const Main = styled.main`
+  background-colour: ;
+`;
+
 function App() {
   const [results, setResults] = useState([]);
 
   return (
-    <main>
+    <Main>
       <Header />
       {/*<GoToTop />*/}
       <Maps>
@@ -30,7 +35,7 @@ function App() {
 
       <SearchBox setResults={setResults} />
       <SearchResults results={results} />
-    </main>
+    </Main>
   );
 }
 
