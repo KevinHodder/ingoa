@@ -91,6 +91,7 @@ export const Locality = (props) => {
     font-size: 1rem;
   `;
 
+  const ttColor = "#867b7b";
   const WrappedPlayableName = () => {
     if (locality.speaker) {
       return (
@@ -99,7 +100,10 @@ export const Locality = (props) => {
           followCursor={true}
           arrow
           placement="top"
-          componentsProps={{ tooltip: { sx: { backgroundColor: "#2a6d6e" } } }}
+          componentsProps={{
+            tooltip: { sx: { backgroundColor: ttColor } },
+            arrow: { sx: { color: ttColor } },
+          }}
         >
           <PlayableName />
         </Tooltip>
