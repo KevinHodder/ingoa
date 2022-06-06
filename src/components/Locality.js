@@ -89,7 +89,6 @@ export const Locality = (props) => {
 
   const TTCont = styled.div`
     font-size: 1rem;
-    background-color: #2a6d6e;
   `;
 
   const WrappedPlayableName = () => {
@@ -100,7 +99,7 @@ export const Locality = (props) => {
           followCursor={true}
           arrow
           placement="top"
-          sx={{ backgroundColor: "#2a6d6e" }}
+          componentsProps={{ tooltip: { sx: { backgroundColor: "#2a6d6e" } } }}
         >
           <PlayableName />
         </Tooltip>
