@@ -104,6 +104,9 @@ const SearchText = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: italic;
   @media (max-width: 650px) {
     display: none;
   }
@@ -114,6 +117,9 @@ const SearchTextSmall = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: italic;
   @media (min-width: 651px) {
     display: none;
   }
@@ -141,12 +147,12 @@ export const SearchBox = (props) => {
   return (
     <Fragment>
       <SearchText>
-        <h2>....or write the name of a place or speaker here</h2>
-        <h2>...tuhia ranei te ingoa wāhi, kaikōrero, ki konei</h2>
+        <div>....or write the name of a place or speaker below</div>
+        <div>...tuhia ranei te ingoa wāhi, kaikōrero, ki raro</div>
       </SearchText>
       <SearchTextSmall>
-        <h2>Write the name of a place or speaker here</h2>
-        <h2>Tuhia te ingoa wāhi, kaikōrero, ki konei</h2>
+        <div>Write the name of a place or speaker below</div>
+        <div>Tuhia te ingoa wāhi, kaikōrero, ki raro</div>
       </SearchTextSmall>
 
       <SearchBar>

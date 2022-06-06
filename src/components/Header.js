@@ -40,7 +40,8 @@ const Subheader = styled.div`
 `;
 
 const MapInstructions = styled.div`
-  font-weight: bold;
+  // font-weight: bold;
+  font-style: italic;
   text-align: center;
   @media (max-width: 650px) {
     display: none;

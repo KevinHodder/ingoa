@@ -31,7 +31,7 @@ const Name = styled.div`
 `;
 
 const Types = styled.div`
-  // width: max-content;
+  font-size: 1.3rem;
 `;
 
 const Alts = styled.div`

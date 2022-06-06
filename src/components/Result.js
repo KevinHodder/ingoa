@@ -17,6 +17,11 @@ const SpeakerInfo = styled.div`
   font-weight: normal;
 `;
 
+const SpeakerName = styled.p`
+  font-style: normal;
+  display: inline-flex;
+`;
+
 export const Result = (props) => {
   const { details, index } = props;
   const { nameCommon, speakers, localities, number, audioTrackFull } = details;
@@ -37,7 +42,8 @@ export const Result = (props) => {
         {activeEventKey === index.toString() ? (
           <Fragment>
             <SpeakerInfo>
-              Spoken by/Kaikōrero: {speakers.join(", ")}
+              Spoken by/Kaikōrero:{" "}
+              <SpeakerName>{speakers.join(", ")}</SpeakerName>
             </SpeakerInfo>
             <Localities
               localities={localities}
