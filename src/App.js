@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -9,6 +9,7 @@ import SearchResults from "./components/SearchResults";
 import MapSI from "./components/MapSI";
 import MapNI from "./components/MapNI";
 import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 // import GoToTop from "./components/GoToTop";
 
 const Maps = styled.div`
@@ -17,25 +18,26 @@ const Maps = styled.div`
   justify-content: center;
 `;
 
-const Main = styled.main`
-  background-colour: ;
-`;
-
 function App() {
   const [results, setResults] = useState([]);
 
   return (
-    <Main>
-      <Header />
-      {/*<GoToTop />*/}
-      <Maps>
-        <MapNI setResults={setResults} />
-        <MapSI setResults={setResults} />
-      </Maps>
+    <Fragment>
+      <header>
+        <NavBar />
+      </header>
+      <main>
+        <Header />
+        {/*<GoToTop />*/}
+        <Maps>
+          <MapNI setResults={setResults} />
+          <MapSI setResults={setResults} />
+        </Maps>
 
-      <SearchBox setResults={setResults} />
-      <SearchResults results={results} />
-    </Main>
+        <SearchBox setResults={setResults} />
+        <SearchResults results={results} />
+      </main>
+    </Fragment>
   );
 }
 
