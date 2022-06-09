@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const HeaderBlock = styled.div`
   margin-bottom: 2rem;
-  background-colour: rgba(255, 255, 255, 0.5);
 `;
 
 const Title = styled.header`
