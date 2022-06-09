@@ -1,7 +1,6 @@
 import { Fragment, useState } from "react";
 import styled from "styled-components";
 import "./App.css";
-import bg from "./assets/bg.png";
 
 import SearchBox from "./components/SearchBox";
 import SearchResults from "./components/SearchResults";
