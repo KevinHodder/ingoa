@@ -1,6 +1,5 @@
 import { Fragment, useState } from "react";
 import styled from "styled-components";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import bg from "./assets/bg.png";
 
