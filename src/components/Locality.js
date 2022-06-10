@@ -21,6 +21,7 @@ const TooltipZone = styled.div`
   display: grid;
   grid-template-columns: 20px minmax(100px, 150px);
   grid-column-gap: 5px;
+  align-items: center;
 `;
 
 const Name = styled.div`

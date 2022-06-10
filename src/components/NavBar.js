@@ -13,8 +13,11 @@ const NavBar = (props) => {
       bg="dark"
       variant="dark"
       className={"px-2"}
+      style={{ fontSize: "1.5rem" }}
     >
-      <Navbar.Brand href={"/"}>Ngā Ingoa ō Aotearoa</Navbar.Brand>
+      <Navbar.Brand href={"/"} style={{ fontSize: "1.5rem" }}>
+        Ngā Ingoa ō Aotearoa
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         {/*<Nav className={"me-auto"}></Nav>*/}

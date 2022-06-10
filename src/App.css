@@ -1,5 +1,9 @@
+html {
+  font-size: 13px; /* Adjust the whole page's font size here */
+}
+
 body {
-  background-image: url("./assets/bg.png")
+  background-image: url("./assets/bg.png");
 }
 
 main {
