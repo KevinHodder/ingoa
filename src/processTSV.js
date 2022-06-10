@@ -4,8 +4,15 @@ const isItemPresent = (arr, num) => {
   return arr.filter((record) => record.number === parseInt(num)).length > 0;
 };
 
+const hasPartZone = (arr, name) => {
+  return arr.filter((record) => record.nameCommon.includes(name)).length > 0;
+};
+
 const getRecord = (arr, num) =>
   arr.filter((record) => record.number === parseInt(num))[0];
+
+const getPartRecord = (arr, name) =>
+  arr.filter((record) => record.nameCommon.includes(name))[0];
 
 const hasMacrons = (input) => {
   return /[^\u0000-\u007f]/.test(input);
@@ -61,9 +68,54 @@ const KIND7 = 102;
 
 const zones = [];
 
-lines.forEach((line) => {
-  // split the csv record
-  const split = line.split("\t");
+function parseLocalityRecordingInfo(split, newLocality, zone) {
+  if (split[START1]) {
+    newLocality.audioStart = parseFloat(split[START1]);
+    newLocality.audioEnd = parseFloat(split[END1]);
+    newLocality.speaker = split[SPEAKER1];
+    zone.speakers.add(split[SPEAKER1]);
+  }
+  if (hasMacrons(split[LOCALITYNAME])) {
+    newLocality.altSpellings = [
+      removeMacrons(split[LOCALITYNAME]).toLowerCase(),
+    ];
+  }
+  //TODO: Need to check for missing primary pronunciation
+  //Alternative pronunciations
+  if (split[INDEXNAME2]) {
+    if (!newLocality.altNames) {
+      newLocality.altNames = [];
+    }
+    newLocality.altNames.push({
+      name: split[INDEXNAME2],
+      altSpellings: [removeMacrons(split[INDEXNAME2]).toLowerCase()],
+      audioStart: split[START2] && parseFloat(split[START2]),
+      audioEnd: split[END2] && parseFloat(split[END2]),
+      speaker: split[SPEAKER2],
+    });
+    // Add speaker to speaker list if not already present
+    if (split[SPEAKER2]) {
+      zone.speakers.add(split[SPEAKER2]);
+    }
+  }
+  if (split[START3]) {
+    if (!newLocality.altNames) {
+      newLocality.altNames = [];
+    }
+    newLocality.altNames.push({
+      name: split[INDEXNAME3],
+      altSpellings: [removeMacrons(split[INDEXNAME3]).toLowerCase()],
+      audioStart: split[START3] && parseFloat(split[START3]),
+      audioEnd: split[END3] && parseFloat(split[END3]),
+      speaker: split[SPEAKER3],
+    });
+    if (split[SPEAKER3]) {
+      zone.speakers.add(split[SPEAKER3]);
+    }
+  }
+}
+
+const processNormalZones = (split) => {
   if (!split[ZONENUM]) {
     return;
   }
@@ -72,8 +124,7 @@ lines.forEach((line) => {
     zones.push({
       number: parseInt(split[ZONENUM]),
       nameCommon: split[ZONENAME],
-
-      speakers: [],
+      speakers: new Set(),
     });
   }
 
@@ -91,59 +142,14 @@ lines.forEach((line) => {
         3,
         "0"
       )}.mp3`;
-      zone.speakers.push(split[SPEAKER1]);
+      zone.speakers.add(split[SPEAKER1]);
     }
     const newLocality = {
       order: parseInt(split[ZONEORDERNUM]),
       name: split[LOCALITYNAME],
       types: [],
     };
-    if (split[START1]) {
-      newLocality.audioStart = parseFloat(split[START1]);
-      newLocality.audioEnd = parseFloat(split[END1]);
-      newLocality.speaker = split[SPEAKER1];
-      if (!zone.speakers.includes(split[SPEAKER1])) {
-        zone.speakers.push(split[SPEAKER1]);
-      }
-    }
-    if (hasMacrons(split[LOCALITYNAME])) {
-      newLocality.altSpellings = [
-        removeMacrons(split[LOCALITYNAME]).toLowerCase(),
-      ];
-    }
-    //TODO: Need to check for missing primary pronunciation
-    //Alternative pronunciations
-    if (split[INDEXNAME2]) {
-      if (!newLocality.altNames) {
-        newLocality.altNames = [];
-      }
-      newLocality.altNames.push({
-        name: split[INDEXNAME2],
-        altSpellings: [removeMacrons(split[INDEXNAME2]).toLowerCase()],
-        audioStart: split[START2] && parseFloat(split[START2]),
-        audioEnd: split[END2] && parseFloat(split[END2]),
-        speaker: split[SPEAKER2],
-      });
-      // Add speaker to speaker list if not already present
-      if (!zone.speakers.includes(split[SPEAKER2]) && split[SPEAKER2]) {
-        zone.speakers.push(split[SPEAKER2]);
-      }
-    }
-    if (split[START3]) {
-      if (!newLocality.altNames) {
-        newLocality.altNames = [];
-      }
-      newLocality.altNames.push({
-        name: split[INDEXNAME3],
-        altSpellings: [removeMacrons(split[INDEXNAME3]).toLowerCase()],
-        audioStart: split[START3] && parseFloat(split[START3]),
-        audioEnd: split[END3] && parseFloat(split[END3]),
-        speaker: split[SPEAKER3],
-      });
-      if (!zone.speakers.includes(split[SPEAKER3]) && split[SPEAKER3]) {
-        zone.speakers.push(split[SPEAKER3]);
-      }
-    }
+    parseLocalityRecordingInfo(split, newLocality, zone);
 
     // Add Types
     if (split[KIND1]) {
@@ -171,6 +177,48 @@ lines.forEach((line) => {
     // Add new locality to zone;
     zone.localities.push(newLocality);
   }
+};
+
+const processPartZones = (split) => {
+  const partNums = [undefined, 0, 59.5, 139.5]; // place in zone order with leading undefined for 1 indexed parts
+  const partRegex = /Part \d/;
+  const partName = split[ZONENAME];
+  // remove entry for Hugh saying "Part X"
+  if (!partRegex.test(partName) || partRegex.test(split[LOCALITYNAME])) {
+    return;
+  }
+  const partNum = partName.slice(5, 6);
+
+  if (!hasPartZone(zones, partName)) {
+    zones.push({
+      number: parseFloat(partNums[partNum]), //does ordering
+      nameCommon: `Introduction to ${split[ZONENAME]}`,
+      speakers: new Set(),
+      localities: [],
+    });
+  }
+
+  const zone = getPartRecord(zones, partName);
+  if (parseInt(split[ZONEORDERNUM]) === 0) {
+    zone.audioTrackFull = `zones/part${partNum}.mp3`;
+    zone.speakers.add(split[SPEAKER1]);
+  }
+
+  const newLocality = {
+    order: parseInt(split[ZONEORDERNUM]),
+    name: split[LOCALITYNAME],
+    types: [],
+  };
+  parseLocalityRecordingInfo(split, newLocality, zone);
+  zone.localities.push(newLocality);
+};
+
+lines.forEach((line) => {
+  // split the csv record
+  const split = line.split("\t");
+  processNormalZones(split);
+  processPartZones(split);
 });
+zones.forEach((z) => (z.speakers = [...z.speakers]));
 
 fs.writeFileSync("data.json", JSON.stringify(zones));

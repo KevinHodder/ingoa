@@ -19,7 +19,7 @@ const MapNI = (props) => {
 
   const goTo = (event) => {
     event.preventDefault();
-    const ids = event.target.id.split("_").map((val) => parseInt(val));
+    const ids = event.target.id.split("_").map((val) => parseFloat(val));
     setResults(
       data
         .filter((zone) => ids.includes(zone.number))

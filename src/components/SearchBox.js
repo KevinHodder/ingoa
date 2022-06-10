@@ -20,7 +20,7 @@ const fuseZones = new Fuse(zones, {
 });
 
 const allResults = zones
-  .sort((a, b) => a.number > b.number)
+  .sort((a, b) => a.number - b.number)
   .map((zone) => ({
     item: zone,
   }));

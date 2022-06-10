@@ -52,7 +52,6 @@ export const Localities = (props) => {
         clearInterval(audioRef.current.int);
       }
       // start new play
-      console.log("setCurrentlyPlayng with: ", thisID);
       setCurrentlyPlaying(thisID);
       audioRef.current.currentTime = 0;
       audioRef.current.play();
