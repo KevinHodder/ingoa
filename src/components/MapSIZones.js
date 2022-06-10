@@ -34,28 +34,36 @@ const MapSIZones = ({ data, goTo }) => {
   }, []);
 
   const getHoverName = (id) => {
-    return data.filter((rec) => parseInt(rec.number) === parseInt(id))[0]
+    return data.filter((rec) => parseFloat(rec.number) === parseFloat(id))[0]
       .nameCommon;
   };
 
   const hoverHandler = ({ currentTarget }) => {
-    gsap.to(q(`#dot${currentTarget.id}`), {
-      fillOpacity: 0,
-    });
+    setHoverName(getHoverName(currentTarget.id));
+    try {
+      gsap.to(q(`#dot${currentTarget.id}`), {
+        fillOpacity: 0,
+      });
+    } catch (e) {
+      // do nothing
+    }
     // gsap.to(q(`[id*='name${currentTarget.id}']`), {
     //   opacity: 1,
     // });
-    setHoverName(getHoverName(currentTarget.id));
   };
 
   const unhoverHandler = ({ currentTarget }) => {
-    gsap.to(q(`#dot${currentTarget.id}`), {
-      fillOpacity: 1,
-    });
+    setHoverName("");
+    try {
+      gsap.to(q(`#dot${currentTarget.id}`), {
+        fillOpacity: 1,
+      });
+    } catch (err) {
+      //do nothing
+    }
     // gsap.to(q(`[id*='name${currentTarget.id}']`), {
     //   opacity: 0,
     // });
-    setHoverName("");
   };
 
   return (
@@ -380,6 +388,8 @@ const MapSIZones = ({ data, goTo }) => {
         <path
           id="139.5" // Part 3
           onClick={clickHandler}
+          onMouseOver={hoverHandler}
+          onMouseLeave={unhoverHandler}
           d="M115.3066 16.7199c-.2646 0-.5292.0264-.7938.0555H89.6404v.0265-.0265c-.5292 2.7333-.2646 4.0458 0 4.477v2.1433h58.212v-6.6203h-32.2812c0-.0344-.2646-.0529-.2646-.0555z"
         />
         <path

@@ -37,28 +37,39 @@ const MapNIZones = ({ data, goTo }) => {
       //Auckland
       return "Auckland Isthmus";
     }
-    return data.filter((rec) => parseInt(rec.number) === parseInt(id))[0]
+    return data.filter((rec) => parseFloat(rec.number) === parseFloat(id))[0]
       .nameCommon;
   };
 
   const hoverHandler = ({ currentTarget }) => {
-    gsap.to(q(`#dot${currentTarget.id}`), {
-      fillOpacity: 0,
-    });
-    // gsap.to(q(`[id*='name${currentTarget.id}']`), {
-    //   opacity: 1,
-    // });
     setHoverName(getHoverName(currentTarget.id));
+    try {
+      q(`#dot${currentTarget.id}`) &&
+        gsap.to(q(`#dot${currentTarget.id}`), {
+          fillOpacity: 0,
+        });
+      // gsap.to(q(`[id*='name${currentTarget.id}']`), {
+      //   opacity: 1,
+      // });
+    } catch (e) {
+      // do nothing
+    }
   };
 
   const unhoverHandler = ({ currentTarget }) => {
-    gsap.to(q(`#dot${currentTarget.id}`), {
-      fillOpacity: 1,
-    });
-    // gsap.to(q(`[id*='name${currentTarget.id}']`), {
-    //   opacity: 0,
-    // });
     setHoverName("");
+    try {
+      q(`#dot${currentTarget.id}`) &&
+        gsap.to(q(`#dot${currentTarget.id}`), {
+          fillOpacity: 1,
+        });
+
+      // gsap.to(q(`[id*='name${currentTarget.id}']`), {
+      //   opacity: 0,
+      // });
+    } catch (e) {
+      // do nothing
+    }
   };
 
   return (
@@ -1333,12 +1344,16 @@ const MapNIZones = ({ data, goTo }) => {
         <path
           id="0" // Part 1
           onClick={clickHandler}
+          onMouseOver={hoverHandler}
+          onMouseLeave={unhoverHandler}
           d="M24.457 1545.8066a.1722.1722 0 0 0-.1738.1719v26.6953c0 .096.0777.1739.1738.1739h284.42a.1739.1739 0 0 0 .1738-.1739v-26.6953a.1721.1721 0 0 0-.1738-.1719z"
           transform="scale(.26458)"
         />
         <path
           id="59.5" // Part 2
           onClick={clickHandler}
+          onMouseOver={hoverHandler}
+          onMouseLeave={unhoverHandler}
           d="M946.0156 649.3223c-.5082.1694-1.002.4316-1.4082.787h-57.7441c-.2713-.0248-.5763-.0312-.9414-.0312-.3652 0-.67.006-.9414.0313h-3.461a.1737.1737 0 0 0-.1738.1738v20.625c0 .0961.0777.1738.1738.1738h239.7188a.1737.1737 0 0 0 .1738-.1738v-20.625a.1739.1739 0 0 0-.1738-.1738h-29.3047c-.018-.002-.025-.0203-.045-.0195-.013.0005-.041.0178-.055.0195h-33.1035c-.1609-.005-.2973-.0313-.4629-.0313h-4.9141v.0313H987.193c-.1328-.004-.2108-.0313-.3594-.0313-.1081 0-.1653.0264-.2637.0313h-38.7383c-.3196-.7397-.859-.7871-1.8164-.7871z"
           transform="scale(.26458)"
         />
