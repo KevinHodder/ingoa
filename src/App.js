@@ -28,7 +28,6 @@ function App() {
       </header>
       <main>
         <Header />
-        {/*<GoToTop />*/}
         <Maps ref={mapRef}>
           <MapNI setResults={setResults} />
           <MapSI setResults={setResults} />
