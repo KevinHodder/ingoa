@@ -9,7 +9,6 @@ import MapNI from "./components/MapNI";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import GoToTop from "./components/GoToTop";
-// import GoToTop from "./components/GoToTop";
 
 const Maps = styled.div`
   display: flex;
