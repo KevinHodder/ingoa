@@ -1,4 +1,5 @@
 import { Nav, Navbar } from "react-bootstrap";
+import icon from "../assets/icon.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const NavBar = (props) => {
@@ -16,6 +17,13 @@ const NavBar = (props) => {
       style={{ fontSize: "1.5rem" }}
     >
       <Navbar.Brand href={"/"} style={{ fontSize: "1.5rem" }}>
+        <img
+          src={icon}
+          height="25"
+          className="d-inline-block align-top"
+          alt="logo"
+          style={{ marginRight: "5px" }}
+        />
         Ngā Ingoa ō Aotearoa
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
