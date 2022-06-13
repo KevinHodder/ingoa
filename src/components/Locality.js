@@ -27,9 +27,11 @@ const TooltipZone = styled.div`
 
 const Name = styled.div`
   width: 100%;
+  max-width: 225px;
   font-weight: 500;
   font-size: 1.5em;
   cursor: pointer;
+  word-break: break-word;
 `;
 
 const Types = styled.div`
