@@ -5,8 +5,9 @@ import "./GoToTop.css";
 const GoToTop = (props) => {
   const { goToElem, appearAt } = props;
   const [showTopBtn, setShowTopBtn] = useState(false);
+  const showButtonAt = appearAt || 400;
+
   useEffect(() => {
-    const showButtonAt = appearAt || 400;
     window.addEventListener("scroll", () => {
       if (window.scrollY > showButtonAt) {
         setShowTopBtn(true);

@@ -46,6 +46,14 @@ const AltTitle = styled.div`
   font-style: italic;
 `;
 
+const displayTypeName = (type, localityName) => {
+  const isName = type.name.toLowerCase() === localityName.toLowerCase();
+  const isEssentiallyName =
+    `${localityName} ${type.type}`.toLowerCase() === type.name.toLowerCase();
+
+  return !isName && !isEssentiallyName;
+};
+
 export const Locality = (props) => {
   const { locality, audioRef, currentlyPlaying, setCurrentlyPlaying } = props;
   const thisID = `${locality.name}${locality.audioStart}`;
@@ -114,11 +122,19 @@ export const Locality = (props) => {
     return <PlayableName />;
   };
 
+  const typesStrings =
+    (locality.types &&
+      locality.types.map(
+        (rec) =>
+          rec.type +
+          (displayTypeName(rec, locality.name) ? ` (${rec.name})` : "")
+      )) ||
+    [];
   return (
     <Record>
       <WrappedPlayableName />
-      {isArrPresent(locality.types) ? (
-        <Types>{locality.types.sort().join(", ")}</Types>
+      {isArrPresent(typesStrings) ? (
+        <Types>{typesStrings.join(", ")}</Types>
       ) : null}
       {isArrPresent(locality.altNames) ? (
         <Alts>

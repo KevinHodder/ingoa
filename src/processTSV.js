@@ -56,12 +56,19 @@ const SPEAKER3 = 25;
 const START3 = 27;
 const END3 = 28;
 const KIND1 = 68;
+const KINDNAME1 = 71;
 const KIND2 = 76;
+const KINDNAME2 = 79;
 const KIND3 = 82;
+const KINDNAME3 = 85;
 const KIND4 = 88;
+const KINDNAME4 = 91;
 const KIND5 = 94;
+const KINDNAME5 = 97;
 const KIND6 = 98;
+const KINDNAME6 = 101;
 const KIND7 = 102;
+const KINDNAME7 = 105;
 
 // const splitHeader = header.split(",");
 // splitHeader.map((item, index) => console.log(`${index}: ${item}`));
@@ -153,25 +160,25 @@ const processNormalZones = (split) => {
 
     // Add Types
     if (split[KIND1]) {
-      newLocality.types.push(split[KIND1]);
+      newLocality.types.push({ type: split[KIND1], name: split[KINDNAME1] });
     }
     if (split[KIND2]) {
-      newLocality.types.push(split[KIND2]);
+      newLocality.types.push({ type: split[KIND2], name: split[KINDNAME2] });
     }
     if (split[KIND3]) {
-      newLocality.types.push(split[KIND3]);
+      newLocality.types.push({ type: split[KIND3], name: split[KINDNAME3] });
     }
     if (split[KIND4]) {
-      newLocality.types.push(split[KIND4]);
+      newLocality.types.push({ type: split[KIND4], name: split[KINDNAME4] });
     }
     if (split[KIND5]) {
-      newLocality.types.push(split[KIND5]);
+      newLocality.types.push({ type: split[KIND5], name: split[KINDNAME5] });
     }
     if (split[KIND6]) {
-      newLocality.types.push(split[KIND6]);
+      newLocality.types.push({ type: split[KIND6], name: split[KINDNAME1] });
     }
     if (split[KIND7]) {
-      newLocality.types.push(split[KIND7]);
+      newLocality.types.push({ type: split[KIND7], name: split[KINDNAME7] });
     }
 
     // Add new locality to zone;
