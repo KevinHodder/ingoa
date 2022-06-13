@@ -9,7 +9,7 @@ import "./locality.css";
 const Record = styled.div`
   display: grid;
   width: auto;
-  grid-template-columns: minmax(120px, 170px) auto;
+  grid-template-columns: minmax(120px, 250px) auto;
   grid-column-gap: 5px;
   grid-row-gap: 3px;
   align-items: center;
@@ -18,14 +18,15 @@ const Record = styled.div`
 `;
 
 const TooltipZone = styled.div`
+  width: 100%;
   display: grid;
-  grid-template-columns: 20px minmax(100px, 150px);
+  grid-template-columns: 20px max-content;
   grid-column-gap: 5px;
   align-items: center;
 `;
 
 const Name = styled.div`
-  width: minmax(100px, 1fr);
+  width: 100%;
   font-weight: 500;
   font-size: 1.5em;
   cursor: pointer;
