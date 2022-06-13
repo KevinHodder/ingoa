@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import styled from "styled-components";
 import "./App.css";
 
@@ -8,6 +8,7 @@ import MapSI from "./components/MapSI";
 import MapNI from "./components/MapNI";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
+import GoToTop from "./components/GoToTop";
 // import GoToTop from "./components/GoToTop";
 
 const Maps = styled.div`
@@ -18,6 +19,7 @@ const Maps = styled.div`
 
 function App() {
   const [results, setResults] = useState([]);
+  const mapRef = useRef();
 
   return (
     <Fragment>
@@ -27,13 +29,14 @@ function App() {
       <main>
         <Header />
         {/*<GoToTop />*/}
-        <Maps>
+        <Maps ref={mapRef}>
           <MapNI setResults={setResults} />
           <MapSI setResults={setResults} />
         </Maps>
 
         <SearchBox setResults={setResults} />
         <SearchResults results={results} />
+        <GoToTop goToElem={mapRef} appearAt={800} />
       </main>
     </Fragment>
   );

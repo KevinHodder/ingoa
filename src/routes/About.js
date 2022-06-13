@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar";
 import styled from "styled-components";
+import GoToTop from "../components/GoToTop";
 
 const TOC = styled.div`
   margin: 20px;
@@ -737,6 +738,7 @@ const About = () => {
         </p>
         <p>- Hugh Young(-Bish)</p>
       </main>
+      <GoToTop />
     </>
   );
 };
