@@ -60,8 +60,8 @@ const Header = () => {
           pronunciation only, and only names in use before 1994 are included.
         </div>
         <div>
-          For background, see an earlier version at{" "}
-          <a href={"http://ingoa.maori.nz"}>ingoa.maori.nz</a>.
+          For background, see the&nbsp;
+          <a href={"./about"}>About page</a>.
         </div>
         <div>
           We welcome feedback, especially about navigation and accessibility,
