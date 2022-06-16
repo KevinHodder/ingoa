@@ -4,7 +4,13 @@ import PropTypes from "prop-types";
 import zones from "../data.json";
 import styled from "styled-components";
 
-const fuseZones = new Fuse(zones, {
+const allResults = zones
+  .sort((a, b) => a.number - b.number)
+  .map((zone) => ({
+    item: zone,
+  }));
+
+const fuseOptions = {
   includeScore: true,
   includeMatches: true,
   keys: [
@@ -14,20 +20,17 @@ const fuseZones = new Fuse(zones, {
     "localities.altNames.name",
     "localities.altNames.altSpellings",
     "localities.speaker",
+    "localities.types.name",
   ],
   threshold: 0.1,
   distance: 10,
-});
-
-const allResults = zones
-  .sort((a, b) => a.number - b.number)
-  .map((zone) => ({
-    item: zone,
-  }));
+};
+const myIndex = Fuse.createIndex(fuseOptions.keys, zones);
+const fuseZones = new Fuse(zones, fuseOptions, myIndex);
 
 const hasMatchingAltName = (locality, matches) => {
   return (
-    locality.altNames &&
+    Array.isArray(locality.altNames) &&
     locality.altNames.reduce(
       (prev, curr) =>
         prev ||
@@ -38,7 +41,7 @@ const hasMatchingAltName = (locality, matches) => {
   );
 };
 const hasMatchingAltSpelling = (locality, matches) =>
-  locality.altSpellings &&
+  Array.isArray(locality.altSpellings) &&
   locality.altSpellings.reduce(
     (prev, curr) => prev || matches.includes(curr),
     false
@@ -46,6 +49,12 @@ const hasMatchingAltSpelling = (locality, matches) =>
 const hasMatchingName = (locality, matches) => matches.includes(locality.name);
 const hasMatchingSpeaker = (locality, matches) =>
   matches.includes(locality.speaker);
+const hasMatchingTypeName = (locality, matches) =>
+  Array.isArray(locality.types) &&
+  locality.types.reduce(
+    (prev, curr) => prev || matches.includes(curr.name),
+    false
+  );
 
 const getMatchingLocalities = (localities, matches) => {
   return localities.filter(
@@ -53,7 +62,8 @@ const getMatchingLocalities = (localities, matches) => {
       hasMatchingName(locality, matches) ||
       hasMatchingAltSpelling(locality, matches) ||
       hasMatchingAltName(locality, matches) ||
-      hasMatchingSpeaker(locality, matches)
+      hasMatchingSpeaker(locality, matches) ||
+      hasMatchingTypeName(locality, matches)
   );
 };
 

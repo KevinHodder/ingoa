@@ -26,7 +26,7 @@ const PlayAllText = styled.div`
 `;
 
 export const Localities = (props) => {
-  const { localities, audioTrackFull, zone } = props;
+  const { localities, track, zone } = props;
 
   const audioRef = useRef();
   const [currentlyPlaying, setCurrentlyPlaying] = useState();
@@ -67,7 +67,7 @@ export const Localities = (props) => {
 
   return localities.length ? (
     <Fragment>
-      <audio ref={audioRef} src={`./${audioTrackFull}`} />
+      <audio ref={audioRef} src={`./${track}`} />
 
       <PlayAllBlock onClick={playAll}>
         <Speaker
@@ -95,15 +95,8 @@ export const Localities = (props) => {
 };
 
 Localities.propTypes = {
-  localities: PropTypes.arrayOf(
-    PropTypes.shape({
-      order: PropTypes.number,
-      name: PropTypes.string,
-      altSpellings: PropTypes.arrayOf(PropTypes.string),
-      types: PropTypes.arrayOf(PropTypes.string),
-    })
-  ),
-  audioTrackFull: PropTypes.string,
+  localities: PropTypes.arrayOf(PropTypes.shape(Locality.propTypes)),
+  track: PropTypes.string,
 };
 
 Localities.defaultProps = {

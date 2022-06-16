@@ -56,7 +56,7 @@ const displayTypeName = (type, localityName) => {
   return !isName && !isEssentiallyName;
 };
 
-export const Locality = (props) => {
+const Locality = (props) => {
   const { locality, audioRef, currentlyPlaying, setCurrentlyPlaying } = props;
   const thisID = `${locality.name}${locality.audioStart}`;
 
@@ -161,14 +161,19 @@ Locality.propTypes = {
     order: PropTypes.number,
     name: PropTypes.string,
     altSpellings: PropTypes.arrayOf(PropTypes.string),
-    types: PropTypes.arrayOf(PropTypes.string),
+    types: PropTypes.arrayOf(
+      PropTypes.shape({
+        type: PropTypes.string,
+        name: PropTypes.string,
+      })
+    ),
     audioStart: PropTypes.number,
     audioEnd: PropTypes.number,
     speaker: PropTypes.string,
-  }).isRequired,
+  }),
   audioRef: PropTypes.object,
   currentlyPlaying: PropTypes.string,
-  setCurrentlyPlaying: PropTypes.func.isRequired,
+  setCurrentlyPlaying: PropTypes.func,
 };
 
 Locality.defaultProps = {

@@ -20,16 +20,16 @@ const hasMacrons = (input) => {
 
 const removeMacrons = (input) => {
   return input
-    .replace(/\u0101/, "a")
-    .replace(/\u0100/, "A")
-    .replace(/\u0113/, "e")
-    .replace(/\u0112/, "E")
-    .replace(/\u012b/, "i")
-    .replace(/\u012a/, "I")
-    .replace(/\u014d/, "o")
-    .replace(/\u014c/, "O")
-    .replace(/\u016b/, "u")
-    .replace(/\u016a/, "U");
+    .replace(/\u0101/g, "a")
+    .replace(/\u0100/g, "A")
+    .replace(/\u0113/g, "e")
+    .replace(/\u0112/g, "E")
+    .replace(/\u012b/g, "i")
+    .replace(/\u012a/g, "I")
+    .replace(/\u014d/g, "o")
+    .replace(/\u014c/g, "O")
+    .replace(/\u016b/g, "u")
+    .replace(/\u016a/g, "U");
 };
 
 const csvFile = fs.readFileSync("../placenames.tsv", "utf8");
@@ -77,8 +77,8 @@ const zones = [];
 
 function parseLocalityRecordingInfo(split, newLocality, zone) {
   if (split[START1]) {
-    newLocality.audioStart = parseFloat(split[START1]);
-    newLocality.audioEnd = parseFloat(split[END1]);
+    newLocality.audioStart = parseFloat(split[START1]) || 0;
+    newLocality.audioEnd = parseFloat(split[END1]) || 0;
     newLocality.speaker = split[SPEAKER1];
     zone.speakers.add(split[SPEAKER1]);
   }
@@ -96,8 +96,8 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
     newLocality.altNames.push({
       name: split[INDEXNAME2],
       altSpellings: [removeMacrons(split[INDEXNAME2]).toLowerCase()],
-      audioStart: split[START2] && parseFloat(split[START2]),
-      audioEnd: split[END2] && parseFloat(split[END2]),
+      audioStart: (split[START2] && parseFloat(split[START2])) || 0,
+      audioEnd: (split[END2] && parseFloat(split[END2])) || 0,
       speaker: split[SPEAKER2],
     });
     // Add speaker to speaker list if not already present
@@ -112,8 +112,8 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
     newLocality.altNames.push({
       name: split[INDEXNAME3],
       altSpellings: [removeMacrons(split[INDEXNAME3]).toLowerCase()],
-      audioStart: split[START3] && parseFloat(split[START3]),
-      audioEnd: split[END3] && parseFloat(split[END3]),
+      audioStart: (split[START3] && parseFloat(split[START3])) || 0,
+      audioEnd: (split[END3] && parseFloat(split[END3])) || 0,
       speaker: split[SPEAKER3],
     });
     if (split[SPEAKER3]) {
@@ -145,10 +145,7 @@ const processNormalZones = (split) => {
     }
     // add speaker name from first entry
     if (parseInt(split[ZONEORDERNUM]) === 1) {
-      zone.audioTrackFull = `zones/${split[ZONENUM].toString().padStart(
-        3,
-        "0"
-      )}.mp3`;
+      zone.track = `zones/${split[ZONENUM].toString().padStart(3, "0")}.mp3`;
       zone.speakers.add(split[SPEAKER1]);
     }
     const newLocality = {
@@ -207,14 +204,13 @@ const processPartZones = (split) => {
 
   const zone = getPartRecord(zones, partName);
   if (parseInt(split[ZONEORDERNUM]) === 0) {
-    zone.audioTrackFull = `zones/part${partNum}.mp3`;
+    zone.track = `zones/part${partNum}.mp3`;
     zone.speakers.add(split[SPEAKER1]);
   }
 
   const newLocality = {
     order: parseInt(split[ZONEORDERNUM]),
     name: split[LOCALITYNAME],
-    types: [],
   };
   parseLocalityRecordingInfo(split, newLocality, zone);
   zone.localities.push(newLocality);

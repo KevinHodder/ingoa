@@ -24,7 +24,7 @@ const SpeakerName = styled.p`
 
 export const Result = (props) => {
   const { details, index } = props;
-  const { nameCommon, speakers, localities, number, audioTrackFull } = details;
+  const { nameCommon, speakers, localities, number, track } = details;
 
   const { activeEventKey } = useContext(AccordionContext);
   const thisElem = useRef();
@@ -45,11 +45,7 @@ export const Result = (props) => {
               Spoken by/Kaikōrero:{" "}
               <SpeakerName>{speakers.join(", ")}</SpeakerName>
             </SpeakerInfo>
-            <Localities
-              localities={localities}
-              zone={number}
-              audioTrackFull={audioTrackFull}
-            />
+            <Localities localities={localities} zone={number} track={track} />
           </Fragment>
         ) : null}
       </Accordion.Body>
@@ -67,14 +63,7 @@ Result.propTypes = {
         audioTrack: PropTypes.string,
       })
     ),
-    localities: PropTypes.arrayOf(
-      PropTypes.shape({
-        order: PropTypes.number,
-        name: PropTypes.string,
-        altSpellings: PropTypes.arrayOf(PropTypes.string),
-        types: PropTypes.arrayOf(PropTypes.string),
-      })
-    ),
+    localities: PropTypes.arrayOf(PropTypes.shape(Localities.propTypes)),
   }),
 };
 
