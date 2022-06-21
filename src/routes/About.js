@@ -52,10 +52,10 @@ const About = () => {
                     Part 3, Ka Ikoa o Te Waipounamu me Wharekauri (Rēkōhu)
                   </a>
                 </li>
+                <li>
+                  <a href="#website">This Website/Tēnei Pae tukutuku</a>
+                </li>
               </ul>
-            </li>
-            <li>
-              <a href="#website">This Website/Tēnei Pae tukutuku</a>
             </li>
           </ul>
         </TOC>
@@ -73,6 +73,12 @@ const About = () => {
           Mainly elders, most of the speakers are no longer with us. Their
           voices are taonga tuku iho, treasures handed down to us. Please
           respect them.
+        </p>
+        <p>
+          The speakers all gave of their knowledge and voices on the strict
+          understanding that they should not be used for profit. In releasing
+          this site to the public, I can only trust to your honour that their
+          wish be respected.
         </p>
         <p>
           The names are sorted into 177 clearly defined "Zones” (takiwā), and
@@ -720,12 +726,6 @@ const About = () => {
         <p> “E tipu, e rea ...”</p>
         <hr />
         <h2 id="website">This Website/Tēnei Pae tukutuku </h2>
-        <p>
-          The speakers all gave of their knowledge and voices on the strict
-          understanding that they should not be used for profit. In releasing
-          this site to the public, I can only trust to your honour that their
-          wish be respected.
-        </p>
         <p>
           Mark Honeychurch created the database from which this website draws
           its data. It was Kevin Hodder (in Rwanda) who created the convenient
