@@ -45,7 +45,12 @@ export const Result = (props) => {
               Spoken by/Kaikōrero:{" "}
               <SpeakerName>{speakers.join(", ")}</SpeakerName>
             </SpeakerInfo>
-            <Localities localities={localities} zone={number} track={track} />
+            <Localities
+              localities={localities}
+              zone={number}
+              zoneName={nameCommon}
+              track={track}
+            />
           </Fragment>
         ) : null}
       </Accordion.Body>

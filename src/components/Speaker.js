@@ -15,8 +15,21 @@ const SpeakerStyled = styled.div`
 const Speaker = (props) => {
   const { isPlaying, name, play } = props;
 
+  const handleSpace = (e) => {
+    // 32 = spacebar
+    if (e.keyCode === 32) {
+      e.preventDefault();
+      play();
+    }
+  };
+
   return (
-    <SpeakerStyled alt={`play ${name}`} onClick={play}>
+    <SpeakerStyled
+      alt={`play ${name}`}
+      onClick={play}
+      onKeyDown={handleSpace}
+      tabIndex={0}
+    >
       {isPlaying ? <SpeakerPlaying /> : <SpeakerPaused />}
     </SpeakerStyled>
   );

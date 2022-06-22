@@ -26,7 +26,7 @@ const PlayAllText = styled.div`
 `;
 
 export const Localities = (props) => {
-  const { localities, track, zone } = props;
+  const { localities, track, zone, zoneName } = props;
 
   const audioRef = useRef();
   const [currentlyPlaying, setCurrentlyPlaying] = useState();
@@ -70,10 +70,7 @@ export const Localities = (props) => {
       <audio ref={audioRef} src={`./${track}`} />
 
       <PlayAllBlock onClick={playAll}>
-        <Speaker
-          isPlaying={isPlayingAll}
-          name={`all names in ${zone.nameCommon}`}
-        />
+        <Speaker isPlaying={isPlayingAll} name={`all names in ${zoneName}`} />
         <PlayAllText>
           {isPlayingAll ? "Pause/Tūtataria" : "All/Katoa"}
         </PlayAllText>
