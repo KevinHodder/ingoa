@@ -1,4 +1,5 @@
-import { ReactComponent as SpeakerSVG } from "../assets/speaker.svg";
+import { ReactComponent as SpeakerPaused } from "../assets/headgreen.svg";
+import { ReactComponent as SpeakerPlaying } from "../assets/headred.svg";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -6,18 +7,17 @@ const SpeakerStyled = styled.div`
   height: 20px;
   width: 20px;
   cursor: pointer;
+  > svg {
+    max-height: 24px;
+  }
 `;
 
 const Speaker = (props) => {
   const { isPlaying, name, play } = props;
 
-  const speakerStyle = {
-    fill: isPlaying ? "red" : "black",
-  };
-
   return (
     <SpeakerStyled alt={`play ${name}`} onClick={play}>
-      <SpeakerSVG style={speakerStyle} />
+      {isPlaying ? <SpeakerPlaying /> : <SpeakerPaused />}
     </SpeakerStyled>
   );
 };
