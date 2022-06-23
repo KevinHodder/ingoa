@@ -4,17 +4,25 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { isArrPresent } from "../utils/utils";
 import Speaker from "./Speaker";
-import "./locality.css";
+
+const ShowMore = styled.div`
+  opacity: 0;
+`;
 
 const Record = styled.div`
   display: grid;
   width: auto;
-  grid-template-columns: minmax(120px, 250px) auto;
+  grid-template-columns: minmax(120px, 250px) auto 65px;
   grid-column-gap: 5px;
   grid-row-gap: 3px;
   align-items: center;
   min-height: 20px;
   margin-bottom: 3px;
+  :hover {
+    ${ShowMore} {
+      opacity: 1;
+    }
+  }
 `;
 
 const TooltipZone = styled.div`
@@ -39,7 +47,7 @@ const Types = styled.div`
 `;
 
 const Alts = styled.div`
-  grid-column: 1 / 3;
+  grid-column: 1 / 4;
   margin-left: 25px;
 `;
 
@@ -57,7 +65,15 @@ const displayTypeName = (type, localityName) => {
 };
 
 const Locality = (props) => {
-  const { locality, audioRef, currentlyPlaying, setCurrentlyPlaying } = props;
+  const {
+    locality,
+    audioRef,
+    currentlyPlaying,
+    setCurrentlyPlaying,
+    openModal,
+    setModalContent,
+    hideShowMore,
+  } = props;
   const thisID = `${locality.name}${locality.audioStart}`;
 
   const [isPlaying, setIsPlaying] = useState(false);
@@ -67,6 +83,12 @@ const Locality = (props) => {
       setIsPlaying(false);
     }
   }, [currentlyPlaying, thisID]);
+
+  const showMore = (e) => {
+    e.preventDefault();
+    setModalContent(locality);
+    openModal();
+  };
 
   const playName = () => {
     if (audioRef.current) {
@@ -137,7 +159,10 @@ const Locality = (props) => {
       <WrappedPlayableName />
       {isArrPresent(typesStrings) ? (
         <Types>{typesStrings.join(", ")}</Types>
-      ) : null}
+      ) : (
+        <div />
+      )}
+      {hideShowMore ? <></> : <ShowMore onClick={showMore}>Show more</ShowMore>}
       {isArrPresent(locality.altNames) ? (
         <Alts>
           <AltTitle>Alternatively/Manohi anō</AltTitle>
@@ -148,6 +173,7 @@ const Locality = (props) => {
               currentlyPlaying={currentlyPlaying}
               setCurrentlyPlaying={setCurrentlyPlaying}
               key={`${locality.name}${altIndex}`}
+              hideShowMore={true}
             />
           ))}
         </Alts>

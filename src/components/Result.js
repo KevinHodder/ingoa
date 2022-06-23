@@ -1,14 +1,10 @@
-import {
-  Fragment,
-  useContext,
-  // useEffect,
-  useRef,
-} from "react";
+import { useContext, useState, useRef } from "react";
 import { Accordion, AccordionContext } from "react-bootstrap";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import Localities from "./Localities";
-import styled from "styled-components";
+import MoreInfoModal from "./MoreInfoModal";
 import "./result.css";
 
 const SpeakerInfo = styled.div`
@@ -29,6 +25,15 @@ export const Result = (props) => {
   const { activeEventKey } = useContext(AccordionContext);
   const thisElem = useRef();
 
+  const [show, setShow] = useState(false);
+  const [content, setModalContent] = useState({});
+  const closeModal = () => {
+    setShow(false);
+  };
+  const openModal = () => {
+    setShow(true);
+  };
+
   // useEffect(() => {
   //   // if (activeEventKey === index.toString()) {
   //     // thisElem.current.scrollIntoView();
@@ -40,9 +45,9 @@ export const Result = (props) => {
       <Accordion.Header>{nameCommon}</Accordion.Header>
       <Accordion.Body>
         {activeEventKey === index.toString() ? (
-          <Fragment>
+          <>
             <SpeakerInfo>
-              Spoken by/Kaikōrero:{" "}
+              Spoken by/Kaikōrero:&nbsp;
               <SpeakerName>{speakers.join(", ")}</SpeakerName>
             </SpeakerInfo>
             <Localities
@@ -50,8 +55,15 @@ export const Result = (props) => {
               zone={number}
               zoneName={nameCommon}
               track={track}
+              openModal={openModal}
+              setModalContent={setModalContent}
             />
-          </Fragment>
+            <MoreInfoModal
+              show={show}
+              handleClose={closeModal}
+              content={content}
+            />
+          </>
         ) : null}
       </Accordion.Body>
     </Accordion.Item>

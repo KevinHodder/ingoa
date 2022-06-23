@@ -26,7 +26,8 @@ const PlayAllText = styled.div`
 `;
 
 export const Localities = (props) => {
-  const { localities, track, zone, zoneName } = props;
+  const { localities, track, zone, zoneName, openModal, setModalContent } =
+    props;
 
   const audioRef = useRef();
   const [currentlyPlaying, setCurrentlyPlaying] = useState();
@@ -84,6 +85,8 @@ export const Localities = (props) => {
           audioRef={audioRef}
           currentlyPlaying={currentlyPlaying}
           setCurrentlyPlaying={setCurrentlyPlaying}
+          openModal={openModal}
+          setModalContent={setModalContent}
           key={`${zone.toString().padStart(3, "0")}${index}`}
         />
       ))}
