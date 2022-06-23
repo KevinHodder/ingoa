@@ -19,7 +19,7 @@ const NavBar = (props) => {
       <Navbar.Brand href={"/"} style={{ fontSize: "1.5rem" }}>
         <img
           src={icon}
-          height="25"
+          height="30"
           className="d-inline-block align-top"
           alt="logo"
           style={{ marginRight: "5px" }}
