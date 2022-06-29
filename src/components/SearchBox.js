@@ -5,7 +5,7 @@ import zones from "../data/zones.json";
 import styled from "styled-components";
 import { getIndexData, getResultDataBasedOnFuseResult } from "../utils/utils";
 
-const searchData = getIndexData(zones);
+const searchData = getIndexData();
 
 const allResults = zones.sort((a, b) => a.number - b.number);
 const fuseOptions = {

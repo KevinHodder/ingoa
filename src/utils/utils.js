@@ -1,9 +1,16 @@
+const zones = require("../data/zones.json");
+
 export const isArrPresent = (myArr) => {
   return myArr && Array.isArray(myArr) && myArr.length;
 };
 
-export const getIndexData = (fullData) => {
-  const a = fullData.map((zone) => ({
+/**
+ * Create an object containing only the info needed for searching
+ * @param fullData - the complete data object array
+ * @returns {*} - an array of objects with a subset of the data used for search
+ */
+export const getIndexData = (fullData = zones) => {
+  return fullData.map((zone) => ({
     number: zone.number,
     nameCommon: zone.nameCommon,
     localities: zone.localities.map((l) => ({
@@ -20,10 +27,11 @@ export const getIndexData = (fullData) => {
       })),
     })),
   }));
-  return a;
 };
 
-export const getResultDataBasedOnFuseResult = (fuseResult, allData) => {
+// Result filtering
+
+export const getResultDataBasedOnFuseResult = (fuseResult, allData = zones) => {
   const output = [];
   fuseResult.forEach((result, index) => {
     const matches = result.matches.map((match) => match.value);
@@ -81,4 +89,21 @@ export const getMatchingLocalities = (localities, matches) => {
       hasMatchingSpeaker(locality, matches) ||
       hasMatchingTypeName(locality, matches)
   );
+};
+
+// Modal matching methods
+const idRegex = /pn_(zo | pa)_(\d+)-(\d+)/;
+export const getSeeAlsoRecordsByIds = (ids, allData = zones) => {
+  if (!isArrPresent(ids)) {
+    return [];
+  }
+  return ids.map((id) => {
+    if (!idRegex.test(id)) {
+      throw new Error("Invalid ID: " + id);
+    }
+    const [, zone, localityNum] = idRegex.match(id);
+    return allData[zone].localities.find(
+      (l) => l.order === parseInt(localityNum)
+    );
+  });
 };

@@ -55,8 +55,11 @@ const SPOKENNAME3 = 23;
 const SPEAKER3 = 25;
 const START3 = 27;
 const END3 = 28;
+const SEETEXT1 = 46;
 const SEEID1 = 51;
+const SEETEXT2 = 46;
 const SEEID2 = 56;
+const SEETEXT3 = 46;
 const SEEID3 = 61;
 const KIND1 = 68;
 const KINDNAME1 = 71;
@@ -108,7 +111,7 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
       zone.speakers.add(split[SPEAKER2]);
     }
   }
-  if (split[START3]) {
+  if (split[INDEXNAME3]) {
     if (!newLocality.altNames) {
       newLocality.altNames = [];
     }
@@ -154,6 +157,7 @@ const processNormalZones = (split) => {
     const newLocality = {
       order: parseInt(split[ZONEORDERNUM]),
       name: split[LOCALITYNAME],
+      uniqueId: split[0],
       types: [],
     };
     parseLocalityRecordingInfo(split, newLocality, zone);
@@ -180,7 +184,17 @@ const processNormalZones = (split) => {
     if (split[KIND7]) {
       newLocality.types.push({ type: split[KIND7], name: split[KINDNAME7] });
     }
-
+    // Add "see also" info
+    if (split[SEEID1]) {
+      newLocality.seeAlso = [];
+      newLocality.seeAlso.push({ text: split[SEETEXT1], id: split[SEEID1] });
+    }
+    if (split[SEEID2]) {
+      newLocality.seeAlso.push({ text: split[SEETEXT2], id: split[SEEID2] });
+    }
+    if (split[SEEID3]) {
+      newLocality.seeAlso.push({ text: split[SEETEXT3], id: split[SEEID3] });
+    }
     // Add new locality to zone;
     zone.localities.push(newLocality);
   }
