@@ -34,7 +34,7 @@ const removeMacrons = (input) => {
 
 const csvFile = fs.readFileSync("../placenames.tsv", "utf8");
 const [header, ...lines] = csvFile.split("\r\n"); // Windows = \r\n, Linux/Mac = \n
-// console.log(header);
+console.log(header);
 
 const ZONENUM = 4;
 const ZONENAME = 5;
@@ -55,6 +55,9 @@ const SPOKENNAME3 = 23;
 const SPEAKER3 = 25;
 const START3 = 27;
 const END3 = 28;
+const SEEID1 = 51;
+const SEEID2 = 56;
+const SEEID3 = 61;
 const KIND1 = 68;
 const KINDNAME1 = 71;
 const KIND2 = 76;
@@ -210,6 +213,7 @@ const processPartZones = (split) => {
 
   const newLocality = {
     order: parseInt(split[ZONEORDERNUM]),
+    uniqueId: split[0],
     name: split[LOCALITYNAME],
   };
   parseLocalityRecordingInfo(split, newLocality, zone);
@@ -219,9 +223,10 @@ const processPartZones = (split) => {
 lines.forEach((line) => {
   // split the csv record
   const split = line.split("\t");
+  console.log(split[SEEID1]);
   processNormalZones(split);
   processPartZones(split);
 });
 zones.forEach((z) => (z.speakers = [...z.speakers]));
 
-fs.writeFileSync("data.json", JSON.stringify(zones));
+fs.writeFileSync("data/zones.json", JSON.stringify(zones));

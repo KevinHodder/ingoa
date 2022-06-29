@@ -34,8 +34,8 @@ export const SearchResults = (props) => {
           <Accordion defaultActiveKey="0" ref={acc}>
             {results.map((result, index) => (
               <Result
-                details={result.item}
-                key={`zone${result.item.number}`}
+                details={result}
+                key={`zone${result.number}`}
                 index={index}
               />
             ))}

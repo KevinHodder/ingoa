@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import data from "../data.json";
+import data from "../data/zones.json";
 import MapNIZones from "./MapNIZones";
 
 const MapSVGCont = styled.svg`
@@ -20,11 +20,7 @@ const MapNI = (props) => {
   const goTo = (event) => {
     event.preventDefault();
     const ids = event.target.id.split("_").map((val) => parseFloat(val));
-    setResults(
-      data
-        .filter((zone) => ids.includes(zone.number))
-        .map((zone) => ({ item: zone }))
-    );
+    setResults(data.filter((zone) => ids.includes(zone.number)));
   };
 
   return (
