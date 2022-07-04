@@ -47,7 +47,7 @@ export const Result = (props) => {
         {activeEventKey === index.toString() ? (
           <>
             <SpeakerInfo>
-              Spoken by/Kaikōrero:&nbsp;
+              Spoken by | Kaikōrero:&nbsp;
               <SpeakerName>{speakers.join(", ")}</SpeakerName>
             </SpeakerInfo>
             <Localities

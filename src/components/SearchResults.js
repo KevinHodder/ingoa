@@ -29,7 +29,7 @@ export const SearchResults = (props) => {
       {results.length ? (
         <Fragment>
           <ResultsHeader>
-            Results/Ingoa rokohina: ({results.length || ""})
+            Results | Ingoa rokohina: ({results.length || ""})
           </ResultsHeader>
           <Accordion defaultActiveKey="0" ref={acc}>
             {results.map((result, index) => (

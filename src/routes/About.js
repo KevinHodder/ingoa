@@ -22,24 +22,24 @@ const About = () => {
           <strong>Table of Contents</strong>
           <ul>
             <li>
-              <a href={"#about"}>About/Mō “Ngā Ingoa ō Aotearoa”</a>
+              <a href={"#about"}>About | Mō “Ngā Ingoa ō Aotearoa”</a>
               <ul>
                 <li>
-                  <a href="#outline">Outline/Whakamārama poto</a>
+                  <a href="#outline">Outline | Whakamārama poto</a>
                 </li>
                 <li>
-                  <a href="#structure">Structure/Te whakatakotoranga</a>
+                  <a href="#structure">Structure | Te whakatakotoranga</a>
                 </li>
                 <li>
-                  <a href="#journey">The Journey/Ngā Haererenga</a>
+                  <a href="#journey">The Journey | Ngā Haererenga</a>
                 </li>
                 <li>
-                  <a href="#technical">Technical/Te Hangarau</a>
+                  <a href="#technical">Technical | Te Hangarau</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#thanks">Thanks/Ngā whakamihi</a>
+              <a href="#thanks">Thanks | Ngā whakamihi</a>
               <ul>
                 <li>
                   <a href="#thanks1">Part 1: Te Upoko ō te Ika</a>
@@ -53,14 +53,14 @@ const About = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#website">This Website/Tēnei Pae tukutuku</a>
+                  <a href="#website">This Website | Tēnei Pae tukutuku</a>
                 </li>
               </ul>
             </li>
           </ul>
         </TOC>
-        <h1 id="about">About/Mō “Ngā Ingoa ō Aotearoa”</h1>
-        <h3 id="outline"> Outline/Whakamārama poto</h3>
+        <h1 id="about">About | Mō “Ngā Ingoa ō Aotearoa”</h1>
+        <h3 id="outline"> Outline | Whakamārama poto</h3>
         <p>
           “Ngā Ingoa o Aotearoa” (The Names of New Zealand) is literally a
           "pronouncing dictionary". More than 8000 names were spoken into a
@@ -95,7 +95,7 @@ const About = () => {
           meanings. That would have taken more than a lifetime, and would be
           done better by tangata whenua in each area.
         </p>
-        <h3 id="structure">Structure/Te whakatakotoranga</h3>
+        <h3 id="structure">Structure | Te whakatakotoranga</h3>
         <p>
           The dictionary was originally recorded in three parts:
           <ul>
@@ -139,7 +139,7 @@ const About = () => {
           and east of the lower North Island, the east, west and centre of the
           upper North Island, and down and clockwise around the South Island.)
         </p>
-        <h3 id={"journey"}>The Journey/Ngā Haererenga</h3>
+        <h3 id={"journey"}>The Journey | Ngā Haererenga</h3>
         <p>
           The first germ of the dictionary was planted in 1977, when as
           Journalist in Charge at Radio Gisborne, I asked Heni Sunderland to
@@ -306,7 +306,7 @@ const About = () => {
           Islands Pijin. Although has no whakapapa Māori himself, he now has
           mokopuna of Tūhoe, and whanaunga of Ngāti Porou, descent.
         </p>
-        <h3 id="technical"> Technical/Te Hangarau</h3>
+        <h3 id="technical"> Technical | Te Hangarau</h3>
         <p>
           Most of the North Island names were recorded on a Uher Report Monitor
           4200 portable stereo reel-to-reel recorder at 7 ½ in/sec using two

@@ -169,7 +169,7 @@ const Locality = (props) => {
       )}
       {isArrPresent(locality.altNames) ? (
         <Alts>
-          <AltTitle>Alternatively/Manohi anō</AltTitle>
+          <AltTitle>Alternatively | Manohi anō</AltTitle>
           {locality.altNames.map((alt, altIndex) => (
             <Locality
               locality={alt}
