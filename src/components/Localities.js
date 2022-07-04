@@ -73,11 +73,11 @@ export const Localities = (props) => {
       <PlayAllBlock onClick={playAll}>
         <Speaker isPlaying={isPlayingAll} name={`all names in ${zoneName}`} />
         <PlayAllText>
-          {isPlayingAll ? "Pause/Tūtataria" : "All/Katoa"}
+          {isPlayingAll ? "Stop | Kia mutu" : "All| Katoa"}
         </PlayAllText>
       </PlayAllBlock>
 
-      <Header>Individual names/He ingoa takitahi</Header>
+      <Header>Individual names | Ngā ingoa takitahi</Header>
 
       {localities.map((locality, index) => (
         <Locality

@@ -92,18 +92,31 @@ export const getMatchingLocalities = (localities, matches) => {
 };
 
 // Modal matching methods
-const idRegex = /pn_(zo | pa)_(\d+)-(\d+)/;
+const idRegex = /pn_(zo|pa)_(\d+)-(\d+)/;
 export const getSeeAlsoRecordsByIds = (ids, allData = zones) => {
   if (!isArrPresent(ids)) {
     return [];
   }
-  return ids.map((id) => {
+  const output = [];
+  ids.forEach((id) => {
     if (!idRegex.test(id)) {
-      throw new Error("Invalid ID: " + id);
+      console.log("Invalid ID: " + id);
+      // throw new Error("Invalid ID: " + id);
     }
-    const [, zone, localityNum] = idRegex.match(id);
-    return allData[zone].localities.find(
+    const [, , zone, localityNum] = id.match(idRegex);
+    const matchingZone = allData.find((z) => z.number === parseInt(zone));
+    const matchingLocality = matchingZone?.localities.find(
       (l) => l.order === parseInt(localityNum)
     );
+    if (!matchingLocality) {
+      console.log("unable to find a match for ", id);
+    } else {
+      output.push({
+        zone,
+        zoneName: matchingZone.nameCommon,
+        ...matchingLocality,
+      });
+    }
   });
+  return output;
 };

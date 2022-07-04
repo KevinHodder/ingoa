@@ -190,9 +190,15 @@ const processNormalZones = (split) => {
       newLocality.seeAlso.push({ text: split[SEETEXT1], id: split[SEEID1] });
     }
     if (split[SEEID2]) {
+      if (!newLocality.seeAlso) {
+        newLocality.seeAlso = [];
+      }
       newLocality.seeAlso.push({ text: split[SEETEXT2], id: split[SEEID2] });
     }
     if (split[SEEID3]) {
+      if (!newLocality.seeAlso) {
+        newLocality.seeAlso = [];
+      }
       newLocality.seeAlso.push({ text: split[SEETEXT3], id: split[SEEID3] });
     }
     // Add new locality to zone;
@@ -237,7 +243,6 @@ const processPartZones = (split) => {
 lines.forEach((line) => {
   // split the csv record
   const split = line.split("\t");
-  console.log(split[SEEID1]);
   processNormalZones(split);
   processPartZones(split);
 });

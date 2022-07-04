@@ -1,7 +1,11 @@
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
+import { getSeeAlsoRecordsByIds, isArrPresent } from "../utils/utils";
+import ModalPlay from "./ModalPlay";
 
 const MoreInfoModal = (props) => {
   const { show, handleClose, content } = props;
+
+  const alsoRecs = getSeeAlsoRecordsByIds(content?.seeAlso?.map((sa) => sa.id));
 
   return (
     <Modal show={show} onHide={handleClose}>
@@ -11,8 +15,15 @@ const MoreInfoModal = (props) => {
       <Modal.Body>
         Placeholder text while we work out how to get useful information into
         here. Aren't active prototypes fun!
-        {/*<br />*/}
-        {/*{JSON.stringify(content)}*/}
+        <br />
+        {/*{JSON.stringify(alsoRecs)}*/}
+        {isArrPresent(alsoRecs) ? <h4>Also associated with:</h4> : <></>}
+        {alsoRecs.map((rec) => (
+          <div key={`${rec.zone}-${rec.order}`}>
+            {rec.zoneName}: {rec.name}
+            <ModalPlay {...rec} />
+          </div>
+        ))}
       </Modal.Body>
       {/*<Modal.Footer>*/}
       {/*<Button variant="secondary" onClick={handleClose}>*/}

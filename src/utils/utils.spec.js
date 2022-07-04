@@ -122,4 +122,73 @@ describe("getSeeAlsoRecordsByIds", () => {
       expect(getSeeAlsoRecordsByIds()).toEqual([]);
     });
   });
+
+  describe("with one ID", () => {
+    const data = [
+      {
+        number: 1,
+        nameCommon: "test",
+        localities: [
+          { order: 1, name: "unexpected" },
+          { order: 3, name: "expected" },
+        ],
+      },
+    ];
+    describe("and a match in the data", () => {
+      it("should return the matching record", () => {
+        const inputID = "pn_zo_1-3";
+        expect(getSeeAlsoRecordsByIds([inputID], data)).toEqual([
+          { order: 3, name: "expected" },
+        ]);
+      });
+    });
+    describe("and no match in the data (locality number)", () => {
+      it("should return an empty array", () => {
+        const inputID = "pn_zo_1-500";
+        expect(getSeeAlsoRecordsByIds(inputID, data)).toEqual([]);
+      });
+    });
+    describe("and no match in the data (zone number)", () => {
+      it("should return an empty array", () => {
+        const inputID = "pn_zo_100-3";
+        expect(getSeeAlsoRecordsByIds(inputID, data)).toEqual([]);
+      });
+    });
+  });
+  describe("with more than one ID", () => {
+    const data = [
+      {
+        number: 1,
+        nameCommon: "test",
+        localities: [
+          { order: 1, name: "unexpected" },
+          { order: 3, name: "expected" },
+          { order: 4, name: "expected2" },
+        ],
+      },
+    ];
+    describe("and matches for all in the data", () => {
+      it("should return the matching records", () => {
+        const inputIDs = ["pn_zo_1-3", "pn_zo_1-4"];
+        expect(getSeeAlsoRecordsByIds(inputIDs, data)).toEqual([
+          { order: 3, name: "expected" },
+          { order: 4, name: "expected2" },
+        ]);
+      });
+    });
+    describe("and matches for all bar one of the IDs in the data", () => {
+      it("should return the matching record and log out to console", () => {
+        jest.spyOn(console, "log");
+        const inputIDs = ["pn_zo_1-3", "pn_zo_1-66"];
+        expect(getSeeAlsoRecordsByIds(inputIDs, data)).toEqual([
+          { order: 3, name: "expected" },
+        ]);
+        expect(console.log).toHaveBeenCalledTimes(1);
+        expect(console.log).toHaveBeenCalledWith(
+          "unable to find a match for ",
+          "pn_zo_1-66"
+        );
+      });
+    });
+  });
 });

@@ -12,7 +12,7 @@ const ShowMore = styled.div`
 const Record = styled.div`
   display: grid;
   width: auto;
-  grid-template-columns: minmax(120px, 250px) auto 65px;
+  grid-template-columns: minmax(120px, 250px) auto 95px;
   grid-column-gap: 5px;
   grid-row-gap: 3px;
   align-items: center;
@@ -162,7 +162,11 @@ const Locality = (props) => {
       ) : (
         <div />
       )}
-      {hideShowMore ? <></> : <ShowMore onClick={showMore}>Show more</ShowMore>}
+      {hideShowMore ? (
+        <></>
+      ) : (
+        <ShowMore onClick={showMore}>Show more | Whakakitea atu</ShowMore>
+      )}
       {isArrPresent(locality.altNames) ? (
         <Alts>
           <AltTitle>Alternatively/Manohi anō</AltTitle>
