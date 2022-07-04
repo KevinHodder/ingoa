@@ -22,7 +22,7 @@ const About = () => {
           <strong>Table of Contents</strong>
           <ul>
             <li>
-              <a href={"#about"}>About | Mō “Ngā Ingoa ō Aotearoa”</a>
+              <a href={"#about"}>About | Mō “Ngā Ingoa o Aotearoa”</a>
               <ul>
                 <li>
                   <a href="#outline">Outline | Whakamārama poto</a>
@@ -59,7 +59,7 @@ const About = () => {
             </li>
           </ul>
         </TOC>
-        <h1 id="about">About | Mō “Ngā Ingoa ō Aotearoa”</h1>
+        <h1 id="about">About | Mō “Ngā Ingoa o Aotearoa”</h1>
         <h3 id="outline"> Outline | Whakamārama poto</h3>
         <p>
           “Ngā Ingoa o Aotearoa” (The Names of New Zealand) is literally a

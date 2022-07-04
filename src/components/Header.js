@@ -51,7 +51,7 @@ const Header = () => {
   return (
     <HeaderBlock>
       <Title>
-        <h1>Ngā Ingoa ō Aotearoa</h1>
+        <h1>Ngā Ingoa o Aotearoa</h1>
         <SubTitle>An Oral Dictionary of Māori Placenames</SubTitle>
       </Title>
       <Subheader>

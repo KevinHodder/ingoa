@@ -24,7 +24,7 @@ const NavBar = (props) => {
           alt="logo"
           style={{ marginRight: "5px" }}
         />
-        Ngā Ingoa ō Aotearoa
+        Ngā Ingoa o Aotearoa
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
