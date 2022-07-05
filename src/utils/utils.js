@@ -101,6 +101,7 @@ export const getSeeAlsoRecordsByIds = (ids, allData = zones) => {
   ids.forEach((id) => {
     if (!idRegex.test(id)) {
       console.log("Invalid ID: " + id);
+      return;
       // throw new Error("Invalid ID: " + id);
     }
     const [, , zone, localityNum] = id.match(idRegex);
