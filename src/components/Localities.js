@@ -73,7 +73,7 @@ export const Localities = (props) => {
       <PlayAllBlock onClick={playAll}>
         <Speaker isPlaying={isPlayingAll} name={`all names in ${zoneName}`} />
         <PlayAllText>
-          {isPlayingAll ? "Stop | Kia mutu" : "All| Katoa"}
+          {isPlayingAll ? "Stop | Kia mutu" : "All | Katoa"}
         </PlayAllText>
       </PlayAllBlock>
 

@@ -39,7 +39,7 @@ console.log(header);
 const ZONENUM = 4;
 const ZONENAME = 5;
 const ZONEORDERNUM = 6;
-const LOCALITYNAME = 7;
+const INDEXNAME1 = 7;
 const ISFEATURED = 8;
 const SPOKENNAME1 = 9;
 const SPEAKER1 = 11;
@@ -88,10 +88,8 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
     newLocality.speaker = split[SPEAKER1];
     zone.speakers.add(split[SPEAKER1]);
   }
-  if (hasMacrons(split[LOCALITYNAME])) {
-    newLocality.altSpellings = [
-      removeMacrons(split[LOCALITYNAME]).toLowerCase(),
-    ];
+  if (hasMacrons(split[INDEXNAME1])) {
+    newLocality.altSpellings = [removeMacrons(split[INDEXNAME1]).toLowerCase()];
   }
   //TODO: Need to check for missing primary pronunciation
   //Alternative pronunciations
@@ -156,7 +154,7 @@ const processNormalZones = (split) => {
     }
     const newLocality = {
       order: parseInt(split[ZONEORDERNUM]),
-      name: split[LOCALITYNAME],
+      name: split[INDEXNAME1],
       uniqueId: split[0],
       types: [],
     };
@@ -211,7 +209,7 @@ const processPartZones = (split) => {
   const partRegex = /Part \d/;
   const partName = split[ZONENAME];
   // remove entry for Hugh saying "Part X"
-  if (!partRegex.test(partName) || partRegex.test(split[LOCALITYNAME])) {
+  if (!partRegex.test(partName) || partRegex.test(split[INDEXNAME1])) {
     return;
   }
   const partNum = partName.slice(5, 6);
@@ -234,7 +232,7 @@ const processPartZones = (split) => {
   const newLocality = {
     order: parseInt(split[ZONEORDERNUM]),
     uniqueId: split[0],
-    name: split[LOCALITYNAME],
+    name: split[INDEXNAME1],
   };
   parseLocalityRecordingInfo(split, newLocality, zone);
   zone.localities.push(newLocality);

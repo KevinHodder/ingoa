@@ -42,10 +42,10 @@ const About = () => {
               <a href="#thanks">Thanks | Ngā whakamihi</a>
               <ul>
                 <li>
-                  <a href="#thanks1">Part 1: Te Upoko ō te Ika</a>
+                  <a href="#thanks1">Part 1: Te Upoko o te Ika</a>
                 </li>
                 <li>
-                  <a href="#thanks2">Part 2: Te Hiku ō te Ika</a>
+                  <a href="#thanks2">Part 2: Te Hiku o te Ika</a>
                 </li>
                 <li>
                   <a href="#thanks3">
@@ -329,7 +329,7 @@ const About = () => {
           with some common names playable separately.
         </p>
         <hr />
-        <h1 id="thanks">Thanks/Ngā whakamihi</h1>
+        <h1 id="thanks">Thanks | Ngā whakamihi</h1>
         <p>
           <i>
             "As teachers, we may and I think should, take care to encourage
@@ -350,7 +350,7 @@ const About = () => {
           (The three parts were issued separately, in 1985, 1991 and 1994, this
           website uploaded in 2022.)
         </p>
-        <h2 id="thanks1">Part 1: Te Upoko ō te Ika</h2>
+        <h2 id="thanks1">Part 1: Te Upoko o te Ika</h2>
         <h3>ACKNOWLEDGEMENTS</h3>
         <h4>Greeting</h4>
         <p>
@@ -446,7 +446,8 @@ const About = () => {
           Young
         </p>
         <hr />
-        <h2 id="thanks2">Part 2: Te Hiku ō te Ika</h2> <h3>ACKNOWLEDGEMENTS</h3>
+        <h2 id="thanks2">Part 2: Te Hiku o te Ika</h2>
+        <h3>ACKNOWLEDGEMENTS</h3>
         <h4>Greeting</h4>
         <p>
           E ngā iwi, e ngā reo, e ngā mana, e ngā ihi, tēnā koutou, tēnā koutou,

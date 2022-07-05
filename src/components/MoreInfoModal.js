@@ -17,7 +17,7 @@ const MoreInfoModal = (props) => {
         here. Aren't active prototypes fun!
         <br />
         {/*{JSON.stringify(alsoRecs)}*/}
-        {isArrPresent(alsoRecs) ? <h4>Also associated with:</h4> : <></>}
+        {isArrPresent(alsoRecs) ? <h4>See also | Tirohia hoki</h4> : <></>}
         {alsoRecs.map((rec) => (
           <div key={`${rec.zone}-${rec.order}`}>
             {rec.zoneName}: {rec.name}
