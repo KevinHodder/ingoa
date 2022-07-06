@@ -10,7 +10,7 @@ const FooterBar = styled.footer`
 
 const Footer = () => {
   return (
-    <FooterBar>
+    <FooterBar id={"footer"}>
       <p>
         Copyright © Hugh Young 1985, 1991 and 1994. The text and recordings may
         not be resold for profit. They may be copied for educational purposes.
