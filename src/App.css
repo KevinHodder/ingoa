@@ -4,6 +4,7 @@ html {
 
 body {
   background-image: url("./assets/bg.png");
+  height: 100%
 }
 
 main {

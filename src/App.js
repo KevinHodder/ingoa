@@ -9,6 +9,7 @@ import MapNI from "./components/MapNI";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import GoToTop from "./components/GoToTop";
+import Footer from "./components/Footer";
 
 const Maps = styled.div`
   display: flex;
@@ -36,6 +37,7 @@ function App() {
         <SearchResults results={results} />
         <GoToTop goToElem={mapRef} appearAt={800} />
       </main>
+      <Footer></Footer>
     </Fragment>
   );
 }
