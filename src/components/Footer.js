@@ -19,6 +19,7 @@ const Footer = () => {
       <p>
         <a
           rel="license"
+          target="_blank"
           href="http://creativecommons.org/licenses/by-nc-nd/3.0/nz/"
         >
           <img
@@ -38,6 +39,7 @@ const Footer = () => {
         &nbsp;by&nbsp;
         <a
           href="mailto:hughingoa@gmail.com"
+          target="_blank"
           property="cc:attributionName"
           rel="cc:attributionURL"
         >
@@ -46,6 +48,7 @@ const Footer = () => {
         is licensed under a{" "}
         <a
           rel="license"
+          target="_blank"
           href="http://creativecommons.org/licenses/by-nc-nd/3.0/nz/"
         >
           Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 New
@@ -57,6 +60,7 @@ const Footer = () => {
         <a
           href="http://www.top.net.nz/%7Ehugh/ingoa/contents.html"
           rel="dc:source"
+          target="_blank"
         >
           www.top.net.nz
         </a>
