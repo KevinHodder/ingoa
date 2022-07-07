@@ -34,7 +34,7 @@ const NavBar = (props) => {
       <Navbar.Collapse id="responsive-navbar-nav">
         {/*<Nav className={"me-auto"}></Nav>*/}
         <Nav>
-          <StyledLink href={"/"}>Dictionary | Ko te papakupu</StyledLink>
+          <StyledLink href={"/"}>Dictionary | Papakupu</StyledLink>
           <StyledLink href={"about"}>About | Mō te papakupu</StyledLink>
           {/*<Nav.Link href={"about"}>About</Nav.Link>*/}
           {/*<Nav.Link href={"about"}>About</Nav.Link>*/}
