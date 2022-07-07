@@ -29,11 +29,7 @@ const Footer = () => {
           />
         </a>
         <br />
-        <span
-          href="http://purl.org/dc/dcmitype/Sound"
-          property="dc:title"
-          rel="dc:type"
-        >
+        <span>
           Nga Ingoa o Aotearoa, an oral dictionary of Maori placenames
         </span>
         &nbsp;by&nbsp;
