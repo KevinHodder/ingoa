@@ -66,7 +66,7 @@ export const Localities = (props) => {
     }
   }
 
-  return localities.length ? (
+  return (
     <Fragment>
       <audio ref={audioRef} src={`./${track}`} />
 
@@ -79,19 +79,22 @@ export const Localities = (props) => {
 
       <Header>Individual names | Ngā ingoa takitahi</Header>
 
-      {localities.map((locality, index) => (
-        <Locality
-          locality={locality}
-          audioRef={audioRef}
-          currentlyPlaying={currentlyPlaying}
-          setCurrentlyPlaying={setCurrentlyPlaying}
-          openModal={openModal}
-          setModalContent={setModalContent}
-          key={`${zone.toString().padStart(3, "0")}${index}`}
-        />
-      ))}
+      {localities &&
+        localities
+          .sort((a, b) => a.name.localeCompare(b.name)
+          .map((locality, index) => (
+            <Locality
+              locality={locality}
+              audioRef={audioRef}
+              currentlyPlaying={currentlyPlaying}
+              setCurrentlyPlaying={setCurrentlyPlaying}
+              openModal={openModal}
+              setModalContent={setModalContent}
+              key={`${zone.toString().padStart(3, "0")}${index}`}
+            />
+          ))}
     </Fragment>
-  ) : null;
+  );
 };
 
 Localities.propTypes = {
