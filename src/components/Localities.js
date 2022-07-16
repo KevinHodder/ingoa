@@ -28,6 +28,11 @@ const PlayAllText = styled.div`
 export const Localities = (props) => {
   const { localities, track, zone, zoneName, openModal, setModalContent } =
     props;
+  const sortedLocalities = localities.sort((a, b) =>
+    zoneName.includes("Introduction to Part")
+      ? a.order - b.order
+      : a.name.localeCompare(b.name)
+  );
 
   const audioRef = useRef();
   const [currentlyPlaying, setCurrentlyPlaying] = useState();
@@ -66,7 +71,7 @@ export const Localities = (props) => {
     }
   }
 
-  return localities.length ? (
+  return (
     <Fragment>
       <audio ref={audioRef} src={`./${track}`} />
 
@@ -79,19 +84,20 @@ export const Localities = (props) => {
 
       <Header>Individual names | Ngā ingoa takitahi</Header>
 
-      {localities.map((locality, index) => (
-        <Locality
-          locality={locality}
-          audioRef={audioRef}
-          currentlyPlaying={currentlyPlaying}
-          setCurrentlyPlaying={setCurrentlyPlaying}
-          openModal={openModal}
-          setModalContent={setModalContent}
-          key={`${zone.toString().padStart(3, "0")}${index}`}
-        />
-      ))}
+      {localities &&
+        sortedLocalities.map((locality, index) => (
+          <Locality
+            locality={locality}
+            audioRef={audioRef}
+            currentlyPlaying={currentlyPlaying}
+            setCurrentlyPlaying={setCurrentlyPlaying}
+            openModal={openModal}
+            setModalContent={setModalContent}
+            key={`${zone.toString().padStart(3, "0")}${index}`}
+          />
+        ))}
     </Fragment>
-  ) : null;
+  );
 };
 
 Localities.propTypes = {
