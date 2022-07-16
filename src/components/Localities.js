@@ -31,6 +31,11 @@ export const Localities = (props) => {
   const { localities, track, zone, zoneName, openModal, setModalContent } =
     props;
   const sprites = getSprites(localities);
+  const sortedLocalities = localities.sort((a, b) =>
+    zoneName.includes("Introduction to Part")
+      ? a.order - b.order
+      : a.name.localeCompare(b.name)
+  );
 
   const { play, stop, togglePlayPause, ready, loading, playing } =
     useAudioPlayer({
@@ -83,19 +88,17 @@ export const Localities = (props) => {
       <Header>Individual names | Ngā ingoa takitahi</Header>
 
       {localities &&
-        localities
-          .sort((a, b) => a.name.localeCompare(b.name))
-          .map((locality, index) => (
-            <Locality
-              locality={locality}
-              audioRef={audioRef}
-              currentlyPlaying={currentlyPlaying}
-              setCurrentlyPlaying={setCurrentlyPlaying}
-              openModal={openModal}
-              setModalContent={setModalContent}
-              key={`${zone.toString().padStart(3, "0")}${index}`}
-            />
-          ))}
+        sortedLocalities.map((locality, index) => (
+          <Locality
+            locality={locality}
+            audioRef={audioRef}
+            currentlyPlaying={currentlyPlaying}
+            setCurrentlyPlaying={setCurrentlyPlaying}
+            openModal={openModal}
+            setModalContent={setModalContent}
+            key={`${zone.toString().padStart(3, "0")}${index}`}
+          />
+        ))}
     </Fragment>
   );
 };
