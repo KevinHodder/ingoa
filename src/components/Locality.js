@@ -1,9 +1,10 @@
-import { useEffect, useState, forwardRef } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import { Tooltip } from "@mui/material";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { isArrPresent } from "../utils/utils";
 import Speaker from "./Speaker";
+import { useAudio } from "../utils/useAudio";
 
 const ShowMore = styled.div`
   opacity: 0;
@@ -18,6 +19,7 @@ const Record = styled.div`
   align-items: center;
   min-height: 20px;
   margin-bottom: 3px;
+  white-space: wrap;
   :hover {
     ${ShowMore} {
       opacity: 1;
@@ -65,24 +67,21 @@ const displayTypeName = (type, localityName) => {
 };
 
 const Locality = (props) => {
-  const {
-    locality,
-    audioRef,
-    currentlyPlaying,
-    setCurrentlyPlaying,
-    openModal,
-    setModalContent,
-    hideShowMore,
-  } = props;
-  const thisID = `${locality.name}${locality.audioStart}`;
+  const { locality, track, openModal, setModalContent, hideShowMore } = props;
+  const thisID = locality.uniqueId;
 
-  const [isPlaying, setIsPlaying] = useState(false);
+  const { play, isPlaying, currentlyPlaying } = useAudio();
+  const playProps = {
+    track,
+    id: thisID,
+    start: locality.audioStart,
+    end: locality.audioEnd,
+  };
 
+  let [thisIsPlaying, setThisIsPlaying] = useState(false);
   useEffect(() => {
-    if (currentlyPlaying !== thisID) {
-      setIsPlaying(false);
-    }
-  }, [currentlyPlaying, thisID]);
+    setThisIsPlaying(isPlaying && currentlyPlaying === thisID);
+  }, [isPlaying, currentlyPlaying]);
 
   const showMore = (e) => {
     e.preventDefault();
@@ -90,34 +89,18 @@ const Locality = (props) => {
     openModal();
   };
 
-  const playName = () => {
-    if (audioRef.current) {
-      // handle "already playing"
-      audioRef.current.pause();
-      clearInterval(audioRef.current.int);
-      // start new play
-      setCurrentlyPlaying(thisID);
-      audioRef.current.currentTime = locality.audioStart;
-      audioRef.current.int = setInterval(() => {
-        if (audioRef.current.currentTime > locality.audioEnd) {
-          audioRef.current.pause();
-          setIsPlaying(false);
-          clearInterval(audioRef.current.int);
-        }
-      }, 10);
-      audioRef.current.play();
-      setIsPlaying(true);
-    }
-  };
-
   const PlayableName = forwardRef((props, ref) => (
     <TooltipZone {...props} ref={ref}>
       {locality.audioStart ? (
-        <Speaker name={locality.name} isPlaying={isPlaying} play={playName} />
+        <Speaker
+          name={locality.name}
+          isPlaying={thisIsPlaying}
+          play={() => play(playProps)}
+        />
       ) : (
         <div />
       )}
-      <Name onClick={playName}>{locality.name}</Name>
+      <Name onClick={() => play(playProps)}>{locality.name}</Name>
     </TooltipZone>
   ));
 
@@ -173,9 +156,7 @@ const Locality = (props) => {
           {locality.altNames.map((alt, altIndex) => (
             <Locality
               locality={alt}
-              audioRef={audioRef}
-              currentlyPlaying={currentlyPlaying}
-              setCurrentlyPlaying={setCurrentlyPlaying}
+              track={track}
               key={`${locality.name}${altIndex}`}
               hideShowMore={true}
             />
@@ -200,6 +181,7 @@ Locality.propTypes = {
     audioStart: PropTypes.number,
     audioEnd: PropTypes.number,
     speaker: PropTypes.string,
+    uniqueId: PropTypes.string,
   }),
   audioRef: PropTypes.object,
   currentlyPlaying: PropTypes.string,

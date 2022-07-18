@@ -1,40 +1,37 @@
 import PropTypes from "prop-types";
-import { useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import styled from "styled-components";
+import { useAudio } from "../utils/useAudio";
+import Speaker from "./Speaker";
+
+const PlayRec = styled.div`
+  display: grid;
+  grid-template-columns: 20px 1fr;
+`;
 
 const ModalPlay = (props) => {
-  const { zone, audioStart, audioEnd } = props;
+  const { zone, audioStart, audioEnd, zoneName, name } = props;
   const track = `zones\\${zone.padStart(3, "0")}.mp3`;
-  const audioRef = useRef();
 
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const playName = () => {
-    if (audioRef.current) {
-      // handle "already playing"
-      audioRef.current.pause();
-      clearInterval(audioRef.current.int);
-      // start new play
-      // setCurrentlyPlaying(thisID);
-      audioRef.current.currentTime = audioStart;
-      audioRef.current.int = setInterval(() => {
-        if (audioRef.current.currentTime > audioEnd) {
-          audioRef.current.pause();
-          setIsPlaying(false);
-          clearInterval(audioRef.current.int);
-        }
-      }, 10);
-      audioRef.current.play();
-      setIsPlaying(true);
-    }
+  const thisID = `modal${zone}${audioStart}`;
+  const { play, isPlaying, currentlyPlaying } = useAudio();
+  const playProps = {
+    track,
+    id: thisID,
+    start: audioStart,
+    end: audioEnd,
   };
 
+  let [thisIsPlaying, setThisIsPlaying] = useState(false);
+  useEffect(() => {
+    setThisIsPlaying(isPlaying && currentlyPlaying === thisID);
+  }, [isPlaying, currentlyPlaying]);
+
   return (
-    <>
-      <audio ref={audioRef} src={track} />
-      <div style={{ display: "inline", marginLeft: "10px" }} onClick={playName}>
-        play
-      </div>
-    </>
+    <PlayRec onClick={() => play(playProps)}>
+      <Speaker name={props.name} isPlaying={thisIsPlaying} play={() => {}} />
+      {zoneName}: {name}
+    </PlayRec>
   );
 };
 

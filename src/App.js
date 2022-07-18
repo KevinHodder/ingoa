@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import GoToTop from "./components/GoToTop";
 import Footer from "./components/Footer";
+import { AudioProvider } from "./utils/useAudio";
 
 const Maps = styled.div`
   display: flex;
@@ -26,17 +27,19 @@ function App() {
       <header>
         <NavBar />
       </header>
-      <main>
-        <Header />
-        <Maps ref={mapRef}>
-          <MapNI setResults={setResults} />
-          <MapSI setResults={setResults} />
-        </Maps>
+      <AudioProvider>
+        <main>
+          <Header />
+          <Maps ref={mapRef}>
+            <MapNI setResults={setResults} />
+            <MapSI setResults={setResults} />
+          </Maps>
 
-        <SearchBox setResults={setResults} />
-        <SearchResults results={results} />
-        <GoToTop goToElem={mapRef} appearAt={800} />
-      </main>
+          <SearchBox setResults={setResults} />
+          <SearchResults results={results} />
+          <GoToTop goToElem={mapRef} appearAt={800} />
+        </main>
+      </AudioProvider>
       <Footer></Footer>
     </Fragment>
   );

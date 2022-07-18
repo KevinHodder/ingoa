@@ -1,10 +1,9 @@
-import { Fragment, useRef, useState, useEffect } from "react";
-import { useAudioPlayer } from "react-use-audio-player";
+import { Fragment, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Locality from "./Locality";
 import Speaker from "./Speaker";
-import { getSprites } from "../utils/utils";
+import { useAudio } from "../utils/useAudio";
 
 const Header = styled.h2`
   margin-top: 1em;
@@ -30,59 +29,31 @@ const PlayAllText = styled.div`
 export const Localities = (props) => {
   const { localities, track, zone, zoneName, openModal, setModalContent } =
     props;
-  const sprites = getSprites(localities);
+  const { play, stop, isPlaying, currentlyPlaying } = useAudio();
+  const thisID = zoneName;
+  const playProps = {
+    track,
+    id: thisID,
+  };
+
   const sortedLocalities = localities.sort((a, b) =>
     zoneName.includes("Introduction to Part")
-      ? a.order - b.order
+      ? a.number - b.number
       : a.name.localeCompare(b.name)
   );
 
-  const { play, stop, togglePlayPause, ready, loading, playing } =
-    useAudioPlayer({
-      src: `./${track}`,
-    });
-  // const [isPlayingAll, setIsPlayingAll] = useState(false);
-
-  const thisID = zone.nameCommon;
-
-  // useEffect(() => {
-  //   if (currentlyPlaying !== thisID) {
-  //     setIsPlayingAll(false);
-  //   }
-  // }, [currentlyPlaying, thisID]);
-
-  // function playAll() {
-  //   if (audioRef.current) {
-  //     // pause if this is playing
-  //     if (!audioRef.current.paused && currentlyPlaying === thisID) {
-  //       return audioRef.current.pause();
-  //     }
-  //     // handle "something else already playing"
-  //     if (!audioRef.current.paused) {
-  //       audioRef.current.pause();
-  //       clearInterval(audioRef.current.int);
-  //     }
-  //     // start new play
-  //     setCurrentlyPlaying(thisID);
-  //     audioRef.current.currentTime = 0;
-  //     audioRef.current.play();
-  //     setIsPlayingAll(true);
-  //     audioRef.current.int = setInterval(() => {
-  //       if (audioRef.current.paused) {
-  //         setIsPlayingAll(false);
-  //         clearInterval(audioRef.current.int);
-  //       }
-  //     }, 10);
-  //   }
-  // }
+  let [thisIsPlaying, setThisIsPlaying] = useState(false);
+  useEffect(() => {
+    setThisIsPlaying(isPlaying && currentlyPlaying === thisID);
+  }, [isPlaying, currentlyPlaying]);
 
   return (
     <Fragment>
-      {/*<audio ref={audioRef} src={`./${track}`} />*/}
-
-      <PlayAllBlock onClick={() => (playing ? stop() : play())}>
-        <Speaker isPlaying={playing} name={`all names in ${zoneName}`} />
-        <PlayAllText>{playing ? "Stop | Kia mutu" : "All | Katoa"}</PlayAllText>
+      <PlayAllBlock onClick={() => (thisIsPlaying ? stop() : play(playProps))}>
+        <Speaker isPlaying={thisIsPlaying} name={`all names in ${zoneName}`} />
+        <PlayAllText>
+          {thisIsPlaying ? "Stop | Kia mutu" : "All | Katoa"}
+        </PlayAllText>
       </PlayAllBlock>
 
       <Header>Individual names | Ngā ingoa takitahi</Header>
@@ -91,9 +62,7 @@ export const Localities = (props) => {
         sortedLocalities.map((locality, index) => (
           <Locality
             locality={locality}
-            audioRef={audioRef}
-            currentlyPlaying={currentlyPlaying}
-            setCurrentlyPlaying={setCurrentlyPlaying}
+            track={track}
             openModal={openModal}
             setModalContent={setModalContent}
             key={`${zone.toString().padStart(3, "0")}${index}`}

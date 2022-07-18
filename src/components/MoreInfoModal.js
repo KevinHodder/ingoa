@@ -19,10 +19,7 @@ const MoreInfoModal = (props) => {
         {/*{JSON.stringify(alsoRecs)}*/}
         {isArrPresent(alsoRecs) ? <h4>See also | Tirohia hoki</h4> : <></>}
         {alsoRecs.map((rec) => (
-          <div key={`${rec.zone}-${rec.order}`}>
-            {rec.zoneName}: {rec.name}
-            <ModalPlay {...rec} />
-          </div>
+          <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />
         ))}
       </Modal.Body>
       {/*<Modal.Footer>*/}
