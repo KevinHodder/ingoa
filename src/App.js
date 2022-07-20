@@ -40,7 +40,6 @@ function App() {
           <GoToTop goToElem={mapRef} appearAt={800} />
         </main>
       </AudioProvider>
-      <Footer></Footer>
     </Fragment>
   );
 }
