@@ -4,6 +4,7 @@ import ModalPlay from "./ModalPlay";
 
 const MoreInfoModal = (props) => {
   const { show, handleClose, content } = props;
+  const { noteName, notePlace, noteSpeech } = content;
 
   const alsoRecs = getSeeAlsoRecordsByIds(content?.seeAlso?.map((sa) => sa.id));
 
@@ -13,8 +14,12 @@ const MoreInfoModal = (props) => {
         <Modal.Title>{content.name}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        Placeholder text while we work out how to get useful information into
-        here. Aren't active prototypes fun!
+        {noteName ? <div>Note on the name: {noteName}</div> : null}
+        {notePlace ? <div>Note on the place: {notePlace}</div> : null}
+        {noteSpeech ? <div>Note on the recording: {noteSpeech}</div> : null}
+        {!(noteSpeech || notePlace || noteName) ? (
+          <div>No notes specific to this location/ recording</div>
+        ) : null}
         <br />
         {/*{JSON.stringify(alsoRecs)}*/}
         {isArrPresent(alsoRecs) ? <h4>See also | Tirohia hoki</h4> : <></>}

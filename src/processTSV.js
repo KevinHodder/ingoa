@@ -55,6 +55,9 @@ const SPOKENNAME3 = 23;
 const SPEAKER3 = 25;
 const START3 = 27;
 const END3 = 28;
+const NOTESPEECH = 35;
+const NOTENAME = 37;
+const NOTEPLACE = 38;
 const SEETEXT1 = 46;
 const SEEID1 = 51;
 const SEETEXT2 = 46;
@@ -157,6 +160,9 @@ const processNormalZones = (split) => {
       name: split[INDEXNAME1],
       uniqueId: split[0],
       types: [],
+      noteSpeech: split[NOTESPEECH] ? split[NOTESPEECH] : undefined,
+      noteName: split[NOTENAME] ? split[NOTENAME] : undefined,
+      notePlace: split[NOTEPLACE] ? split[NOTEPLACE] : undefined,
     };
     parseLocalityRecordingInfo(split, newLocality, zone);
 
