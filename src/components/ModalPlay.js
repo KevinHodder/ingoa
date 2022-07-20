@@ -10,7 +10,7 @@ const PlayRec = styled.div`
 `;
 
 const ModalPlay = (props) => {
-  const { zone, audioStart, audioEnd, zoneName, name } = props;
+  const { zone, audioStart, audioEnd, zoneName, name, speaker } = props;
   const track = `zones\\${zone.padStart(3, "0")}.mp3`;
 
   const thisID = `modal${zone}${audioStart}`;
@@ -30,7 +30,7 @@ const ModalPlay = (props) => {
   return (
     <PlayRec onClick={() => play(playProps)}>
       <Speaker name={props.name} isPlaying={thisIsPlaying} play={() => {}} />
-      {zoneName}: {name}
+      {zoneName}: {name}, spoken by {speaker}
     </PlayRec>
   );
 };
