@@ -8,6 +8,8 @@ const MoreInfoModal = (props) => {
 
   const alsoRecs = getSeeAlsoRecordsByIds(content?.seeAlso?.map((sa) => sa.id));
 
+  const noTextNotes = !(noteSpeech || notePlace || noteName);
+  const noNotes = noTextNotes && !isArrPresent(alsoRecs);
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
@@ -17,10 +19,10 @@ const MoreInfoModal = (props) => {
         {noteName ? <div>Note on the name: {noteName}</div> : null}
         {notePlace ? <div>Note on the place: {notePlace}</div> : null}
         {noteSpeech ? <div>Note on the recording: {noteSpeech}</div> : null}
-        {!(noteSpeech || notePlace || noteName) ? (
-          <div>No notes specific to this location/ recording</div>
+        {noNotes ? (
+          <div>No notes specific to this location or recording</div>
         ) : null}
-        <br />
+        {noTextNotes ? null : <br />}
         {/*{JSON.stringify(alsoRecs)}*/}
         {isArrPresent(alsoRecs) ? <h4>See also | Tirohia hoki</h4> : <></>}
         {alsoRecs.map((rec) => (

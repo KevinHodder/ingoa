@@ -7,6 +7,7 @@ import Speaker from "./Speaker";
 const PlayRec = styled.div`
   display: grid;
   grid-template-columns: 20px 1fr;
+  margin-bottom: 3px;
 `;
 
 const ModalPlay = (props) => {
@@ -30,7 +31,7 @@ const ModalPlay = (props) => {
   return (
     <PlayRec onClick={() => play(playProps)}>
       <Speaker name={props.name} isPlaying={thisIsPlaying} play={() => {}} />
-      {zoneName}: {name}, spoken by {speaker}
+      {name}, in {zoneName}, spoken by {speaker}
     </PlayRec>
   );
 };
