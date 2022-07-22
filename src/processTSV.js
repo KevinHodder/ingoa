@@ -58,6 +58,10 @@ const END3 = 28;
 const NOTESPEECH = 35;
 const NOTENAME = 37;
 const NOTEPLACE = 38;
+const GROUPNAME1 = 39;
+const GROUPID1 = 40;
+const GROUPNAME2 = 41;
+const GROUPID2 = 42;
 const SEETEXT1 = 46;
 const SEEID1 = 51;
 const SEETEXT2 = 46;
@@ -163,6 +167,7 @@ const processNormalZones = (split) => {
       noteSpeech: split[NOTESPEECH] ? split[NOTESPEECH] : undefined,
       noteName: split[NOTENAME] ? split[NOTENAME] : undefined,
       notePlace: split[NOTEPLACE] ? split[NOTEPLACE] : undefined,
+      groups: undefined,
     };
     parseLocalityRecordingInfo(split, newLocality, zone);
 
@@ -204,6 +209,16 @@ const processNormalZones = (split) => {
         newLocality.seeAlso = [];
       }
       newLocality.seeAlso.push({ text: split[SEETEXT3], id: split[SEEID3] });
+    }
+    // Add group info
+    if (split[GROUPID1]) {
+      newLocality.groups = [{ name: split[GROUPNAME1], id: split[GROUPID1] }];
+    }
+    if (split[GROUPID2]) {
+      if (!Array.isArray(newLocality.groups)) {
+        newLocality.groups = [];
+      }
+      newLocality.groups.push({ name: split[GROUPNAME2], id: split[GROUPID2] });
     }
     // Add new locality to zone;
     zone.localities.push(newLocality);

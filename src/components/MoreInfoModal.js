@@ -1,12 +1,18 @@
 import { Modal } from "react-bootstrap";
-import { getSeeAlsoRecordsByIds, isArrPresent } from "../utils/utils";
+import {
+  getGroupRecordsById,
+  getSeeAlsoRecordsByIds,
+  isArrPresent,
+} from "../utils/utils";
 import ModalPlay from "./ModalPlay";
 
 const MoreInfoModal = (props) => {
   const { show, handleClose, content } = props;
-  const { noteName, notePlace, noteSpeech } = content;
+  const { noteName, notePlace, noteSpeech, groups } = content;
 
   const alsoRecs = getSeeAlsoRecordsByIds(content?.seeAlso?.map((sa) => sa.id));
+  const group1Recs = groups?.[0] ? getGroupRecordsById(groups[0].id) : [];
+  const group2Recs = groups?.[1] ? getGroupRecordsById(groups[1].id) : [];
 
   const noTextNotes = !(noteSpeech || notePlace || noteName);
   const noNotes = noTextNotes && !isArrPresent(alsoRecs);
@@ -23,9 +29,29 @@ const MoreInfoModal = (props) => {
           <div>No notes specific to this location or recording</div>
         ) : null}
         {noTextNotes ? null : <br />}
-        {/*{JSON.stringify(alsoRecs)}*/}
+        {/*  Also see stuff*/}
         {isArrPresent(alsoRecs) ? <h4>See also | Tirohia hoki</h4> : <></>}
         {alsoRecs.map((rec) => (
+          <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />
+        ))}
+        {isArrPresent(alsoRecs) ? <br /> : <></>}
+        {/* Group 1*/}
+        {isArrPresent(group1Recs) ? (
+          <h4>Also associated with {groups[0].name} | Tirohia hoki</h4>
+        ) : (
+          <></>
+        )}
+        {group1Recs.map((rec) => (
+          <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />
+        ))}
+        {isArrPresent(group1Recs) ? <br /> : <></>}
+        {/* Group 2 info*/}
+        {isArrPresent(group2Recs) ? (
+          <h4>Also associated with {groups[1].name} | Tirohia hoki</h4>
+        ) : (
+          <></>
+        )}
+        {group2Recs.map((rec) => (
           <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />
         ))}
       </Modal.Body>

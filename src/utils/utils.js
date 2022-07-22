@@ -121,3 +121,25 @@ export const getSeeAlsoRecordsByIds = (ids, allData = zones) => {
   });
   return output;
 };
+
+export const getGroupRecordsById = (id, allData = zones) => {
+  return allData.reduce(
+    (prev, curr) => [...prev, ...getZoneRecordsInGroupById(id, curr)],
+    []
+  );
+};
+const getZoneRecordsInGroupById = (id, zoneData = { localities: [] }) => {
+  const outputLocalities = [];
+  zoneData.localities.forEach((l) => {
+    const matchingGroups = l.groups?.filter((g) => g.id === id).length;
+    if (matchingGroups) {
+      const newRec = {
+        ...l,
+        zoneName: zoneData.nameCommon,
+        zone: zoneData.number.toString(),
+      };
+      outputLocalities.push(newRec);
+    }
+  });
+  return outputLocalities;
+};
