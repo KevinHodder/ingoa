@@ -64,10 +64,9 @@ const GROUPNAME2 = 41;
 const GROUPID2 = 42;
 const SEETEXT1 = 46;
 const SEEID1 = 51;
-const SEETEXT2 = 46;
 const SEEID2 = 56;
-const SEETEXT3 = 46;
 const SEEID3 = 61;
+const SEEID4 = 66;
 const KIND1 = 68;
 const KINDNAME1 = 71;
 const KIND2 = 76;
@@ -195,20 +194,25 @@ const processNormalZones = (split) => {
     }
     // Add "see also" info
     if (split[SEEID1]) {
-      newLocality.seeAlso = [];
-      newLocality.seeAlso.push({ text: split[SEETEXT1], id: split[SEEID1] });
+      newLocality.seeAlso = [split[SEEID1]];
     }
     if (split[SEEID2]) {
       if (!newLocality.seeAlso) {
         newLocality.seeAlso = [];
       }
-      newLocality.seeAlso.push({ text: split[SEETEXT2], id: split[SEEID2] });
+      newLocality.seeAlso.push(split[SEEID2]);
     }
     if (split[SEEID3]) {
       if (!newLocality.seeAlso) {
         newLocality.seeAlso = [];
       }
-      newLocality.seeAlso.push({ text: split[SEETEXT3], id: split[SEEID3] });
+      newLocality.seeAlso.push(split[SEEID3]);
+    }
+    if (split[SEEID4]) {
+      if (!newLocality.seeAlso) {
+        newLocality.seeAlso = [];
+      }
+      newLocality.seeAlso.push(split[SEEID4]);
     }
     // Add group info
     if (split[GROUPID1]) {

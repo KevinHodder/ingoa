@@ -10,7 +10,7 @@ const MoreInfoModal = (props) => {
   const { show, handleClose, content } = props;
   const { noteName, notePlace, noteSpeech, groups } = content;
 
-  const alsoRecs = getSeeAlsoRecordsByIds(content?.seeAlso?.map((sa) => sa.id));
+  const alsoRecs = getSeeAlsoRecordsByIds(content?.seeAlso);
   const group1Recs = groups?.[0] ? getGroupRecordsById(groups[0].id) : [];
   const group2Recs = groups?.[1] ? getGroupRecordsById(groups[1].id) : [];
 
