@@ -11,8 +11,8 @@ const MoreInfoModal = (props) => {
   const { noteName, notePlace, noteSpeech, groups } = content;
 
   const alsoRecs = getSeeAlsoRecordsByIds(content?.seeAlso);
-  const group1Recs = groups?.[0] ? getGroupRecordsById(groups[0].id) : [];
-  const group2Recs = groups?.[1] ? getGroupRecordsById(groups[1].id) : [];
+  // const group1Recs = groups?.[0] ? getGroupRecordsById(groups[0].id) : [];
+  // const group2Recs = groups?.[1] ? getGroupRecordsById(groups[1].id) : [];
 
   const noTextNotes = !(noteSpeech || notePlace || noteName);
   const noNotes = noTextNotes && !isArrPresent(alsoRecs);
@@ -35,25 +35,25 @@ const MoreInfoModal = (props) => {
           <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />
         ))}
         {isArrPresent(alsoRecs) ? <br /> : <></>}
-        {/* Group 1*/}
-        {isArrPresent(group1Recs) ? (
-          <h4>Also associated with {groups[0].name} | Tirohia hoki</h4>
-        ) : (
-          <></>
-        )}
-        {group1Recs.map((rec) => (
-          <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />
-        ))}
-        {isArrPresent(group1Recs) ? <br /> : <></>}
-        {/* Group 2 info*/}
-        {isArrPresent(group2Recs) ? (
-          <h4>Also associated with {groups[1].name} | Tirohia hoki</h4>
-        ) : (
-          <></>
-        )}
-        {group2Recs.map((rec) => (
-          <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />
-        ))}
+        {/*/!* Group 1*!/*/}
+        {/*{isArrPresent(group1Recs) ? (*/}
+        {/*  <h4>Also associated with {groups[0].name} | Tirohia hoki</h4>*/}
+        {/*) : (*/}
+        {/*  <></>*/}
+        {/*)}*/}
+        {/*{group1Recs.map((rec) => (*/}
+        {/*  <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />*/}
+        {/*))}*/}
+        {/*{isArrPresent(group1Recs) ? <br /> : <></>}*/}
+        {/*/!* Group 2 info*!/*/}
+        {/*{isArrPresent(group2Recs) ? (*/}
+        {/*  <h4>Also associated with {groups[1].name} | Tirohia hoki</h4>*/}
+        {/*) : (*/}
+        {/*  <></>*/}
+        {/*)}*/}
+        {/*{group2Recs.map((rec) => (*/}
+        {/*  <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />*/}
+        {/*))}*/}
       </Modal.Body>
       {/*<Modal.Footer>*/}
       {/*<Button variant="secondary" onClick={handleClose}>*/}
