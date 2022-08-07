@@ -13,7 +13,7 @@ const ShowMore = styled.div`
 const Record = styled.div`
   display: grid;
   width: auto;
-  grid-template-columns: minmax(120px, 250px) auto 95px;
+  grid-template-columns: minmax(30%, 250px) auto 95px;
   grid-column-gap: 5px;
   grid-row-gap: 3px;
   align-items: center;
@@ -29,14 +29,12 @@ const Record = styled.div`
 
 const TooltipZone = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: 20px max-content;
-  grid-column-gap: 5px;
+  display: flex;
+  column-gap: 5px;
   align-items: center;
 `;
 
 const Name = styled.div`
-  width: 100%;
   max-width: 225px;
   font-weight: 500;
   font-size: 1.5em;
