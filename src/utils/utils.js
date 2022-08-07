@@ -143,3 +143,34 @@ const getZoneRecordsInGroupById = (id, zoneData = { localities: [] }) => {
   });
   return outputLocalities;
 };
+
+const getZoneRecordsByZoneId = (id, zoneData = zones) => {
+  return zoneData.filter((z) => z.number === parseInt(id))[0];
+};
+
+export const getZoneSuperscriptRecordsById = (id, zoneNum, thisRecord) => {
+  const zone = getZoneRecordsByZoneId(zoneNum);
+  const superRecords = [];
+  zone.localities.forEach((l) => {
+    if (l?.supers?.includes(id) && l.order !== thisRecord) {
+      superRecords.push(l);
+    }
+  });
+  return superRecords;
+};
+
+const displayTypeName = (type, localityName) => {
+  const isName = type.name.toLowerCase() === localityName.toLowerCase();
+  const isEssentiallyName =
+    `${localityName} ${type.type}`.toLowerCase() === type.name.toLowerCase();
+
+  return !isName && !isEssentiallyName;
+};
+
+export const getTypesString = (typesArr = [], localityName) =>
+  typesArr
+    .map(
+      (rec) =>
+        rec.type + (displayTypeName(rec, localityName) ? ` (${rec.name})` : "")
+    )
+    .join(", ");

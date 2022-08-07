@@ -2,7 +2,7 @@ import { forwardRef, useEffect, useState } from "react";
 import { Tooltip } from "@mui/material";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { isArrPresent } from "../utils/utils";
+import { getTypesString, isArrPresent } from "../utils/utils";
 import Speaker from "./Speaker";
 import { useAudio } from "../utils/useAudio";
 
@@ -55,14 +55,6 @@ const AltTitle = styled.div`
   font-weight: bold;
   font-style: italic;
 `;
-
-const displayTypeName = (type, localityName) => {
-  const isName = type.name.toLowerCase() === localityName.toLowerCase();
-  const isEssentiallyName =
-    `${localityName} ${type.type}`.toLowerCase() === type.name.toLowerCase();
-
-  return !isName && !isEssentiallyName;
-};
 
 const Locality = (props) => {
   const { locality, track, openModal, setModalContent, hideShowMore } = props;
@@ -127,22 +119,12 @@ const Locality = (props) => {
     return <PlayableName />;
   };
 
-  const typesStrings =
-    (locality.types &&
-      locality.types.map(
-        (rec) =>
-          rec.type +
-          (displayTypeName(rec, locality.name) ? ` (${rec.name})` : "")
-      )) ||
-    [];
+  const typesStrings = getTypesString(locality.types, locality.name);
+
   return (
     <Record>
       <WrappedPlayableName />
-      {isArrPresent(typesStrings) ? (
-        <Types>{typesStrings.join(", ")}</Types>
-      ) : (
-        <div />
-      )}
+      {typesStrings ? <Types>{typesStrings}</Types> : <div />}
       {hideShowMore ? (
         <></>
       ) : (

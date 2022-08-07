@@ -69,6 +69,9 @@ const SEEID3 = 61;
 const SEEID4 = 66;
 const KIND1 = 68;
 const KINDNAME1 = 71;
+const SUPER1 = 72;
+const SUPER2 = 73;
+const SUPER3 = 74;
 const KIND2 = 76;
 const KINDNAME2 = 79;
 const KIND3 = 82;
@@ -160,6 +163,7 @@ const processNormalZones = (split) => {
     }
     const newLocality = {
       order: parseInt(split[ZONEORDERNUM]),
+      zoneNumber: parseInt(split[ZONENUM]),
       name: split[INDEXNAME1],
       uniqueId: split[0],
       types: [],
@@ -223,6 +227,13 @@ const processNormalZones = (split) => {
         newLocality.groups = [];
       }
       newLocality.groups.push({ name: split[GROUPNAME2], id: split[GROUPID2] });
+    }
+    // Add super info
+    if (split[SUPER1]) {
+      newLocality.supers = [split[SUPER1]];
+    }
+    if (split[SUPER3]) {
+      newLocality.supers.push(split[SUPER1]);
     }
     // Add new locality to zone;
     zone.localities.push(newLocality);
