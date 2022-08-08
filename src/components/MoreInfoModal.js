@@ -27,9 +27,11 @@ const MoreInfoModal = (props) => {
         <Modal.Title>{content.name}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h5>
-          Zone {zoneNumber}, {getZoneNameByZoneNumber(zoneNumber)}
-        </h5>
+        {zoneNumber ? (
+          <h5>
+            Zone {zoneNumber}, {getZoneNameByZoneNumber(zoneNumber)}
+          </h5>
+        ) : null}
         {noteName ? <div>Note on the name: {noteName}</div> : null}
         {notePlace ? <div>Note on the place: {notePlace}</div> : null}
         {noteSpeech ? <div>Note on the recording: {noteSpeech}</div> : null}
