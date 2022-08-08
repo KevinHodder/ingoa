@@ -1,4 +1,4 @@
-const zones = require("../data/zones.json");
+const allZones = require("../data/zones.json");
 
 export const isArrPresent = (myArr) => {
   return myArr && Array.isArray(myArr) && myArr.length;
@@ -9,7 +9,7 @@ export const isArrPresent = (myArr) => {
  * @param fullData - the complete data object array
  * @returns {*} - an array of objects with a subset of the data used for search
  */
-export const getIndexData = (fullData = zones) => {
+export const getIndexData = (fullData = allZones) => {
   return fullData.map((zone) => ({
     number: zone.number,
     nameCommon: zone.nameCommon,
@@ -31,7 +31,10 @@ export const getIndexData = (fullData = zones) => {
 
 // Result filtering
 
-export const getResultDataBasedOnFuseResult = (fuseResult, allData = zones) => {
+export const getResultDataBasedOnFuseResult = (
+  fuseResult,
+  allData = allZones
+) => {
   const output = [];
   fuseResult.forEach((result, index) => {
     const matches = result.matches.map((match) => match.value);
@@ -93,7 +96,7 @@ export const getMatchingLocalities = (localities, matches) => {
 
 // Modal matching methods
 const idRegex = /pn_(zo|pa)_(\d+)-(\d+)/;
-export const getSeeAlsoRecordsByIds = (ids, allData = zones) => {
+export const getSeeAlsoRecordsByIds = (ids, allData = allZones) => {
   if (!isArrPresent(ids)) {
     return [];
   }
@@ -122,7 +125,7 @@ export const getSeeAlsoRecordsByIds = (ids, allData = zones) => {
   return output;
 };
 
-export const getGroupRecordsById = (id, allData = zones) => {
+export const getGroupRecordsById = (id, allData = allZones) => {
   return allData.reduce(
     (prev, curr) => [...prev, ...getZoneRecordsInGroupById(id, curr)],
     []
@@ -144,7 +147,7 @@ const getZoneRecordsInGroupById = (id, zoneData = { localities: [] }) => {
   return outputLocalities;
 };
 
-const getZoneRecordsByZoneId = (id, zoneData = zones) => {
+const getZoneRecordsByZoneId = (id, zoneData = allZones) => {
   return zoneData.filter((z) => z.number === parseInt(id))[0];
 };
 
@@ -184,3 +187,8 @@ export const getTypesString = (typesArr = [], localityName) =>
         rec.type + (displayTypeName(rec, localityName) ? ` (${rec.name})` : "")
     )
     .join(", ");
+
+export const getZoneNameByZoneNumber = (id, zones = allZones) => {
+  const match = zones.filter((zone) => zone.number === parseInt(id));
+  return match[0].nameCommon;
+};

@@ -3,6 +3,7 @@ import {
   getSeeAlsoRecordsByIds,
   isArrPresent,
   getAllSuperRecs,
+  getZoneNameByZoneNumber,
 } from "../utils/utils";
 import ModalPlay from "./ModalPlay";
 import ModalPlaySS from "./ModalPlaySS";
@@ -18,7 +19,7 @@ const MoreInfoModal = (props) => {
 
   const superRecs = getAllSuperRecs(supers, zoneNumber, order);
   const noTextNotes = !(noteSpeech || notePlace || noteName);
-  const noListedNotes = !superRecs;
+  const noListedNotes = !isArrPresent(superRecs);
   const noNotes = noTextNotes && !isArrPresent(alsoRecs) && noListedNotes;
   return (
     <Modal show={show} onHide={handleClose}>
@@ -26,6 +27,11 @@ const MoreInfoModal = (props) => {
         <Modal.Title>{content.name}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
+        {zoneNumber ? (
+          <h5>
+            Zone {zoneNumber}, {getZoneNameByZoneNumber(zoneNumber)}
+          </h5>
+        ) : null}
         {noteName ? <div>Note on the name: {noteName}</div> : null}
         {notePlace ? <div>Note on the place: {notePlace}</div> : null}
         {noteSpeech ? <div>Note on the recording: {noteSpeech}</div> : null}
