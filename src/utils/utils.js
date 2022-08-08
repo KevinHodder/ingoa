@@ -189,6 +189,8 @@ export const getTypesString = (typesArr = [], localityName) =>
     .join(", ");
 
 export const getZoneNameByZoneNumber = (id, zones = allZones) => {
-  const match = zones.filter((zone) => zone.number === parseInt(id));
-  return match[0].nameCommon;
+  if (!id) {
+    return "";
+  }
+  return zones.filter((zone) => zone.number === parseInt(id))[0].nameCommon;
 };
