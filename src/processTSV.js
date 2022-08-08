@@ -70,14 +70,17 @@ const SEEID4 = 66;
 const KIND1 = 68;
 const KINDNAME1 = 71;
 const SUPER1 = 72;
-const SUPER2 = 73;
-const SUPER3 = 74;
+const SUPER1a = 73;
+const SUPER1_1 = 74;
 const KIND2 = 76;
 const KINDNAME2 = 79;
+const SUPER2 = 80;
 const KIND3 = 82;
 const KINDNAME3 = 85;
+const SUPER3 = 80;
 const KIND4 = 88;
 const KINDNAME4 = 91;
+const SUPER4 = 92;
 const KIND5 = 94;
 const KINDNAME5 = 97;
 const KIND6 = 98;
@@ -171,6 +174,7 @@ const processNormalZones = (split) => {
       noteName: split[NOTENAME] ? split[NOTENAME] : undefined,
       notePlace: split[NOTEPLACE] ? split[NOTEPLACE] : undefined,
       groups: undefined,
+      supers: [],
     };
     parseLocalityRecordingInfo(split, newLocality, zone);
 
@@ -230,10 +234,25 @@ const processNormalZones = (split) => {
     }
     // Add super info
     if (split[SUPER1]) {
-      newLocality.supers = [split[SUPER1]];
+      newLocality.supers.push(split[SUPER1]);
+    }
+    if (split[SUPER1_1]) {
+      if (!newLocality.supers) {
+        newLocality.supers = [];
+      }
+      newLocality.supers.push(split[SUPER1_1]);
+    }
+    if (split[SUPER2]) {
+      newLocality.supers.push(split[SUPER2]);
     }
     if (split[SUPER3]) {
-      newLocality.supers.push(split[SUPER1]);
+      newLocality.supers.push(split[SUPER3]);
+    }
+    if (split[SUPER4]) {
+      newLocality.supers.push(split[SUPER4]);
+    }
+    if (newLocality.supers === []) {
+      delete newLocality.supers; // remove array if nothing in it, to avoid confusion.
     }
     // Add new locality to zone;
     zone.localities.push(newLocality);

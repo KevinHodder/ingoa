@@ -150,13 +150,23 @@ const getZoneRecordsByZoneId = (id, zoneData = zones) => {
 
 export const getZoneSuperscriptRecordsById = (id, zoneNum, thisRecord) => {
   const zone = getZoneRecordsByZoneId(zoneNum);
-  const superRecords = [];
+  const superRecords = new Set();
   zone.localities.forEach((l) => {
     if (l?.supers?.includes(id) && l.order !== thisRecord) {
-      superRecords.push(l);
+      superRecords.add(l);
     }
   });
-  return superRecords;
+  return Array.from(superRecords);
+};
+
+export const getAllSuperRecs = (ids = [], zoneNum, thisRecord) => {
+  const allRecs = ids.map((id) =>
+    getZoneSuperscriptRecordsById(id, zoneNum, thisRecord)
+  );
+  /// will probably change. is a bit dumb at the moment, I just don't want to pollute getZoneSuperscriptRecordsById
+  const allRecsFlat = new Set();
+  allRecs.forEach((recs) => recs.forEach((rec) => allRecsFlat.add(rec)));
+  return Array.from(allRecsFlat);
 };
 
 const displayTypeName = (type, localityName) => {

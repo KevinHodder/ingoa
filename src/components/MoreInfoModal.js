@@ -1,10 +1,8 @@
 import { Modal } from "react-bootstrap";
 import {
-  getGroupRecordsById,
   getSeeAlsoRecordsByIds,
-  getZoneSuperscriptRecordsById,
   isArrPresent,
-  getTypesString,
+  getAllSuperRecs,
 } from "../utils/utils";
 import ModalPlay from "./ModalPlay";
 import ModalPlaySS from "./ModalPlaySS";
@@ -18,14 +16,9 @@ const MoreInfoModal = (props) => {
   // const group1Recs = groups?.[0] ? getGroupRecordsById(groups[0].id) : [];
   // const group2Recs = groups?.[1] ? getGroupRecordsById(groups[1].id) : [];
 
-  const super1Recs = supers?.[0]
-    ? getZoneSuperscriptRecordsById(supers[0], zoneNumber, order)
-    : [];
-  const super3Recs = supers?.[1]
-    ? getZoneSuperscriptRecordsById(supers[1], zoneNumber, order)
-    : [];
+  const superRecs = getAllSuperRecs(supers, zoneNumber, order);
   const noTextNotes = !(noteSpeech || notePlace || noteName);
-  const noListedNotes = !(super1Recs || super3Recs);
+  const noListedNotes = !superRecs;
   const noNotes = noTextNotes && !isArrPresent(alsoRecs) && noListedNotes;
   return (
     <Modal show={show} onHide={handleClose}>
@@ -65,12 +58,12 @@ const MoreInfoModal = (props) => {
         {/*{group2Recs.map((rec) => (*/}
         {/*  <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />*/}
         {/*))}*/}
-        {isArrPresent(super1Recs) ? (
+        {isArrPresent(superRecs) ? (
           <h4>Also associated with this location: </h4>
         ) : (
           <></>
         )}
-        {super1Recs.map((r) => (
+        {superRecs.map((r) => (
           <ModalPlaySS {...r} key={`${r.order}`} />
         ))}
       </Modal.Body>
