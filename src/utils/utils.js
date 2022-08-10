@@ -1,8 +1,12 @@
 const allZones = require("../data/zones.json");
 
+// General utils
+
 export const isArrPresent = (myArr) => {
   return myArr && Array.isArray(myArr) && myArr.length;
 };
+
+// Search Utils
 
 /**
  * Create an object containing only the info needed for searching
@@ -125,6 +129,8 @@ export const getSeeAlsoRecordsByIds = (ids, allData = allZones) => {
   return output;
 };
 
+// Group utils
+
 export const getGroupRecordsById = (id, allData = allZones) => {
   return allData.reduce(
     (prev, curr) => [...prev, ...getZoneRecordsInGroupById(id, curr)],
@@ -146,6 +152,8 @@ const getZoneRecordsInGroupById = (id, zoneData = { localities: [] }) => {
   });
   return outputLocalities;
 };
+
+// Super Script utilities
 
 const getZoneRecordsByZoneId = (id, zoneData = allZones) => {
   return zoneData.filter((z) => z.number === parseInt(id))[0];
@@ -172,19 +180,29 @@ export const getAllSuperRecs = (ids = [], zoneNum, thisRecord) => {
   return Array.from(allRecsFlat);
 };
 
+// Types
+
 const displayTypeName = (type, localityName) => {
   const isName = type.name.toLowerCase() === localityName.toLowerCase();
   const isEssentiallyName =
-    `${localityName} ${type.type}`.toLowerCase() === type.name.toLowerCase();
-
+    `${localityName} ${type.type}`.toLowerCase() === type.name.toLowerCase() ||
+    `${type.type} ${localityName}`.toLowerCase() === type.name.toLowerCase();
   return !isName && !isEssentiallyName;
+};
+
+const prefixKindName = (prefix, main) => {
+  if (prefix) {
+    return `${prefix} ${main}`;
+  }
+  return main;
 };
 
 export const getTypesString = (typesArr = [], localityName) =>
   typesArr
     .map(
       (rec) =>
-        rec.type + (displayTypeName(rec, localityName) ? ` (${rec.name})` : "")
+        prefixKindName(rec.prefix, rec.type) +
+        (displayTypeName(rec, localityName) ? ` (${rec.name})` : "")
     )
     .join(", ");
 

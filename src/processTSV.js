@@ -67,11 +67,13 @@ const SEEID1 = 51;
 const SEEID2 = 56;
 const SEEID3 = 61;
 const SEEID4 = 66;
+const KINDPREFIX1 = 67;
 const KIND1 = 68;
 const KINDNAME1 = 71;
 const SUPER1 = 72;
 const SUPER1a = 73;
 const SUPER1_1 = 74;
+const KINDPREFIX2 = 75;
 const KIND2 = 76;
 const KINDNAME2 = 79;
 const SUPER2 = 80;
@@ -180,10 +182,18 @@ const processNormalZones = (split) => {
 
     // Add Types
     if (split[KIND1]) {
-      newLocality.types.push({ type: split[KIND1], name: split[KINDNAME1] });
+      newLocality.types.push({
+        prefix: split[KINDPREFIX1],
+        type: split[KIND1],
+        name: split[KINDNAME1],
+      });
     }
     if (split[KIND2]) {
-      newLocality.types.push({ type: split[KIND2], name: split[KINDNAME2] });
+      newLocality.types.push({
+        prefix: split[KINDPREFIX2],
+        type: split[KIND2],
+        name: split[KINDNAME2],
+      });
     }
     if (split[KIND3]) {
       newLocality.types.push({ type: split[KIND3], name: split[KINDNAME3] });
@@ -195,7 +205,7 @@ const processNormalZones = (split) => {
       newLocality.types.push({ type: split[KIND5], name: split[KINDNAME5] });
     }
     if (split[KIND6]) {
-      newLocality.types.push({ type: split[KIND6], name: split[KINDNAME1] });
+      newLocality.types.push({ type: split[KIND6], name: split[KINDNAME6] });
     }
     if (split[KIND7]) {
       newLocality.types.push({ type: split[KIND7], name: split[KINDNAME7] });
