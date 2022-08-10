@@ -18,6 +18,10 @@ const hasMacrons = (input) => {
   return /[^\u0000-\u007f]/.test(input);
 };
 
+const replaceSpecialCharacters = (word) => {
+  return word.replaceAll("_k_", "𝙠").replaceAll("_K_", "𝙆");
+};
+
 const removeMacrons = (input) => {
   return input
     .replace(/\u0101/g, "a")
@@ -112,7 +116,7 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
       newLocality.altNames = [];
     }
     newLocality.altNames.push({
-      name: split[INDEXNAME2],
+      name: replaceSpecialCharacters(split[INDEXNAME2]),
       altSpellings: [removeMacrons(split[INDEXNAME2]).toLowerCase()],
       audioStart: (split[START2] && parseFloat(split[START2])) || 0,
       audioEnd: (split[END2] && parseFloat(split[END2])) || 0,
@@ -169,7 +173,7 @@ const processNormalZones = (split) => {
     const newLocality = {
       order: parseInt(split[ZONEORDERNUM]),
       zoneNumber: parseInt(split[ZONENUM]),
-      name: split[INDEXNAME1],
+      name: replaceSpecialCharacters(split[INDEXNAME1]),
       uniqueId: split[0],
       types: [],
       noteSpeech: split[NOTESPEECH] ? split[NOTESPEECH] : undefined,
