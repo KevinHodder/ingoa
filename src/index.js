@@ -7,11 +7,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import About from "./routes/About";
 import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <header>
+        <NavBar />
+      </header>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />

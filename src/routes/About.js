@@ -1,4 +1,3 @@
-import NavBar from "../components/NavBar";
 import styled from "styled-components";
 import GoToTop from "../components/GoToTop";
 
@@ -16,7 +15,6 @@ const TOC = styled.div`
 const About = () => {
   return (
     <>
-      <NavBar />
       <main style={{ padding: "10px" }}>
         <TOC>
           <strong>Table of Contents</strong>

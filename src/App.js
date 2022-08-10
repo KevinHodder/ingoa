@@ -9,7 +9,6 @@ import MapNI from "./components/MapNI";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import GoToTop from "./components/GoToTop";
-import Footer from "./components/Footer";
 import { AudioProvider } from "./utils/useAudio";
 
 const Maps = styled.div`
@@ -24,9 +23,6 @@ function App() {
 
   return (
     <Fragment>
-      <header>
-        <NavBar />
-      </header>
       <AudioProvider>
         <main>
           <Header />
