@@ -1,4 +1,4 @@
-import { getIndexData, getSeeAlsoRecordsByIds } from "./utils";
+import { getIndexData, getSeeAlsoRecordsByIds, getTypesString } from "./utils";
 
 const testData = [
   {
@@ -189,6 +189,80 @@ describe("getSeeAlsoRecordsByIds", () => {
           "pn_zo_1-66"
         );
       });
+    });
+  });
+});
+
+describe("getTypesString", () => {
+  describe("with empty type array", () => {
+    it("should return an empty string", () => {
+      expect(getTypesString([], "anything")).toEqual("");
+    });
+  });
+  // no names
+  describe("with one record in the type array", () => {
+    describe("with a prefix", () => {
+      it("should combine the prefix and type into a single string, with a space between", () => {
+        const input = [{ prefix: "former", type: "hotdog" }];
+        expect(getTypesString(input)).toEqual("former hotdog");
+      });
+    });
+    describe("with no prefix", () => {
+      it("should return just the type name, with no space at the start", () => {
+        const input = [{ prefix: undefined, type: "hotdog" }];
+        expect(getTypesString(input)).toEqual("hotdog");
+      });
+    });
+  });
+  describe("with more than one record in the type array", () => {
+    describe("with a prefix on one", () => {
+      it("should combine all records into a single string, including the prefix, with a comma between", () => {
+        const input = [
+          { type: "hamburger" },
+          { prefix: "former", type: "hotdog" },
+        ];
+        expect(getTypesString(input)).toEqual("hamburger, former hotdog");
+      });
+    });
+    describe("with no prefix", () => {
+      it("should return just the type names with comma separation", () => {
+        const input = [
+          { prefix: undefined, type: "hotdog" },
+          { type: "cheeseburger" },
+        ];
+        expect(getTypesString(input)).toEqual("hotdog, cheeseburger");
+      });
+    });
+  });
+  // handling names
+  describe("when the kind name includes the locality and type (before)", () => {
+    it("should not show the name in brackets", () => {
+      const localityName = "ABC";
+      const input = [{ prefix: "former", type: "lake", name: "ABC lake" }];
+      expect(getTypesString(input, localityName)).toEqual("former lake");
+    });
+  });
+  describe("when the kind name includes the locality and type (after)", () => {
+    it("should not show the name in brackets", () => {
+      const localityName = "ABC";
+      const input = [{ prefix: "former", type: "lake", name: "lake ABC" }];
+      expect(getTypesString(input, localityName)).toEqual("former lake");
+    });
+  });
+  describe("when the kind name is just the locality name", () => {
+    it("should not show the name in brackets", () => {
+      const localityName = "ABC";
+      const input = [{ prefix: "former", type: "lake", name: "ABC" }];
+      expect(getTypesString(input, localityName)).toEqual("former lake");
+    });
+  });
+  describe("when the kind name differs from the locality and type", () => {
+    it("should not show the name in brackets", () => {
+      const localityName = "ABC";
+      const input = [{ prefix: "former", type: "lake", name: "lake ABCD" }];
+      expect(getTypesString(input, localityName)).toEqual(
+        "former lake (lake ABCD)"
+      );
     });
   });
 });

@@ -208,10 +208,3 @@ export const getTypesString = (typesArr = [], localityName) =>
         (displayTypeName(rec, localityName) ? ` (${rec.name})` : "")
     )
     .join(", ");
-
-export const getZoneNameByZoneNumber = (id, zones = allZones) => {
-  if (!id) {
-    return "";
-  }
-  return zones.filter((zone) => zone.number === parseInt(id))[0].nameCommon;
-};
