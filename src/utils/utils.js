@@ -183,6 +183,9 @@ export const getAllSuperRecs = (ids = [], zoneNum, thisRecord) => {
 // Types
 
 const displayTypeName = (type, localityName) => {
+  if (!type.name) {
+    return false;
+  }
   const isName = type.name.toLowerCase() === localityName.toLowerCase();
   const isEssentiallyName =
     `${localityName} ${type.type}`.toLowerCase() === type.name.toLowerCase() ||
