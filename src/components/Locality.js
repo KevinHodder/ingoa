@@ -56,6 +56,10 @@ const AltTitle = styled.div`
   font-style: italic;
 `;
 
+const Placeholder = styled.div`
+  min-width: 20px;
+`;
+
 const Locality = (props) => {
   const { locality, track, openModal, setModalContent, hideShowMore } = props;
   const thisID = locality.uniqueId;
@@ -79,18 +83,21 @@ const Locality = (props) => {
     openModal();
   };
 
+  // These should never play the whole track
+  const playAudio = (props) => {
+    if (props.start && props.end) {
+      return play(props);
+    }
+  };
+
   const PlayableName = forwardRef((props, ref) => (
-    <TooltipZone {...props} ref={ref}>
+    <TooltipZone {...props} onClick={() => playAudio(playProps)} ref={ref}>
       {locality.audioStart ? (
-        <Speaker
-          name={locality.name}
-          isPlaying={thisIsPlaying}
-          play={() => play(playProps)}
-        />
+        <Speaker name={locality.name} isPlaying={thisIsPlaying} />
       ) : (
-        <div />
+        <Placeholder />
       )}
-      <Name onClick={() => play(playProps)}>{locality.name}</Name>
+      <Name>{locality.name}</Name>
     </TooltipZone>
   ));
 

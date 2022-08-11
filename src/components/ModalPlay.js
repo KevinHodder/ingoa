@@ -23,14 +23,24 @@ const ModalPlay = (props) => {
     end: audioEnd,
   };
 
+  const playAudio = (props) => {
+    if (audioStart && audioEnd) {
+      return play(props);
+    }
+  };
+
   let [thisIsPlaying, setThisIsPlaying] = useState(false);
   useEffect(() => {
     setThisIsPlaying(isPlaying && currentlyPlaying === thisID);
   }, [isPlaying, currentlyPlaying]);
 
   return (
-    <PlayRec onClick={() => play(playProps)}>
-      <Speaker name={props.name} isPlaying={thisIsPlaying} play={() => {}} />
+    <PlayRec onClick={() => playAudio(playProps)}>
+      {audioEnd ? (
+        <Speaker name={props.name} isPlaying={thisIsPlaying} play={() => {}} />
+      ) : (
+        <div />
+      )}
       {name}, in {zoneName}, spoken by {speaker}
     </PlayRec>
   );
