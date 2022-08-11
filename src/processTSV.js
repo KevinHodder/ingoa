@@ -33,7 +33,8 @@ const removeMacrons = (input) => {
     .replace(/\u014d/g, "o")
     .replace(/\u014c/g, "O")
     .replace(/\u016b/g, "u")
-    .replace(/\u016a/g, "U");
+    .replace(/\u016a/g, "U")
+    .replaceAll(/_k_/gi, "k");
 };
 
 const csvFile = fs.readFileSync("../placenames.tsv", "utf8");
