@@ -19,7 +19,11 @@ const hasMacrons = (input) => {
 };
 
 const replaceSpecialCharacters = (word) => {
-  return word.replaceAll("_k_", "𝙠").replaceAll("_K_", "𝙆");
+  return word
+    .replaceAll("_k_", "𝙠")
+    .replaceAll("_K_", "𝙆")
+    .replaceAll("_h_", "ʰ")
+    .replaceAll("_H_", "ᴴ");
 };
 
 const removeMacrons = (input) => {
@@ -34,7 +38,8 @@ const removeMacrons = (input) => {
     .replace(/\u014c/g, "O")
     .replace(/\u016b/g, "u")
     .replace(/\u016a/g, "U")
-    .replaceAll(/_k_/gi, "k");
+    .replaceAll(/_k_/gi, "k")
+    .replaceAll(/_h_/gi, "h");
 };
 
 const csvFile = fs.readFileSync("../placenames.tsv", "utf8");
