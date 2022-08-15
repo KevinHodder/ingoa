@@ -45,7 +45,7 @@ const ModalPlay = (props) => {
       )}
       <Fragment>
         {props.name} ({getTypesString(props.types, props.name)})
-        {audioEnd ? `, spoken by {speaker}` : ``}
+        {audioEnd ? `, spoken by ${speaker}` : ``}
       </Fragment>
     </PlayRec>
   );
