@@ -181,15 +181,37 @@ export const getAllSuperRecs = (ids = [], zoneNum, thisRecord) => {
 };
 
 // Types
+const removeSpecialCharacters = (input) => {
+  return input
+    .replace(/\u0101/g, "a")
+    .replace(/\u0100/g, "A")
+    .replace(/\u0113/g, "e")
+    .replace(/\u0112/g, "E")
+    .replace(/\u012b/g, "i")
+    .replace(/\u012a/g, "I")
+    .replace(/\u014d/g, "o")
+    .replace(/\u014c/g, "O")
+    .replace(/\u016b/g, "u")
+    .replace(/\u016a/g, "U")
+    .replaceAll(/_k_/gi, "k")
+    .replaceAll("ʰ", "h")
+    .replaceAll("_h_", "h")
+    .replaceAll("ᴴ", "H")
+    .replaceAll("_H_", "H");
+};
 
 const displayTypeName = (type, localityName) => {
   if (!type.name) {
     return false;
   }
-  const isName = type.name.toLowerCase() === localityName.toLowerCase();
+  const isName =
+    removeSpecialCharacters(type.name).toLowerCase() ===
+    removeSpecialCharacters(localityName).toLowerCase();
   const isEssentiallyName =
-    `${localityName} ${type.type}`.toLowerCase() === type.name.toLowerCase() ||
-    `${type.type} ${localityName}`.toLowerCase() === type.name.toLowerCase();
+    removeSpecialCharacters(`${localityName} ${type.type}`).toLowerCase() ===
+      removeSpecialCharacters(type.name).toLowerCase() ||
+    removeSpecialCharacters(`${type.type} ${localityName}`).toLowerCase() ===
+      removeSpecialCharacters(type.name).toLowerCase();
   return !isName && !isEssentiallyName;
 };
 
