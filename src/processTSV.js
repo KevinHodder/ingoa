@@ -42,10 +42,15 @@ const removeMacrons = (input) => {
     .replaceAll(/_h_/gi, "h");
 };
 
-const csvFile = fs.readFileSync("../placenames.tsv", "utf8");
-const [header, ...lines] = csvFile.split("\r\n"); // Windows = \r\n, Linux/Mac = \n
+const placenamesFile = fs.readFileSync("../placenames.tsv", "utf8");
+const [header, ...lines] = placenamesFile.split("\r\n"); // Windows = \r\n, Linux/Mac = \n
+
+const zonesFile = fs.readFileSync("../zones.tsv", "utf8");
+const [zoneHeader, ...zoneLines] = zonesFile.split("\r\n"); // Windows = \r\n, Linux/Mac = \n
+
 console.log(header);
 
+// Placename columns
 const ZONENUM = 4;
 const ZONENAME = 5;
 const ZONEORDERNUM = 6;
@@ -100,6 +105,9 @@ const KINDNAME6 = 101;
 const KIND7 = 102;
 const KINDNAME7 = 105;
 
+//Zone Columns
+const zoneNUMBER = 1;
+const zoneNOTES = 60;
 // const splitHeader = header.split(",");
 // splitHeader.map((item, index) => console.log(`${index}: ${item}`));
 
@@ -320,5 +328,13 @@ lines.forEach((line) => {
   processPartZones(split);
 });
 zones.forEach((z) => (z.speakers = [...z.speakers]));
+
+zoneLines.forEach((zoneLine) => {
+  const zoneSplit = zoneLine.split("\t");
+  const zoneMatch = zones.find(
+    (z) => z.number === parseInt(zoneSplit[zoneNUMBER])
+  );
+  zoneMatch.notes = zoneSplit[zoneNOTES];
+});
 
 fs.writeFileSync("data/zones.json", JSON.stringify(zones));

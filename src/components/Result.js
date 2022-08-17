@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import Localities from "./Localities";
 import MoreInfoModal from "./MoreInfoModal";
 import "./result.css";
+import PlayAll from "./PlayAll";
 
 const SpeakerInfo = styled.div`
   font-size: 1.5em;
@@ -20,7 +21,7 @@ const SpeakerName = styled.p`
 
 export const Result = (props) => {
   const { details, index } = props;
-  const { nameCommon, speakers, localities, number, track } = details;
+  const { nameCommon, speakers, localities, number, track, notes } = details;
 
   const { activeEventKey } = useContext(AccordionContext);
   const thisElem = useRef();
@@ -46,6 +47,9 @@ export const Result = (props) => {
       <Accordion.Body>
         {activeEventKey === index.toString() ? (
           <>
+            <div>Zone {number}</div>
+            <PlayAll track={track} zoneName={nameCommon} />
+            <div>{notes}</div>
             <SpeakerInfo>
               Spoken by | Kaikōrero:&nbsp;
               <SpeakerName>{speakers.join(", ")}</SpeakerName>
