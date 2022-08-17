@@ -19,9 +19,22 @@ const SpeakerName = styled.p`
   display: inline-flex;
 `;
 
+const ZoneNumber = styled.div`
+  font-size: 1.5em;
+  margin-bottom: 1em;
+`;
+const ZoneNotes = styled.div`
+  font-size: 1.2em;
+`;
+
+const PlayAllBlock = styled(PlayAll)`
+  margin-bottom: 1em;
+`;
 export const Result = (props) => {
   const { details, index } = props;
   const { nameCommon, speakers, localities, number, track, notes } = details;
+
+  const isPartZone = nameCommon.includes("Introduction to Part");
 
   const { activeEventKey } = useContext(AccordionContext);
   const thisElem = useRef();
@@ -47,9 +60,9 @@ export const Result = (props) => {
       <Accordion.Body>
         {activeEventKey === index.toString() ? (
           <>
-            <div>Zone {number}</div>
-            <PlayAll track={track} zoneName={nameCommon} />
-            <div>{notes}</div>
+            {isPartZone ? null : <ZoneNumber>Zone {number}</ZoneNumber>}
+            <PlayAllBlock track={track} zoneName={nameCommon} />
+            {notes ? <ZoneNotes>{notes}</ZoneNotes> : null}
             <SpeakerInfo>
               Spoken by | Kaikōrero:&nbsp;
               <SpeakerName>{speakers.join(", ")}</SpeakerName>
