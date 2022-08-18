@@ -59,7 +59,7 @@ const MoreInfoModal = (props) => {
         {/*  <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />*/}
         {/*))}*/}
         {isArrPresent(superRecs) ? (
-          <h4>Also associated with this location: </h4>
+          <h4>Associated name/s | He ingoa honoa</h4>
         ) : (
           <></>
         )}
