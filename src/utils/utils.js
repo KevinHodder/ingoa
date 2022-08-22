@@ -45,7 +45,14 @@ export const getResultDataBasedOnFuseResult = (
     // return whole zone if the search matches zone name
     const zoneRecord = allData.find((z) => z.number === result.item.number);
     output[index] = { ...zoneRecord };
-    if (matches.includes(removeSpecialCharacters(zoneRecord.nameCommon))) {
+    if (
+      matches.some(
+        // was previously .includes(), but I wanted to selectively tweak the name for matching
+        (match) =>
+          removeSpecialCharacters(match).toLowerCase() ===
+          removeSpecialCharacters(zoneRecord.nameCommon).toLowerCase()
+      )
+    ) {
       return (output[index].localities = zoneRecord.localities);
     }
     // otherwise return just matching search results
