@@ -34,6 +34,10 @@ const MapSIZones = ({ data, goTo }) => {
   }, []);
 
   const getHoverName = (id) => {
+    if (id === "176_177") {
+      //Chathams
+      return "Chatham Islands";
+    }
     return data.filter((rec) => parseFloat(rec.number) === parseFloat(id))[0]
       .nameCommon;
   };

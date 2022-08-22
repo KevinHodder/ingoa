@@ -45,7 +45,7 @@ export const getResultDataBasedOnFuseResult = (
     // return whole zone if the search matches zone name
     const zoneRecord = allData.find((z) => z.number === result.item.number);
     output[index] = { ...zoneRecord };
-    if (matches.includes(zoneRecord.nameCommon)) {
+    if (matches.includes(removeSpecialCharacters(zoneRecord.nameCommon))) {
       return (output[index].localities = zoneRecord.localities);
     }
     // otherwise return just matching search results
@@ -197,7 +197,11 @@ const removeSpecialCharacters = (input) => {
     .replaceAll("ʰ", "h")
     .replaceAll("_h_", "h")
     .replaceAll("ᴴ", "H")
-    .replaceAll("_H_", "H");
+    .replaceAll("_H_", "H")
+    .replaceAll("_l_", "l")
+    .replaceAll("_L_", "L")
+    .replaceAll("𝒍", "l")
+    .replaceAll("𝑳", "L");
 };
 
 const displayTypeName = (type, localityName) => {

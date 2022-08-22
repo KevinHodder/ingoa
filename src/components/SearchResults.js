@@ -1,8 +1,8 @@
+import { Fragment, useEffect, useRef } from "react";
 import { Accordion } from "react-bootstrap";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Result from "./Result";
-import { Fragment, useEffect, useRef } from "react";
 
 const Wrapper = styled.div`
   padding: 5px;

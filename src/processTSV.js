@@ -23,7 +23,9 @@ const replaceSpecialCharacters = (word) => {
     .replaceAll("_k_", "𝙠")
     .replaceAll("_K_", "𝙆")
     .replaceAll("_h_", "ʰ")
-    .replaceAll("_H_", "ᴴ");
+    .replaceAll("_H_", "ᴴ")
+    .replaceAll("_l_", "𝒍")
+    .replaceAll("_L_", "𝑳");
 };
 
 const removeMacrons = (input) => {
@@ -39,7 +41,8 @@ const removeMacrons = (input) => {
     .replace(/\u016b/g, "u")
     .replace(/\u016a/g, "U")
     .replaceAll(/_k_/gi, "k")
-    .replaceAll(/_h_/gi, "h");
+    .replaceAll(/_h_/gi, "h")
+    .replaceAll(/_l_/gi, "l");
 };
 
 const placenamesFile = fs.readFileSync("../placenames.tsv", "utf8");
@@ -166,7 +169,7 @@ const processNormalZones = (split) => {
   if (!isItemPresent(zones, split[ZONENUM])) {
     zones.push({
       number: parseInt(split[ZONENUM]),
-      nameCommon: split[ZONENAME],
+      nameCommon: replaceSpecialCharacters(split[ZONENAME]),
       speakers: new Set(),
     });
   }
