@@ -15,12 +15,10 @@ const SuperSpacer = styled.div`
 
 const MoreInfoModal = (props) => {
   const { show, handleClose, content } = props;
-  const { noteName, notePlace, noteSpeech, groups, supers, zoneNumber, order } =
+  const { noteName, notePlace, noteSpeech, supers, zoneNumber, order } =
     content;
 
   const alsoRecs = getSeeAlsoRecordsByIds(content?.seeAlso);
-  // const group1Recs = groups?.[0] ? getGroupRecordsById(groups[0].id) : [];
-  // const group2Recs = groups?.[1] ? getGroupRecordsById(groups[1].id) : [];
 
   const superRecs = getAllSuperRecs(supers, zoneNumber, order);
   const noTextNotes = !(noteSpeech || notePlace || noteName);
