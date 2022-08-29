@@ -26,6 +26,20 @@ const About = () => {
                   <a href="#outline">Outline | Whakamārama poto</a>
                 </li>
                 <li>
+                  <a href="#howto">
+                    How to use the dictionary | Me pehea te whakamahi i te
+                    papakupu
+                  </a>
+                </li>
+                <li>
+                  <a href="#conventions">
+                    Conventions | Ngā Tikanga o tēnei Papakupu
+                  </a>
+                </li>
+                <li>
+                  <a href="#zones">About the Zones | Mō ngā Takiwā</a>
+                </li>
+                <li>
                   <a href="#structure">Structure | Te whakatakotoranga</a>
                 </li>
                 <li>
@@ -79,19 +93,84 @@ const About = () => {
           wish be respected.
         </p>
         <p>
-          The names are sorted into 177 clearly defined "Zones” (takiwā), and
-          are spoken in alphabetical order within each Zone.The Zones do not
-          claim to correspond to rohe-a-iwi, but there is often a rough
-          alignment because of the speakers' whakapapa. The dictionary was
-          intended especially for broadcasters and those who have to speak in
-          public, but everyone who wants to pronounce placenames authentically
-          will find it valuable. The list includes geographic features down to
-          the larger hills and streams, all human settlements, suburbs and
-          schools, marae, meeting houses and dining halls and many other
-          features. It does not include names conferred since 1994, such as
-          Government departments or new marae. It does not give the names'
-          meanings. That would have taken more than a lifetime, and would be
-          done better by tangata whenua in each area.
+          The dictionary was intended especially for broadcasters and those who
+          have to speak in public, but everyone who wants to pronounce
+          placenames authentically will find it valuable.
+        </p>
+        <h3 id={"howto"}>
+          How to use the dictionary | Me pehea te whakamahi i te papakupu
+        </h3>
+        <ol>
+          <li>
+            Click on the map where the place is, or type it into the box
+            provided. (The maps do not appear on small screens.) The names are
+            sorted into 177 clearly defined "Zones” (takiwā). A Zone name will
+            appear below the box.
+          </li>
+          <li>
+            Click on the Zone to open an alphabetical list of the names in it.
+          </li>
+          <li>
+            If the name has a koruru beside it, click on that or the name to
+            hear it spoken.
+          </li>
+          <li>
+            Click on “Show more | Whakakitea atu” to the right of the basic
+            information to bring down a box with further background, including
+            associated names, such as the wharenui and wharekai on a marae.
+          </li>
+          <li>
+            The speaker's name will appear in a popup. (Typing a speaker's name
+            into the box will open every track in which that speaker's voice is
+            heard.)
+            {/*Click on a speaker's name at the head of the list for more*/}
+            {/*information about the speaker.*/}
+          </li>
+        </ol>
+        <h3 id={"conventions"}>Conventions | Ngā Tikanga o tēnei Papakupu</h3>
+        <p>
+          The speaker's voices are the prime authority. The written names follow
+          them and/or the conventions of the time so far as capitalisation,
+          spacing, hyphens etc. go. (Macrons were not commonplace in 1984-94 and
+          have been added.) Where the NZ Gazetteer differs, this may be noted.
+        </p>
+        <p>
+          In Whanganui and Taranaki, in words where h and wh are not aspirated,
+          the h (or H) has been superscripted in the text. How this sounds
+          varies between regions, between speakers, and by context. (For
+          example, in Patea/Hawera “Hawera” vs “Te Hawera” for the same place.)
+          Capitalisation of superscript h follows the usual convention, not any
+          distinction of pronunciation.)
+        </p>
+        <p>
+          In Te Wai Pounamu, the k that is written and spoken corresponding to
+          ng in the north has been italicised, as in kaika; kainga in the north.
+          (It was unmarked in 1991. There was a move to underline it in the
+          1990s, but this seems to have faded, perhaps because it does not
+          apparently affect pronunciation.) In the same way, the southern l that
+          stands in for northern r, and g for ng/k, have been italicised. (This
+          has nothing to do with the Southland prounciation of r, by the way.)
+          Only one speaker, Huata Holmes, wanted the g written, though it occurs
+          in Anglicised Māori words such as Kilmog, matagouri and Otago.
+        </p>
+        <h3 id={"zones"}>About the Zones | Mō ngā Takiwā</h3>
+        <p>
+          They meander up the centre, west and east of the lower North Island;
+          then the east, west and centre of the upper North Island; then down
+          and clockwise around the South Island.
+        </p>
+        <p>
+          The Zones do not claim to correspond to rohe-a-iwi, but there is often
+          a rough alignment because of the speakers' whakapapa.
+        </p>
+        <p>
+          The lists include geographic features down to the larger hills and
+          streams, all human settlements, suburbs and schools, marae, meeting
+          houses and dining halls and many other features. It does not include
+          names conferred since 1994, such as Government departments or new
+          buildings. It does not give the names' meanings. That would have taken
+          more than a lifetime, and would be done better by tangata whenua in
+          each area.
         </p>
         <h3 id="structure">Structure | Te whakatakotoranga</h3>
         <p>
@@ -126,18 +205,11 @@ const About = () => {
           </ul>
         </p>
         <p>
-          Total distance travelled: 23,000 km approx.
-          <br />
-          Total track duration: 6 hours 30 minutes
-        </p>
-        <p>
           To a large extent, the parts have been merged to create this website,
           and the numbering of the zones – crucial to finding places on the
-          cassettes and CDs - backgrounded. (They meander up the centre, west
-          and east of the lower North Island, the east, west and centre of the
-          upper North Island, and down and clockwise around the South Island.)
+          cassettes and CDs - backgrounded.
         </p>
-        <h3 id={"journey"}>The Journey | Ngā Haererenga</h3>
+        <h3 id={"journey"}>My Journeys | Ōku Haererenga</h3>
         <p>
           The first germ of the dictionary was planted in 1977, when as
           Journalist in Charge at Radio Gisborne, I asked Heni Sunderland to
@@ -153,14 +225,25 @@ const About = () => {
           names of the whole country, but was turned down. The following year my
           application was accepted. (Within seconds of the presentation, a
           non-speaker of te reo began lecturing me about the correct
-          pronuncation of Whanganui.)
+          pronuncation of Whanganui. Far too much ink has been spilt and voices
+          raised over the “correct” pronunciation of wh everywhere. For
+          non-speakers of te reo a soft f will suffice and cannot change the
+          meaning. For those who care more, I recommend following the speakers
+          here.)
         </p>
         <p>
-          With no Internet, I gathered names from wherever I could, beginning
-          with the AA Road Map. This means it will be short on the names of
-          places far from roads, and the coverage of minor names will be
-          scattershot. The speakers themselves were invaluable in adding to the
-          lists.
+          With no Internet or online Gazetteer, I gathered names from wherever I
+          could, beginning with the AA Road Map. This means it will be short on
+          the names of places far from roads, and the coverage of minor names
+          will be scattershot. The speakers themselves were invaluable in adding
+          to the lists. Their memories and my understanding may have been faulty
+          in associating marae, wharenui and wharekai, and the only guidebook
+          was John Cresswell's 1977 “Maori Meeting Houses of the North Island”.
+          Many houses have opened and others fallen into disuse since these
+          recordings were made. Since the dictionary was aimed at radio
+          announcers, these names were originally meant to be secondary to
+          geographic features, but the speakers were determined that they should
+          be comprehensive.
         </p>
         <p>
           I typed the first part at home on an electric typewriter, and the
@@ -172,14 +255,14 @@ const About = () => {
           Bruce Biggs at Auckland University. One potential speaker refused
           point blank to have anything to do with the project if we used them.
           It became clear that - largely under the influence of Professor Tīmoti
-          Kāretu at Waikato University - the macron (eg Māori) was going to win
-          out, and we searched and replaced all 10 vowels (AA EE II OO UU aa ee
+          Kāretu at Waikato University - macrons (eg Māori) were going to win
+          out, and we searched and replaced all 10 vowels (AA EE II OO UU, aa ee
           ii oo uu) with their macronned equivalents - then searched and
           de-macronned all the wrongly altered English words such as schōl and
           mēting. Creating macrons was a job in itself in those days. Each one
           involved executing a subroutine, or macro, of backspace, half-raise,
           hyphen, half-lower. When I returned to the reluctant speaker with a
-          macronned list, he couldn't be happier to be recorded.
+          macronised list, he couldn't be happier to be recorded.
         </p>
         <p>
           Before I went out recording, I asked for printouts of the names, but
