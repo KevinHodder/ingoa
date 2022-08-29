@@ -12,9 +12,9 @@ const Footer = () => {
   return (
     <FooterBar id={"footer"}>
       <p>
-        Copyright © Hugh Young 1985, 1991 and 1994. The text and recordings may
-        not be resold for profit. They may be copied for educational purposes.
-        Copies should be clearly identified as such.
+        Copyright © Hugh Young 1985, 1991, 1994 and 2022. The text and
+        recordings may not be resold for profit. They may be copied for
+        educational purposes. Copies should be clearly identified as such.
       </p>
       <p>
         <a
@@ -29,9 +29,7 @@ const Footer = () => {
           />
         </a>
         <br />
-        <span>
-          Nga Ingoa o Aotearoa, an oral dictionary of Maori placenames
-        </span>
+        <span>Nga Ingoa o Aotearoa, an oral dictionary of Maori placename</span>
         &nbsp;by&nbsp;
         <a
           href="mailto:hughingoa@gmail.com"
@@ -49,16 +47,6 @@ const Footer = () => {
         >
           Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 New
           Zealand License
-        </a>
-        .
-        <br />
-        Based on a work at{" "}
-        <a
-          href="http://www.top.net.nz/%7Ehugh/ingoa/contents.html"
-          rel="dc:source"
-          target="_blank"
-        >
-          www.top.net.nz
         </a>
         .
       </p>

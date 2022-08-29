@@ -269,16 +269,15 @@ const About = () => {
           invariably more would have to be added on the road. I tried to ensure
           the speakers chose each other. I asked that they have mana and te reo,
           preferably as their first language. In one case of one ideal
-          candidate, up the Whanganui, it was his only language and I couldn't
-          communicate in sufficient detail to reach him. His nephew and
-          gatekeeper spoke the names reluctandly and hurriedly. I tried to
-          insure that women were included, but they often proved reticent,
-          despite being the better speakers. One influential contact insisted
-          that only children of her late father could say the local names, but
-          none of them spoke te reo. In the event she settled for a cousin, who
-          was excellent. Often the best speakers were shy, while the less
-          suitable ones pushed themselves forward. I learn much about diplomacy
-          on my travels, and the many gentle ways of saying “No.”
+          candidate, it was his only language and I couldn't communicate in
+          sufficient detail to reach him. I tried to insure that women were
+          included, but they often proved reticent, despite being the better
+          speakers. One influential contact insisted that only children of her
+          late father could say the local names, but none of them spoke te reo.
+          In the event she settled for a cousin, who was excellent. Often the
+          best speakers were shy, while the less suitable ones pushed themselves
+          forward. I learnt much about diplomacy on my travels, and the many
+          gentle ways of saying “No.”
         </p>
         <p>
           The first volume was entirely recorded on a portable reel-to-reel
@@ -300,17 +299,20 @@ const About = () => {
           Manuera, Tupi Puriri, and Matenga Baker.
         </p>
         <p>
-          I can't believe I completed recording and publishing the first volume
-          in only 18 months and painted and wallpapered my bathroom and built a
-          sundeck at the bottom of my garden, while also holding down a
-          full-time job. The first volume was launched at Takapuwahia Marae by
-          Rino Tirikatene (Snr). I paused the work in 1985-6 to concentrate on
-          passing the Homosexual Law Reform Act.
+          I drew the covers of the booklets, the first especially, in day-long
+          bursts of creativity, the North Island ones especially including many
+          local references.
+        </p>
+        <p>
+          I can't believe I completed recording and publishing the first parte
+          in only 18 monthswhile holding down a full-time job. Itwas launched at
+          Takapuwahia Marae by Rino Tirikatene (Snr). I paused the work in
+          1985-6 to concentrate on passing the Homosexual Law Reform Act.
         </p>
         <p>
           Without a grant for the second part, I could no longer rely on the
           Radio NZ typing pool, and created the lists at home, teaching myself
-          how to use a database, which were relatively new in 1986. (A
+          how to use databases, which were relatively new in 1986. (A
           “Superscript” word processor and “Superbase” database in a Commodore
           128 computer.)
         </p>
@@ -318,13 +320,23 @@ const About = () => {
           Most of the second volume was recorded on the Uher portable
           reel-to-reel machine, but at one point north of Auckland it broke down
           and I hired what had once been a top-of-the-line cassette machine, a
-          Nakimichi. The sound quality, even though I think it had Dolby noise
+          Nakimichi. The sound quality, even though it had Dolby noise
           reduction, was decidedly inferior. I completed the thermal region by
           1988 and presented one copy to Radio NZ in Rotorua. The station
           manager seemed uninterested. I made several long hauls into the King
-          Country, Waikato-Hauraki, Auckland and Northland in 1989-1990. By the
-          time it was completed in 1991, Radio NZ was unsupportive and this
-          volume was launched discreetly at my home by Bill Kere Kere.
+          Country, Waikato-Hauraki, Auckland and Northland in 1989-1990.
+        </p>
+        <p>
+          Invaluable throughout Tainui was a letter from the secretary to Te
+          Arikinui Dame Te Atairangikaahu giving her blessing to the project. I
+          especially remember the hospitality of Raureti and Bob Harris of
+          Kohukohu, who invited me to stay the night after recording them, help
+          myself to breakfast and let myself out in the morning, while they were
+          out milking cows and driving the school bus.
+        </p>
+        <p>
+          By the time Part 2 was completed in 1991, Radio NZ was unsupportive
+          and this volume was launched discreetly at my home by Bill Kere Kere.
         </p>
         <p>
           My first port of call when I embarked on the South Island was (later
@@ -336,14 +348,14 @@ const About = () => {
           I was in Christchurch making my first South Island contacts in 1991
           when I learnt that I had been made redundant from Radio NZ
           (ironically, in part because the Corporation had spent so much
-          fighting against Māori radio in courts). I determined to carry on, and
-          gained two grants through Internal Affairs, from the Lottery Grants
-          Board Culture and Heritage fund and the Pacific Conservation and
-          Development Trust, which is funded from the French Government's grant
-          of $13 million in recognition of (not "compensation for") the sinking
-          of the "Rainbow Warrior". Much of that went on a Digital Audio Tape
-          (DAT) recorder, and the third volume was entirely recorded on it. The
-          improvement in sound quality is evident.
+          fighting against Māori radio stations in courts). I determined to
+          carry on, and gained two grants through Internal Affairs, from the
+          Lottery Grants Board Culture and Heritage fund and the Pacific
+          Conservation and Development Trust, which is funded from the French
+          Government's grant of $13 million in recognition of (not "compensation
+          for") the sinking of the "Rainbow Warrior". Much of that went on a
+          Digital Audio Tape (DAT) recorder, and the third volume was entirely
+          recorded on it. The improvement in sound quality is evident.
         </p>
         <p>
           I visited the South Island three times altogether, travelling as far
@@ -356,7 +368,11 @@ const About = () => {
           in 1994.
         </p>
         <p>
-          People often said “You should have done this years ago when Mea Temea
+          The total distance travelled was approximately 23,000 km. The total
+          track duration is 6 hours 30 minutes
+        </p>
+        <p>
+          People often said “You should have done this years ago when Mea Te Mea
           was alive.” I'm very glad now that I did do it all those years ago,
           when so many great speakers were alive.
         </p>
@@ -379,13 +395,14 @@ const About = () => {
           Biggs and Merimeri Penfold in 1969, when few Pākehā did, and the
           linguistic and social landscape was very different. A friend, Murray
           Short invited him to Ruātoki and introduced him to Ngāi Tūhoe, John
-          Rangihau took him under his wing and he competed at Tūhoe Festivals
-          with Tūhoe ki Pōneke. He also has a connection to Parihaka, unveiling
-          Whatarau Wharehoka's headstone in 1973, and in 1981 helping prepare
-          for the centenary of te Rā o te Pāhua. As a VSA volunteer in Solomon
-          Islands in 1974-6, he co-authored a dictionary and grammar of Solomon
-          Islands Pijin. Although has no whakapapa Māori himself, he now has
-          mokopuna of Tūhoe, and whanaunga of Ngāti Porou, descent.
+          Rangihau took him under his wing and he competed at two Tūhoe
+          Festivals in the back row of Tūhoe ki Pōneke. He also has a connection
+          to Parihaka, unveiling Whatarau Wharehoka's headstone in 1973, and in
+          1981 helping prepare for the centenary of te Rā o te Pāhua. As a VSA
+          volunteer in Solomon Islands in 1974-6, he co-authored a dictionary
+          and grammar of Solomon Islands Pijin. Although has no whakapapa Māori
+          himself, he now has mokopuna of Tūhoe, and whanaunga of Ngāti Porou,
+          descent.
         </p>
         <h3 id="technical"> Technical | Te Hangarau</h3>
         <p>
@@ -810,13 +827,20 @@ const About = () => {
         <h2 id="website">This Website/Tēnei Pae tukutuku </h2>
         <p>
           Mark Honeychurch created the database from which this website draws
-          its data. It was Kevin Hodder (in Rwanda) who created the convenient
-          site you see. I have been greatly supported in bringing the site to
-          this stage by Professor Peter Adds and Paul Edwards of Te Herenga
-          Waka/Victoria University of Wellington, Vicki-Anne Heikell and Paul
-          Diamond of the Alexander Turnbull Library, my friends Lance Gunderson
-          and Mark Masterson, and most of all by my devoted husband, Tim
-          Bish-Young. Ngā mihi aroha ki ā koutou katoa.
+          its data, including the timings of the start and finish of each name,
+          and remastered the audio. It was Kevin Hodder (in Rwanda and Uganda)
+          who created the convenient site you see. I have been greatly supported
+          in bringing the site to this stage by Professor Peter Adds and Paul
+          Edwards of Te Herenga Waka/Victoria University of Wellington,
+          Vicki-Anne Heikell and Paul Diamond of the Alexander Turnbull Library,
+          my friends Lance Gunderson and Mark Masterson, and most of all by my
+          devoted husband, Tim Bish-Young. Ngā mihi aroha ki ā koutou katoa.
+        </p>
+        <p>
+          Nō reira, e koro mā, e kui mā, e hoa mā, e ōku rangatira maha, nō
+          koutou i uta ngā taonga ki runga i tēnei waka, tēnā koutou. Ka tukua e
+          au inaianei kia rere atu ki runga i ngā karekare o te moana, kia tai
+          atu ki tēhea te uta?
         </p>
         <p>- Hugh Young(-Bish)</p>
       </main>
