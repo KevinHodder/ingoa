@@ -6,6 +6,12 @@ import {
 } from "../utils/utils";
 import ModalPlay from "./ModalPlay";
 import ModalPlaySS from "./ModalPlaySS";
+import styled from "styled-components";
+
+const SuperSpacer = styled.div`
+  text-align: center;
+  margin: 5px auto;
+`;
 
 const MoreInfoModal = (props) => {
   const { show, handleClose, content } = props;
@@ -39,32 +45,25 @@ const MoreInfoModal = (props) => {
           <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />
         ))}
         {isArrPresent(alsoRecs) ? <br /> : <></>}
-        {/*/!* Group 1*!/*/}
-        {/*{isArrPresent(group1Recs) ? (*/}
-        {/*  <h4>Also associated with {groups[0].name} | Tirohia hoki</h4>*/}
-        {/*) : (*/}
-        {/*  <></>*/}
-        {/*)}*/}
-        {/*{group1Recs.map((rec) => (*/}
-        {/*  <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />*/}
-        {/*))}*/}
-        {/*{isArrPresent(group1Recs) ? <br /> : <></>}*/}
-        {/*/!* Group 2 info*!/*/}
-        {/*{isArrPresent(group2Recs) ? (*/}
-        {/*  <h4>Also associated with {groups[1].name} | Tirohia hoki</h4>*/}
-        {/*) : (*/}
-        {/*  <></>*/}
-        {/*)}*/}
-        {/*{group2Recs.map((rec) => (*/}
-        {/*  <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />*/}
-        {/*))}*/}
+        {/* Super scripts */}
         {isArrPresent(superRecs) ? (
           <h4>Associated name/s | He ingoa honoa</h4>
         ) : (
           <></>
         )}
-        {superRecs.map((r) => (
-          <ModalPlaySS {...r} key={`${r.order}`} />
+        {superRecs.map((superArr, i, orig) => (
+          <>
+            <div key={i}>
+              {superArr.map((r) => (
+                <ModalPlaySS {...r} key={`${r.order}`} />
+              ))}
+            </div>
+            {i < orig.length - 1 ? (
+              <SuperSpacer>- - - - - - - </SuperSpacer>
+            ) : (
+              <></>
+            )}
+          </>
         ))}
       </Modal.Body>
       {/*<Modal.Footer>*/}

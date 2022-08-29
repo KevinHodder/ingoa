@@ -3,6 +3,21 @@ const allZones = require("../data/zones.json");
 // General utils
 
 export const isArrPresent = (myArr) => {
+  // no val, not array, or empty array
+  if (!myArr || !Array.isArray(myArr) || !myArr.length) {
+    return false;
+  }
+  // If array content is arrays
+  if (
+    myArr &&
+    Array.isArray(myArr) &&
+    myArr.length &&
+    myArr.reduce((prev, curr) => prev || Array.isArray(curr), false)
+  ) {
+    // return true if any of the inner arrays are of non-zero length, else false
+    return myArr.reduce((prev, curr) => prev || isArrPresent(curr), false);
+  }
+  // return true if array length > 0 and inner items are not arrays, else false
   return myArr && Array.isArray(myArr) && myArr.length;
 };
 
@@ -178,13 +193,15 @@ export const getZoneSuperscriptRecordsById = (id, zoneNum, thisRecord) => {
 };
 
 export const getAllSuperRecs = (ids = [], zoneNum, thisRecord) => {
-  const allRecs = ids.map((id) =>
+  const idSet = new Set(ids);
+  const allRecs = Array.from(idSet).map((id) =>
     getZoneSuperscriptRecordsById(id, zoneNum, thisRecord)
   );
+  return allRecs;
   /// will probably change. is a bit dumb at the moment, I just don't want to pollute getZoneSuperscriptRecordsById
-  const allRecsFlat = new Set();
-  allRecs.forEach((recs) => recs.forEach((rec) => allRecsFlat.add(rec)));
-  return Array.from(allRecsFlat);
+  // const allRecsFlat = new Set();
+  // allRecs.forEach((recs) => recs.forEach((rec) => allRecsFlat.add(rec)));
+  // return Array.from(allRecsFlat);
 };
 
 // Types
