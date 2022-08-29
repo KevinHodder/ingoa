@@ -43,7 +43,7 @@ const About = () => {
                   <a href="#structure">Structure | Te whakatakotoranga</a>
                 </li>
                 <li>
-                  <a href="#journey">The Journey | Ngā Haererenga</a>
+                  <a href="#journey">My Journeys | Ōku Haererenga</a>
                 </li>
                 <li>
                   <a href="#technical">Technical | Te Hangarau</a>
