@@ -8,10 +8,23 @@ const hasPartZone = (arr, name) => {
   return arr.filter((record) => record.nameCommon.includes(name)).length > 0;
 };
 
-const getRecord = (arr, num) =>
+/**
+ * Get a Zone level record with a given (unique) zone number
+ * @param arr {object[]}- an array of top level Zone records
+ * @param num {int | string} - zone number (will parse strings to ints)
+ * @returns {*}
+ */
+const getZoneRecordByZoneNumber = (arr, num) =>
   arr.filter((record) => record.number === parseInt(num))[0];
 
-const getPartRecord = (arr, name) =>
+/**
+ * Same as get getZoneRecordByZoneNumber, but searching by name
+ * Name is less unique so only used for the "part zones" which don't have numbers in the spreadsheet
+ * @param arr {object[]}- an array of top level Zone records
+ * @param name {string}- zone name (need not be an identical match)
+ * @returns {*}
+ */
+const getZoneRecordByName = (arr, name) =>
   arr.filter((record) => record.nameCommon.includes(name))[0];
 
 const hasMacrons = (input) => {
@@ -24,6 +37,10 @@ const replaceSpecialCharacters = (word) => {
     .replaceAll("_K_", "𝙆")
     .replaceAll("_h_", "ʰ")
     .replaceAll("_H_", "ᴴ")
+    .replaceAll("_f_", "𝒇")
+    .replaceAll("_F_", "𝑭")
+    .replaceAll("_g_", "𝒈")
+    .replaceAll("_G_", "𝑮")
     .replaceAll("_l_", "𝒍")
     .replaceAll("_L_", "𝑳");
 };
@@ -42,6 +59,8 @@ const removeMacrons = (input) => {
     .replace(/\u016a/g, "U")
     .replaceAll(/_k_/gi, "k")
     .replaceAll(/_h_/gi, "h")
+    .replaceAll(/_f_/gi, "f")
+    .replaceAll(/_g_/gi, "g")
     .replaceAll(/_l_/gi, "l");
 };
 
@@ -177,7 +196,7 @@ const processNormalZones = (split) => {
   if (split[ZONEORDERNUM] > 0) {
     // exclude intro line
     //grab zone record entry
-    const zone = getRecord(zones, parseInt(split[ZONENUM]));
+    const zone = getZoneRecordByZoneNumber(zones, parseInt(split[ZONENUM]));
     // add locality array if required
     if (!zone.localities) {
       zone.localities = [];
@@ -309,7 +328,7 @@ const processPartZones = (split) => {
     });
   }
 
-  const zone = getPartRecord(zones, partName);
+  const zone = getZoneRecordByName(zones, partName);
   if (parseInt(split[ZONEORDERNUM]) === 0) {
     zone.track = `zones/part${partNum}.mp3`;
     zone.speakers.add(split[SPEAKER1]);
