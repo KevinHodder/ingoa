@@ -1,0 +1,7 @@
+/*Need this to override a style from the zoom component library*/
+[data-rmiz] {
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+    margin-right: 2rem;
+}

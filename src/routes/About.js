@@ -1,5 +1,14 @@
 import styled from "styled-components";
 import GoToTop from "../components/GoToTop";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+import "./about.css";
+import { ReactComponent as SpeakerPaused } from "../assets/headgreen.svg";
+import mapNI from "../assets/map-NI-red-spots-sequence.webp";
+import mapSI from "../assets/map-SI-red-spots-sequence.webp";
+import cover1 from "../assets/cover-part-1.webp";
+import cover2 from "../assets/cover-part-2.webp";
+import cover3 from "../assets/cover-part-3.webp";
 
 const TOC = styled.div`
   margin: 20px;
@@ -10,6 +19,10 @@ const TOC = styled.div`
     text-decoration: none;
     color: black;
   }
+`;
+
+const StandardImg = styled.img`
+  max-height: 250px;
 `;
 
 const About = () => {
@@ -111,8 +124,9 @@ const About = () => {
             Click on the Zone to open an alphabetical list of the names in it.
           </li>
           <li>
-            If the name has a koruru beside it, click on that or the name to
-            hear it spoken.
+            If the name has a koruru&nbsp;
+            <SpeakerPaused style={{ height: "1.25rem" }} /> beside it, click on
+            that or the name to hear it spoken.
           </li>
           <li>
             Click on “Show more | Whakakitea atu” to the right of the basic
@@ -154,6 +168,13 @@ const About = () => {
           in Anglicised Māori words such as Kilmog, matagouri and Otago.
         </p>
         <h3 id={"zones"}>About the Zones | Mō ngā Takiwā</h3>
+        <Zoom>
+          <StandardImg src={mapNI} />
+        </Zoom>
+        <Zoom>
+          <StandardImg src={mapSI} />
+        </Zoom>
+        <p></p>
         <p>
           They meander up the centre, west and east of the lower North Island;
           then the east, west and centre of the upper North Island; then down
@@ -303,6 +324,16 @@ const About = () => {
           bursts of creativity, the North Island ones especially including many
           local references.
         </p>
+        <Zoom>
+          <StandardImg src={cover1} />
+        </Zoom>
+        <Zoom>
+          <StandardImg src={cover2} />
+        </Zoom>
+        <Zoom>
+          <StandardImg src={cover3} />
+        </Zoom>
+        <p></p>
         <p>
           I can't believe I completed recording and publishing the first parte
           in only 18 monthswhile holding down a full-time job. Itwas launched at
