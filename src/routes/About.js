@@ -335,8 +335,8 @@ const About = () => {
         </Zoom>
         <p></p>
         <p>
-          I can't believe I completed recording and publishing the first parte
-          in only 18 monthswhile holding down a full-time job. Itwas launched at
+          I can't believe I completed recording and publishing the first part in
+          only 18 monthswhile holding down a full-time job. Itwas launched at
           Takapuwahia Marae by Rino Tirikatene (Snr). I paused the work in
           1985-6 to concentrate on passing the Homosexual Law Reform Act.
         </p>
