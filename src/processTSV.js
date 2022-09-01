@@ -27,10 +27,20 @@ const getZoneRecordByZoneNumber = (arr, num) =>
 const getZoneRecordByName = (arr, name) =>
   arr.filter((record) => record.nameCommon.includes(name))[0];
 
+/**
+ * Checks if a string contains macron characters
+ * @param input {string}
+ * @returns {boolean}
+ */
 const hasMacrons = (input) => {
   return /[^\u0000-\u007f]/.test(input);
 };
 
+/**
+ * returns a new string with any underscored letters replaced with the appropriate special characters
+ * @param word
+ * @returns {string}
+ */
 const replaceSpecialCharacters = (word) => {
   return word
     .replaceAll("_k_", "𝙠")
@@ -45,7 +55,12 @@ const replaceSpecialCharacters = (word) => {
     .replaceAll("_L_", "𝑳");
 };
 
-const removeMacrons = (input) => {
+/**
+ * returns a new string with any special characters downgraded to the base-english equivalent characters
+ * @param input {string}
+ * @returns {string}
+ */
+const removeSpecialCharacters = (input) => {
   return input
     .replace(/\u0101/g, "a")
     .replace(/\u0100/g, "A")
@@ -143,7 +158,9 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
     zone.speakers.add(split[SPEAKER1]);
   }
   if (hasMacrons(split[INDEXNAME1])) {
-    newLocality.altSpellings = [removeMacrons(split[INDEXNAME1]).toLowerCase()];
+    newLocality.altSpellings = [
+      removeSpecialCharacters(split[INDEXNAME1]).toLowerCase(),
+    ];
   }
   //TODO: Need to check for missing primary pronunciation
   //Alternative pronunciations
@@ -153,7 +170,7 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
     }
     newLocality.altNames.push({
       name: replaceSpecialCharacters(split[INDEXNAME2]),
-      altSpellings: [removeMacrons(split[INDEXNAME2]).toLowerCase()],
+      altSpellings: [removeSpecialCharacters(split[INDEXNAME2]).toLowerCase()],
       audioStart: (split[START2] && parseFloat(split[START2])) || 0,
       audioEnd: (split[END2] && parseFloat(split[END2])) || 0,
       speaker: split[SPEAKER2],
@@ -169,7 +186,7 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
     }
     newLocality.altNames.push({
       name: split[INDEXNAME3],
-      altSpellings: [removeMacrons(split[INDEXNAME3]).toLowerCase()],
+      altSpellings: [removeSpecialCharacters(split[INDEXNAME3]).toLowerCase()],
       audioStart: (split[START3] && parseFloat(split[START3])) || 0,
       audioEnd: (split[END3] && parseFloat(split[END3])) || 0,
       speaker: split[SPEAKER3],
@@ -337,7 +354,7 @@ const processPartZones = (split) => {
   const newLocality = {
     order: parseInt(split[ZONEORDERNUM]),
     uniqueId: split[0],
-    name: split[INDEXNAME1],
+    name: replaceSpecialCharacters(split[INDEXNAME1]),
   };
   parseLocalityRecordingInfo(split, newLocality, zone);
   zone.localities.push(newLocality);
