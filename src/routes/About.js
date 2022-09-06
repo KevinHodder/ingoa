@@ -149,23 +149,22 @@ const About = () => {
           have been added.) Where the NZ Gazetteer differs, this may be noted.
         </p>
         <p>
-          In Whanganui and Taranaki, in words where h and wh are not aspirated,
-          the h (or H) has been superscripted in the text. How this sounds
+          When speakers in or from Wʰanganui or Taranaki do not aspirate an h or
+          wh, the h (or H) has been superscripted in the text. How this sounds
           varies between regions, between speakers, and by context. (For
           example, in Patea/Hawera “Hawera” vs “Te Hawera” for the same place.)
           Capitalisation of superscript h follows the usual convention, not any
           distinction of pronunciation.)
         </p>
         <p>
-          In Te Wai Pounamu, the k that is written and spoken corresponding to
-          ng in the north has been italicised, as in kaika; kainga in the north.
-          (It was unmarked in 1991. There was a move to underline it in the
-          1990s, but this seems to have faded, perhaps because it does not
-          apparently affect pronunciation.) In the same way, the southern l that
-          stands in for northern r, and g for ng/k, have been italicised. (This
-          has nothing to do with the Southland prounciation of r, by the way.)
-          Only one speaker, Huata Holmes, wanted the g written, though it occurs
-          in Anglicised Māori words such as Kilmog, matagouri and Otago.
+          In Te Wai Pounamu, I italicised the k that is written and spoken
+          corresponding to ng in the north, as in kai𝙠a; kainga in the north.
+          (It was generally unmarked prior to that. There was a move by 𝙆ai Tahu
+          to underline it in the 1990s, but this seems to have faded), In the
+          same way, the southern l that stands in for northern r, and g for
+          ng/k, have been italicised. Only one speaker, Huata Holmes, wanted the
+          g written, though it occurs in Anglicised Māori words such as Kilmog,
+          matagouri and Otago.
         </p>
         <h3 id={"zones"}>About the Zones | Mō ngā Takiwā</h3>
         <Zoom>
@@ -336,7 +335,7 @@ const About = () => {
         <p></p>
         <p>
           I can't believe I completed recording and publishing the first part in
-          only 18 monthswhile holding down a full-time job. Itwas launched at
+          only 18 months while holding down a full-time job. It was launched at
           Takapuwahia Marae by Rino Tirikatene (Snr). I paused the work in
           1985-6 to concentrate on passing the Homosexual Law Reform Act.
         </p>
@@ -359,8 +358,8 @@ const About = () => {
         </p>
         <p>
           Invaluable throughout Tainui was a letter from the secretary to Te
-          Arikinui Dame Te Atairangikaahu giving her blessing to the project. I
-          especially remember the hospitality of Raureti and Bob Harris of
+          Arikinui Dame Te Atairangikaahu giving her blessing to the project.
+          And I especially remember the hospitality of Raureti and Bob Harris of
           Kohukohu, who invited me to stay the night after recording them, help
           myself to breakfast and let myself out in the morning, while they were
           out milking cows and driving the school bus.
@@ -377,16 +376,14 @@ const About = () => {
         </p>
         <p>
           I was in Christchurch making my first South Island contacts in 1991
-          when I learnt that I had been made redundant from Radio NZ
-          (ironically, in part because the Corporation had spent so much
-          fighting against Māori radio stations in courts). I determined to
-          carry on, and gained two grants through Internal Affairs, from the
-          Lottery Grants Board Culture and Heritage fund and the Pacific
-          Conservation and Development Trust, which is funded from the French
-          Government's grant of $13 million in recognition of (not "compensation
-          for") the sinking of the "Rainbow Warrior". Much of that went on a
-          Digital Audio Tape (DAT) recorder, and the third volume was entirely
-          recorded on it. The improvement in sound quality is evident.
+          when I learnt that I had been made redundant from Radio NZ. I
+          determined to carry on, and gained two grants through Internal
+          Affairs, from the Lottery Grants Board Culture and Heritage fund and
+          the Pacific Conservation and Development Trust, which is funded from
+          the French Government's grant of $13 million in recognition of (not
+          "compensation for") the sinking of the "Rainbow Warrior". Much of that
+          went on a Digital Audio Tape (DAT) recorder, and the third volume was
+          entirely recorded on it. The improvement in sound quality is evident.
         </p>
         <p>
           I visited the South Island three times altogether, travelling as far
