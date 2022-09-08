@@ -18,7 +18,7 @@ const getZoneRecordByZoneNumber = (arr, num) =>
   arr.filter((record) => record.number === parseInt(num))[0];
 
 /**
- * Same as get getZoneRecordByZoneNumber, but searching by name
+ * Same as get getZoneRecordByZoneNumber, but searching by name.
  * Name is less unique so only used for the "part zones" which don't have numbers in the spreadsheet
  * @param arr {object[]}- an array of top level Zone records
  * @param name {string}- zone name (need not be an identical match)
@@ -83,7 +83,10 @@ const placenamesFile = fs.readFileSync("../placenames.tsv", "utf8");
 const [header, ...lines] = placenamesFile.split("\r\n"); // Windows = \r\n, Linux/Mac = \n
 
 const zonesFile = fs.readFileSync("../zones.tsv", "utf8");
-const [zoneHeader, ...zoneLines] = zonesFile.split("\r\n"); // Windows = \r\n, Linux/Mac = \n
+const [, ...zoneLines] = zonesFile.split("\r\n"); // Windows = \r\n, Linux/Mac = \n
+
+const speakersFile = fs.readFileSync("../speakers.tsv", "utf8");
+const [, ...speakerLines] = speakersFile.split("\r\n"); // Windows = \r\n, Linux/Mac = \n
 
 console.log(header);
 
@@ -148,6 +151,11 @@ const zoneNOTES = 60;
 // const splitHeader = header.split(",");
 // splitHeader.map((item, index) => console.log(`${index}: ${item}`));
 
+//Speakers Columns
+const SPEAKERNAME = 2;
+const RECORDINGNOTES = 18;
+const SPEAKERNOTES = 19;
+
 const zones = [];
 
 function parseLocalityRecordingInfo(split, newLocality, zone) {
@@ -185,7 +193,7 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
       newLocality.altNames = [];
     }
     newLocality.altNames.push({
-      name: split[INDEXNAME3],
+      name: replaceSpecialCharacters(split[INDEXNAME3]),
       altSpellings: [removeSpecialCharacters(split[INDEXNAME3]).toLowerCase()],
       audioStart: (split[START3] && parseFloat(split[START3])) || 0,
       audioEnd: (split[END3] && parseFloat(split[END3])) || 0,
@@ -366,8 +374,9 @@ lines.forEach((line) => {
   processNormalZones(split);
   processPartZones(split);
 });
-zones.forEach((z) => (z.speakers = [...z.speakers]));
+zones.forEach((z) => (z.speakers = [...z.speakers])); // cast the speakers Set into an array
 
+// Merge Zone notes data (from zones.tsv) into main Zones object (from placenames.tsv)
 zoneLines.forEach((zoneLine) => {
   const zoneSplit = zoneLine.split("\t");
   const zoneMatch = zones.find(
@@ -375,5 +384,22 @@ zoneLines.forEach((zoneLine) => {
   );
   zoneMatch.notes = zoneSplit[zoneNOTES];
 });
-
 fs.writeFileSync("data/zones.json", JSON.stringify(zones));
+
+// Parse lines from Speakar file into a data object
+const speakerInfo = [];
+speakerLines.forEach((speakerLine) => {
+  const speakerSplit = speakerLine.split("\t");
+  const newSpeaker = {
+    name: speakerSplit[SPEAKERNAME],
+    notes: [],
+  };
+  if (speakerSplit[RECORDINGNOTES]) {
+    newSpeaker.notes.push(speakerSplit[RECORDINGNOTES]);
+  }
+  if (speakerSplit[SPEAKERNOTES]) {
+    newSpeaker.notes.push(speakerSplit[SPEAKERNOTES]);
+  }
+  speakerInfo.push(newSpeaker);
+});
+fs.writeFileSync("data/speakers.json", JSON.stringify(speakerInfo));
