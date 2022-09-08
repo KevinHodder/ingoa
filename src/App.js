@@ -1,4 +1,4 @@
-import { Fragment, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import styled from "styled-components";
 import "./App.css";
 
@@ -7,7 +7,6 @@ import SearchResults from "./components/SearchResults";
 import MapSI from "./components/MapSI";
 import MapNI from "./components/MapNI";
 import Header from "./components/Header";
-import NavBar from "./components/NavBar";
 import GoToTop from "./components/GoToTop";
 import { AudioProvider } from "./utils/useAudio";
 
@@ -22,7 +21,7 @@ function App() {
   const mapRef = useRef();
 
   return (
-    <Fragment>
+    <>
       <AudioProvider>
         <main>
           <Header />
@@ -30,13 +29,12 @@ function App() {
             <MapNI setResults={setResults} />
             <MapSI setResults={setResults} />
           </Maps>
-
           <SearchBox setResults={setResults} />
           <SearchResults results={results} />
           <GoToTop goToElem={mapRef} appearAt={800} />
         </main>
       </AudioProvider>
-    </Fragment>
+    </>
   );
 }
 

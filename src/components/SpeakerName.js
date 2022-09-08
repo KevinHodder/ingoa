@@ -7,24 +7,26 @@ const SpeakerNameBlock = styled.p`
   font-style: normal;
   display: inline-flex;
   margin-right: 0.5rem;
+  cursor: ${(props) => (props.shouldShowModal ? "pointer" : "unset")};
 `;
 
 const SpeakerName = (props) => {
   const { name, hasComma } = props;
+  const shouldShowModal = hasSpeakerNotes(name);
 
   const [show, setShow] = useState(false);
   const closeModal = () => {
     setShow(false);
   };
   const openModal = () => {
-    if (hasSpeakerNotes(name)) {
+    if (shouldShowModal) {
       setShow(true);
     }
   };
 
   return (
     <>
-      <SpeakerNameBlock onClick={openModal}>
+      <SpeakerNameBlock onClick={openModal} shouldShowModal={shouldShowModal}>
         {name}
         {hasComma && ","}
       </SpeakerNameBlock>

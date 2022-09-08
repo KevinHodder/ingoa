@@ -19,7 +19,7 @@ const GoToTop = (props) => {
 
   const goToTop = () => {
     if (goToElem) {
-      goToElem.current.scrollIntoView();
+      goToElem.current.scrollIntoView({ behavior: "smooth" });
     } else {
       window.scrollTo({
         top: 0,

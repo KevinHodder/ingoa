@@ -38,7 +38,7 @@ const Name = styled.div`
   max-width: 225px;
   font-weight: 500;
   font-size: 1.5em;
-  cursor: pointer;
+  cursor: ${(props) => (props.showPointer ? "pointer" : "unset")};
   word-break: break-word;
 `;
 
@@ -97,7 +97,7 @@ const Locality = (props) => {
       ) : (
         <Placeholder />
       )}
-      <Name>{locality.name}</Name>
+      <Name showPointer={!!locality.audioStart}>{locality.name}</Name>
     </TooltipZone>
   ));
 
