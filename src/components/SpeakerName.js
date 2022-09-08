@@ -3,10 +3,17 @@ import SpeakerModal from "./SpeakerModal";
 import { useState } from "react";
 import { hasSpeakerNotes } from "../utils/utils";
 
+const SpeakerNameWrapper = styled.div`
+  display: inline;
+  &:not(:last-child) {
+    &:after {
+      content: ", ";
+    }
+  }
+`;
 const SpeakerNameBlock = styled.p`
   font-style: normal;
   display: inline-flex;
-  margin-right: 0.5rem;
   cursor: ${(props) => (props.shouldShowModal ? "pointer" : "unset")};
 `;
 
@@ -25,13 +32,13 @@ const SpeakerName = (props) => {
   };
 
   return (
-    <>
+    <SpeakerNameWrapper>
       <SpeakerNameBlock onClick={openModal} shouldShowModal={shouldShowModal}>
         {name}
         {hasComma && ","}
       </SpeakerNameBlock>
       <SpeakerModal show={show} handleClose={closeModal} content={{ name }} />
-    </>
+    </SpeakerNameWrapper>
   );
 };
 

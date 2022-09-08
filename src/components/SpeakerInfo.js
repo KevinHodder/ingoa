@@ -12,8 +12,8 @@ const SpeakerInfo = (props) => {
   return (
     <SpeakerInfoSection>
       Spoken by | Kaikōrero:&nbsp;
-      {speakers.map((speakerName, i) => (
-        <SpeakerName name={speakerName} hasComma={i + 1 < speakers.length} />
+      {speakers.map((speakerName) => (
+        <SpeakerName name={speakerName} />
       ))}
     </SpeakerInfoSection>
   );
