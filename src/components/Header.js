@@ -56,12 +56,8 @@ const Header = () => {
       </Title>
       <Subheader>
         <div>
-          This is a prototype under active development. It is a dictionary of
-          pronunciation only, and only names in use before 1994 are included.
-        </div>
-        <div>
-          For background, see the&nbsp;
-          <a href={"./about"}>About page</a>.
+          This is a dictionary of pronunciation only, and only names in use
+          before 1994 are included.
         </div>
         <div>
           We welcome feedback, especially about navigation and accessibility,
@@ -69,10 +65,19 @@ const Header = () => {
           <a href={"mailto: hughingoa@gmail.nz"}>hughingoa@gmail.nz</a>.{" "}
         </div>
         <div>
-          The audio of some names is incorrectly cut short. If you notice any
-          such issues, please advise us which they are and the Zones/takiwā they
-          are in, and they will be corrected.
+          If you notice any issues, please advise us and they will be corrected.
         </div>
+        <hr style={{ width: "100%" }} />
+        <div>
+          He papakupu whakahua noa tenei, a ko nga ingoa i kīa i mua i te tau
+          1994 ka whakauruhia.{" "}
+        </div>
+        <div>
+          Ka pai mai ki a mātou nga urupare, ina koa mo te whakatere me te uru,
+          ki&nbsp;
+          <a href={"mailto: hughingoa@gmail.nz"}>hughingoa@gmail.nz</a>.{" "}
+        </div>
+        <div>Mena kei a koe i ētahi raru, pā mai kia whakatikahia ai.</div>{" "}
         <hr style={{ width: "100%" }} />
         <MapInstructions>
           <div>To find a name, click on the map...</div>
