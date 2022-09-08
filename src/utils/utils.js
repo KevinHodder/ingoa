@@ -1,4 +1,5 @@
 const allZones = require("../data/zones.json");
+const allSpeakerInfo = require("../data/speakers.json");
 
 // General utils
 
@@ -262,3 +263,17 @@ export const getTypesString = (typesArr = [], localityName) =>
         (displayTypeName(rec, localityName) ? ` (${rec.name})` : "")
     )
     .join(", ");
+
+export const getSpeakerNotesByName = (
+  searchName,
+  speakerInfo = allSpeakerInfo
+) => {
+  const matchingSpeaker = speakerInfo.find(
+    (speaker) => speaker.name.toLowerCase() === searchName.toLowerCase()
+  );
+  return matchingSpeaker.notes || [];
+};
+
+export const hasSpeakerNotes = (searchName) => {
+  return isArrPresent(getSpeakerNotesByName(searchName));
+};

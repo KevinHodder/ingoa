@@ -7,17 +7,7 @@ import Localities from "./Localities";
 import MoreInfoModal from "./MoreInfoModal";
 import "./result.css";
 import PlayAll from "./PlayAll";
-
-const SpeakerInfo = styled.div`
-  font-size: 1.5em;
-  font-style: italic;
-  font-weight: normal;
-`;
-
-const SpeakerName = styled.p`
-  font-style: normal;
-  display: inline-flex;
-`;
+import SpeakerInfo from "./SpeakerInfo";
 
 const ZoneNumber = styled.div`
   font-size: 1.5em;
@@ -63,10 +53,7 @@ export const Result = (props) => {
             {isPartZone ? null : <ZoneNumber>Zone {number}</ZoneNumber>}
             <PlayAllBlock track={track} zoneName={nameCommon} />
             {notes ? <ZoneNotes>{notes}</ZoneNotes> : null}
-            <SpeakerInfo>
-              Spoken by | Kaikōrero:&nbsp;
-              <SpeakerName>{speakers.join(", ")}</SpeakerName>
-            </SpeakerInfo>
+            <SpeakerInfo speakers={speakers} />
             <Localities
               localities={localities}
               zone={number}
