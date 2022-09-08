@@ -13,6 +13,12 @@ main {
   background-color: rgb(221, 214, 214, 0.93);
 }
 
+@media (max-width: 1200px) {
+  main {
+    width: 80vw;
+  }
+}
+
 @media (max-width: 650px) {
   main {
     width: 90vw;
