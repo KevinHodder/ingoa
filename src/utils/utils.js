@@ -271,7 +271,7 @@ export const getSpeakerNotesByName = (
   const matchingSpeaker = speakerInfo.find(
     (speaker) => speaker.name.toLowerCase() === searchName.toLowerCase()
   );
-  return matchingSpeaker.notes || [];
+  return matchingSpeaker?.notes || [];
 };
 
 export const hasSpeakerNotes = (searchName) => {

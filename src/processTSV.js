@@ -163,8 +163,8 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
     newLocality.audioStart = parseFloat(split[START1]) || 0;
     newLocality.audioEnd = parseFloat(split[END1]) || 0;
     newLocality.speaker = split[SPEAKER1];
-    zone.speakers.add(split[SPEAKER1]);
   }
+  split[SPEAKER1] && zone.speakers.add(split[SPEAKER1]);
   if (hasMacrons(split[INDEXNAME1])) {
     newLocality.altSpellings = [
       removeSpecialCharacters(split[INDEXNAME1]).toLowerCase(),
