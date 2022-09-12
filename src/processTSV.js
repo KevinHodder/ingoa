@@ -48,11 +48,11 @@ const replaceSpecialCharacters = (word) => {
     .replaceAll("_h_", "ʰ")
     .replaceAll("_H_", "ᴴ")
     .replaceAll("_f_", "𝒇")
-    .replaceAll("_F_", "𝑭")
+    .replaceAll("_F_", "𝙁")
     .replaceAll("_g_", "𝒈")
-    .replaceAll("_G_", "𝑮")
+    .replaceAll("_G_", "𝙂")
     .replaceAll("_l_", "𝒍")
-    .replaceAll("_L_", "𝑳");
+    .replaceAll("_L_", "𝙇");
 };
 
 /**

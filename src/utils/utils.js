@@ -224,13 +224,13 @@ const removeSpecialCharacters = (input) => {
     .replaceAll("ᴴ", "H")
     .replaceAll(/_f_/gi, "f")
     .replaceAll("𝒇", "f")
-    .replaceAll("𝑭", "F")
+    .replaceAll("𝙁", "F")
     .replaceAll(/_g_/gi, "g")
     .replaceAll("𝒈", "f")
-    .replaceAll("𝑮", "F")
+    .replaceAll("𝙂", "F")
     .replaceAll(/_l_/gi, "l")
     .replaceAll("𝒍", "l")
-    .replaceAll("𝑳", "L");
+    .replaceAll("𝙇", "L");
 };
 
 const displayTypeName = (type, localityName) => {
