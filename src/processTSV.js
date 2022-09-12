@@ -250,30 +250,45 @@ const processNormalZones = (split) => {
       newLocality.types.push({
         prefix: split[KINDPREFIX1],
         type: split[KIND1],
-        name: split[KINDNAME1],
+        name: replaceSpecialCharacters(split[KINDNAME1]),
       });
     }
     if (split[KIND2]) {
       newLocality.types.push({
         prefix: split[KINDPREFIX2],
         type: split[KIND2],
-        name: split[KINDNAME2],
+        name: replaceSpecialCharacters(split[KINDNAME2]),
       });
     }
     if (split[KIND3]) {
-      newLocality.types.push({ type: split[KIND3], name: split[KINDNAME3] });
+      newLocality.types.push({
+        type: split[KIND3],
+        name: replaceSpecialCharacters(split[KINDNAME3]),
+      });
     }
     if (split[KIND4]) {
-      newLocality.types.push({ type: split[KIND4], name: split[KINDNAME4] });
+      newLocality.types.push({
+        type: split[KIND4],
+        name: replaceSpecialCharacters(split[KINDNAME4]),
+      });
     }
     if (split[KIND5]) {
-      newLocality.types.push({ type: split[KIND5], name: split[KINDNAME5] });
+      newLocality.types.push({
+        type: split[KIND5],
+        name: replaceSpecialCharacters(split[KINDNAME5]),
+      });
     }
     if (split[KIND6]) {
-      newLocality.types.push({ type: split[KIND6], name: split[KINDNAME6] });
+      newLocality.types.push({
+        type: split[KIND6],
+        name: replaceSpecialCharacters(split[KINDNAME6]),
+      });
     }
     if (split[KIND7]) {
-      newLocality.types.push({ type: split[KIND7], name: split[KINDNAME7] });
+      newLocality.types.push({
+        type: split[KIND7],
+        name: replaceSpecialCharacters(split[KINDNAME7]),
+      });
     }
     // Add "see also" info
     if (split[SEEID1]) {
