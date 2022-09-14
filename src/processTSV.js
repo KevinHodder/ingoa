@@ -37,8 +37,11 @@ const hasMacrons = (input) => {
 };
 
 /**
- * returns a new string with any underscored letters replaced with the appropriate special characters
- * @param word
+ * returns a new string with any underscored letters replaced with the appropriate special characters.
+ * Hugh had a large number of characters which he wanted special treatment for, due to curiosities of pronunciation.
+ * He had historically handled these with italicised characters, which were difficult to store in a Google sheet, and
+ * then display correctly via react, so this was the compromise. It's not exactly a clean solution.
+ * @param {string} word
  * @returns {string}
  */
 const replaceSpecialCharacters = (word) => {
@@ -79,6 +82,7 @@ const removeSpecialCharacters = (input) => {
     .replaceAll(/_l_/gi, "l");
 };
 
+// Parse input files
 const placenamesFile = fs.readFileSync("../placenames.tsv", "utf8");
 const [header, ...lines] = placenamesFile.split("\r\n"); // Windows = \r\n, Linux/Mac = \n
 
@@ -87,8 +91,6 @@ const [, ...zoneLines] = zonesFile.split("\r\n"); // Windows = \r\n, Linux/Mac =
 
 const speakersFile = fs.readFileSync("../speakers.tsv", "utf8");
 const [, ...speakerLines] = speakersFile.split("\r\n"); // Windows = \r\n, Linux/Mac = \n
-
-console.log(header);
 
 // Placename columns
 const ZONENUM = 4;
@@ -156,21 +158,24 @@ const SPEAKERNAME = 2;
 const RECORDINGNOTES = 18;
 const SPEAKERNOTES = 19;
 
+// Handle Zones and Placenames
 const zones = [];
 
 function parseLocalityRecordingInfo(split, newLocality, zone) {
+  // Top level name recording info
   if (split[START1]) {
     newLocality.audioStart = parseFloat(split[START1]) || 0;
     newLocality.audioEnd = parseFloat(split[END1]) || 0;
     newLocality.speaker = split[SPEAKER1];
     split[SPEAKER1] && zone.speakers.add(split[SPEAKER1]);
   }
+  // Todo: remove array. Alt spellings was initially assumed to have more than one option. This has not eventuated.
+  // These alt spelling sare using to help with matching in the search
   if (hasMacrons(split[INDEXNAME1])) {
     newLocality.altSpellings = [
       removeSpecialCharacters(split[INDEXNAME1]).toLowerCase(),
     ];
   }
-  //TODO: Need to check for missing primary pronunciation
   //Alternative pronunciations
   if (split[INDEXNAME2]) {
     if (!newLocality.altNames) {
