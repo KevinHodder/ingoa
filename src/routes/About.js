@@ -56,7 +56,9 @@ const About = () => {
                   <a href="#structure">Structure | Te whakatakotoranga</a>
                 </li>
                 <li>
-                  <a href="#journey">My Journeys | Ōku Haererenga</a>
+                  <a href="#journey">
+                    The Journeys of the Collector | Ngā Haererenga o te Kaikohi
+                  </a>
                 </li>
                 <li>
                   <a href="#technical">Technical | Te Hangarau</a>
@@ -229,99 +231,101 @@ const About = () => {
           and the numbering of the zones – crucial to finding places on the
           cassettes and CDs - backgrounded.
         </p>
-        <h3 id={"journey"}>My Journeys | Ōku Haererenga</h3>
+        <h3 id={"journey"}>
+          The Journeys of the Collector | Ngā Haererenga o te Kaikohi
+        </h3>
         <p>
           The first germ of the dictionary was planted in 1977, when as
-          Journalist in Charge at Radio Gisborne, I asked Heni Sunderland to
-          record a list of local placenames for the use of announcers. Then as a
-          producer with Radio New Zealand Special Projects in 1983 I organised
-          three half-day hui at Te Herenga Waka marae, Victoria University of
-          Wellington, for weather forecasters to learn the pronunciations of the
-          handful of Māori names then in use in forecasts, and issued them with
-          cassettes of authentic pronunciations, by John Rangihau and others.
+          Journalist in Charge at Radio Gisborne, Hugh Young asked Heni
+          Sunderland to record a list of local placenames for the use of
+          announcers. Then as a producer with Radio New Zealand Special Projects
+          in 1983 he organised three half-day hui at Te Herenga Waka marae,
+          Victoria University of Wellington, for weather forecasters to learn
+          the pronunciations of the handful of Māori names then in use in
+          forecasts, and issued them with cassettes of authentic pronunciations,
+          spoken by Tawini Rangihau, Aroaro Hond, and Wiremu Kere Kere.
         </p>
         <p>
-          That same year I applied for a Bill Toft memorial grant to record the
-          names of the whole country, but was turned down. The following year my
-          application was accepted. (Within seconds of the presentation, a
-          non-speaker of te reo began lecturing me about the correct
-          pronuncation of Whanganui. Far too much ink has been spilt and voices
-          raised over the “correct” pronunciation of wh everywhere. For
-          non-speakers of te reo a soft f will suffice and cannot change the
-          meaning. For those who care more, I recommend following the speakers
-          here.)
+          That same year he applied for a Bill Toft memorial grant to record the
+          names of the whole country, but was turned down. The following year
+          his application was accepted. (Within seconds of the presentation, a
+          non-speaker of te reo began lecturing him about the “correct”
+          pronuncation of Whanganui. (“Far too much ink has been spilt and
+          voices raised over the 'correct' pronunciation of WH everywhere,” he
+          says. “For non-speakers of te reo a soft F will suffice and cannot
+          change the him aning.” For those who care more, he recommend following
+          the speakers here.)
         </p>
         <p>
-          With no Internet or online Gazetteer, I gathered names from wherever I
-          could, beginning with the AA Road Map. This means it will be short on
-          the names of places far from roads, and the coverage of minor names
-          will be scattershot. The speakers themselves were invaluable in adding
-          to the lists. Their memories and my understanding may have been faulty
-          in associating marae, wharenui and wharekai, and the only guidebook
-          was John Cresswell's 1977 “Maori Meeting Houses of the North Island”.
-          Many houses have opened and others fallen into disuse since these
-          recordings were made. Since the dictionary was aimed at radio
-          announcers, these names were originally meant to be secondary to
-          geographic features, but the speakers were determined that they should
-          be comprehensive.
+          With no Internet or online Gazetteer, he gathered names from wherever
+          he could, beginning with the AA Road Map. This means it will be short
+          on the names of places far from roads, and the coverage of minor names
+          is scattershot. The speakers themselves were invaluable in adding to
+          the lists. Their memmories and his understanding may have been faulty
+          in associating marae, wharenui and wharekai. Marae and houses have
+          been opened and others fallen into disuse since these recordings were
+          made. Since the dictionary was aimed at radio announcers, these names
+          were originallymeant to be secondary to geographic features, but the
+          speakers were determined that they should be comprehensive.
         </p>
         <p>
-          I typed the first part at home on an electric typewriter, and the
-          incredibly patient Radio NZ typing pool put up with my micromanagement
-          for over a year. They put the lists on to 8" IBM floppy discs.
-          (“Placenames” as a name for the files was mistyped early as
-          “placements” and that name stuck.) In the first instance, I used
-          double vowel orthography (eg Maaori) as I had learnt from Professor
-          Bruce Biggs at Auckland University. One potential speaker refused
-          point blank to have anything to do with the project if we used them.
-          It became clear that - largely under the influence of Professor Tīmoti
-          Kāretu at Waikato University - macrons (eg Māori) were going to win
-          out, and we searched and replaced all 10 vowels (AA EE II OO UU, aa ee
-          ii oo uu) with their macronned equivalents - then searched and
-          de-macronned all the wrongly altered English words such as schōl and
-          mēting. Creating macrons was a job in itself in those days. Each one
-          involved executing a subroutine, or macro, of backspace, half-raise,
-          hyphen, half-lower. When I returned to the reluctant speaker with a
+          Hugh typed the first part at home on an electric typewriter, and the
+          incredibly patient Radio NZ typing pool put up with his
+          micromanagement for over a year. They put the lists on to 8" IBM
+          floppy discs. In the first instance, he used double vowel orthography
+          (eg Maaori) as he had learnt from Professor Bruce Biggs at Auckland
+          University. One potential speaker refused point blank to have anything
+          to do with the project if it used them. It became clear that - largely
+          under the influence of Professor Tīmoti Kāretu at Waikato University -
+          macrons (eg Māori) were going to win out, and they searched and
+          replaced all 10 double vowels (upper and lower case AA, EE, II, OO,
+          UU) with their macronned equivalents - then searched and de-macronned
+          all the wrongly altered English words such as schōl and mēting.
+          Creating macrons was a job in itself in those days. Each one involved
+          executing a subroutine, or macro, of backspace, half-raise, hyphen,
+          half-lower. When Hugh returned to the reluctant speaker with a
           macronised list, he couldn't be happier to be recorded.
         </p>
         <p>
-          Before I went out recording, I asked for printouts of the names, but
-          invariably more would have to be added on the road. I tried to ensure
-          the speakers chose each other. I asked that they have mana and te reo,
-          preferably as their first language. In one case of one ideal
-          candidate, it was his only language and I couldn't communicate in
-          sufficient detail to reach him. I tried to insure that women were
-          included, but they often proved reticent, despite being the better
-          speakers. One influential contact insisted that only children of her
-          late father could say the local names, but none of them spoke te reo.
-          In the event she settled for a cousin, who was excellent. Often the
-          best speakers were shy, while the less suitable ones pushed themselves
-          forward. I learnt much about diplomacy on my travels, and the many
-          gentle ways of saying “No.”
+          Before he went out recording, he asked for printouts of the names, but
+          invariably more would have to be added on the road. He tried to ensure
+          the speakers chose each other. He asked that they have mana and te
+          reo, preferably as their first language. In one case of one ideal
+          candidate, it was his only language and Hugh couldn't communicate in
+          sufficient detail to reach him.
+        </p>
+        <p>
+          He tried to insure that women were included, but they often proved
+          reticent, despite being the better speakers. One influential contact
+          insisted that only children of her late father could say the local
+          names, but none of them spoke te reo. In the event she settled for a
+          cousin, who was excellent. Often the best speakers were shy, while the
+          less suitable ones pushed themselves forward. Hugh learnt much about
+          diplomacy on his travels, and the gentle ways of saying “No.”
         </p>
         <p>
           The first volume was entirely recorded on a portable reel-to-reel
-          recorder. From the outset I insisted on using the only stereo recorder
-          of Radio NZ Special Projects, when it was free. (Fortunately Special
-          Projects, broadcasting in AM, recorded in stereo only occasionally.) I
-          knew that the sound quality would be substantially better in stereo,
-          even though it was only ever a single voice. I made various short
-          forays to southern parts of the North Island, and two big sweeps over
-          several days into Wʰanganui, Taranaki, Taupo, the Urewera, East Coast
-          and Hawkes Bay.
+          recorder. From the outset Hugh insisted on using the only stereo
+          recorder of Radio NZ Special Projects, when it was free. (Fortunately
+          Special Projects, broadcasting in AM, recorded in stereo only
+          occasionally.) He knew that the sound quality would be substantially
+          better in stereo, even though it was only ever a single voice. He made
+          various short forays to southern parts of the North Island, and two
+          big sweeps over several days into Wʰanganui, Taranaki, Taupo, the
+          Urewera, East Coast and Hawkes Bay.
         </p>
         <p>
-          I encountered occasional resistance to the project, sometimes
-          explicitly because I was a Pākehā, but mainly enthusiasm and boundless
-          hospitality. The blessings and voices of previous speakers melted
-          resistance, especially once they included such famous names as John
-          Rangihau, Wiremu Parker, Bill Kere Kere, Ruka Broughton, Eruera
+          He encountered occasional resistance to the project, sometimes
+          explicitly because he was a Pākehā, but mainly enthusiasm and
+          boundless hospitality. The blessings and voices of previous speakers
+          mellted resistance, especially once they included such famous names as
+          John Rangihau, Wiremu Parker, Bill Kere Kere, Ruka Broughton, Eruera
           Manuera, Tupi Puriri, and Matenga Baker.
         </p>
         <p>
-          I drew the covers of the booklets, the first especially, in day-long
-          bursts of creativity, the North Island ones especially including many
-          local references.
+          Hugh drew the covers of the booklets, the first especially, in
+          day-long bursts of creativity, the North Island ones especially
+          including many local references.
         </p>
         <Zoom>
           <StandardImg src={cover1} />
@@ -334,49 +338,48 @@ const About = () => {
         </Zoom>
         <p></p>
         <p>
-          I can't believe I completed recording and publishing the first part in
-          only 18 months while holding down a full-time job. It was launched at
-          Takapuwahia Marae by Rino Tirikatene (Snr). I paused the work in
-          1985-6 to concentrate on passing the Homosexual Law Reform Act.
+          He can't believe he completed recording and publishing the first part
+          in only 18 months while holding down a full-time job. It was launched
+          at Takapuwahia Marae by Rino Tirikatene (Snr).
         </p>
         <p>
-          Without a grant for the second part, I could no longer rely on the
-          Radio NZ typing pool, and created the lists at home, teaching myself
-          how to use databases, which were relatively new in 1986. (A
-          “Superscript” word processor and “Superbase” database in a Commodore
-          128 computer.)
+          Without a grant for the second part, he could no longer rely on the
+          Radio NZ typing pool, and created the lists at home, teaching himself
+          how to use a computer and databases, which were relatively new in
+          1986. (A “Superscript” word processor and “Superbase” database in a
+          Commodore 128 home computer.)
         </p>
         <p>
           Most of the second volume was recorded on the Uher portable
           reel-to-reel machine, but at one point north of Auckland it broke down
-          and I hired what had once been a top-of-the-line cassette machine, a
+          and he hired what had once been a top-of-the-line cassette machine, a
           Nakimichi. The sound quality, even though it had Dolby noise
-          reduction, was decidedly inferior. I completed the thermal region by
-          1988 and presented one copy to Radio NZ in Rotorua. The station
-          manager seemed uninterested. I made several long hauls into the King
-          Country, Waikato-Hauraki, Auckland and Northland in 1989-1990.
+          reduction, was decidedly inferior. He completed the thermal region by
+          1988 and presented one copy to Radio NZ in Rotorua. He made several
+          long hauls into the King Country, Waikato-Hauraki, Auckland and
+          Northland in 1989-1990.
         </p>
         <p>
           Invaluable throughout Tainui was a letter from the secretary to Te
           Arikinui Dame Te Atairangikaahu giving her blessing to the project.
-          And I especially remember the hospitality of Raureti and Bob Harris of
-          Kohukohu, who invited me to stay the night after recording them, help
-          myself to breakfast and let myself out in the morning, while they were
-          out milking cows and driving the school bus.
+          And he especially remember the hospitality of Raureti and Bob Harris
+          of Kohukohu, who invited him to stay the night after recording them,
+          help himself to breakfast and let himself out in the morning, while
+          they were out milking cows and driving the school bus.
         </p>
         <p>
           By the time Part 2 was completed in 1991, Radio NZ was unsupportive
-          and this volume was launched discreetly at my home by Bill Kere Kere.
+          and this volume was launched discreetly at his home by Bill Kere Kere.
         </p>
         <p>
-          My first port of call when I embarked on the South Island was (later
-          Sir) Tīpene O'Regan, who immediately referred me to Dr Maarire
+          His first port of call when he embarked on the South Island was (later
+          Sir) Tīpene O'Regan, who immediately referred him to Dr Maarire
           Goodall, and he became a dear friend. He was invaluable, with contacts
           all over Te Waipounamu.
         </p>
         <p>
-          I was in Christchurch making my first South Island contacts in 1991
-          when I learnt that I had been made redundant from Radio NZ. I
+          Hugh was in Christchurch making his first South Island contacts in
+          1991 when he learnt that he had been made redundant from Radio NZ. He
           determined to carry on, and gained two grants through Internal
           Affairs, from the Lottery Grants Board Culture and Heritage fund and
           the Pacific Conservation and Development Trust, which is funded from
@@ -386,14 +389,14 @@ const About = () => {
           entirely recorded on it. The improvement in sound quality is evident.
         </p>
         <p>
-          I visited the South Island three times altogether, travelling as far
-          as Tākaka, Hokitika and Tuatāpere. Again I created the lists at home,
-          but this time I transmitted them to Dr Goodall's computer using a
+          He visited the South Island three times altogether, travelling as far
+          as Tākaka, Hokitika and Tuatāpere. Again he created the lists at home,
+          but this time he transmitted them to Dr Goodall's computer using a
           standalone modem and a precursor of the Internet, a dialup dating
-          service called the Meetboard. At 300 Baud (bits/second), that took
+          service called theMeetboard. At 300 Baud (bits/second), that took
           hours, and the issues of encoding and decoding the macrons in ASCII
           were horrendous. The third volume was launched at Tapu te Ranga Marae
-          in 1994.
+          in 1994, by his friend Richard Northey MP, among others.
         </p>
         <p>
           The total distance travelled was approximately 23,000 km. The total
@@ -401,18 +404,19 @@ const About = () => {
         </p>
         <p>
           People often said “You should have done this years ago when Mea Te Mea
-          was alive.” I'm very glad now that I did do it all those years ago,
-          when so many great speakers were alive.
+          was alive.” He's very glad that he did do it all those years ago, when
+          so many great speakers - many first-language speakers, some
+          pre-television, some even pre-radio - were alive. Te mita o te reo
+          (intonation and accent) has certainly changed since 1984-94.
         </p>
         <p>
-          It was in the back of my mind, as some kind of science fiction dream,
-          that some day one could hear any of the names instantly at the touch
-          of a button. I had no idea, when every computer had a room to itself,
-          that a man in Rwanda could make that happen for me while we talked, or
-          that then anyone in the world could hear those same names at the touch
-          of that same button, yet here we are.
+          It was in the back of Hugh Young's mind, as some kind of science
+          fiction dream, that some day one could hear any of the names instantly
+          at the touch of a button. He had no idea, when every computer had a
+          room to itself, that a man in Rwanda or Uganda could make that happen
+          for him while they talked, or that then anyone in the world could hear
+          those same names at the touch of that same virtual button.
         </p>
-        <p> - Hugh Young</p>
         <p>
           Hugh Young (Pākehā, Clan Chatten) was born in Christchurch when Māori
           there were almost invisible, and after graduating in Zoology from
