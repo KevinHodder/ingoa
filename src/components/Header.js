@@ -52,8 +52,9 @@ const Header = () => {
       <Title>
         <h1>Ngā Ingoa o Aotearoa</h1>
         <SubTitle>
-          An Oral Dictionary of Māori place names | He pukapapa-ā-reo o ngā
-          ingoa wāhi
+          An Oral Dictionary of Māori place names
+          <br />
+          He pukapapa-ā-reo o ngā ingoa wāhi
         </SubTitle>
       </Title>
       <Subheader>
