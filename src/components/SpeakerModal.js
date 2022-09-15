@@ -18,8 +18,8 @@ const SpeakerModal = (props) => {
         <Modal.Title>{content.name}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        {notes.map((note) => (
-          <Note>{note}</Note>
+        {notes.map((note, i) => (
+          <Note key={"note" + i}>{note}</Note>
         ))}
       </Modal.Body>
     </Modal>

@@ -1,8 +1,8 @@
-import Speaker from "./Speaker";
-import { useEffect, useState } from "react";
-import { useAudio } from "../utils/useAudio";
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import Speaker from "./Speaker";
+import { useAudio } from "../utils/useAudio";
 
 const PlayAllBlock = styled.div`
   display: grid;

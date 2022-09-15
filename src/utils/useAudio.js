@@ -1,13 +1,13 @@
 import { useRef, useState, useContext, createContext } from "react";
 
-const AudioContext = createContext("./001.mp3");
+const AudioContext = createContext("./zones/001.mp3");
 
 const AudioProvider = ({ children }) => {
-  const audio = useRef(new Audio("./001.mp3"));
+  const audio = useRef(new Audio("./zones/001.mp3"));
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentlyPlaying, setCurrentlyPlaying] = useState("");
 
-  const play = ({ track = "001.mp3", id = "", start = 0, end }) => {
+  const play = ({ track = "zones/001.mp3", id = "", start = 0, end }) => {
     if (audio.current) {
       audio.current.src = `./${track}`;
       // handle "already playing"

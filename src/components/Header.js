@@ -39,7 +39,6 @@ const Subheader = styled.div`
 `;
 
 const MapInstructions = styled.div`
-  // font-weight: bold;
   font-style: italic;
   text-align: center;
   @media (max-width: 650px) {
@@ -52,7 +51,10 @@ const Header = () => {
     <HeaderBlock>
       <Title>
         <h1>Ngā Ingoa o Aotearoa</h1>
-        <SubTitle>An Oral Dictionary of Māori Placenames</SubTitle>
+        <SubTitle>
+          An Oral Dictionary of Māori place names | He pukapapa-ā-reo o ngā
+          ingoa wāhi
+        </SubTitle>
       </Title>
       <Subheader>
         <div>
@@ -62,7 +64,7 @@ const Header = () => {
         <div>
           We welcome feedback, especially about navigation and accessibility,
           at&nbsp;
-          <a href={"mailto: hughingoa@gmail.nz"}>hughingoa@gmail.nz</a>.{" "}
+          <a href={"mailto: hughingoa@gmail.nz"}>hughingoa@gmail.nz</a>.
         </div>
         <div>
           If you notice any issues, please advise us and they will be corrected.
@@ -70,14 +72,14 @@ const Header = () => {
         <hr style={{ width: "100%" }} />
         <div>
           He papakupu whakahua noa tenei, a ko nga ingoa i kīa i mua i te tau
-          1994 ka whakauruhia.{" "}
+          1994 ka whakauruhia.
         </div>
         <div>
           Ka pai mai ki a mātou nga urupare, ina koa mo te whakatere me te uru,
           ki&nbsp;
-          <a href={"mailto: hughingoa@gmail.nz"}>hughingoa@gmail.nz</a>.{" "}
+          <a href={"mailto: hughingoa@gmail.nz"}>hughingoa@gmail.nz</a>.
         </div>
-        <div>Mena kei a koe i ētahi raru, pā mai kia whakatikahia ai.</div>{" "}
+        <div>Mena kei a koe i ētahi raru, pā mai kia whakatikahia ai.</div>
         <hr style={{ width: "100%" }} />
         <MapInstructions>
           <div>To find a name, click on the map...</div>

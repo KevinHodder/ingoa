@@ -13,7 +13,7 @@ const SpeakerInfo = (props) => {
     <SpeakerInfoSection>
       Spoken by | Kaikōrero:&nbsp;
       {speakers.map((speakerName) => (
-        <SpeakerName name={speakerName} />
+        <SpeakerName key={speakerName + "key"} name={speakerName} />
       ))}
     </SpeakerInfoSection>
   );

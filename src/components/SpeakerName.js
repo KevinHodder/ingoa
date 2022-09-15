@@ -18,7 +18,7 @@ const SpeakerNameBlock = styled.p`
 `;
 
 const SpeakerName = (props) => {
-  const { name, hasComma } = props;
+  const { name } = props;
   const shouldShowModal = hasSpeakerNotes(name);
 
   const [show, setShow] = useState(false);
@@ -35,7 +35,6 @@ const SpeakerName = (props) => {
     <SpeakerNameWrapper>
       <SpeakerNameBlock onClick={openModal} shouldShowModal={shouldShowModal}>
         {name}
-        {hasComma && ","}
       </SpeakerNameBlock>
       <SpeakerModal show={show} handleClose={closeModal} content={{ name }} />
     </SpeakerNameWrapper>
