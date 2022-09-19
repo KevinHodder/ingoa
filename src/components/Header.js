@@ -54,7 +54,7 @@ const Header = () => {
         <SubTitle>
           An Oral Dictionary of Māori place names
           <br />
-          He pukapapa-ā-reo o ngā ingoa wāhi
+          He Papakupu-ā-waha o Whakahua Ingoa Wāhi
         </SubTitle>
       </Title>
       <Subheader>
@@ -72,15 +72,15 @@ const Header = () => {
         </div>
         <hr style={{ width: "100%" }} />
         <div>
-          He papakupu whakahua noa tenei, a ko nga ingoa i kīa i mua i te tau
-          1994 ka whakauruhia.
+          He papakupu whakahua noa tēnei, ā ko ngā ingoa anake i kīa i mua i te
+          tau 1994 ka whakauruhia.
         </div>
         <div>
-          Ka pai mai ki a mātou nga urupare, ina koa mo te whakatere me te uru,
+          Ka pai mai ki a mātou ngā urupare, inākoa mō te whakatere me te uru,
           ki&nbsp;
           <a href={"mailto: hughingoa@gmail.nz"}>hughingoa@gmail.nz</a>.
         </div>
-        <div>Mena kei a koe i ētahi raru, pā mai kia whakatikahia ai.</div>
+        <div>Mehemea kei a koe ētahi raru, pā mai kia whakatikahia ai.</div>
         <hr style={{ width: "100%" }} />
         <MapInstructions>
           <div>To find a name, click on the map...</div>

@@ -152,23 +152,31 @@ const About = () => {
         </p>
         <p>
           When speakers in or from Wʰanganui or Taranaki do not aspirate an h or
-          wh, the h (or H) has been superscripted in the text. How this sounds
-          varies between regions, between speakers, and by context. (For
-          example, in Patea/Hawera “Hawera” vs “Te Hawera” for the same place.)
-          Capitalisation of superscript h follows the usual convention, not any
-          distinction of pronunciation.)
+          wh, the h (or H) has been superscripted (raised) in the text:
+          &#x02B0;. How this sounds varies between regions, between speakers,
+          and by context. (For example, in Patea/Hawera “Hawera” vs “Te
+          &#x1D34;awera” for the same place.) Capitalisation of superscript h
+          follows the usual convention, not any distinction of pronunciation.
         </p>
         <p>
-          In Te Wai Pounamu, I italicised the k that is written and spoken
-          corresponding to ng in the north, as in kai𝙠a; kainga in the north.
-          (It was generally unmarked prior to that. There was a move by 𝙆ai Tahu
-          to underline it in the 1990s, but this seems to have faded), In the
-          same way, the southern l that stands in for northern r, and g for
-          ng/k, have been italicised. Only one speaker, Huata Holmes, wanted the
-          g written, though it occurs in Anglicised Māori words such as Kilmog,
-          matagouri and Otago.
+          In Te Wai Pounamu, k is italicised when it corresponds to ng in the
+          north, as in kai𝙠a; kainga in the north. (It was generally unmarked
+          prior to that. There was a move by 𝙆ai Tahu to underline it in the
+          1990s, but this seems to have faded), In the same way, the southern l
+          that stands in for northern r, and g for ng/k, have been italicised.
+          Only one speaker, Huata Holmes, wanted the g written, though it occurs
+          in Anglicised Māori words such as Kilmog, matagouri and Otago.
         </p>
         <h3 id={"zones"}>About the Zones | Mō ngā Takiwā</h3>
+        <p>
+          The Zones do not claim to correspond to rohe-a-iwi, but there is often
+          a rough alignment because of the speakers' whakapapa.
+        </p>
+        <p>
+          They meander up the centre, west and east of the lower North Island;
+          then the east, west and centre of the upper North Island; then down
+          and clockwise around the South Island.
+        </p>
         <Zoom>
           <StandardImg src={mapNI} />
         </Zoom>
@@ -176,15 +184,6 @@ const About = () => {
           <StandardImg src={mapSI} />
         </Zoom>
         <p></p>
-        <p>
-          They meander up the centre, west and east of the lower North Island;
-          then the east, west and centre of the upper North Island; then down
-          and clockwise around the South Island.
-        </p>
-        <p>
-          The Zones do not claim to correspond to rohe-a-iwi, but there is often
-          a rough alignment because of the speakers' whakapapa.
-        </p>
         <p>
           The lists include geographic features down to the larger hills and
           streams, all human settlements, suburbs and schools, marae, meeting
@@ -248,12 +247,12 @@ const About = () => {
         <p>
           That same year he applied for a Bill Toft memorial grant to record the
           names of the whole country, but was turned down. The following year
-          his application was accepted. (Within seconds of the presentation, a
+          his application was accepted. Within seconds of the presentation, a
           non-speaker of te reo began lecturing him about the “correct”
           pronuncation of Whanganui. (“Far too much ink has been spilt and
           voices raised over the 'correct' pronunciation of WH everywhere,” he
           says. “For non-speakers of te reo a soft F will suffice and cannot
-          change the him aning.” For those who care more, he recommend following
+          change the meaning.” For those who care more, he recommend following
           the speakers here.)
         </p>
         <p>
@@ -261,11 +260,11 @@ const About = () => {
           he could, beginning with the AA Road Map. This means it will be short
           on the names of places far from roads, and the coverage of minor names
           is scattershot. The speakers themselves were invaluable in adding to
-          the lists. Their memmories and his understanding may have been faulty
+          the lists. Their memories and his understanding may have been faulty
           in associating marae, wharenui and wharekai. Marae and houses have
           been opened and others fallen into disuse since these recordings were
           made. Since the dictionary was aimed at radio announcers, these names
-          were originallymeant to be secondary to geographic features, but the
+          were originally meant to be secondary to geographic features, but the
           speakers were determined that they should be comprehensive.
         </p>
         <p>
@@ -277,7 +276,7 @@ const About = () => {
           University. One potential speaker refused point blank to have anything
           to do with the project if it used them. It became clear that - largely
           under the influence of Professor Tīmoti Kāretu at Waikato University -
-          macrons (eg Māori) were going to win out, and they searched and
+          macrons (eg Māori) were going to win out, and the typists searched and
           replaced all 10 double vowels (upper and lower case AA, EE, II, OO,
           UU) with their macronned equivalents - then searched and de-macronned
           all the wrongly altered English words such as schōl and mēting.
@@ -287,10 +286,10 @@ const About = () => {
           macronised list, he couldn't be happier to be recorded.
         </p>
         <p>
-          Before he went out recording, he asked for printouts of the names, but
-          invariably more would have to be added on the road. He tried to ensure
-          the speakers chose each other. He asked that they have mana and te
-          reo, preferably as their first language. In one case of one ideal
+          Before he went out recording, Hugh asked for printouts of the names,
+          but invariably more would have to be added on the road. He tried to
+          ensure the speakers chose each other. He asked that they have mana and
+          te reo, preferably as their first language. In one case of one ideal
           candidate, it was his only language and Hugh couldn't communicate in
           sufficient detail to reach him.
         </p>
@@ -299,7 +298,7 @@ const About = () => {
           reticent, despite being the better speakers. One influential contact
           insisted that only children of her late father could say the local
           names, but none of them spoke te reo. In the event she settled for a
-          cousin, who was excellent. Often the best speakers were shy, while the
+          cousin, who was excellent. Often the best speakers were shy, while
           less suitable ones pushed themselves forward. Hugh learnt much about
           diplomacy on his travels, and the gentle ways of saying “No.”
         </p>
@@ -405,7 +404,7 @@ const About = () => {
         <p>
           People often said “You should have done this years ago when Mea Te Mea
           was alive.” He's very glad that he did do it all those years ago, when
-          so many great speakers - many first-language speakers, some
+          so many great speakers - many first-language speakers, most
           pre-television, some even pre-radio - were alive. Te mita o te reo
           (intonation and accent) has certainly changed since 1984-94.
         </p>
@@ -417,6 +416,7 @@ const About = () => {
           for him while they talked, or that then anyone in the world could hear
           those same names at the touch of that same virtual button.
         </p>
+        <p></p>
         <p>
           Hugh Young (Pākehā, Clan Chatten) was born in Christchurch when Māori
           there were almost invisible, and after graduating in Zoology from
@@ -426,15 +426,15 @@ const About = () => {
           Māori almost accidentally at Auckland University under Professor Bruce
           Biggs and Merimeri Penfold in 1969, when few Pākehā did, and the
           linguistic and social landscape was very different. A friend, Murray
-          Short invited him to Ruātoki and introduced him to Ngāi Tūhoe, John
-          Rangihau took him under his wing and he competed at two Tūhoe
-          Festivals in the back row of Tūhoe ki Pōneke. He also has a connection
-          to Parihaka, unveiling Whatarau Wharehoka's headstone in 1973, and in
-          1981 helping prepare for the centenary of te Rā o te Pāhua. As a VSA
-          volunteer in Solomon Islands in 1974-6, he co-authored a dictionary
-          and grammar of Solomon Islands Pijin. Although has no whakapapa Māori
-          himself, he now has mokopuna of Tūhoe, and whanaunga of Ngāti Porou,
-          descent.
+          Short, invited him to Ruātoki and introduced him to Ngāi Tūhoe. John
+          Rangihau took him under his wing, he was involved in the opening of Te
+          Tira Hou in Auckland, and he competed at two Tūhoe Festivals in the
+          back row of Tūhoe ki Pōneke. He also has a connection to Parihaka,
+          unveiling Whatarau Wharehoka's headstone in 1973, and in 1981 helping
+          prepare for the centenary of te Rā o te Pāhua. As a VSA volunteer in
+          Solomon Islands in 1974-6, he co-authored a dictionary and grammar of
+          Solomon Islands Pijin. Although has no whakapapa Māori himself, he now
+          has mokopuna of Tūhoe, and whanaunga of Ngāti Porou, descent.
         </p>
         <h3 id="technical"> Technical | Te Hangarau</h3>
         <p>
@@ -856,7 +856,7 @@ const About = () => {
         </p>
         <p> “E tipu, e rea ...”</p>
         <hr />
-        <h2 id="website">This Website/Tēnei Pae tukutuku </h2>
+        <h2 id="website">This Website | Tēnei Pae tukutuku </h2>
         <p>
           Mark Honeychurch created the database from which this website draws
           its data, including the timings of the start and finish of each name,
