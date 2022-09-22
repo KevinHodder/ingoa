@@ -5,7 +5,7 @@ import {
   getAllSuperRecs,
   getTypesString,
 } from "../../utils/utils";
-import ModalPlay from "./ModalPlay";
+import ModalPlay from "../audio/ModalPlay";
 import styled from "styled-components";
 
 const SuperSpacer = styled.div`

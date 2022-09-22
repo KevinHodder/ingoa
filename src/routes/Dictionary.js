@@ -1,13 +1,12 @@
 import { useRef, useState } from "react";
 import styled from "styled-components";
-import "../App.css";
 
 import SearchBox from "../components/search/SearchBox";
 import SearchResults from "../components/SearchResults";
 import MapSI from "../components/maps/MapSI";
 import MapNI from "../components/maps/MapNI";
-import Header from "../components/Header";
-import GoToTop from "../components/GoToTop";
+import DictIntro from "../components/DictIntro";
+import GoToTop from "../components/goToTop/GoToTop";
 import { AudioProvider } from "../utils/useAudio";
 
 const Maps = styled.div`
@@ -24,7 +23,7 @@ function Dictionary() {
     <>
       <AudioProvider>
         <main>
-          <Header />
+          <DictIntro />
           <Maps ref={mapRef}>
             <MapNI setResults={setResults} />
             <MapSI setResults={setResults} />

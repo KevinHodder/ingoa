@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useAudio } from "../../utils/useAudio";
-import Speaker from "../Speaker";
+import Speaker from "./Speaker";
 
 const PlayRec = styled.div`
   display: grid;

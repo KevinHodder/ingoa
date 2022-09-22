@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HeaderBlock = styled.div`
+const IntroBlock = styled.div`
   margin-bottom: 2rem;
 `;
 
@@ -46,9 +46,9 @@ const MapInstructions = styled.div`
   }
 `;
 
-const Header = () => {
+const DictIntro = () => {
   return (
-    <HeaderBlock>
+    <IntroBlock>
       <Title>
         <h1>Ngā Ingoa o Aotearoa</h1>
         <SubTitle>
@@ -87,8 +87,8 @@ const Header = () => {
           <div>Kia kitea he ingoa, pawhiria te mapi...</div>
         </MapInstructions>
       </Subheader>
-    </HeaderBlock>
+    </IntroBlock>
   );
 };
 
-export default Header;
+export default DictIntro;

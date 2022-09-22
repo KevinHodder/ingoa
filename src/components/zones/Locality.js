@@ -3,7 +3,7 @@ import { Tooltip } from "@mui/material";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { getTypesString, isArrPresent } from "../../utils/utils";
-import Speaker from "../Speaker";
+import Speaker from "../audio/Speaker";
 import { useAudio } from "../../utils/useAudio";
 
 const ShowMore = styled.div`

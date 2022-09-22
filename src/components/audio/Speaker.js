@@ -1,5 +1,5 @@
-import { ReactComponent as SpeakerPaused } from "../assets/headgreen.svg";
-import { ReactComponent as SpeakerPlaying } from "../assets/headred.svg";
+import { ReactComponent as SpeakerPaused } from "../../assets/headgreen.svg";
+import { ReactComponent as SpeakerPlaying } from "../../assets/headred.svg";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -15,6 +15,7 @@ const SpeakerStyled = styled.div`
 const Speaker = (props) => {
   const { isPlaying, name, play } = props;
 
+  // for keyboard control - accessibility.
   const handleSpace = (e) => {
     // 32 = spacebar
     if (e.keyCode === 32) {

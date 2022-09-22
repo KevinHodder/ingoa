@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import GoToTop from "../components/GoToTop";
 import Zoom from "react-medium-image-zoom";
-import "react-medium-image-zoom/dist/styles.css";
-import "./about.css";
+import styled from "styled-components";
 import { ReactComponent as SpeakerPaused } from "../assets/headgreen.svg";
 import mapNI from "../assets/map-NI-red-spots-sequence.webp";
 import mapSI from "../assets/map-SI-red-spots-sequence.webp";
 import cover1 from "../assets/cover-part-1.webp";
 import cover2 from "../assets/cover-part-2.webp";
 import cover3 from "../assets/cover-part-3.webp";
+import GoToTop from "../components/goToTop/GoToTop";
+import "./about.css";
+import "react-medium-image-zoom/dist/styles.css";
 
 const TOC = styled.div`
   margin: 20px;

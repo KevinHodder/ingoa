@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 import Localities from "./Localities";
 import MoreInfoModal from "../modals/MoreInfoModal";
-import PlayAll from "./PlayAll";
+import PlayAll from "../audio/PlayAll";
 import SpeakerInfo from "./SpeakerInfo";
 import "./zone.css";
 
