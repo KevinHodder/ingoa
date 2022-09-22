@@ -1,14 +1,14 @@
 import { useRef, useState } from "react";
 import styled from "styled-components";
-import "./App.css";
+import "../App.css";
 
-import SearchBox from "./components/SearchBox";
-import SearchResults from "./components/SearchResults";
-import MapSI from "./components/MapSI";
-import MapNI from "./components/MapNI";
-import Header from "./components/Header";
-import GoToTop from "./components/GoToTop";
-import { AudioProvider } from "./utils/useAudio";
+import SearchBox from "../components/search/SearchBox";
+import SearchResults from "../components/SearchResults";
+import MapSI from "../components/maps/MapSI";
+import MapNI from "../components/maps/MapNI";
+import Header from "../components/Header";
+import GoToTop from "../components/GoToTop";
+import { AudioProvider } from "../utils/useAudio";
 
 const Maps = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const Maps = styled.div`
   justify-content: center;
 `;
 
-function App() {
+function Dictionary() {
   const [results, setResults] = useState([]);
   const mapRef = useRef();
 
@@ -38,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default Dictionary;

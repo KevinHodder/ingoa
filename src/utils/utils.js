@@ -49,7 +49,7 @@ export const getIndexData = (fullData = allZones) => {
   }));
 };
 
-// Result filtering
+// Zone filtering
 
 export const getResultDataBasedOnFuseResult = (
   fuseResult,

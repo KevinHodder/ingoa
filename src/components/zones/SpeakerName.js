@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import SpeakerModal from "./SpeakerModal";
+import SpeakerModal from "../modals/SpeakerModal";
 import { useState } from "react";
-import { hasSpeakerNotes } from "../utils/utils";
+import { hasSpeakerNotes } from "../../utils/utils";
 
 const SpeakerNameWrapper = styled.div`
   display: inline;

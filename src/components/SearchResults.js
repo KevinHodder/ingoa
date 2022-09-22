@@ -2,7 +2,7 @@ import { Fragment, useEffect, useRef } from "react";
 import { Accordion } from "react-bootstrap";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Result from "./Result";
+import Zone from "./zones/Zone";
 
 const Wrapper = styled.div`
   padding: 5px;
@@ -33,7 +33,7 @@ export const SearchResults = (props) => {
           </ResultsHeader>
           <Accordion defaultActiveKey="0" ref={acc}>
             {results.map((result, index) => (
-              <Result
+              <Zone
                 details={result}
                 key={`zone${result.number}`}
                 index={index}

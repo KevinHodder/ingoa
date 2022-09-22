@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import data from "../data/zones.json";
-import MapSIZones from "./MapSIZones";
+import data from "../../data/zones.json";
+import MapNIZones from "./MapNIZones";
 
 const MapSVGCont = styled.svg`
   max-width: 100%;
-  max-height: 75vh;
   min-width: 50vh;
+  max-height: 75vh;
 
   @media (max-width: 650px) {
     display: none;
@@ -14,7 +14,7 @@ const MapSVGCont = styled.svg`
 
 const BGImg = styled.image``;
 
-const MapSI = (props) => {
+const MapNI = (props) => {
   const { setResults } = props;
 
   const goTo = (event) => {
@@ -24,11 +24,11 @@ const MapSI = (props) => {
   };
 
   return (
-    <MapSVGCont viewBox="0 0 85.5 100" role={"presentation"}>
-      <BGImg href={"./maps/SI.webp"} x={0} y={0} width={85.5} height={100} />
-      <MapSIZones goTo={goTo} data={data} />
+    <MapSVGCont viewBox="0 0 72 100" role={"presentation"}>
+      <BGImg href={"./maps/NI.webp"} x={0} y={0} width={72} height={100} />
+      <MapNIZones goTo={goTo} data={data} />
     </MapSVGCont>
   );
 };
 
-export default MapSI;
+export default MapNI;

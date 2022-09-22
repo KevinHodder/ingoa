@@ -1,9 +1,12 @@
 import Fuse from "fuse.js";
 import { useState, useEffect, Fragment, useRef } from "react";
 import PropTypes from "prop-types";
-import zones from "../data/zones.json";
+import zones from "../../data/zones.json";
 import styled from "styled-components";
-import { getIndexData, getResultDataBasedOnFuseResult } from "../utils/utils";
+import {
+  getIndexData,
+  getResultDataBasedOnFuseResult,
+} from "../../utils/utils";
 
 const searchData = getIndexData();
 

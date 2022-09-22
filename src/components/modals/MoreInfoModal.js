@@ -4,7 +4,7 @@ import {
   isArrPresent,
   getAllSuperRecs,
   getTypesString,
-} from "../utils/utils";
+} from "../../utils/utils";
 import ModalPlay from "./ModalPlay";
 import styled from "styled-components";
 
@@ -69,14 +69,6 @@ const MoreInfoModal = (props) => {
           </>
         ))}
       </Modal.Body>
-      {/*<Modal.Footer>*/}
-      {/*<Button variant="secondary" onClick={handleClose}>*/}
-      {/*  Close*/}
-      {/*</Button>*/}
-      {/*<Button variant="primary" onClick={handleClose}>*/}
-      {/*  Save Changes*/}
-      {/*</Button>*/}
-      {/*</Modal.Footer>*/}
     </Modal>
   );
 };

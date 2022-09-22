@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-import App from "./App";
+import Dictionary from "./routes/Dictionary";
 import reportWebVitals from "./reportWebVitals";
 import About from "./routes/About";
 import Footer from "./components/Footer";
@@ -17,7 +17,7 @@ root.render(
         <NavBar />
       </header>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Dictionary />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer></Footer>

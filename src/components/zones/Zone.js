@@ -4,10 +4,10 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import Localities from "./Localities";
-import MoreInfoModal from "./MoreInfoModal";
-import "./result.css";
+import MoreInfoModal from "../modals/MoreInfoModal";
 import PlayAll from "./PlayAll";
 import SpeakerInfo from "./SpeakerInfo";
+import "./zone.css";
 
 const ZoneNumber = styled.div`
   font-size: 1.5em;
@@ -20,7 +20,7 @@ const ZoneNotes = styled.div`
 const PlayAllBlock = styled(PlayAll)`
   margin-bottom: 1em;
 `;
-export const Result = (props) => {
+export const Zone = (props) => {
   const { details, index } = props;
   const { nameCommon, speakers, localities, number, track, notes } = details;
 
@@ -74,7 +74,7 @@ export const Result = (props) => {
   );
 };
 
-Result.propTypes = {
+Zone.propTypes = {
   details: PropTypes.shape({
     number: PropTypes.number,
     nameCommon: PropTypes.string,
@@ -88,8 +88,8 @@ Result.propTypes = {
   }),
 };
 
-Result.defaultProps = {
+Zone.defaultProps = {
   details: {},
 };
 
-export default Result;
+export default Zone;

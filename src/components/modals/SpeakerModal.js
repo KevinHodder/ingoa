@@ -1,5 +1,5 @@
 import { Modal } from "react-bootstrap";
-import { getSpeakerNotesByName } from "../utils/utils";
+import { getSpeakerNotesByName } from "../../utils/utils";
 import styled from "styled-components";
 
 const Note = styled.div`

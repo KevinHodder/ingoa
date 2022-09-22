@@ -2,9 +2,9 @@ import { forwardRef, useEffect, useState } from "react";
 import { Tooltip } from "@mui/material";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { getTypesString, isArrPresent } from "../utils/utils";
-import Speaker from "./Speaker";
-import { useAudio } from "../utils/useAudio";
+import { getTypesString, isArrPresent } from "../../utils/utils";
+import Speaker from "../Speaker";
+import { useAudio } from "../../utils/useAudio";
 
 const ShowMore = styled.div`
   opacity: 0;
