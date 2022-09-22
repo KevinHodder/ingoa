@@ -3,9 +3,9 @@ import {
   getSeeAlsoRecordsByIds,
   isArrPresent,
   getAllSuperRecs,
+  getTypesString,
 } from "../utils/utils";
 import ModalPlay from "./ModalPlay";
-import ModalPlaySS from "./ModalPlaySS";
 import styled from "styled-components";
 
 const SuperSpacer = styled.div`
@@ -40,7 +40,9 @@ const MoreInfoModal = (props) => {
         {/*  Also see stuff*/}
         {isArrPresent(alsoRecs) ? <h4>See also | Tirohia hoki</h4> : <></>}
         {alsoRecs.map((rec) => (
-          <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`} />
+          <ModalPlay {...rec} key={`${rec.zone}-${rec.order}`}>
+            {rec.name}, in {rec.zoneName}, spoken by {rec.speaker}
+          </ModalPlay>
         ))}
         {isArrPresent(alsoRecs) ? <br /> : <></>}
         {/* Super scripts */}
@@ -53,7 +55,10 @@ const MoreInfoModal = (props) => {
           <>
             <div key={i}>
               {superArr.map((r) => (
-                <ModalPlaySS {...r} key={`${r.order}`} />
+                <ModalPlay {...r} key={`${r.order}`}>
+                  {r.name} ({getTypesString(r.types, r.name)})
+                  {r.audioEnd ? `, spoken by ${r.speaker}` : ``}
+                </ModalPlay>
               ))}
             </div>
             {i < orig.length - 1 ? (

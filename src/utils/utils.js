@@ -143,7 +143,7 @@ export const getSeeAlsoRecordsByIds = (ids, allData = allZones) => {
       console.log("unable to find a match for ", id);
     } else {
       output.push({
-        zone,
+        zoneNumber: zone,
         zoneName: matchingZone.nameCommon,
         ...matchingLocality,
       });

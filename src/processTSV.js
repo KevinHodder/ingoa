@@ -187,6 +187,7 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
       audioStart: (split[START2] && parseFloat(split[START2])) || 0,
       audioEnd: (split[END2] && parseFloat(split[END2])) || 0,
       speaker: split[SPEAKER2],
+      uniqueId: split[0] + "_1",
     });
     // Add speaker to speaker list if not already present
     if (split[SPEAKER2]) {
@@ -203,6 +204,7 @@ function parseLocalityRecordingInfo(split, newLocality, zone) {
       audioStart: (split[START3] && parseFloat(split[START3])) || 0,
       audioEnd: (split[END3] && parseFloat(split[END3])) || 0,
       speaker: split[SPEAKER3],
+      uniqueId: split[0] + "_2",
     });
     if (split[SPEAKER3]) {
       zone.speakers.add(split[SPEAKER3]);

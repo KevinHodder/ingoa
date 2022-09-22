@@ -11,10 +11,10 @@ const PlayRec = styled.div`
 `;
 
 const ModalPlay = (props) => {
-  const { zone, audioStart, audioEnd, zoneName, name, speaker } = props;
-  const track = `zones\\${zone.padStart(3, "0")}.mp3`;
+  const { zoneNumber, audioStart, audioEnd, children } = props;
+  const track = `zones\\${zoneNumber.toString().padStart(3, "0")}.mp3`;
 
-  const thisID = `modal${zone}${audioStart}`;
+  const thisID = `modal${zoneNumber}${audioStart}`;
   const { play, isPlaying, currentlyPlaying } = useAudio();
   const playProps = {
     track,
@@ -41,7 +41,7 @@ const ModalPlay = (props) => {
       ) : (
         <div />
       )}
-      {name}, in {zoneName}, spoken by {speaker}
+      {children}
     </PlayRec>
   );
 };
