@@ -165,7 +165,8 @@ const About = () => {
           1990s, but this seems to have faded), In the same way, the southern l
           that stands in for northern r, and g for ng/k, have been italicised.
           Only one speaker, Huata Holmes, wanted the g written, though it occurs
-          in Anglicised Māori words such as Kilmog, matagouri and Otago.
+          in Anglicised Māori words such as Kilmog | Kirimoko, matagouri |
+          tūmatakuru and Otago | Ōtākou.
         </p>
         <h3 id={"zones"}>About the Zones | Mō ngā Takiwā</h3>
         <p>

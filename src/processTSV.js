@@ -385,6 +385,12 @@ const processPartZones = (split) => {
     order: parseInt(split[ZONEORDERNUM]),
     uniqueId: split[0],
     name: replaceSpecialCharacters(split[INDEXNAME1]),
+    types: [
+      {
+        type: "", // we just need these fields to display the translations so they're not really "types". without an empty string here, it displays "undefined"
+        name: replaceSpecialCharacters(split[KINDNAME1]),
+      },
+    ],
   };
   parseLocalityRecordingInfo(split, newLocality, zone);
   zone.localities.push(newLocality);
@@ -404,7 +410,7 @@ zoneLines.forEach((zoneLine) => {
   const zoneMatch = zones.find(
     (z) => z.number === parseInt(zoneSplit[zoneNUMBER])
   );
-  zoneMatch.notes = zoneSplit[zoneNOTES];
+  zoneMatch.notes = replaceSpecialCharacters(zoneSplit[zoneNOTES]);
 });
 fs.writeFileSync("data/zones.json", JSON.stringify(zones));
 
