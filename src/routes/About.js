@@ -295,13 +295,14 @@ const About = () => {
           sufficient detail to reach him.
         </p>
         <p>
-          He tried to insure that women were included, but they often proved
+          He tried to ensure that women were included, but they often proved
           reticent, despite being the better speakers. One influential contact
           insisted that only children of her late father could say the local
           names, but none of them spoke te reo. In the event she settled for a
           cousin, who was excellent. Often the best speakers were shy, while
-          less suitable ones pushed themselves forward. Hugh learnt much about
-          diplomacy on his travels, and the gentle ways of saying “No.”
+          sometimes less suitable ones pushed themselves forward. Hugh learnt
+          much about diplomacy on his travels, and the gentle ways of saying
+          “No.”
         </p>
         <p>
           The first volume was entirely recorded on a portable reel-to-reel
@@ -417,7 +418,7 @@ const About = () => {
           for him while they talked, or that then anyone in the world could hear
           those same names at the touch of that same virtual button.
         </p>
-        <p></p>
+        <hr />
         <p>
           Hugh Young (Pākehā, Clan Chatten) was born in Christchurch when Māori
           there were almost invisible, and after graduating in Zoology from
